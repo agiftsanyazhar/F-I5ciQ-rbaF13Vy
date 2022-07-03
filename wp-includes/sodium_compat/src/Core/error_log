@@ -1,0 +1,8 @@
+[29-Jan-2020 08:58:47 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_ChaCha20' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/HChaCha20.php on line 11
+[05-May-2020 18:31:00 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Curve25519' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/X25519.php on line 11
+[05-May-2020 23:15:43 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Curve25519' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/Ed25519.php on line 11
+[06-May-2020 10:26:06 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Curve25519_H' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/Curve25519.php on line 17
+[06-May-2020 11:54:49 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_HSalsa20' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/XSalsa20.php on line 11
+[07-May-2020 08:48:00 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Util' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/SipHash.php on line 13
+[16-May-2020 04:59:46 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Salsa20' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/HSalsa20.php on line 11
+[17-May-2020 09:16:30 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Util' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/BLAKE2b.php on line 13

@@ -1,0 +1,130 @@
+@import url("../unair-wp/style.css");
+/*
+Theme Name:     unair-wp-child
+Theme URI:      http://unair.ac.id
+Author:         Universitas Airlangga
+Author URI: http://unair.ac.id/
+Description:    unair-wp-child is child theme for unair wordpress sites.
+Version:        2.5
+Template:   unair-wp
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: ioa
+*/
+
+/* Change background color of top-bar */
+#top-bar {
+    background-color: #152d8f !important; /* #fbfbfb; */
+}
+
+/* Change Text or link color in top-bar */
+#top-bar ul.menu li a {
+    color: #ffffff !important; /* #777777; */
+}
+
+/* Change background color of menu item in top-bar in hover */
+#top-bar .menu-bar .menu div.hoverdir-wrap span.hoverdir {
+    background-color: #102681 !important; /* #28dcff; */
+}
+
+/* Remove transparent image */
+#top-bar .menu-bar .menu > li.current_page_item > a,
+#top-bar .menu-bar .menu > li.current-menu-ancestor > a,
+#top-bar .menu-bar .menu > li.menu-active > a,
+#top-bar .menu-bar .menu > li.current-menu-item > a {
+    background: none; /* url(sprites/i/button_shade.png) repeat-x #46759b; */
+}
+
+/* Set color of active menu item */
+#top-bar .menu-bar .menu>li.current_page_item>a,
+#top-bar .menu-bar .menu>li.current-menu-ancestor>a,
+#top-bar .menu-bar .menu>li.menu-active>a,
+#top-bar .menu-bar .menu>li.current-menu-item>a {
+    background-color: #102681 !important; /* #28dcff; */
+}
+
+#top-bar .menu-bar ul.menu li.relative ul.sub-menu {
+    background-color: #152d8f !important;
+}
+
+/* Change background color of compact menu in top-bar */
+div.compact-bar {
+    background-color: #102681 !important; /* #ffffff; */
+}
+/* Set color of compact menu item */
+div.theme-header .menu-bar .menu li a {
+    color: #ffffff; /* #414747; */
+}
+
+/* Move breadcrumbs to left below page/post title */
+div.title-wrap {
+    padding: 10px 0 25px; 15px 0;
+}
+#breadcrumbs {
+    bottom: -5px;
+    left: 150px;
+    right: auto;
+}
+
+.top-area-wrapper div.top-area {
+    padding: 0 0;
+}
+
+div.bottom-area {
+    height: 49px;
+    padding: 0 0 0;
+    background: #ffb72b;
+}
+
+div.bottom-area div.top-area {
+    background-color: transparent !important;
+}
+
+div.title-wrap {
+    background-color: #3c3c3c !important;
+    padding: 20px 0 50px;
+}
+
+div.bottom-area div.top-area .menu>li>a {
+    color: #fff !important;
+}
+
+div.bottom-area div.top-area .menu-bar .menu>li.current-menu-item>a {
+    background-color: #152d8f;
+}
+
+#footer {
+    background-color: #ffb72b !important;
+}
+
+div.footer-wrap h3.footer-heading,
+div.footer-wrap div.custom-box-content,
+div.footer-wrap div.custom-box-content p,
+div.footer-wrap,
+.footer-wrap ul li a,
+.footer-wrap div.widget-posts .description p {
+    color: #000000 !important;
+}
+
+.footer-wrap ul li a:hover {
+    color: #152d8f !important;
+}
+
+#footer-menu {
+    background-color: #3c3c3c !important;
+}
+
+div.theme-header .menu-bar .menu > li.current-menu-ancestor > a > span.spacer,
+div.theme-header .menu-bar .menu > li.current_page_item > a > span.spacer,
+div.theme-header .menu-bar .menu > li.current-menu-item > a > span.spacer {
+    display: none;
+}
+
+div.theme-header .menu > li > a {
+    padding: 13px 12px;
+}
+
+div.theme-header .menu > li > a span.menu-arrow {
+    padding: 8px 0;
+}

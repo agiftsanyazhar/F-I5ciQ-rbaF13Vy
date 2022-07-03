@@ -1,0 +1,48 @@
+[03-Sep-2021 10:17:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/footer.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/footer.php on line 9
+[11-Sep-2021 00:58:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php on line 9
+[12-Sep-2021 21:42:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-content.php on line 13
+[19-Sep-2021 21:27:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/comments.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/comments.php on line 9
+[20-Sep-2021 10:55:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/sidebar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/sidebar.php on line 9
+[11-Dec-2021 17:54:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed.php on line 13
+[12-Dec-2021 04:41:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-404.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-404.php on line 14
+[12-Dec-2021 11:23:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php on line 9
+[14-Dec-2021 16:16:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-content.php on line 13
+[27-Dec-2021 01:16:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/embed-content.php on line 13
+[30-Dec-2021 05:19:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function do_action() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/footer-embed.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/footer-embed.php on line 18
+[28-Jan-2022 04:42:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php on line 9

@@ -1,0 +1,108 @@
+[19-Sep-2020 16:07:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php:225
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php on line 225
+[19-Sep-2020 16:07:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[19-Sep-2020 16:08:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php on line 31
+[19-Sep-2020 16:08:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[19-Sep-2020 16:08:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[16-Jan-2021 20:35:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php on line 31
+[16-Jan-2021 20:36:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[16-Jan-2021 20:38:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[16-Jan-2021 20:39:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php:225
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php on line 225
+[16-Jan-2021 20:39:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[05-Feb-2021 23:35:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[11-Feb-2021 18:50:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[28-Aug-2021 22:56:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[01-Sep-2021 13:01:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[03-Sep-2021 11:39:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php:225
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php on line 225
+[17-Sep-2021 23:16:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[25-Sep-2021 02:13:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[07-Nov-2021 18:03:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php on line 31
+[07-Nov-2021 20:17:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[19-Apr-2022 16:50:02 UTC] PHP Fatal error:  Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[24-Apr-2022 20:35:50 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php on line 31
+[24-Apr-2022 21:37:21 UTC] PHP Fatal error:  Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[25-Apr-2022 23:44:51 UTC] PHP Fatal error:  Call to undefined function _e() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[13-May-2022 00:55:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[18-May-2022 22:58:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[06-Jun-2022 13:39:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[11-Jun-2022 15:18:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php on line 31
+[11-Jun-2022 15:36:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[25-Jun-2022 21:45:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/rad_hooks.php on line 31
+[28-Jun-2022 12:09:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10

@@ -1,0 +1,26 @@
+[05-May-2020 17:54:40 UTC] PHP Fatal error:  Class 'getid3_lib' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ogg.php on line 17
+[05-May-2020 20:10:45 UTC] PHP Fatal error:  Class 'getid3_lib' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio-video.asf.php on line 16
+[06-May-2020 05:22:10 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.tag.id3v1.php on line 19
+[06-May-2020 09:06:21 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.dts.php on line 22
+[06-May-2020 10:18:41 UTC] PHP Fatal error:  Class 'getid3_lib' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio-video.riff.php on line 26
+[06-May-2020 11:13:26 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.tag.apetag.php on line 18
+[06-May-2020 12:19:28 UTC] PHP Fatal error:  Class 'getid3_lib' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio-video.quicktime.php on line 18
+[07-May-2020 01:33:29 UTC] PHP Fatal error:  Class 'getid3_lib' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.flac.php on line 18
+[07-May-2020 06:59:23 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.tag.lyrics3.php on line 19
+[07-May-2020 08:54:22 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 19
+[08-May-2020 06:06:58 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio-video.matroska.php on line 217
+[05-Jun-2020 21:17:29 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home3/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 19
+[03-Jul-2020 17:28:13 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 18
+[05-Jul-2020 17:43:53 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 18
+[05-Jul-2020 22:17:30 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 18
+[22-Jul-2020 23:42:17 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 18
+[24-Aug-2020 01:21:29 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 18
+[19-Dec-2021 19:12:16 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ac3.php on line 18
+[20-Dec-2021 10:08:43 UTC] PHP Fatal error:  Uncaught Error: Class 'getid3_lib' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ogg.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.ogg.php on line 17
+[24-Dec-2021 12:47:51 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio-video.flv.php on line 77
+[30-Dec-2021 20:13:36 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.mp3.php on line 25
+[02-Jan-2022 17:44:54 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio.dts.php on line 21
+[07-Feb-2022 17:35:09 UTC] PHP Fatal error:  Class 'getid3_handler' not found in /home/vokasi/public_html/perpajakan/wp-includes/ID3/module.audio-video.flv.php on line 77

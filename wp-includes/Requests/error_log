@@ -1,0 +1,1 @@
+[18-Jan-2022 23:18:22 UTC] PHP Fatal error:  Interface 'Requests_Hooker' not found in /home/vokasi/public_html/perpajakan/wp-includes/Requests/Hooks.php on line 15

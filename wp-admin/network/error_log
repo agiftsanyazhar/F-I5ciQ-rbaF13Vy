@@ -1,0 +1,36 @@
+[28-Aug-2021 15:40:45 UTC] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php:71
+Stack trace:
+#0 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(465): RevSliderBaseAdmin::addMetaBox('Revolution Slid...', '', Array, NULL)
+#1 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(72): RevSliderAdmin->addSliderMetaBox()
+#2 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(44): RevSliderAdmin->init()
+#3 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/revslider.php(165): RevSliderAdmin->__construct('/home/vokasi/pu...')
+#4 /home/vokasi/public_html/perpajakan/wp-settings.php(360): include_once('/home/vokasi/pu...')
+#5 /home/vokasi/public_html/perpajakan/wp-config.php(89): require_once('/home/vokasi/pu...')
+#6 /home/vokasi/public_html/perpajakan/wp-load.php(37): require_once('/home in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php on line 71
+[09-Jan-2022 00:29:02 UTC] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php:71
+Stack trace:
+#0 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(465): RevSliderBaseAdmin::addMetaBox('Revolution Slid...', '', Array, NULL)
+#1 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(72): RevSliderAdmin->addSliderMetaBox()
+#2 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(44): RevSliderAdmin->init()
+#3 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/revslider.php(165): RevSliderAdmin->__construct('/home/vokasi/pu...')
+#4 /home/vokasi/public_html/perpajakan/wp-settings.php(360): include_once('/home/vokasi/pu...')
+#5 /home/vokasi/public_html/perpajakan/wp-config.php(89): require_once('/home/vokasi/pu...')
+#6 /home/vokasi/public_html/perpajakan/wp-load.php(37): require_once('/home in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php on line 71
+[15-Jan-2022 22:56:16 UTC] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php:71
+Stack trace:
+#0 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(465): RevSliderBaseAdmin::addMetaBox('Revolution Slid...', '', Array, NULL)
+#1 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(72): RevSliderAdmin->addSliderMetaBox()
+#2 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(44): RevSliderAdmin->init()
+#3 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/revslider.php(165): RevSliderAdmin->__construct('/home/vokasi/pu...')
+#4 /home/vokasi/public_html/perpajakan/wp-settings.php(360): include_once('/home/vokasi/pu...')
+#5 /home/vokasi/public_html/perpajakan/wp-config.php(89): require_once('/home/vokasi/pu...')
+#6 /home/vokasi/public_html/perpajakan/wp-load.php(37): require_once('/home in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php on line 71
+[29-Jan-2022 02:02:04 UTC] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php:71
+Stack trace:
+#0 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(465): RevSliderBaseAdmin::addMetaBox('Revolution Slid...', '', Array, NULL)
+#1 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(72): RevSliderAdmin->addSliderMetaBox()
+#2 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/admin/revslider-admin.class.php(44): RevSliderAdmin->init()
+#3 /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/revslider.php(165): RevSliderAdmin->__construct('/home/vokasi/pu...')
+#4 /home/vokasi/public_html/perpajakan/wp-settings.php(360): include_once('/home/vokasi/pu...')
+#5 /home/vokasi/public_html/perpajakan/wp-config.php(89): require_once('/home/vokasi/pu...')
+#6 /home/vokasi/public_html/perpajakan/wp-load.php(37): require_once('/home in /home/vokasi/public_html/perpajakan/wp-content/plugins/revslider/includes/framework/base-admin.class.php on line 71

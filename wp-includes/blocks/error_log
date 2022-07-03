@@ -1,0 +1,116 @@
+[05-May-2020 19:49:08 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/vokasi/public_html/perpajakan/wp-includes/blocks/rss.php on line 160
+[06-May-2020 06:43:12 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/vokasi/public_html/perpajakan/wp-includes/blocks/block.php on line 48
+[06-May-2020 07:31:32 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php on line 37
+[06-May-2020 08:17:28 UTC] PHP Fatal error:  Call to undefined function add_action() in /home3/vokasi/public_html/perpajakan/wp-includes/blocks/archives.php on line 143
+[24-Aug-2021 04:45:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php on line 78
+[28-Aug-2021 14:13:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[20-Sep-2021 18:28:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/search.php:93
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/search.php on line 93
+[24-Oct-2021 23:35:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/latest-posts.php:189
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/latest-posts.php on line 189
+[29-Oct-2021 20:19:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/latest-comments.php:196
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/latest-comments.php on line 196
+[05-Nov-2021 15:34:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/search.php:93
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/search.php on line 93
+[06-Nov-2021 15:59:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/archives.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/archives.php on line 143
+[08-Nov-2021 08:29:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[25-Nov-2021 14:59:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php on line 78
+[20-Dec-2021 03:09:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php on line 78
+[25-Dec-2021 00:39:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/archives.php:143
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/archives.php on line 143
+[27-Dec-2021 09:27:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php on line 37
+[29-Dec-2021 21:40:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[30-Dec-2021 11:16:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[30-Dec-2021 14:22:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php on line 48
+[02-Jan-2022 05:13:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php on line 37
+[05-Jan-2022 06:39:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[05-Jan-2022 21:16:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php on line 48
+[08-Jan-2022 05:50:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php on line 37
+[11-Jan-2022 06:45:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[11-Jan-2022 21:10:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php on line 48
+[12-Jan-2022 03:16:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php:78
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/calendar.php on line 78
+[14-Jan-2022 05:16:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php on line 37
+[18-Jan-2022 00:02:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php on line 48
+[18-Jan-2022 12:04:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/shortcode.php on line 37
+[21-Jan-2022 19:52:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/categories.php on line 120
+[21-Jan-2022 22:26:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-includes/blocks/block.php on line 48
+[24-Jun-2022 10:07:57 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/blocks/index.php on line 9
+[24-Jun-2022 10:07:57 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/blocks/index.php on line 9
+[24-Jun-2022 10:07:57 UTC] PHP Warning:  require(ABSPATHWPINC/blocks/archives.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/blocks/index.php on line 9
+[24-Jun-2022 10:07:57 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/blocks/archives.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/blocks/index.php on line 9

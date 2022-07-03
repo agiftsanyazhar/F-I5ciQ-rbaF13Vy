@@ -1,0 +1,2 @@
+[14-Feb-2020 16:42:50 UTC] PHP Strict Standards:  Static function ParagonIE_Sodium_Core_Base64_Common::decode6Bits() should not be abstract in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/Base64/Common.php on line 203
+[14-Feb-2020 16:42:50 UTC] PHP Strict Standards:  Static function ParagonIE_Sodium_Core_Base64_Common::encode6Bits() should not be abstract in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/Base64/Common.php on line 212

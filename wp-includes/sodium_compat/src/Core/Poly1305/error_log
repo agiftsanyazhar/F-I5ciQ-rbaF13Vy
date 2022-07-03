@@ -1,0 +1,1 @@
+[07-May-2020 20:10:29 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Util' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/src/Core/Poly1305/State.php on line 11

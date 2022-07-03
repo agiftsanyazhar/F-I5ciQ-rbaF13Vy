@@ -1,0 +1,1 @@
+[28-Jan-2020 23:42:19 UTC] PHP Fatal error:  Class 'ParagonIE_Sodium_Core_Salsa20' not found in /home3/vokasi/public_html/perpajakan/wp-includes/sodium_compat/namespaced/Core/Salsa20.php on line 5

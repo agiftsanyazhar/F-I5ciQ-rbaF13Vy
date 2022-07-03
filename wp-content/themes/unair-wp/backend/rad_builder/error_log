@@ -1,0 +1,88 @@
+[19-Sep-2020 16:04:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[19-Sep-2020 16:05:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[19-Sep-2020 16:05:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[19-Sep-2020 16:05:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[14-Jul-2021 14:24:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[16-Jul-2021 23:06:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[20-Jul-2021 05:44:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[20-Jul-2021 15:37:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[23-Jul-2021 14:30:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[26-Jul-2021 16:12:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[28-Jul-2021 22:57:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[29-Jul-2021 15:15:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[29-Jul-2021 17:47:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[03-Aug-2021 12:44:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[06-Aug-2021 12:49:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[25-Aug-2021 21:14:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[04-Sep-2021 18:08:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[02-Oct-2021 06:04:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[16-May-2022 17:08:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[18-May-2022 03:54:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[19-May-2022 08:57:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[27-May-2022 00:47:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
