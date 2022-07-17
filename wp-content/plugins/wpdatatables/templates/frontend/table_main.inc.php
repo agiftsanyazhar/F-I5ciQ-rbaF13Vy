@@ -23,8 +23,8 @@
 
     <table id="<?php echo esc_attr($this->getId()) ?>"
            class="<?php if ($this->isScrollable()) { ?>scroll<?php } ?>
-           <?php  ?>
-           display nowrap <?php echo esc_attr($this->getCSSClasses()) ?> wpDataTable"
+           <?php if ($this->isResponsive()) { ?>responsive<?php } ?>
+           display nowrap <?php echo esc_attr($this->getCSSClasses()) ?> wpDataTable wpDataTableID-<?php echo esc_attr($this->getWpId()) ?>"
            style="<?php echo esc_attr($this->getCSSStyle()) ?>"
            data-described-by='<?php echo esc_attr($this->getId()) ?>_desc'
            data-wpdatatable_id="<?php echo esc_attr($this->getWpId()); ?>

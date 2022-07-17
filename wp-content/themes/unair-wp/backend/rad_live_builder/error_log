@@ -106,3 +106,15 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[07-Jul-2022 19:07:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/widget_toolbar.php on line 13
+[10-Jul-2022 22:07:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php:225
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/class_radlivebuilder.php on line 225
+[13-Jul-2022 19:39:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getIOAInput() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13

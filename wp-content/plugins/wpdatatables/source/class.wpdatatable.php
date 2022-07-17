@@ -25,6 +25,7 @@ class WPDataTable
     private $_title = '';
     private $_interfaceLanguage;
     private $_responsive = false;
+    private $_responsiveAction = 'icon';
     private $_scrollable = false;
     private $_inlineEditing = false;
     private $_popoverTools = false;
@@ -407,7 +408,7 @@ class WPDataTable
     {
         $classesStr = $this->_cssClassArray;
         $classesStr = apply_filters('wpdatatables_filter_table_cssClassArray', $classesStr, $this->getWpId());
-        return $classesStr;
+        return implode(' ', $classesStr);
     }
 
     public function getCSSClasses()
@@ -929,6 +930,34 @@ class WPDataTable
         return $count;
     }
 
+    public function setResponsive($responsive) {
+        if ($responsive) {
+            $this->_responsive = true;
+        } else {
+            $this->_responsive = false;
+        }
+    }
+
+    public function isResponsive() {
+        return $this->_responsive;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResponsiveAction()
+    {
+        return $this->_responsiveAction;
+    }
+
+    /**
+     * @param string $responsiveAction
+     */
+    public function setResponsiveAction($responsiveAction)
+    {
+        $this->_responsiveAction = $responsiveAction;
+    }
+
 
     public function enableGrouping()
     {
@@ -1239,6 +1268,13 @@ class WPDataTable
                             $dataRow[$key] = str_replace('.', '', $dataRow[$key]);
                         } else {
                             $dataRow[$key] = str_replace(',', '', $dataRow[$key]);
+                        }
+                    }
+                }
+                if ($columnType === 'string') {
+                    foreach ($this->_dataRows as &$dataRow) {
+                        if (is_float($dataRow[$key]) || is_int($dataRow[$key])) {
+                            $dataRow[$key] = strval($dataRow[$key]);
                         }
                     }
                 }
@@ -1700,8 +1736,9 @@ class WPDataTable
         } else {
             wp_enqueue_style('wdt-wpdatatables', WDT_CSS_PATH . 'wpdatatables.min.css');
             wp_enqueue_style('wdt-table-tools', WDT_CSS_PATH . 'TableTools.css');
-
-
+            if ($this->isResponsive()) {
+                wp_enqueue_style('wdt-datatables-responsive', WDT_CSS_PATH . 'datatables.responsive.css', array(), WDT_CURRENT_VERSION);
+            }
             if (WDT_INCLUDE_DATATABLES_CORE) {
                 wp_enqueue_script('wdt-datatables', WDT_JS_PATH . 'jquery-datatables/jquery.dataTables.min.js', array(), false, true);
             }
@@ -1718,8 +1755,9 @@ class WPDataTable
                 !empty($this->_tableToolsConfig['columns']) ? wp_enqueue_script('wdt-button-vis', WDT_JS_PATH . 'export-tools/buttons.colVis.min.js', array('jquery', 'wdt-datatables'), WDT_CURRENT_VERSION, true) : null;
 
             }
-
-
+            if ($this->isResponsive()) {
+                wp_enqueue_script('wdt-responsive', WDT_JS_PATH . 'responsive/datatables.responsive.js', array(), WDT_CURRENT_VERSION, true);
+            }
             wp_enqueue_script('wdt-funcs-js', WDT_JS_PATH . 'wpdatatables/wdt.funcs.js', array('jquery', 'wdt-datatables', 'wdt-common'), false, true);
             wp_enqueue_script('wdt-wpdatatables', WDT_JS_PATH . 'wpdatatables/wpdatatables.js', array('jquery', 'wdt-datatables'), false, true);
         }
@@ -2013,7 +2051,9 @@ class WPDataTable
             $this->setWordWrap(true);
         }
 
-
+        if (!empty($tableData->responsive)) {
+            $this->setResponsive(true);
+        }
         if (!empty($tableData->scrollable)) {
             $this->setScrollable(true);
         }
@@ -2054,6 +2094,7 @@ class WPDataTable
             isset($advancedSettings->borderSpacing) ? $this->setBorderSpacing($advancedSettings->borderSpacing) : $this->setBorderSpacing(0);
             isset($advancedSettings->verticalScroll) ? $this->setVerticalScroll($advancedSettings->verticalScroll) : $this->setVerticalScroll(false);
             isset($advancedSettings->verticalScrollHeight) ? $this->setVerticalScrollHeight($advancedSettings->verticalScrollHeight) : $this->setVerticalScrollHeight(600);
+            isset($advancedSettings->responsiveAction) ? $this->setResponsiveAction($advancedSettings->responsiveAction) : $this->setResponsiveAction('icon');
             isset($advancedSettings->pagination) ? $this->setPagination($advancedSettings->pagination) : $this->setPagination(true);
             isset($advancedSettings->paginationAlign) ? $this->setPaginationAlign($advancedSettings->paginationAlign) : $this->setPaginationAlign('right');
             isset($advancedSettings->paginationLayout) ? $this->setPaginationLayout($advancedSettings->paginationLayout) : $this->setPaginationLayout('full_numbers');
@@ -2120,7 +2161,15 @@ class WPDataTable
             if (!$column->visible) {
                 $this->getColumn($column->orig_header)->setIsVisible(false);
             }
-
+            // Set hiding on phones and tablets for responsiveness
+            if ($this->isResponsive()) {
+                if ($column->hide_on_mobiles) {
+                    $this->getColumn($column->orig_header)->setHiddenOnPhones(true);
+                }
+                if ($column->hide_on_tablets) {
+                    $this->getColumn($column->orig_header)->setHiddenOnTablets(true);
+                }
+            }
 
             // if grouping enabled for this column, passing it to table class
             if ($column->groupColumn) {
@@ -2195,6 +2244,8 @@ class WPDataTable
         $obj->tableId = $this->getId();
         $obj->tableType = $this->getTableType();
         $obj->selector = '#' . $this->getId();
+        $obj->responsive = $this->isResponsive();
+        $obj->responsiveAction = $this->getResponsiveAction();
         $obj->infoBlock = $this->isInfoBlock();
         $obj->pagination = $this->isPagination();
         $obj->paginationAlign = $this->getPaginationAlign();

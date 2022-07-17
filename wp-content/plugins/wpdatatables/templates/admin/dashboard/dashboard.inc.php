@@ -337,13 +337,17 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                  </span>
                         </p>
                         <p class="wpdt-text wpdt-font m-b-18">
-                            A minor update with bug fix and stability improvements:
+                            A major update with new features, improvements and stability improvements:
                         </p>
                         <div class="alert alert-info m-b-0" role="alert">
                             <i class="wpdt-icon-info-circle-full"></i>
                             <ul>
-                                <li><strong>BugFix:</strong> Fixed issue with showing tables insert from Divi integration.</li>
-                                <li>Compatibility with WordPress 6.0 approved.</li>
+                                <li><strong>Feature:</strong> Responsive datatables – now each datatable can be responsive where you can choose which columns do you want to be visible or hidden on tablets and/or mobiles.</li>
+                                <li><strong>Feature:</strong> Added options for responsive actions in datatables – icon, row or cell.</li>
+                                <li><strong>Feature:</strong> Responsive Charts – now each chart (both Google and Chartjs) can be responsive – just tick the “responsive” checkbox near the width input. Responsive chart will occupy 100% width of the container, instead of having fixed width, therefore always render correctly on any device types, and when you resize browser window.</li>
+                                <li><strong>Feature:</strong> Grouping Charts – rows with same labels would be treated as a single entry, summing up all the values in other cells.</li>
+                                <li><strong>Improvement:</strong> Enabled options in Google chart: Horizontal crosshair, Horizontal axis direction, Vertical crosshair, Vertical axis direction and Invert axis</li>
+                                <li><strong>BugFix:</strong> Fixed issue with PHP notice.</li>
                                 <li>Other small bug fixes and stability improvements.</li>
                             </ul>
                         </div>
@@ -429,12 +433,6 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                             </p>
                             <p class="wpdt-font">
                                 <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Follow table filtering in charts', 'wpdatatables'); ?>
-                            </p>
-                            <p class="wpdt-font">
-                                <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Grouping data in Charts', 'wpdatatables'); ?>
-                            </p>
-                            <p class="wpdt-font">
-                                <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Responsive', 'wpdatatables'); ?>
                             </p>
                             <p class="wpdt-font">
                                 <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Conditional formatting', 'wpdatatables'); ?>
@@ -726,10 +724,10 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                 <?php esc_html_e('Appointments and Events WordPress Booking Plugin', 'wpdatatables'); ?>
                             </div>
                             <p class="wpdt-text wpdt-font m-b-0">
-                                <?php esc_html_e('Amelia Lite is a free appointment booking WordPress plugin that allows to set up a fully-featured automated booking system on your WordPress website and is a handy tool for small businesses and individuals that depend on stable appointment booking processes. 40,000+ businesses from healthcare, beauty, sports, automotive, educational, creative, HR and other industries use Amelia to flawlessly manage 500,000+ appointments and events worldwide each month.', 'wpdatatables'); ?></p>
+                                <?php echo sprintf(esc_html__('Amelia Lite is a free appointment booking WordPress plugin that allows to set up a fully-featured automated booking system on your WordPress website and is a handy tool for small businesses and individuals that depend on stable appointment booking processes. %s businesses from healthcare, beauty, sports, automotive, educational, creative, HR and other industries use Amelia to flawlessly manage %s appointments and events worldwide each month.', 'wpdatatables') ,AMELIA_NUMBER_OF_ACTIVE_INSTALLS , AMELIA_NUMBER_OF_APPOINTMENTS ); ?></p>
                             <p>
                                 <span class="wdt-stars-container stars-88">★★★★★</span>
-                                <span class="wdt-rating"> <?php esc_html_e('Rating: 4.3 - ‎97 reviews') ?></span>
+                                <span class="wdt-rating"> <?php esc_html_e('Rating: 4.3 - 255 reviews') ?></span>
                             </p>
                             <a href="https://downloads.wordpress.org/plugin/ameliabooking.zip" class="btn btn-primary">
                                 <?php esc_html_e('Free Download', 'wpdatatables'); ?>

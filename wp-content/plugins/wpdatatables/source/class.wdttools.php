@@ -1053,8 +1053,13 @@ class WDTTools
     {
         if (null !== $dateFormat && $dateFormat == 'd/m/Y') {
             $returnDate = strtotime(str_replace('/', '-', $dateString));
-        } else if (null !== $dateFormat && in_array($dateFormat, ['m.d.Y', 'm-d-Y', 'm-d-y'])) {
+        } else if (null !== $dateFormat && in_array($dateFormat, ['m.d.Y', 'm-d-Y', 'm-d-y','d.m.y','Y.m.d','d-m-Y'])) {
             $returnDate = strtotime(str_replace(['.', '-'], '/', $dateString));
+        } else if (null !== $dateFormat && $dateFormat == 'm/Y') {
+            if ($dateString == '') return $dateString;
+            $dateObject = DateTime::createFromFormat($dateFormat, $dateString);
+            if (!$dateObject) return strtotime($dateString);
+            $returnDate = $dateObject->getTimestamp();
         } else {
             $returnDate = strtotime($dateString);
         }

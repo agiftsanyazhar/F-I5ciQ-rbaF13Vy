@@ -14,6 +14,7 @@
                     wdtChart.setColumns(wpDataCharts[chart_id].render_data.columns);
                     wdtChart.setRows(wpDataCharts[chart_id].render_data.rows);
                     wdtChart.setOptions(wpDataCharts[chart_id].render_data.options);
+                    wdtChart.setGrouping(wpDataCharts[chart_id].group_chart);
                     wdtChart.setContainer(wpDataCharts[chart_id].container);
                     wdtChart.setColumnIndexes(wpDataCharts[chart_id].render_data.column_indexes);
                     if (typeof wpDataChartsCallbacks !== 'undefined' && typeof wpDataChartsCallbacks[chart_id] !== 'undefined') {
@@ -27,6 +28,7 @@
                     wdtChart.setGlobalOptions(wpDataCharts[chart_id].render_data.options.globalOptions);
                     wdtChart.setType(wpDataCharts[chart_id].render_data.configurations.type);
                     wdtChart.setColumnIndexes(wpDataCharts[chart_id].render_data.column_indexes);
+                    wdtChart.setGrouping(wpDataCharts[chart_id].group_chart);
                     wdtChart.setContainer(document.getElementById("chartJSContainer_" + chart_id));
                     wdtChart.setCanvas(document.getElementById("chartJSCanvas_" + chart_id));
                     wdtChart.setContainerOptions(wpDataCharts[chart_id].render_data.configurations);

@@ -36,3 +36,11 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/deprecated/class_enigma.php on line 15
+[05-Jul-2022 19:42:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_option() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/deprecated/visual_settings.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/deprecated/visual_settings.php on line 4
+[12-Jul-2022 07:07:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_option() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/deprecated/visual_settings.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/deprecated/visual_settings.php on line 4

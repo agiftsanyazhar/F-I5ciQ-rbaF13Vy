@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wpdatatables\n"
-"POT-Creation-Date: 2022-03-28 07:32+0200\n"
-"PO-Revision-Date: 2022-03-28 07:33+0200\n"
+"POT-Creation-Date: 2022-07-08 12:31+0200\n"
+"PO-Revision-Date: 2022-07-08 12:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: wpdatatables <cjbug@yandex.ru>\n"
 "Language: en\n"
@@ -271,23 +271,23 @@ msgstr ""
 
 #: wpdatatables-lite/controllers/wdt_admin.php:116
 #: wpdatatables-lite/controllers/wdt_admin.php:117
-#: wpdatatables-lite/controllers/wdt_functions.php:864
+#: wpdatatables-lite/controllers/wdt_functions.php:865
 msgid "Go Premium"
 msgstr ""
 
-#: wpdatatables-lite/controllers/wdt_admin.php:542
-#: wpdatatables-lite/controllers/wdt_admin.php:591
-#: wpdatatables-lite/controllers/wdt_admin.php:634
-#: wpdatatables-lite/controllers/wdt_admin.php:655
-#: wpdatatables-lite/controllers/wdt_admin.php:702
-#: wpdatatables-lite/controllers/wdt_admin.php:728
-#: wpdatatables-lite/controllers/wdt_admin.php:747
-#: wpdatatables-lite/controllers/wdt_admin.php:767
-#: wpdatatables-lite/controllers/wdt_admin.php:786
-#: wpdatatables-lite/controllers/wdt_admin.php:806
-#: wpdatatables-lite/controllers/wdt_admin.php:826
-#: wpdatatables-lite/controllers/wdt_admin.php:846
-#: wpdatatables-lite/controllers/wdt_admin.php:865
+#: wpdatatables-lite/controllers/wdt_admin.php:543
+#: wpdatatables-lite/controllers/wdt_admin.php:592
+#: wpdatatables-lite/controllers/wdt_admin.php:635
+#: wpdatatables-lite/controllers/wdt_admin.php:656
+#: wpdatatables-lite/controllers/wdt_admin.php:703
+#: wpdatatables-lite/controllers/wdt_admin.php:729
+#: wpdatatables-lite/controllers/wdt_admin.php:748
+#: wpdatatables-lite/controllers/wdt_admin.php:768
+#: wpdatatables-lite/controllers/wdt_admin.php:787
+#: wpdatatables-lite/controllers/wdt_admin.php:807
+#: wpdatatables-lite/controllers/wdt_admin.php:827
+#: wpdatatables-lite/controllers/wdt_admin.php:847
+#: wpdatatables-lite/controllers/wdt_admin.php:866
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
@@ -304,16 +304,16 @@ msgstr ""
 msgid "Provided column is not Integer or Float column type"
 msgstr ""
 
-#: wpdatatables-lite/controllers/wdt_functions.php:859
+#: wpdatatables-lite/controllers/wdt_functions.php:860
 msgid "Go to Settings"
 msgstr ""
 
-#: wpdatatables-lite/controllers/wdt_functions.php:888
+#: wpdatatables-lite/controllers/wdt_functions.php:889
 #, php-format
 msgid "By %s"
 msgstr ""
 
-#: wpdatatables-lite/controllers/wdt_functions.php:892
+#: wpdatatables-lite/controllers/wdt_functions.php:893
 msgid "Docs"
 msgstr ""
 
@@ -492,11 +492,11 @@ msgstr ""
 msgid "There was an error trying to fetch the table data: "
 msgstr ""
 
-#: wpdatatables-lite/source/class.wdtconfigcontroller.php:599
+#: wpdatatables-lite/source/class.wdtconfigcontroller.php:608
 msgid "Table in data source has no rows."
 msgstr ""
 
-#: wpdatatables-lite/source/class.wdtconfigcontroller.php:1154
+#: wpdatatables-lite/source/class.wdtconfigcontroller.php:1164
 msgid "Select a "
 msgstr ""
 
@@ -640,9 +640,9 @@ msgid "Please select columns that you want to use in table"
 msgstr ""
 
 #: wpdatatables-lite/source/class.wdttools.php:218
-#: wpdatatables-lite/source/class.wpdatatable.php:2344
-#: wpdatatables-lite/source/class.wpdatatable.php:2429
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1052
+#: wpdatatables-lite/source/class.wpdatatable.php:2395
+#: wpdatatables-lite/source/class.wpdatatable.php:2480
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1068
 msgid "Copy"
 msgstr ""
 
@@ -837,15 +837,15 @@ msgstr ""
 
 #: wpdatatables-lite/source/class.wdttools.php:305
 #: wpdatatables-lite/templates/admin/common/premium_modal.inc.php:17
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1135
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1411
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1151
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1529
 msgid "This is a premium feature"
 msgstr ""
 
 #: wpdatatables-lite/source/class.wdttools.php:306
 #: wpdatatables-lite/templates/admin/common/premium_modal.inc.php:26
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1136
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1412
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1152
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1530
 msgid "This feature is available only in premium version of wpDataTables"
 msgstr ""
 
@@ -854,8 +854,8 @@ msgstr ""
 #: wpdatatables-lite/templates/admin/getting-started/getting_started.inc.php:145
 #: wpdatatables-lite/templates/admin/getting-started/getting_started.inc.php:157
 #: wpdatatables-lite/templates/admin/getting-started/getting_started.inc.php:169
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1140
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1416
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1156
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1534
 msgid "Compare and View Pricing"
 msgstr ""
 
@@ -1358,67 +1358,67 @@ msgid ""
 "page. <br><br>You may now finish this tutorial. "
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatachart.php:972
+#: wpdatatables-lite/source/class.wpdatachart.php:1091
 msgid "Only one column can be of type String"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatachart.php:975
+#: wpdatatables-lite/source/class.wpdatachart.php:1094
 msgid "You are mixing data types (several date axes and several number)"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:1991
+#: wpdatatables-lite/source/class.wpdatatable.php:2029
 msgid ""
 "You are trying to load a table of an unknown type. Probably you did not "
 "activate the addon which is required to use this table type."
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2229
-#: wpdatatables-lite/source/class.wpdatatable.php:2232
+#: wpdatatables-lite/source/class.wpdatatable.php:2280
+#: wpdatatables-lite/source/class.wpdatatable.php:2283
 #: wpdatatables-lite/templates/admin/chart_wizard/steps/step3.inc.php:86
 #: wpdatatables-lite/templates/admin/table-settings/column_settings_panel.inc.php:554
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:327
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:343
 msgid "All"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2293
-#: wpdatatables-lite/source/class.wpdatatable.php:2376
+#: wpdatatables-lite/source/class.wpdatatable.php:2344
+#: wpdatatables-lite/source/class.wpdatatable.php:2427
 #: wpdatatables-lite/templates/admin/table-settings/columns_list_modal.inc.php:12
 msgid "Columns"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2306
-#: wpdatatables-lite/source/class.wpdatatable.php:2388
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1049
+#: wpdatatables-lite/source/class.wpdatatable.php:2357
+#: wpdatatables-lite/source/class.wpdatatable.php:2439
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1065
 msgid "Print"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2320
-#: wpdatatables-lite/source/class.wpdatatable.php:2403
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1050
+#: wpdatatables-lite/source/class.wpdatatable.php:2371
+#: wpdatatables-lite/source/class.wpdatatable.php:2454
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1066
 msgid "Excel"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2332
-#: wpdatatables-lite/source/class.wpdatatable.php:2416
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1051
+#: wpdatatables-lite/source/class.wpdatatable.php:2383
+#: wpdatatables-lite/source/class.wpdatatable.php:2467
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1067
 msgid "CSV"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2356
-#: wpdatatables-lite/source/class.wpdatatable.php:2441
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1053
+#: wpdatatables-lite/source/class.wpdatatable.php:2407
+#: wpdatatables-lite/source/class.wpdatatable.php:2492
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1069
 msgid "PDF"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2364
+#: wpdatatables-lite/source/class.wpdatatable.php:2415
 msgid "Export"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2454
+#: wpdatatables-lite/source/class.wpdatatable.php:2505
 msgid "Search table"
 msgstr ""
 
-#: wpdatatables-lite/source/class.wpdatatable.php:2455
+#: wpdatatables-lite/source/class.wpdatatable.php:2506
 msgid "Showing _MENU_ Entries"
 msgstr ""
 
@@ -1441,7 +1441,7 @@ msgid "NEW"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:40
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:556
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:551
 msgid "Forminator Forms integration for wpDataTables"
 msgstr ""
 
@@ -1453,7 +1453,7 @@ msgid ""
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:48
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:738
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:733
 msgid "Free Download"
 msgstr ""
 
@@ -1467,7 +1467,7 @@ msgid "Learn more"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:65
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:576
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:571
 #: wpdatatables-lite/templates/admin/system-info/system_info.inc.php:281
 #: wpdatatables-lite/templates/admin/system-info/system_info.inc.php:302
 #: wpdatatables-lite/templates/admin/system-info/system_info.inc.php:320
@@ -1477,7 +1477,7 @@ msgid "Installed"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:80
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:593
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:588
 msgid "Master Detail Tables for wpDataTables"
 msgstr ""
 
@@ -1490,7 +1490,7 @@ msgid ""
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:107
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:620
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:615
 msgid "Powerful Filters for wpDataTables"
 msgstr ""
 
@@ -1502,36 +1502,36 @@ msgid ""
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:134
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:646
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:641
 msgid "Report Builder"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:137
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:650
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:645
 msgid ""
 "A unique tool that allows you to generate almost any Word DOCX and Excel "
 "XLSX documents filled in with actual data from your database."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:158
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:673
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:668
 msgid "Formidable Forms integration for wpDataTables"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:161
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:677
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:672
 msgid ""
 "Tool that adds \"Formidable Form\" as a new table type and allows you to "
 "create wpDataTables from Formidable Forms entries data."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:180
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:699
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:694
 msgid "Gravity Forms integration for wpDataTables"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/addons/addons.inc.php:183
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:703
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:698
 msgid ""
 "Tool that adds \"Gravity Form\" as a new table type and allows you to create "
 "wpDataTables from Gravity Forms entries data."
@@ -1654,7 +1654,7 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/chart_wizard/chart_wizard.inc.php:157
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:680
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1965
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2083
 msgid "Color"
 msgstr ""
 
@@ -2056,8 +2056,8 @@ msgstr ""
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:104
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:425
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:660
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1612
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1942
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1730
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2060
 msgid "Background color"
 msgstr ""
 
@@ -2076,7 +2076,7 @@ msgstr ""
 #: wpdatatables-lite/templates/admin/chart_wizard/steps/step4.inc.php:177
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:123
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:444
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1634
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1752
 msgid "Border color"
 msgstr ""
 
@@ -2116,7 +2116,7 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/chart_wizard/steps/step4.inc.php:286
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:45
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1546
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1664
 msgid "Font size"
 msgstr ""
 
@@ -2144,8 +2144,8 @@ msgstr ""
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:70
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:143
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:464
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1582
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1657
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1700
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1775
 msgid "Font color"
 msgstr ""
 
@@ -2605,7 +2605,7 @@ msgstr ""
 #: wpdatatables-lite/templates/admin/table-settings/column_settings_panel.inc.php:1121
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:678
 #: wpdatatables-lite/templates/admin/table-settings/table_preview_block.inc.php:81
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2126
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2244
 #: wpdatatables-lite/templates/admin/welcome_page/welcome_page.inc.php:228
 msgid "View Documentation"
 msgstr ""
@@ -2853,164 +2853,153 @@ msgstr ""
 msgid "Version "
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:362
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:363
 msgid "Go Premium!"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:368
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:369
 msgid "View Comparison"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:376
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:377
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:48
 msgid ""
 "Get the most out of wpDataTables by upgrading to Premium and unlocking all "
 "of the powerful features."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:380
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:305
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:381
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:344
 msgid "Create a table manually"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:383
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:317
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:384
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:356
 msgid "Creating tables from Google Spreadsheet"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:386
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:329
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:387
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:368
 msgid "Creating tables via Google Sheet API"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:389
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:342
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:390
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:381
 msgid "Creating tables from Private Google Spreadsheet"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:392
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:355
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:393
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:394
 msgid "Creating MySQL-based tables from database"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:395
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:367
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:396
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:406
 msgid "Creating MySQL-based tables from Wordpress post types"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:398
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:399
 msgid "Creating tables where users can see and edit own data"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:401
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:391
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:402
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:430
 msgid "Creating table relations (Foreign key)"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:404
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:427
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:405
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:466
 msgid "Advanced filtering"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:407
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:439
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:408
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:478
 msgid "Pre-filtering tables through URL"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:410
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:292
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:411
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:331
 msgid "Table Customization"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:413
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:403
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:414
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:442
 #: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:153
 msgid "Server-side processing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:416
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:415
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:417
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:454
 msgid "Multiple databases support (MySQL,MS SQL and PostgreSQL)"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:419
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:451
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:420
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:490
 msgid "Front-end table editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:422
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:463
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:423
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:502
 msgid "Excel-like editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:425
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:475
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:426
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:514
 msgid "Creating charts with ApexCharts"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:428
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:488
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:429
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:527
 msgid "Creating charts with Highcharts"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:431
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:432
 msgid "Export Highcharts data to CSV and XLS files"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:434
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:500
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:435
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:539
 msgid "Follow table filtering in charts"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:437
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:512
-msgid "Grouping data in Charts"
-msgstr ""
-
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:440
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:524
-#: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:68
-msgid "Responsive"
-msgstr ""
-
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:443
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:536
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:438
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:551
 #: wpdatatables-lite/templates/admin/table-settings/column_settings_panel.inc.php:60
 msgid "Conditional formatting"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:446
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:548
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:441
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:563
 msgid "Calculating Tools"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:449
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:444
 msgid "Formula columns"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:452
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:560
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:447
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:575
 #: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:80
 msgid "Placeholders"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:455
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:450
 msgid "Premium support"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:459
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:454
 msgid "Get Premium Today"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:466
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:461
 msgid "News Blog"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:471
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:466
 msgid "Checkout useful articles from wpdatatables.com"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:518
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:513
 msgid ""
 "Never miss notifications about new cool features, promotions,\n"
 "                                    giveaways or freebies – subscribe to our "
@@ -3018,95 +3007,84 @@ msgid ""
 "                                    about 1 message per month and never spam!"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:535
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:530
 msgid "wpDataTables Addons"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:536
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:531
 msgid "Premium "
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:539
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:534
 msgid ""
 "While wpDataTables itself provides quite a large amount of features and "
 "unlimited customisation, flexibility, you can achieve even more with our "
 "premium addons."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:541
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:536
 msgid ""
 "(except Forminator Forms integration which is free and can be used with Lite "
 "version as well, all others requires wpDataTables Premium version)"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:549
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:544
 msgid "Free"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:560
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:555
 msgid ""
 "Tool that adds \"Forminator Form\" as a new table type and allows you to "
 "create wpDataTables from Forminator Forms submissions."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:567
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:603
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:630
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:656
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:683
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:709
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:742
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:562
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:598
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:625
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:651
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:678
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:704
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:737
 msgid "Learn More"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:597
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:592
 msgid ""
 "A wpDataTables addon which allows showing additional details for a specific "
 "row in a popup or a separate page or post."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:624
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:619
 msgid ""
 "An add-on for wpDataTables that provides powerful filtering features: "
 "cascade filtering, applying filters on button click, hide table before "
 "filtering."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:720
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:715
 msgid "Need free booking plugin?"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:729
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:724
 msgid "Appointments and Events WordPress Booking Plugin"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:732
-msgid ""
-"Amelia Lite is a free appointment booking WordPress plugin that allows to "
-"set up a fully-featured automated booking system on your WordPress website "
-"and is a handy tool for small businesses and individuals that depend on "
-"stable appointment booking processes. 40,000+ businesses from healthcare, "
-"beauty, sports, automotive, educational, creative, HR and other industries "
-"use Amelia to flawlessly manage 330,000+ appointments and events worldwide "
-"each month."
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:730
+msgid "Rating: 4.3 - 255 reviews"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:735
-msgid "Rating: 4.3 - ‎97 reviews"
-msgstr ""
-
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:753
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:748
 #: wpdatatables-lite/templates/admin/getting-started/getting_started.inc.php:184
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:603
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:618
 #: wpdatatables-lite/templates/admin/support/support.inc.php:78
 #: wpdatatables-lite/templates/admin/system-info/system_info.inc.php:545
 #: wpdatatables-lite/templates/admin/welcome_page/welcome_page.inc.php:358
 msgid "Made by"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:761
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:756
 #: wpdatatables-lite/templates/admin/getting-started/getting_started.inc.php:192
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:611
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:626
 #: wpdatatables-lite/templates/admin/support/support.inc.php:45
 #: wpdatatables-lite/templates/admin/support/support.inc.php:86
 #: wpdatatables-lite/templates/admin/system-info/system_info.inc.php:553
@@ -3115,9 +3093,9 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:765
+#: wpdatatables-lite/templates/admin/dashboard/dashboard.inc.php:760
 #: wpdatatables-lite/templates/admin/getting-started/getting_started.inc.php:196
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:615
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:630
 #: wpdatatables-lite/templates/admin/support/support.inc.php:24
 #: wpdatatables-lite/templates/admin/support/support.inc.php:90
 #: wpdatatables-lite/templates/admin/system-info/system_info.inc.php:557
@@ -3244,7 +3222,7 @@ msgid "Lite vs Premium comparison"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:52
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:595
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:610
 msgid "Go Premium Now"
 msgstr ""
 
@@ -3257,7 +3235,7 @@ msgid "Lite"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:64
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:582
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:597
 msgid "Premium"
 msgstr ""
 
@@ -3287,10 +3265,10 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:131
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:144
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:293
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:330
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:343
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:476
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:332
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:369
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:382
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:515
 #: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:84
 msgid "NEW!"
 msgstr ""
@@ -3311,8 +3289,8 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:168
 #: wpdatatables-lite/templates/admin/table-settings/column_settings_panel.inc.php:47
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:643
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:651
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:659
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:667
 msgid "Sorting"
 msgstr ""
 
@@ -3322,9 +3300,9 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:192
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:653
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:504
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:512
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1450
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:520
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:528
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1568
 msgid "Pagination"
 msgstr ""
 
@@ -3358,35 +3336,50 @@ msgid "Creating charts with Chart.js"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:265
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:278
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:291
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:304
 msgid "NEW in Lite!"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:277
+msgid "Responsive tables"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:290
+msgid "Responsive charts"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:303
+msgid "Grouping data in Charts"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:316
 msgid "Customize charts"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:281
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:576
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:320
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:591
 msgid "Limited"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:283
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:322
 msgid "Some options are not available."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:379
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:418
 msgid "Creating tables where users can see and edit only their own data"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:572
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:587
 msgid "Support"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:578
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:593
 msgid "Response time is slow and can be up to 5 business days."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:589
+#: wpdatatables-lite/templates/admin/lite-vs-premium/lite_vs_premium.inc.php:604
 msgid ""
 "* Please note that wpDataTables add-ons are not included in premium version "
 "of plugin."
@@ -3431,56 +3424,56 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:18
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:25
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1430
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1524
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1548
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1642
 msgid "Font"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:27
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1527
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1645
 msgid ""
 "This font will be used in rendered tables. Leave blank not to override "
 "default theme settings"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:47
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1549
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1667
 msgid "Define the font size"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:72
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1585
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1703
 msgid "This color is used for the main font in table cells."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:97
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:365
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1434
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1552
 msgid "Header"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:106
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1615
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1733
 msgid "The color is used for background of the table header."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:125
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1637
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1755
 msgid "This color is used for the border in the table header."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:145
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1660
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1778
 msgid "This color is used for the font in the table header."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:162
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1679
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1797
 msgid "Active and hover color\t"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:164
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1682
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1800
 msgid ""
 "This color is used when you hover the mouse above the table header, or when "
 "you choose a column."
@@ -3491,47 +3484,47 @@ msgid "Table border "
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:198
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1710
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1828
 msgid "Inner border"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:200
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1713
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1831
 msgid "This color is used for the inner border in the table between cells."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:218
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1733
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1851
 msgid "Outer border"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:220
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1736
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1854
 msgid "This color is used for the outer border of the whole table body."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:238
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1756
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1874
 msgid "Table borders"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:240
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1759
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1877
 msgid "When this is checked, borders in table will be removed "
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:244
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1765
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1883
 msgid "Remove borders in table"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:249
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1770
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1888
 msgid "Header border"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:251
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1773
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1891
 msgid "When this is checked,borders in header will be removed  "
 msgstr ""
 
@@ -3540,76 +3533,76 @@ msgid "Remove borders in header"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:269
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1442
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1560
 msgid "Row color"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:276
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1792
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1910
 msgid "Even row background"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:278
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1795
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1913
 msgid "This color is used for for background in even rows."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:295
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1814
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1932
 msgid "Odd row background"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:297
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1817
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1935
 msgid "This color is used for for background in odd rows."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:314
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1836
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1954
 msgid "Hover row"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:316
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1839
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1957
 msgid ""
 "This color is used for to highlight the row when you hover your mouse above "
 "it."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:333
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1858
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1976
 msgid "Background for selected rows"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:335
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1861
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1979
 msgid "This color is used for background in selected rows."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:362
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1446
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1564
 msgid "Cell color"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:369
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1889
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2007
 msgid "Sorted columns, even rows"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:371
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1892
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2010
 msgid ""
 "This color is used for background in cells which are in the active columns "
 "(columns used for sorting) in even rows."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:389
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1912
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2030
 msgid "Sorted columns, odd rows"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:391
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1915
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2033
 msgid ""
 "This color is used for background in cells which are in the active columns "
 "(columns used for sorting) in odd rows."
@@ -3697,53 +3690,53 @@ msgid ""
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:662
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1945
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2063
 msgid "This color is used for the background of the pagination"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:682
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1968
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2086
 msgid "This color is used for the color of the links in the pagination."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:700
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1987
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2105
 msgid "Current page background color"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:702
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1990
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2108
 msgid "The color is used for background of the current page"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:719
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2011
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2129
 msgid "Current page color"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:721
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2014
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2132
 msgid "This color is used for the color of the current page."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:739
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2034
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2152
 msgid "Other pages hover background color"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:741
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2037
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2155
 msgid ""
 "This background color is used when you hover the mouse above the other pages"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:758
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2058
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2176
 msgid "Other pages hover color"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/color_and_font_settings.php:760
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2061
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2179
 msgid "This color is used when you hover the mouse above the other pages."
 msgstr ""
 
@@ -3758,7 +3751,7 @@ msgid ""
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/custom_js_and_css.php:31
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2088
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2206
 msgid "Custom wpDataTables CSS"
 msgstr ""
 
@@ -3777,17 +3770,17 @@ msgid "Use minified version of Javascript files"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:15
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1470
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1588
 msgid "Interface language"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:17
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1473
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1591
 msgid "Pick the language which will be used in tables interface."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:23
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1480
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1598
 msgid "English (default)"
 msgstr ""
 
@@ -3822,42 +3815,42 @@ msgid "Parse shortcodes in strings"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:104
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1493
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1611
 msgid "Base skin"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:106
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1496
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1614
 msgid "Choose the base skin for the plugin."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:112
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1503
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1621
 msgid "Material"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:113
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1504
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1622
 msgid "Light"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:114
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1505
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1623
 msgid "Graphite"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:115
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1506
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1624
 msgid "Aqua"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:116
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1507
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1625
 msgid "Purple"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:117
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1508
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1626
 msgid "Dark"
 msgstr ""
 
@@ -3924,144 +3917,144 @@ msgstr ""
 msgid "Descending"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:229
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:228
 msgid "Tablet width"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:231
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:230
 msgid ""
 "Here you can specify width of the screen (in pixels) that will be treated as "
 "a tablet. You can set it wider if you want responsive effect on desktops."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:255
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:252
 msgid "Mobile width"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:257
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:254
 msgid "Here you can specify width (in pixels) will be treated as a mobile.."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:282
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:278
 msgid "Tables per admin page"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:284
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:280
 msgid "How many tables to show in the browse page."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:300
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:296
 msgid "Align numbers"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:302
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:298
 msgid "How Integer and Float column types will be aligned in the cell"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:306
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:302
 msgid "Align numbers to the right"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:316
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:312
 msgid "Sum functions label"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:318
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:314
 msgid ""
 "Enter a label that will be used for Sum functions. If you leave it blank "
 "default label will be Σ ="
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:336
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:332
 msgid "Average functions label"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:338
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:334
 msgid ""
 "Enter a label that will be used for Average functions. If you leave it blank "
 "default label will be Avg ="
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:361
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:357
 msgid "Minimum functions label"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:363
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:359
 msgid ""
 "Enter a label that will be used for Minimum functions. If you leave it blank "
 "default label will be Min ="
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:381
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:377
 msgid "Maximum functions label"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:383
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:379
 msgid ""
 "Enter a label that will be used for Maximum functions. If you leave it blank "
 "default label will be Max ="
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:409
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:405
 msgid "Include full bootstrap front-end"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:411
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:422
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:407
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:418
 msgid ""
 "It is recommended to uncheck this option if bootstrap.js is already included "
 "in one of the theme files. Unchecked option means that there is still "
 "bootstrap.js included just in noconflict mode which should prevent errors."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:415
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:411
 msgid "Include full bootstrap.js on the front-end"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:420
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:416
 msgid "Include full bootstrap back-end"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:426
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:422
 msgid "Include full bootstrap.js on the back-end"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:434
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:440
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:430
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:436
 msgid "Show plugin credentials below tables"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:436
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:432
 msgid ""
 "If you want to support our project, please, keep this checkbox as checked"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:445
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:441
 msgid "Prevent deleting tables in database"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:447
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:443
 msgid ""
 "It is recommended to leave this option as checked if you what to keep your "
 "tables in database after deleting plugin from Plugins page. If you uncheck "
 "this option, it will be deleted all tables in database after deleting plugin"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:451
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:447
 msgid ""
 "Prevent deleting tables in database after deleting plugin from Plugins page"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:458
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:454
 msgid "Remove Getting Started page"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:460
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:456
 msgid ""
 "Check this option if you want to remove Getting Started page from admin menu."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:464
+#: wpdatatables-lite/templates/admin/settings/tabs/main_plugin_settings.php:460
 msgid "Remove \"Getting Started\" page from admin menu."
 msgstr ""
 
@@ -4996,7 +4989,7 @@ msgid "Allow filtering"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/column_settings_panel.inc.php:865
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:682
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:698
 msgid "Global search"
 msgstr ""
 
@@ -5156,6 +5149,14 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/column_small_block.inc.php:20
 msgid "Show/hide the column"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/table-settings/column_small_block.inc.php:22
+msgid "Show/hide on mobile"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/table-settings/column_small_block.inc.php:24
+msgid "Show/hide on tablet"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/column_small_block.inc.php:26
@@ -5371,6 +5372,10 @@ msgstr ""
 msgid "Edit Data"
 msgstr ""
 
+#: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:68
+msgid "Responsive"
+msgstr ""
+
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:83
 msgid "Undo"
 msgstr ""
@@ -5412,6 +5417,7 @@ msgid "Manage rows"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:132
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:284
 msgid "Row"
 msgstr ""
 
@@ -5649,53 +5655,53 @@ msgid "Scrollable"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:543
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:378
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:394
 msgid "Scrollable table"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:547
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:385
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:401
 msgid "Enable this to enable a horizontal scrollbar below the table."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:555
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:394
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:410
 msgid "Show a horizontal scrollbar"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:562
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:570
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:438
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:446
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:454
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:462
 msgid "Limit table width"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:574
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:453
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:469
 msgid "Enable this to restrict table width to page width."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:582
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:462
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:478
 msgid "Limit table width to page width"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:589
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:597
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:469
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:477
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:485
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:493
 msgid "Word wrap"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:601
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:484
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:500
 msgid ""
 "Enable this to wrap long strings into multiple lines and stretch the cells "
 "height."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/simple_table_settings_block.inc.php:609
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:492
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:508
 msgid "Wrap words to newlines"
 msgstr ""
 
@@ -5762,7 +5768,7 @@ msgid "Sorting and filtering"
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:76
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1009
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1025
 msgid "Table Tools"
 msgstr ""
 
@@ -5880,295 +5886,311 @@ msgid ""
 "tablets in the column settings!"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:269
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:266
 msgid "Allow collapsing on mobiles and tablets"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:277
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:274
+msgid "Responsive action"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:276
+msgid "Choose between different options when responsive is turned on."
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:282
+msgid "Icon"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:283
+msgid "Cell"
+msgstr ""
+
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:293
 msgid "Hide until loaded"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:279
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:295
 msgid ""
 "Enable to make whole table hidden until it is initialized to prevent "
 "unformatted data flashing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:284
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:300
 msgid "Hide the table before it is fully loaded"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:296
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:312
 msgid "Default rows per page"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:304
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:339
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:320
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:355
 msgid "Rows per page"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:311
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:327
 msgid "How many rows to show per page by default."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:347
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:363
 msgid "Show X entries"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:354
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:370
 msgid ""
 "Enable/disable this to show/hide \"Show X entries\" per page dropdown on the "
 "frontend."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:362
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:378
 msgid "Show \"Show X entries\" dropdown"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:386
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:402
 msgid "This should be turned off if you want to set columns width manually."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:407
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:415
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:423
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:431
 msgid "Info block"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:422
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:438
 msgid ""
 "Enable to show a block of information about the number of records below the "
 "table."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:430
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:446
 msgid "Show information block below the table"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:454
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:470
 msgid ""
 "This should be turned on if you want to set columns width manually. Should "
 "be on to use word wrapping."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:516
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:532
 msgid "Enable to show a pagination"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:524
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:540
 msgid "Show pagination block below the table"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:532
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:540
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:548
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:556
 msgid "Pagination Alignment"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:544
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:560
 msgid "Here you can set pagination position: right, center or left."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:552
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:568
 msgid "Right"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:553
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:569
 msgid "Center"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:554
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:570
 msgid "Left"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:563
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:571
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:579
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:587
 msgid "Pagination Layout"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:575
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:591
 msgid "Here you can choose between different pagination layout."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:583
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:599
 msgid ""
 "\"First\", \"Previous\", \"Next\" and \"Last\" buttons, plus page numbers"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:584
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:600
 msgid "\"Previous\" and \"Next\" buttons only"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:585
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:601
 msgid "\"Previous\" and \"Next\" buttons, plus page numbers"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:586
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:602
 msgid "\"First\", \"Previous\", \"Next\" and \"Last\" buttons"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:587
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:603
 msgid "Page number buttons only"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:588
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:604
 msgid "\"First\" and \"Last\" buttons, plus page numbers"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:609
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:625
 msgid "Advanced column filters"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:617
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:633
 msgid "Advanced filter"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:624
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:640
 msgid ""
 "Enable to show an advanced filter for each of the columns, filters can be "
 "shown in table footer, header or in a separate form."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:635
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:651
 msgid "Enable advanced column filters"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:658
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:674
 msgid ""
 "If this is enabled, each column header will be clickable; clicking will sort "
 "the whole table by the content of this column cells ascending or descending."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:666
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:682
 msgid "Allow sorting for the table"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:674
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:690
 msgid "Main search block"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:689
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:705
 msgid ""
 "If this is enabled, a search block will be displayed on the top right of the "
 "table, allowing to search through whole table with a single input."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:697
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:713
 msgid "Enable search block"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:711
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:727
 msgid "Filters in a form"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:718
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:734
 msgid "Filter in form"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:725
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:741
 msgid ""
 "Enable to show the advanced column filter in a form above the table, instead "
 "of showing in the table footer/header."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:734
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:750
 msgid "Show filters in a form above the table"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:742
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:758
 msgid "Clear filters button"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:749
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:765
 msgid "Clear filters"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:753
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:769
 msgid "Enable to show the clear filters button."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:754
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:770
 msgid ""
 "If filter in form is enabled, clear button will be rendered after the last "
 "filter."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:759
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:775
 msgid ""
 "Otherwise, clear filter button will be rendered above the table next to "
 "\"Table Tools\" buttons."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:772
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:788
 msgid "Show clear filters button"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:792
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:808
 msgid "Allow editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:800
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:816
 msgid "Front-end editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:807
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:823
 msgid "Allow editing the table from the front-end."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:815
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:831
 msgid "Allow front-end editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:823
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:839
 msgid "Popover edit block"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:831
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:847
 msgid "Popover tools"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:838
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:854
 msgid ""
 "If this is enabled, the New, Edit and Delete buttons will appear in a "
 "popover when you click on any row, instead of Table Tools block above the "
 "table."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:846
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:862
 msgid "Editing buttons in a popover"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:854
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:862
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:870
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:878
 msgid "In-line editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:869
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:885
 msgid ""
 "If this is enabled, front-end users will be able to edit cells by double-"
 "clicking them, not only with the editor dialog."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:877
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:893
 msgid "Allow in-line editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:892
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:908
 msgid "MySQL table name for editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:894
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:910
 msgid ""
 "Name of the MySQL table which will be updated when edited from front-end."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:899
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:915
 msgid "MySQL table name"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:908
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:924
 msgid "ID column for editing"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:910
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:926
 msgid ""
 "Choose the column values from which will be used as row identifiers. MUST be "
 "a unique auto-increment integer on MySQL side so insert/edit/delete would "
@@ -6176,165 +6198,165 @@ msgid ""
 "\"id\" or \"ID\" on MySQL side."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:924
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:940
 msgid "Editor roles"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:926
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:942
 msgid ""
 "If you want only specific user roles to be able to edit the table, choose in "
 "this dropdown. Leave unchecked to allow editing for everyone."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:931
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:947
 msgid "Everyone"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:932
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:948
 msgid "Administrators"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:933
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:949
 msgid "Editors"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:934
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:950
 msgid "Authors"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:935
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:951
 msgid "Contributors"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:936
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:952
 msgid "Subscribers"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:951
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:967
 msgid "Users see and edit only own data"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:959
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:975
 msgid "Users see and edit only their own data"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:966
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:982
 msgid ""
 "If this is enabled, users will see and edit only the rows that are related "
 "to them or were created by them (associated using the User ID column)."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:974
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:990
 msgid "Limit editing to own data only"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:982
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:998
 msgid "User ID column"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:984
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1000
 msgid ""
 "Choose the column values from which will be used as User identifiers. "
 "References the ID from WordPress Users table (wp_users), MUST be defined as "
 "an integer on MySQL side."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1017
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1033
 msgid "Table tools"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1024
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1040
 msgid ""
 "If this is enabled, a toolbar with useful tools will be shown above the table"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1032
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1048
 msgid "Enable Table Tools"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1040
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1056
 msgid "Buttons"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1042
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1058
 msgid "Choose which buttons to show in the Table Tools block."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1048
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1064
 msgid "Columns visibility"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1061
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1068
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1077
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1084
 msgid "Include HTML"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1071
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1087
 msgid ""
 "If this is enabled, columns that contain HTML like (link, image, email, "
 "attachment or HTML) will be rendered as HTML in export files for CSV,Excel,"
 "Print and Copy export option."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1073
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1089
 msgid ""
 "NOTICE: Please note that in back-end it will be rendered settings buttons in "
 "headers as well, so please check this functionality on front-end."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1080
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1096
 msgid "Enable HTML in export files (CSV, Excel, Print and Copy)"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1091
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1107
 msgid "PDF Paper Size"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1093
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1109
 msgid "Choose between different paper sizes for the created PDF."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1098
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1114
 msgid "A3"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1099
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1115
 msgid "A4"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1100
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1116
 msgid "A5"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1101
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1117
 msgid "Legal"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1102
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1118
 msgid "Letter"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1103
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1119
 msgid "Tabloid"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1110
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1126
 msgid "Page orientation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1112
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1128
 msgid "Choose a paper orientation for the created PDF."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1117
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1133
 msgid "Portrait"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1118
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1134
 msgid "Landscape"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1143
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1159
 msgid ""
 "Placeholders can be understood as predefined ‘search and replace‘ templates; "
 "that will be replaced with some actual values at the execution time; usually "
@@ -6343,109 +6365,121 @@ msgid ""
 "Excel, CSV, Google Spreadsheet and PHP Serialized array."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1157
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1172
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1187
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1173
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1188
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1203
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1224
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1239
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1254
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1275
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1290
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1305
 msgid ""
 "This placeholder will be replaced with any value that you will provide in a "
 "shortcode. Provide a default value here that will be used for table "
 "generation and when a different one is not defined in the shortcode."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1162
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1177
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1192
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1215
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1233
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1251
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1273
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1291
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1309
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1334
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1354
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1373
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1395
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1178
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1193
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1208
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1229
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1244
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1259
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1280
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1295
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1310
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1333
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1351
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1369
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1391
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1409
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1427
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1452
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1472
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1491
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1513
 msgid "Default for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1208
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1326
 msgid ""
 "This placeholder will be replaced with the ID of currently logged in user. "
 "Provide a value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1225
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1343
 msgid ""
 "This placeholder will be replaced with the login of currently logged in "
 "user. Provide a value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1243
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1361
 msgid ""
 "This placeholder will be replaced with the Email of currently logged in "
 "user. Provide a value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1267
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1385
 msgid ""
 "This placeholder will be replaced with the ID of current post. Provide a "
 "value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1283
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1401
 msgid ""
 "This placeholder will be replaced with the First Name of currently logged in "
 "user. Provide a value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1301
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1419
 msgid ""
 "This placeholder will be replaced with the Last Name of currently logged in "
 "user. Provide a value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1325
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1443
 msgid "This placeholder will be replaced with current date."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1344
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1462
 msgid "This placeholder will be replaced with current datetime."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1364
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1482
 msgid "This placeholder will be replaced with current time."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1388
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1506
 msgid ""
 "This placeholder will be replaced with the current prefix of WordPress "
 "database. Provide a value here to be used for table generation"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1419
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1537
 msgid ""
 "In premium version you can customize each table with different skin, font, "
 "background , colors and lot more. Checkout new table customize settings "
 "below."
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1426
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1544
 msgid "Main"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1438
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1556
 msgid "Table border"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1454
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1572
 msgid "Custom CSS"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1779
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:1897
 msgid "Remove borders in table header"
 msgstr ""
 
-#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2091
+#: wpdatatables-lite/templates/admin/table-settings/table_settings_block.inc.php:2209
 msgid ""
 "This CSS will be inserted as an inline style block on every page that has "
 "this wpDataTable."
@@ -6462,12 +6496,6 @@ msgstr ""
 
 #: wpdatatables-lite/templates/admin/welcome_page/welcome_page.inc.php:51
 msgid "The Best Tables & Charts WordPress Plugin"
-msgstr ""
-
-#: wpdatatables-lite/templates/admin/welcome_page/welcome_page.inc.php:54
-msgid ""
-"wpDataTables is a best-selling WordPress table plugin which makes your work "
-"with tables, charts and data management easy. 60,000+ companies."
 msgstr ""
 
 #: wpdatatables-lite/templates/admin/welcome_page/welcome_page.inc.php:62

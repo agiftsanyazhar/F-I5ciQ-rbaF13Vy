@@ -13,7 +13,11 @@ var wpDataTablesGoogleChart = function () {
         googleDataTable: null,
         renderCallback: null,
         options: {
-            animation: 'none',
+            animation: {
+                duration: 1000,
+                easing: 'out',
+                startup: true
+            },
             backgroundColor: {
                 fill: '#FFFFFF',
                 strokeWidth: 0,
@@ -22,6 +26,9 @@ var wpDataTablesGoogleChart = function () {
             },
             chartArea: {
                 backgroundColor: {}
+
+            },
+            crosshair: {
 
             },
             curveType: 'none',
@@ -34,7 +41,7 @@ var wpDataTablesGoogleChart = function () {
             orientation: 'horizontal',
             titlePosition: 'out',
             tooltip: {
-                trigger: 'none'
+                trigger: 'focus'
             },
             vAxis: {
                 direction: 1,
@@ -105,6 +112,9 @@ var wpDataTablesGoogleChart = function () {
         },
         getType: function () {
             return this.type;
+        },
+        setGrouping: function( group_chart ){
+            this.group_chart = group_chart;
         },
         setContainer: function (containerId) {
             this.containerId = containerId;
@@ -211,7 +221,15 @@ var wpDataTablesGoogleChart = function () {
         setChartConfig: function (chartConfig) {
             // Chart
 
-            this.options.width = chartConfig.width;
+            if (chartConfig.responsive_width == 1) {
+                this.options.animation = false;
+                delete this.options.width;
+                jQuery(window).resize(function(){
+                    obj.chart.draw( obj.googleDataTable, obj.options );
+                });
+            } else {
+                this.options.width = chartConfig.width;
+            }
 
             chartConfig.height ? this.options.height = chartConfig.height : null;
             this.options.backgroundColor.fill = chartConfig.background_color;
@@ -252,9 +270,30 @@ var wpDataTablesGoogleChart = function () {
                 delete this.options.vAxis.gridlines;
             }
             chartConfig.horizontal_axis_label ? this.options.hAxis.title = chartConfig.horizontal_axis_label : null;
+            if (chartConfig.horizontal_axis_crosshair == 1 && chartConfig.vertical_axis_crosshair == 0) {
+                this.options.crosshair = {
+                    trigger: 'both',
+                    orientation: 'horizontal'
+                }
+            } else if (chartConfig.horizontal_axis_crosshair == 0 && chartConfig.vertical_axis_crosshair == 1) {
+                this.options.crosshair = {
+                    trigger: 'both',
+                    orientation: 'vertical'
+                }
+            } else if (chartConfig.horizontal_axis_crosshair == 1 && chartConfig.vertical_axis_crosshair == 1) {
+                this.options.crosshair = {
+                    trigger: 'both',
+                    orientation: 'both'
+                }
+            } else {
+                this.options.crosshair = {}
+            }
+            chartConfig.horizontal_axis_direction ? this.options.hAxis.direction = chartConfig.horizontal_axis_direction : null;
             chartConfig.vertical_axis_label ? this.options.vAxis.title = chartConfig.vertical_axis_label : null;
+            chartConfig.vertical_axis_direction ? this.options.vAxis.direction = chartConfig.vertical_axis_direction : null;
             this.options.vAxis.viewWindow.min = chartConfig.vertical_axis_min;
             this.options.vAxis.viewWindow.max= chartConfig.vertical_axis_max;
+            chartConfig.inverted == 1 ? this.options.orientation = 'vertical' : this.options.orientation = 'horizontal';
             // Title
             chartConfig.show_title == 1 ? this.options.title = chartConfig.chart_title : this.options.title = '';
             chartConfig.title_floating == 1 ? this.options.titlePosition = 'in' : this.options.titlePosition = 'out';

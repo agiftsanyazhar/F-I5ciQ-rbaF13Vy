@@ -222,10 +222,6 @@
         /**
          * Load current config on load
          */
-        wpdatatable_plugin_config.setSeparateConnection ( wdt_current_config.wdtUseSeparateCon == 1 ? 1 : 0 );
-
-
-
         wpdatatable_plugin_config.setLanguage           ( wdt_current_config.wdtInterfaceLanguage );
         wpdatatable_plugin_config.setDateFormat         ( wdt_current_config.wdtDateFormat );
         wpdatatable_plugin_config.setTablesAdmin        ( wdt_current_config.wdtTablesPerPage );
@@ -234,11 +230,9 @@
         wpdatatable_plugin_config.setNumberFormat       ( wdt_current_config.wdtNumberFormat );
         wpdatatable_plugin_config.setCSVDelimiter       ( wdt_current_config.wdtCSVDelimiter );
         wpdatatable_plugin_config.setSortingOrderBrowseTables( wdt_current_config.wdtSortingOrderBrowseTables );
-
-        
-
         wpdatatable_plugin_config.setDecimalPlaces      ( wdt_current_config.wdtDecimalPlaces );
-
+        wpdatatable_plugin_config.setTabletWidth(wdt_current_config.wdtTabletWidth);
+        wpdatatable_plugin_config.setMobileWidth(wdt_current_config.wdtMobileWidth);
         
 
         wpdatatable_plugin_config.setPurchaseCode       ( wdt_current_config.wdtPurchaseCode );

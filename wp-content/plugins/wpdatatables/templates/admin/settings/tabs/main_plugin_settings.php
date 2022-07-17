@@ -225,9 +225,8 @@
     <div class="row">
         <div class="col-sm-4 tablet-width">
             <h4 class="c-title-color m-b-2">
-                <i class="wpdt-icon-star-full" style="color: #FFC078;"></i>
-                <span class="opacity-6" ><?php esc_html_e('Tablet width', 'wpdatatables'); ?></span>
-                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                <?php esc_html_e('Tablet width', 'wpdatatables'); ?>
+                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                    title="<?php esc_attr_e('Here you can specify width of the screen (in pixels) that will be treated as a tablet. You can set it wider if you want responsive effect on desktops.', 'wpdatatables'); ?>"></i>
             </h4>
             <div class="form-group">
@@ -235,12 +234,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="fg-line wdt-custom-number-input">
-                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-minus wdt-lite-disabled"  data-type="minus" data-field="wdt-tablet-width">
+                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-minus" data-type="minus" data-field="wdt-tablet-width">
                                     <i class="wpdt-icon-minus"></i>
                                 </button>
-                                <input type="number" name="wdt-tablet-width" min="1" value="" data-toggle="html-input-premium-popover" data-placement="top" title="" data-content="content" placeholder="Set tablet width in px" class="form-control input-sm input-number" data-name="wdtTabletWidth"
-                                       id="wdt-tablet-width">
-                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-plus wdt-lite-disabled"  data-type="plus" data-field="wdt-tablet-width">
+                                <input type="number" name="wdt-tablet-width" placeholder="Set tablet width in px" min="0" value="" class="form-control input-sm input-number" id="wdt-tablet-width">
+                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-plus" data-type="plus" data-field="wdt-tablet-width">
                                     <i class="wpdt-icon-plus-full"></i>
                                 </button>
                             </div>
@@ -251,9 +249,8 @@
         </div>
         <div class="col-sm-4 mobile-width">
             <h4 class="c-title-color m-b-2">
-                <i class="wpdt-icon-star-full" style="color: #FFC078;"></i>
-                <span class="opacity-6" ><?php esc_html_e('Mobile width', 'wpdatatables'); ?></span>
-                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                <?php esc_html_e('Mobile width', 'wpdatatables'); ?>
+                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                    title="<?php esc_attr_e('Here you can specify width (in pixels) will be treated as a mobile..', 'wpdatatables'); ?>"></i>
             </h4>
             <div class="form-group">
@@ -261,12 +258,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="fg-line wdt-custom-number-input">
-                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-minus wdt-lite-disabled" data-type="minus" data-field="wdt-mobile-width">
+                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-minus" data-type="minus" data-field="wdt-mobile-width">
                                     <i class="wpdt-icon-minus"></i>
                                 </button>
-                                <input type="number" name="wdt-mobile-width" min="1" value="" data-toggle="html-input-premium-popover" data-placement="top" title="" data-content="content" placeholder="Set mobile width in px" class="form-control input-sm input-number" data-name="wdtMobileWidth"
-                                       id="wdt-mobile-width">
-                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-plus wdt-lite-disabled" data-type="plus" data-field="wdt-mobile-width">
+                                <input type="number" name="wdt-mobile-width" placeholder="Set mobile width in px" min="0" value="" class="form-control input-sm input-number" id="wdt-mobile-width">
+                                <button type="button" class="btn btn-default wdt-btn-number wdt-button-plus" data-type="plus" data-field="wdt-mobile-width">
                                     <i class="wpdt-icon-plus-full"></i>
                                 </button>
                             </div>

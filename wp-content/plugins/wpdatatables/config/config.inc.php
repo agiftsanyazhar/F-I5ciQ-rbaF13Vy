@@ -9,8 +9,14 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 
 // Current version
 
-define('WDT_CURRENT_VERSION', '2.1.34');
+define('WDT_CURRENT_VERSION', '2.1.35');
 
+// Number of active plugin installs for wpDataTables
+define('WDT_NUMBER_OF_ACTIVE_INSTALLS', '66,000+');
+// Number of active plugin installs for Amelia
+define('AMELIA_NUMBER_OF_ACTIVE_INSTALLS', '40,000+');
+// Number of appointments for Amelia
+define('AMELIA_NUMBER_OF_APPOINTMENTS', '500,000+');
 /**
  * Regular Expressions
  */

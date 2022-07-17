@@ -280,6 +280,7 @@ function wdtEditEnqueue() {
         wp_enqueue_style('wdt-handsontable-css', WDT_CSS_PATH . 'handsontable.full.min.css');
     }
     wp_enqueue_style('wdt-table-tools', WDT_CSS_PATH . 'TableTools.css');
+    wp_enqueue_style('wdt-datatables-responsive', WDT_CSS_PATH . 'datatables.responsive.css', array(), WDT_CURRENT_VERSION);
 
 
     wp_enqueue_style('wdt-dragula');
@@ -330,7 +331,7 @@ function wdtEditEnqueue() {
 
 
     wp_enqueue_script('wdt-wpdatatables', WDT_JS_PATH . 'wpdatatables/wpdatatables.js', array('jquery', 'wdt-datatables'), false, true);
-
+    wp_enqueue_script('wdt-responsive', WDT_JS_PATH . 'responsive/datatables.responsive.js', array(), WDT_CURRENT_VERSION, true);
 
 
     wp_enqueue_script('wdt-common');

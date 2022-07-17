@@ -274,6 +274,45 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td data-title="Features"><?php esc_html_e('Responsive tables', 'wpdatatables'); ?>
+                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW in Lite!', 'wpdatatables'); ?></span>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Features"><?php esc_html_e('Responsive charts', 'wpdatatables'); ?>
+                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW in Lite!', 'wpdatatables'); ?></span>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Features"><?php esc_html_e('Grouping data in Charts', 'wpdatatables'); ?>
+                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW in Lite!', 'wpdatatables'); ?></span>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td data-title="Features"><?php esc_html_e('Customize charts', 'wpdatatables'); ?>
                                     <hr>
                                 </td>
@@ -498,30 +537,6 @@
                             </tr>
                             <tr>
                                 <td data-title="Features"><?php esc_html_e('Follow table filtering in charts', 'wpdatatables'); ?>
-                                    <hr>
-                                </td>
-                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-minus"></i>
-                                    <hr>
-                                </td>
-                                <td data-title="Premium" class="text-center bg-blue"><i
-                                            class="wpdt-icon-check-full"></i>
-                                    <hr>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Features"><?php esc_html_e('Grouping data in Charts', 'wpdatatables'); ?>
-                                    <hr>
-                                </td>
-                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-minus"></i>
-                                    <hr>
-                                </td>
-                                <td data-title="Premium" class="text-center bg-blue"><i
-                                            class="wpdt-icon-check-full"></i>
-                                    <hr>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td data-title="Features"><?php esc_html_e('Responsive', 'wpdatatables'); ?>
                                     <hr>
                                 </td>
                                 <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-minus"></i>

@@ -27,8 +27,48 @@ var wdtRenderDataTable = null;
             // Parse the DataTable init options
             var dataTableOptions = tableDescription.dataTableParams;
 
-            
+            /**
+             * Responsive-mode related stuff
+             */
+            if (tableDescription.responsive) {
+                wpDataTablesResponsiveHelpers[tableDescription.tableId] = false;
+                dataTableOptions.preDrawCallback = function () {
+                    if (!wpDataTablesResponsiveHelpers[tableDescription.tableId]) {
+                        if (typeof tableDescription.mobileWidth !== 'undefined') {
+                            wdtBreakpointDefinition.phone = parseInt(tableDescription.mobileWidth);
+                        }
+                        if (typeof tableDescription.tabletWidth !== 'undefined') {
+                            wdtBreakpointDefinition.tablet = parseInt(tableDescription.tabletWidth);
+                        }
+                        wpDataTablesResponsiveHelpers[tableDescription.tableId] = new ResponsiveDatatablesHelper($(tableDescription.selector).dataTable(), wdtBreakpointDefinition, {
+                            clickOn: tableDescription.responsiveAction ? tableDescription.responsiveAction : 'icon'
+                        });
+                    }
+                    wdtAddOverlay('#' + tableDescription.tableId);
+                }
+                dataTableOptions.fnRowCallback = function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                    wpDataTablesResponsiveHelpers[tableDescription.tableId].createExpandIcon(nRow);
+                }
 
+                dataTableOptions.fnDrawCallback = function () {
+                    wpDataTablesResponsiveHelpers[tableDescription.tableId].respond();
+                    wdtRemoveOverlay('#' + tableDescription.tableId);
+                }
+
+            } else {
+                dataTableOptions.fnPreDrawCallback = function () {
+                    wdtAddOverlay('#' + tableDescription.tableId);
+                }
+            }
+
+            /**
+             * Remove overlay if the table is not responsive nor editable
+             */
+            if (!tableDescription.responsive) {
+                dataTableOptions.fnDrawCallback = function () {
+                    wdtRemoveOverlay('#' + tableDescription.tableId);
+                }
+            }
             /**
              * If aggregate functions shortcode exists on the page add that column to the ajax data
              */

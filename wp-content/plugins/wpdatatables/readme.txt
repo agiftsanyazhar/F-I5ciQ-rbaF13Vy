@@ -6,7 +6,7 @@ Tags: table, table builder, data tables, tables, charts, datatables, simple tabl
 Requires at least: 4.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 2.1.34
+Stable tag: 2.1.35
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,12 @@ Here is the list of the new functionality in those simple tables:
 
 [youtube https://www.youtube.com/watch?v=06QF0wNEf94]
 
+== Create Responsive Table very easy –
+
+Responsiveness is a feature that allows presenting the same content differently depending on the display size of device that is used to view it. In other words, the same website can be presented differently on a laptop, mobile phone or a tablet.
+Any wpDataTable can be responsive table, it doesn’t matter which data source do you use – CSV, JSON , Excel, or any other. In this WordPress responsive table plugin you can choose which columns do you want to be visible or hidden on tablets and/or mobiles. The hidden columns' data will be still available for the users that would like to see it in a dropdown; it will collapse under an expandable block in the first visible column. More about process of creating a responsive table in our docs [Responsive table in WordPress](https://wpdatatables.com/documentation/table-features/responsiveness/).
+Your tables will be 100% functional, and they will look great on all screen and devices.
+
 == Create WordPress table from Excel ==
 
 Microsoft Excel is a very powerful tool and one of the most efficient software for graphic-analytical and tabular data processing. It speeds up and make work in the workplace tables easier, easy to learn, easy to use and fast in displaying work results. It is awesome analysis spreadsheet for many business users. With wpDataTables, it’s even more powerful in WordPress environment. *.XLS* and *.XLSX* formats are also so common for storing data simpler, faster and more intuitive. wpDataTables is deeply integrated with Excel. In just a few clicks you can create awesome WordPress tables with search, sort, pagination, custom skins and lot more. Checkout more details in our documentation about [How to create WordPress tables from Excel files](https://wpdatatables.com/documentation/creating-wpdatatables/creating-wpdatatables-from-excel/) where you can find and video tutorials as well.
@@ -61,6 +67,18 @@ Learn [How to create WordPress tables from JSON](https://wpdatatables.com/docume
 == Develop dynamic WordPress table from Serialized PHP array ==
 
 For developer users, or users who are at least somewhat familiar with PHP language, that previous input data sources (Excel, CSV, XML of JSON) are not flexible enough for dynamic data presentation. We didn't want to limit your freedom in wpDataTables, so we implemented serialized PHP arrays as one of data sources, so you are able to create dynamic datatables. You can prepare data from some private or public API, or use WP Query to get data from your posts, get data by depending on some variables in the URL, or use some other complex logic. Learn how you can prepare a PHP file and [How to create WordPress tables based on serialized PHP arrays](https://wpdatatables.com/documentation/creating-wpdatatables/creating-wpdatatables-from-serialized-php-array/) in our docs.
+
+== Create Responsive Charts ==
+
+Responsive Charts in wpDataTables can be created with a step-by-step chart creation wizard in WordPress admin. On each step you can go back to change the settings with huge number of customization options. In the “Formatting and preview” step, you can see a live chart preview, so you can check if you’re satisfied with the look of the chart before saving it and inserting it to a WordPress post or page. More about chart wizard and chart customization options in our docs about [How to create responsive charts in WordPress](https://wpdatatables.com/documentation/wpdatacharts/creating-charts-wordpress-wpdatachart-wizard/).
+
+== Editing charts ==
+
+Editing charts with wpDataTables plugin is very easy – everything is done with the same wizard used to create them – the only difference is, the data is already prefilled. The editing steps are the same as the steps used to create the chart. More on link [Editing charts in WordPress](https://wpdatatables.com/documentation/wpdatacharts/editing-charts-in-wordpress/).
+
+== NEW! Grouping data in Charts ==
+
+Charts in wpDataTables have a very useful feature: grouping - the values of the rows with the same label will be summed up and rendered as a single series. It is quite easy to set the grouping for a chart with single option "Group chart" in chart wizard. More in our docs about [Grouping data in WordPress Charts](https://wpdatatables.com/documentation/wpdatacharts/grouping-in-charts/).
 
 wpDataTables allows creating 14 different chart types using the Google Charts rendering engine:
 
@@ -146,12 +164,11 @@ Please note some limitations compared to the Premium version of the wpDataTables
 2. Creating tables from the Google Spreadsheet files is not included.
 3. Create a datatables manually is not included.
 4. Server-side processing is not included.
-5. Responsive mode for the tables is not included.
-6. Table filters are not included.
-7. Front-end table editing is not included.
-8. Excel-like editing is not included.
-9. Advanced HighCharts and ApexCharts are not included.
-10. Table Constructor Wizard (step-by-step table generator) is not included.
+5. Table filters are not included.
+6. Front-end table editing is not included.
+7. Excel-like editing is not included.
+8. Advanced HighCharts and ApexCharts are not included.
+9. Table Constructor Wizard (step-by-step table generator) is not included.
 10. Customize options for each table are not included.
 11. Access to our premium support system is not included.
 
@@ -207,13 +224,11 @@ The major features of wpDataTables include but are not limited to:
 * Datatables
 * and all other cases or industries where data need to be shown as tabular or chart format.
 
-
 Additional useful features include:
 
 * [NEW! Customize options for each table](https://wpdatatables.com/documentation/table-features/customize-table/) – Now you can customize each table with different skin, font, background, colors and lot more.
 * [NEW! Create Tables via Google Spreadsheet API](https://wpdatatables.com/documentation/connect-wordpress-tables-with-google-sheets-api/) – Instant synchronization in wpDataTables after changes in Google sheets. Create tables from Private Google Spreadsheets.
 * [Multiple databases support](https://wpdatatables.com/documentation/general/configuration/#separate-connection) - wpDataTables is the only WordPress table plugin that can display the data from MySQL, MS SQL or PostgreSQL databases.
-* [Responsive Tables](https://wpdatatables.com/documentation/table-features/responsiveness/) – your WordPress tables will be 100% functional and they will look great on all screen and devices
 * [Huge Amount of Data](https://wpdatatables.com/documentation/creating-wpdatatables/creating-mysql-based-wpdatatables-with-server-side-processing/) – wpDataTables Premium can create huge tables (millions of rows) in a matter of minutes. All the operations will be handled by the MySQL server.
 * [Editable Tables](https://wpdatatables.com/documentation/front-end-editing/creating-editable-tables/) – you or any other WordPress user with access will be able to edit and/or adjust the published tables at any point
 * [Advanced Filters and Search](https://wpdatatables.com/documentation/table-features/advanced-filtering/)– you will be able to create individual filters that will help you narrow the search results in the table quickly and easily. You can also configure a cascade filter with the [Powerful Filters addon](https://wpdatatables.com/powerful-filtering/).
@@ -332,6 +347,15 @@ This can be changed from the “Number format” drop-down menu in the wpDataTab
 12. Google chart settings
 
 == Changelog ==
+
+= 2.1.35 =
+* Feature: Responsive datatables – now each datatable can be responsive where you can choose which columns do you want to be visible or hidden on tablets and/or mobiles.
+* Feature: Added options for responsive actions in datatables – icon, row or cell.
+* Feature: Responsive Charts – now each chart (both Google and Chartjs) can be responsive – just tick the “responsive” checkbox near the width input. Responsive chart will occupy 100% width of the container, instead of having fixed width, therefore always render correctly on any device types, and when you resize browser window.
+* Feature: Grouping Charts – rows with same labels would be treated as a single entry, summing up all the values in other cells.
+* Improvement: Enabled options in Google chart: Horizontal crosshair, Horizontal axis direction, Vertical crosshair, Vertical axis direction, Invert
+* BugFix: Fixed issue with PHP notice.
+Other small bug fixes and stability improvements.
 
 = 2.1.34 =
 * BugFix: Fixed issue with PHP warnings.

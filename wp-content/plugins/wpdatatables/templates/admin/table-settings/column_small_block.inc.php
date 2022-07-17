@@ -19,10 +19,10 @@
                     class="wpdt-icon-sort-alpha-up column-control wdt-toggle-show-sorting"></i></span>
         <span class="pull-right" data-toggle="tooltip" title="<?php esc_attr_e('Show/hide the column'); ?>"><i
                     class="wpdt-icon-eye-full column-control toggle-visibility"></i></span>
-        <span class="pull-right" data-toggle="html-input-premium-popover" data-placement="top" title="" data-content="content"><i
-                    class="wpdt-icon-mobile-android-alt column-control wdt-toggle-show-on-mobile" style="color: #FFC078;"></i></span>
-        <span class="pull-right" data-toggle="html-input-premium-popover" data-placement="top" title="" data-content="content"><i
-                    class="wpdt-icon-mobile-android-alt column-control wdt-toggle-show-on-tablet" style="color: #FFC078;"></i></span>
+        <span class="pull-right wdt-column-block-icon" data-toggle="tooltip" title="<?php esc_attr_e('Show/hide on mobile'); ?>"><i
+                    class="wpdt-icon-mobile-android-alt column-control wdt-toggle-show-on-mobile"></i></span>
+        <span class="pull-right wdt-column-block-icon" data-toggle="tooltip" title="<?php esc_attr_e('Show/hide on tablet'); ?>"><i
+                    class="wpdt-icon-mobile-android-alt column-control wdt-toggle-show-on-tablet"></i></span>
         <span class="pull-right" data-toggle="tooltip" title="<?php esc_attr_e('Open column settings'); ?>"><i
                     class="wpdt-icon-cog column-control open-settings"></i></span>
     </div>

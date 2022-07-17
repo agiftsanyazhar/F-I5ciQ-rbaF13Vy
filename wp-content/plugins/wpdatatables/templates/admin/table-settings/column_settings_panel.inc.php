@@ -173,32 +173,32 @@
 
                             <div class="col-sm-6">
                                 <h4 class="c-title-color m-b-2">
-                                    <span class="opacity-6"><?php esc_html_e('Hide on mobiles', 'wpdatatables'); ?></span>
-                                    <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                    <?php esc_html_e('Hide on mobiles', 'wpdatatables'); ?>
+                                    <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                        title="Disabling this will make the column collapse to an expandable block when table viewed from mobile devices."></i>
                                 </h4>
 
                                 <div class="form-group">
                                     <div class="toggle-switch" data-ts-color="blue">
-                                        <input id="wdt-hide-column-on-mobiles" type="checkbox" class="d-none wdt-premium-feature">
-                                        <label for="wdt-hide-column-on-mobiles" data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content"
-                                               class="ts-label"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i><span class="opacity-6"><?php esc_html_e('Collapse column on mobile devices', 'wpdatatables'); ?></span></label>
+                                        <input id="wdt-hide-column-on-mobiles" type="checkbox">
+                                        <label for="wdt-hide-column-on-mobiles"
+                                               class="ts-label"><?php esc_html_e('Collapse column on mobile devices', 'wpdatatables'); ?></label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <h4 class="c-title-color m-b-2">
-                                    <span class="opacity-6"> <?php esc_html_e('Hide on tablets', 'wpdatatables'); ?></span>
-                                    <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                    <?php esc_html_e('Hide on tablets', 'wpdatatables'); ?>
+                                    <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                        title="Disabling this will make the column collapse to an expandable block when table viewed from tablet devices."></i>
                                 </h4>
 
                                 <div class="form-group">
                                     <div class="toggle-switch" data-ts-color="blue">
-                                        <input id="wdt-hide-column-on-tablets" type="checkbox" class="d-none wdt-premium-feature">
-                                        <label for="wdt-hide-column-on-tablets" data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content"
-                                               class="ts-label"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i><span class="opacity-6"><?php esc_html_e('Collapse column on tablet devices', 'wpdatatables'); ?></span></label>
+                                        <input id="wdt-hide-column-on-tablets" type="checkbox">
+                                        <label for="wdt-hide-column-on-tablets"
+                                               class="ts-label"><?php esc_html_e('Collapse column on tablet devices', 'wpdatatables'); ?></label>
                                     </div>
                                 </div>
                             </div>

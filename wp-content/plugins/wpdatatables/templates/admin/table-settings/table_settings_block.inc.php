@@ -236,18 +236,18 @@
 
                         </div>
 
-                        <div class="col-sm-4 m-b-20 wdt-responsive-block">
+                        <div class="col-sm-4 m-b-16 wdt-responsive-block">
 
                             <h4 class="c-title-color m-b-2">
-                                <span class="opacity-5"><?php esc_html_e('Responsiveness', 'wpdatatables'); ?></span>
-                                <i class="wpdt-icon-info-circle-thin" data-popover-content="#table-responsive-hint"
+                                <?php esc_html_e('Responsiveness', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-popover-content="#table-responsive-hint"
                                    data-toggle="html-popover" data-trigger="hover" data-placement="right"></i>
                             </h4>
 
                             <!-- Hidden popover with image hint -->
                             <div class="hidden" id="table-responsive-hint">
                                 <div class="popover-heading">
-                                    <span class="opacity-5"><?php esc_html_e('Responsive design', 'wpdatatables'); ?></span>
+                                    <?php esc_html_e('Responsive design', 'wpdatatables'); ?>
                                 </div>
 
                                 <div class="popover-body">
@@ -261,12 +261,28 @@
                             <!-- /Hidden popover with image hint -->
 
                             <div class="toggle-switch" data-ts-color="blue">
-                                <input id="wdt-responsive" type="checkbox" class="d-none wdt-premium-feature">
-                                <label for="wdt-responsive" data-toggle="html-checkbox-premium-popover"
-                                       data-placement="top" title="title" data-content="content"
-                                       class="ts-label"><i class="wpdt-icon-star-full m-r-5"
-                                                           style="color: #FFC078;"></i><span
-                                            class="opacity-6"><?php esc_html_e('Allow collapsing on mobiles and tablets', 'wpdatatables'); ?></span></label>
+                                <input id="wdt-responsive" type="checkbox" checked="checked">
+                                <label for="wdt-responsive"
+                                       class="ts-label"><?php esc_html_e('Allow collapsing on mobiles and tablets', 'wpdatatables'); ?></label>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-4 m-b-16 responsive-action-block hidden">
+
+                            <h4 class="c-title-color m-b-2">
+                                <?php esc_html_e('Responsive action', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Choose between different options when responsive is turned on.', 'wpdatatables'); ?>"></i>
+                            </h4>
+
+                            <div class="select">
+                                <select class="form-control selectpicker"
+                                        id="wdt-responsive-action">
+                                    <option value="icon"><?php esc_html_e('Icon', 'wpdatatables'); ?></option>
+                                    <option value="cell"><?php esc_html_e('Cell', 'wpdatatables'); ?></option>
+                                    <option value="row"><?php esc_html_e('Row', 'wpdatatables'); ?></option>
+                                </select>
                             </div>
 
                         </div>

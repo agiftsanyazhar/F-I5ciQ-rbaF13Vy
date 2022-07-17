@@ -8,26 +8,6 @@ var wpDataTablesChartJS = function(){
         renderCallback: null,
         chart: null,
         pieCharts: ['chartjs_polar_area_chart', 'chartjs_pie_chart', 'chartjs_doughnut_chart'],
-        setContainer: function(container){
-            this.container = container;
-        },
-        setCanvas: function(canvas){
-            this.canvas = canvas;
-        },
-        setContainerOptions: function(options){
-            if(options.container.width == 0){
-                this.container.style.width = null;
-            } else {
-                this.container.style.width = options.container.width + 'px';
-            }
-            this.container.style.height = options.container.height + 'px';
-            this.canvas.style.backgroundColor = options.canvas.backgroundColor;
-            this.canvas.style.border = options.canvas.borderWidth + 'px solid ' + options.canvas.borderColor;
-            this.canvas.style.borderRadius = options.canvas.borderRadius + 'px';
-        },
-        setRenderCallback: function( callback ){
-            this.renderCallback = callback;
-        },
         globalOptions: {
 
         },
@@ -80,6 +60,26 @@ var wpDataTablesChartJS = function(){
                 },
                 maintainAspectRatio: false
             }
+        },
+        setContainer: function(container){
+            this.container = container;
+        },
+        setCanvas: function(canvas){
+            this.canvas = canvas;
+        },
+        setContainerOptions: function(options){
+            if(options.container.width == 0){
+                this.container.style.width = null;
+            } else {
+                this.container.style.width = options.container.width + 'px';
+            }
+            this.container.style.height = options.container.height + 'px';
+            this.canvas.style.backgroundColor = options.canvas.backgroundColor;
+            this.canvas.style.border = options.canvas.borderWidth + 'px solid ' + options.canvas.borderColor;
+            this.canvas.style.borderRadius = options.canvas.borderRadius + 'px';
+        },
+        setRenderCallback: function( callback ){
+            this.renderCallback = callback;
         },
         setOptions: function( options ){
             for( var property in options ){
@@ -154,8 +154,8 @@ var wpDataTablesChartJS = function(){
         setColumnIndexes: function( columnIndexes ){
             this.columnIndexes = columnIndexes;
         },
-        setConnectedWPDataTable: function( wpDataTable ){
-            this.connectedWPDataTable = wpDataTable;
+        setGrouping: function( group_chart ){
+            this.group_chart = group_chart;
         },
         setChartConfig: function(chartConfig) {
             // Chart

@@ -269,7 +269,13 @@ var wdtChartColumnsData = {};
 
                 // Set initial width for preview
                 if (constructedChartData.width == null) {
-                    constructedChartData.width = 400;
+                    if (typeof editing_chart_data !== 'undefined') {
+                        if (editing_chart_data.render_data.options.responsive_width != 1 && editing_chart_data.render_data.options.width == null) {
+                            constructedChartData.width = 400;
+                        }
+                    } else {
+                        constructedChartData.width = 400;
+                    }
                 }
 
                 $('#wdt-chart-row-range-type').change();
@@ -438,6 +444,11 @@ var wdtChartColumnsData = {};
                             .on('change', function () {
                                 renderChart(false);
                             });
+                        // Trigger chart grouping
+                        $('input#group-chart')
+                            .on('change', function () {
+                                renderChart(true);
+                            });
 
                         nextStepButton.show().addClass('wdt-save-chart').html('<i class="wpdt-icon-save"></i>' + wpdatatablesEditStrings.saveChart)
 
@@ -532,6 +543,7 @@ var wdtChartColumnsData = {};
     function getInputData() {
         //Chart
         constructedChartData.width = parseInt($('#chart-width').val());
+        constructedChartData.responsive_width = $('#chart-responsive-width').is(':checked') ? 1 : 0;
         constructedChartData.height = parseInt($('#chart-height').val());
         constructedChartData.group_chart = $('#group-chart').is(':checked') ? 1 : 0;
         constructedChartData.enable_animation = $('#enable-animation').is(':checked') ? 1 : 0;
@@ -743,6 +755,23 @@ var wdtChartColumnsData = {};
         }
     });
 
+    /**
+     * Responsive width checkbox
+     */
+    $('#chart-responsive-width').change(function (e) {
+        if ($(this).is(':checked')) {
+            $('#chart-width').val('0');
+            $('#btn-plus-chart-width').prop('disabled', true);
+            $('#btn-minus-chart-width').prop('disabled', true);
+            $('#chart-width').prop('readonly', 'readonly');
+        } else {
+            $('#btn-plus-chart-width').prop('disabled', false);
+            $('#btn-minus-chart-width').prop('disabled', false);
+            $('#chart-width').prop('readonly', '');
+            $('#chart-width').val('400');
+        }
+    });
+
 
     /**
      * Select all columns in the column selecter
@@ -906,6 +935,12 @@ var wdtChartColumnsData = {};
             }
             $('#chart-height').val(editing_chart_data.render_data.options.height);
 
+            // Grouping
+            if (editing_chart_data.render_data.group_chart) {
+                $('#group-chart').prop('checked', 'checked');
+            } else {
+                $('#group-chart').prop('checked', '');
+            }
 
             // Axes
             if (editing_chart_data.render_data.show_grid == null) {
@@ -990,12 +1025,50 @@ var wdtChartColumnsData = {};
                 }
 
                 // Axes
+                if (editing_chart_data.render_data.options.crosshair == null) {
+                    $('#horizontal-axis-crosshair').prop('checked', '');
+                    $('#vertical-axis-crosshair').prop('checked', '');
+                } else {
+                    if (editing_chart_data.render_data.options.crosshair.orientation == 'both') {
+                        $('#horizontal-axis-crosshair').prop('checked', 'checked');
+                        $('#vertical-axis-crosshair').prop('checked', 'checked');
+                    } else if (editing_chart_data.render_data.options.crosshair.orientation == 'horizontal') {
+                        $('#horizontal-axis-crosshair').prop('checked', 'checked');
+                        $('#vertical-axis-crosshair').prop('checked', '');
+                    } else if (editing_chart_data.render_data.options.crosshair.orientation == 'vertical') {
+                        $('#horizontal-axis-crosshair').prop('checked', '');
+                        $('#vertical-axis-crosshair').prop('checked', 'checked');
+                    }
+                }
+
+
+                if (editing_chart_data.render_data.options.hAxis.direction == null) {
+                    $('#horizontal-axis-direction').val(1);
+                } else {
+                    $('#horizontal-axis-direction').val(editing_chart_data.render_data.options.hAxis.direction);
+                }
+
+                if (editing_chart_data.render_data.options.vAxis.direction == null) {
+                    $('#vertical-axis-direction').val(1);
+                } else {
+                    $('#vertical-axis-direction').val(editing_chart_data.render_data.options.vAxis.direction);
+                }
+
+                // Axes
                 if (editing_chart_data.render_data.options.vAxis.viewWindow == null) {
                     $('#vertical-axis-min').val('');
                     $('#vertical-axis-max').val('');
                 } else {
                     $('#vertical-axis-min').val(editing_chart_data.render_data.options.vAxis.viewWindow.min);
                     $('#vertical-axis-max').val(editing_chart_data.render_data.options.vAxis.viewWindow.max);
+                }
+
+                if (editing_chart_data.render_data.options.orientation == null) {
+                    $('#inverted').prop('checked', '');
+                } else {
+                    if (editing_chart_data.render_data.options.orientation == 'vertical') {
+                        $('#inverted').prop('checked', 'checked');
+                    }
                 }
 
                 // Title

@@ -83,13 +83,13 @@
                     </div>
                     <div class="responsive-width">
                         <h4 class="c-title-color m-b-2">
-                            <span class="opacity-6"><?php _e('Responsive width', 'wpdatatables'); ?></span>
-                            <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                            <?php esc_html_e('Responsive width', 'wpdatatables'); ?>
+                            <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                title="<?php esc_attr_e('If you tick this chart width will always adjust to 100% width of the container', 'wpdatatables'); ?>"></i>
                         </h4>
-                        <div class="toggle-switch" data-ts-color="blue">
-                            <input id="chart-responsive-width" type="checkbox" class="d-none wdt-premium-feature">
-                            <label data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content" for="chart-responsive-width"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i> <span class="opacity-6"><?php _e('Responsive chart width', 'wpdatatables'); ?></span></label>
+                        <div class="toggle-switch p-b-16" data-ts-color="blue">
+                            <input id="chart-responsive-width" type="checkbox" checked>
+                            <label for="chart-responsive-width"><?php esc_html_e('Responsive chart width', 'wpdatatables'); ?></label>
                         </div>
                     </div>
                     <div class="chart-height">
@@ -119,13 +119,13 @@
                     </div>
                     <div class="group-chart">
                         <h4 class="c-title-color m-b-2">
-                            <span class="opacity-6"><?php _e('Group chart', 'wpdatatables'); ?></span>
-                            <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                            <?php esc_html_e('Group chart', 'wpdatatables'); ?>
+                            <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                title="<?php esc_attr_e('If you tick this checkbox, the values of the rows with same label will be summed up and rendered as a single series. If you leave it unticked all rows will be rendered as separate series.', 'wpdatatables'); ?>"></i>
                         </h4>
-                        <div class="toggle-switch" data-ts-color="blue">
-                            <input id="group-chart" type="checkbox" class="d-none wdt-premium-feature">
-                            <label data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content" for="group-chart"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i> <span class="opacity-6"><?php _e('Enable grouping', 'wpdatatables'); ?></span></label>
+                        <div class="toggle-switch p-b-16" data-ts-color="blue">
+                            <input id="group-chart" type="checkbox" class="doNotTriggerChange">
+                            <label for="group-chart"><?php esc_html_e('Enable grouping', 'wpdatatables'); ?></label>
                         </div>
                     </div>
                     <div class="background-color-container" id="background-color-container">
@@ -403,30 +403,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="google"  id="horizontal-axis-crosshair-row">
+                        <div class="google" id="horizontal-axis-crosshair-row">
                             <h4 class="c-title-color m-b-2">
-                                <span class="opacity-6"><?php _e('Horizontal crosshair', 'wpdatatables'); ?></span>
-                                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                <?php esc_html_e('Horizontal crosshair', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                    title="<?php esc_attr_e('Configure a horizontal crosshair that follows either the mouse pointer or the hovered point lines', 'wpdatatables'); ?>"></i>
                             </h4>
-                            <div class="toggle-switch" data-ts-color="blue">
-                                <input id="horizontal-axis-crosshair" type="checkbox" class="d-none wdt-premium-feature">
-                                <label data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content" for="horizontal-axis-crosshair"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i> <span class="opacity-6"><?php _e('Show x-Axis crosshair', 'wpdatatables'); ?></span></label>
+                            <div class="toggle-switch p-b-16" data-ts-color="blue">
+                                <input id="horizontal-axis-crosshair" type="checkbox">
+                                <label for="horizontal-axis-crosshair"><?php esc_html_e('Show x-Axis crosshair', 'wpdatatables'); ?></label>
                             </div>
                         </div>
                         <div class="google" id="horizontal-axis-direction-row">
                             <h4 class="c-title-color m-b-2">
-                                <span class="opacity-6" ><?php _e('Horizontal axis direction', 'wpdatatables'); ?></span>
-                                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                <?php esc_html_e('Horizontal axis direction', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                    title="<?php esc_attr_e('The direction in which the values along the horizontal axis grow. Specify -1 to reverse the order of the values', 'wpdatatables'); ?>"></i>
                             </h4>
                             <div class="form-group">
                                 <div class="fg-line">
                                     <div class="select">
-                                        <select class="selectpicker" name="horizontal-axis-direction" data-toggle="html-premium-popover" data-placement="top" title="title" data-content="content"
+                                        <select class="selectpicker" name="horizontal-axis-direction"
                                                 id="horizontal-axis-direction">
-                                            <option selected="selected" value="1" data-content="<i class='wpdt-icon-star-full m-r-5' style='color: #FFC078;'></i> <span class='opacity-6'>1</span>"></option>
-                                            <option value="-1" data-content="<i class='wpdt-icon-star-full m-r-5' style='color: #FFC078;'></i> <span class='opacity-6'>-1</span>"></option>
+                                            <option selected="selected" value="1">1</option>
+                                            <option value="-1">-1</option>
                                         </select>
                                     </div>
                                 </div>
@@ -449,30 +449,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="google"  id="vertical-axis-crosshair-row">
+                        <div class="google" id="vertical-axis-crosshair-row">
                             <h4 class="c-title-color m-b-2">
-                                <span class="opacity-6"><?php _e('Vertical crosshair', 'wpdatatables'); ?></span>
-                                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                <?php esc_html_e('Vertical crosshair', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                    title="<?php esc_attr_e('Configure a vertical crosshair that follows either the mouse pointer or the hovered point lines', 'wpdatatables'); ?>"></i>
                             </h4>
-                            <div class="toggle-switch" data-ts-color="blue">
-                                <input id="vertical-axis-crosshair" type="checkbox" class="d-none wdt-lite-disabled">
-                                <label data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content" for="vertical-axis-crosshair"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i><span class="opacity-6"><?php _e('Show y-Axis crosshair', 'wpdatatables'); ?></span></label>
+                            <div class="toggle-switch p-b-16" data-ts-color="blue">
+                                <input id="vertical-axis-crosshair" type="checkbox">
+                                <label for="vertical-axis-crosshair"><?php esc_html_e('Show y-Axis crosshair', 'wpdatatables'); ?></label>
                             </div>
                         </div>
                         <div class="google" id="vertical-axis-direction-row">
                             <h4 class="c-title-color m-b-2">
-                                <span class="opacity-6" ><?php _e('Vertical axis direction', 'wpdatatables'); ?></span>
-                                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                <?php esc_html_e('Vertical axis direction', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                    title="<?php esc_attr_e('The direction in which the values along the vertical axis grow. Specify -1 to reverse the order of the values', 'wpdatatables'); ?>"></i>
                             </h4>
                             <div class="form-group">
                                 <div class="fg-line">
                                     <div class="select">
-                                        <select class="selectpicker" name="vertical-axis-direction" data-toggle="html-premium-popover" data-placement="top" title="title" data-content="content"
+                                        <select class="selectpicker" name="vertical-axis-direction"
                                                 id="vertical-axis-direction">
-                                            <option selected="selected" value="1" data-content="<i class='wpdt-icon-star-full m-r-5' style='color: #FFC078;'></i> <span class='opacity-6'>1</span>"></option>
-                                            <option value="-1" data-content="<i class='wpdt-icon-star-full m-r-5' style='color: #FFC078;'></i> <span class='opacity-6'>-1</span>"></option>
+                                            <option selected="selected" value="1">1</option>
+                                            <option value="-1">-1</option>
                                         </select>
                                     </div>
                                 </div>
@@ -528,15 +528,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="google"  id="inverted-row">
+                        <div class="google" id="inverted-row">
                             <h4 class="c-title-color m-b-2">
-                                <span class="opacity-6"> <?php esc_html_e('Invert', 'wpdatatables'); ?></span>
-                                <i class="wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                <?php esc_html_e('Invert', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
                                    title="<?php esc_attr_e('Whether to invert the axes so that the x axis is vertical and y axis is horizontal', 'wpdatatables'); ?>"></i>
                             </h4>
-                            <div class="toggle-switch" data-ts-color="blue">
-                                <input id="inverted" type="checkbox" class="d-none wdt-premium-feature">
-                                <label data-toggle="html-checkbox-premium-popover" data-placement="top" title="title" data-content="content" for="inverted"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i><span class="opacity-6"><?php _e('Invert chart axes', 'wpdatatables'); ?></span></label>
+                            <div class="toggle-switch p-b-16" data-ts-color="blue">
+                                <input id="inverted" type="checkbox">
+                                <label for="inverted"><?php esc_html_e('Invert chart axes', 'wpdatatables'); ?></label>
                             </div>
                         </div>
                     </div>

@@ -1485,3 +1485,24 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/enigma_backend.php on line 9
+[06-Jul-2022 15:15:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/shortcodes.php:77
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/shortcodes.php on line 77
+[07-Jul-2022 05:57:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/options_panel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/options_panel.php on line 8
+[08-Jul-2022 15:16:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer.php on line 9
+[10-Jul-2022 04:56:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_init.php(8): require_once()
+#1 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[10-Jul-2022 20:27:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/listener.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/listener.php on line 7

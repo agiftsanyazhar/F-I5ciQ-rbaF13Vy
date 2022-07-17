@@ -18,7 +18,9 @@ class WPDataChart
     private $_wpdatatable = NULL;
     // Chart
     private $_width = 400;
+    private $_responsiveWidth = false;
     private $_height = 400;
+    private $_group_chart = false;
     private $_background_color = '#FFFFFF';
     private $_border_width = 0;
     private $_border_color = '#4572A7';
@@ -46,6 +48,11 @@ class WPDataChart
     );
     private $_vertical_axis_min;
     private $_vertical_axis_max;
+    private $_horizontal_axis_crosshair = false;
+    private $_horizontal_axis_direction = 1;
+    private $_vertical_axis_crosshair = false;
+    private $_vertical_axis_direction = 1;
+    private $_inverted = false;
     // Title
     private $_title = '';
     private $_show_title = true;
@@ -98,6 +105,16 @@ class WPDataChart
         return $this->_width;
     }
 
+    public function isResponsiveWidth() {
+        return $this->_responsiveWidth;
+    }
+
+    /**
+     * @param boolean $responsiveWidth
+     */
+    public function setResponsiveWidth($responsiveWidth) {
+        $this->_responsiveWidth = $responsiveWidth;
+    }
 
     public function setHeight($height)
     {
@@ -107,6 +124,20 @@ class WPDataChart
     public function getHeight()
     {
         return $this->_height;
+    }
+
+    /**
+     * @param boolean $group_chart
+     */
+    public function setGroupChart($group_chart) {
+        $this->_group_chart = $group_chart;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isGroupChart() {
+        return $this->_group_chart;
     }
 
 
@@ -363,6 +394,34 @@ class WPDataChart
     }
 
     /**
+     * @param boolean $horizontal_axis_crosshair
+     */
+    public function setHorizontalAxisCrosshair($horizontal_axis_crosshair) {
+        $this->_horizontal_axis_crosshair = (bool)$horizontal_axis_crosshair;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isHorizontalAxisCrosshair() {
+        return $this->_horizontal_axis_crosshair;
+    }
+
+    /**
+     * @param int $horizontal_axis_direction
+     */
+    public function setHorizontalAxisDirection($horizontal_axis_direction) {
+        $this->_horizontal_axis_direction = $horizontal_axis_direction;
+    }
+
+    /**
+     * @return int
+     */
+    public function getHorizontalAxisDirection() {
+        return $this->_horizontal_axis_direction;
+    }
+
+    /**
      * @param mixed $vertical_axis_min
      */
     public function setVerticalAxisMin($vertical_axis_min) {
@@ -388,6 +447,48 @@ class WPDataChart
      */
     public function getVerticalAxisMax() {
         return $this->_vertical_axis_max;
+    }
+
+    /**
+     * @param boolean $vertical_axis_crosshair
+     */
+    public function setVerticalAxisCrosshair($vertical_axis_crosshair) {
+        $this->_vertical_axis_crosshair = (bool)$vertical_axis_crosshair;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isVerticalAxisCrosshair() {
+        return $this->_vertical_axis_crosshair;
+    }
+
+    /**
+     * @param int $vertical_axis_direction
+     */
+    public function setVerticalAxisDirection($vertical_axis_direction) {
+        $this->_vertical_axis_direction = $vertical_axis_direction;
+    }
+
+    /**
+     * @return int
+     */
+    public function getVerticalAxisDirection() {
+        return $this->_vertical_axis_direction;
+    }
+
+    /**
+     * @param $inverted
+     */
+    public function setInverted($inverted) {
+        $this->_inverted = (bool)$inverted;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isInverted() {
+        return $this->_inverted;
     }
 
     // Title
@@ -751,7 +852,9 @@ class WPDataChart
         // Render data (step 4 or chart constructor)
         // Chart
         $chartObj->setWidth((int)WDTTools::defineDefaultValue($constructedChartData, 'width', 0));
+        $chartObj->setResponsiveWidth((bool)WDTTools::defineDefaultValue($constructedChartData, 'responsive_width', 0));
         $chartObj->setHeight((int)WDTTools::defineDefaultValue($constructedChartData, 'height', 400));
+        $chartObj->setGroupChart(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'group_chart', false)));
         $chartObj->setBackgroundColor(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'background_color', '#FFFFFF')));
         $chartObj->setBorderWidth(WDTTools::defineDefaultValue($constructedChartData, 'border_width', 0));
         $chartObj->setBorderColor(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'border_color', '#FFFFFF')));
@@ -784,7 +887,11 @@ class WPDataChart
         $chartObj->setMinorAxisLabel(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'vertical_axis_label', '')));
         $chartObj->setVerticalAxisMin(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'vertical_axis_min', '')));
         $chartObj->setVerticalAxisMax(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'vertical_axis_max', '')));
-
+        $chartObj->setHorizontalAxisCrosshair(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'horizontal_axis_crosshair', false)));
+        $chartObj->setHorizontalAxisDirection(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'horizontal_axis_direction', 1)));
+        $chartObj->setVerticalAxisCrosshair(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'vertical_axis_crosshair', false)));
+        $chartObj->setVerticalAxisDirection(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'vertical_axis_direction', 1)));
+        $chartObj->setInverted(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'inverted', false)));
 
         // Title
         $chartObj->setShowTitle(sanitize_text_field(WDTTools::defineDefaultValue($constructedChartData, 'show_title', true)));
@@ -904,6 +1011,11 @@ class WPDataChart
             );
         }
 
+        if ($this->isResponsiveWidth()) {
+            unset($this->_render_data['options']['width']);
+            $this->_render_data['options']['responsive_width'] = 1;
+        }
+
 
         $this->_type_counters = array(
             'date' => 0,
@@ -947,6 +1059,13 @@ class WPDataChart
             }
         }
 
+        // Group chart data
+        if ($this->isGroupChart()) {
+            $this->_render_data['group_chart'] = true;
+        } else {
+            $this->_render_data['group_chart'] = false;
+        }
+
 
         // Define grid settings
         if (!$this->_show_grid) {
@@ -981,8 +1100,47 @@ class WPDataChart
 
     }
 
+    public function groupData() {
+        if (isset($this->_render_data['group_chart'])) {
+            if ($this->isGroupChart() || $this->_render_data['group_chart'] == true) {
+                $output = array();
+                foreach ($this->_render_data['rows'] as $row) {
+                    if (!empty($output)) {
+                        $value_key = 'none';
+                        foreach ($output as $key => $value) {
+                            if ($value_key === 'none') {
+                                if ($value[0] == $row[0]) {
+                                    $value_key = $key;
+                                }
+                            }
+                        }
+                        if ($value_key === 'none') {
+                            $output[] = $row;
+                        } else {
+                            for ($n = 1; $n <= count($row) - 1; $n++) {
+                                $output[$value_key][$n] += $row[$n];
+                            }
+                        }
+                    } else {
+                        $output[] = $row;
+                    }
+                }
+                $this->_group_chart = 1;
+                $this->_render_data['rows'] = $output;
+            } else {
+                $this->_group_chart = 0;
+            }
+        } else {
+            $this->_group_chart = 0;
+        }
+
+    }
+
     public function prepareGoogleChartsRender() {
         // Chart
+        if (!$this->isResponsiveWidth()) {
+            $this->_render_data['width'] = $this->getWidth();
+        }
         $this->_render_data['width'] = $this->getWidth();
         $this->_render_data['options']['backgroundColor']['fill'] = $this->getBackgroundColor();
         $this->_render_data['options']['backgroundColor']['strokeWidth'] = $this->getBorderWidth();
@@ -1007,8 +1165,28 @@ class WPDataChart
         }
 
         // Axes
+        if ($this->isHorizontalAxisCrosshair() && !$this->isVerticalAxisCrosshair()) {
+            $this->_render_data['options']['crosshair']['trigger'] = 'both';
+            $this->_render_data['options']['crosshair']['orientation'] = 'horizontal';
+        } elseif (!$this->isHorizontalAxisCrosshair() && $this->isVerticalAxisCrosshair()) {
+            $this->_render_data['options']['crosshair']['trigger'] = 'both';
+            $this->_render_data['options']['crosshair']['orientation'] = 'vertical';
+        } elseif ($this->isHorizontalAxisCrosshair() && $this->isVerticalAxisCrosshair()) {
+            $this->_render_data['options']['crosshair']['trigger'] = 'both';
+            $this->_render_data['options']['crosshair']['orientation'] = 'both';
+        } else {
+            $this->_render_data['options']['crosshair']['trigger'] = '';
+            $this->_render_data['options']['crosshair']['orientation'] = '';
+        }
+        $this->_render_data['options']['hAxis']['direction'] = $this->getHorizontalAxisDirection();
+        $this->_render_data['options']['vAxis']['direction'] = $this->getVerticalAxisDirection();
         $this->_render_data['options']['vAxis']['viewWindow']['min'] = $this->getVerticalAxisMin();
         $this->_render_data['options']['vAxis']['viewWindow']['max'] = $this->getVerticalAxisMax();
+        if ($this->isInverted()) {
+            $this->_render_data['options']['orientation'] = 'vertical';
+        } else {
+            $this->_render_data['options']['orientation'] = 'horizontal';
+        }
 
         // Title
         if ($this->isTitleFloating()) {
@@ -1169,7 +1347,13 @@ class WPDataChart
         // Chart
         $this->_chartjs_render_data['configurations']['type'] = $this->getType();
         $this->_chartjs_render_data['configurations']['container']['height'] = $this->getHeight();
-        $this->_chartjs_render_data['configurations']['container']['width'] = $this->getWidth();
+        if ($this->isResponsiveWidth()) {
+            $this->_chartjs_render_data['configurations']['container']['width'] = 0;
+            $this->_chartjs_render_data['options']['options']['maintainAspectRatio'] = true;
+        } else {
+            $this->_chartjs_render_data['configurations']['container']['width'] = $this->getWidth();
+            $this->_chartjs_render_data['options']['options']['maintainAspectRatio'] = false;
+        }
         $this->_chartjs_render_data['options']['options']['maintainAspectRatio'] = false;
         $this->_chartjs_render_data['configurations']['canvas']['backgroundColor'] = $this->getBackgroundColor();
         $this->_chartjs_render_data['configurations']['canvas']['borderWidth'] = $this->getBorderWidth();
@@ -1438,6 +1622,7 @@ class WPDataChart
     public function returnGoogleChartData()
     {
         $this->prepareData();
+        $this->groupData();
         $this->shiftStringColumnUp();
         $this->prepareGoogleChartsRender();
         return $this->_render_data;
@@ -1445,6 +1630,7 @@ class WPDataChart
 
     public function returnChartJSData() {
         $this->prepareData();
+        $this->groupData();
         $this->shiftStringColumnUp();
         $this->prepareChartJSRender();
         return $this->_chartjs_render_data;
@@ -1590,6 +1776,7 @@ class WPDataChart
         $this->setRowRange($renderData['row_range']);
         $this->setShowGrid(isset($renderData['show_grid']) ? $renderData['show_grid'] : false);
         $this->setShowTitle(isset($renderData['show_title']) ? $renderData['show_title'] : false);
+        $this->setResponsiveWidth(isset($renderData['render_data']['options']['responsive_width']) ? (bool)$renderData['render_data']['options']['responsive_width'] : false);
         if (!empty($renderData['render_data']['options']['width'])) {
             $this->setWidth($renderData['render_data']['options']['width']);
         }
@@ -1611,8 +1798,25 @@ class WPDataChart
             }
 
             // Axes
+            if ($this->isHorizontalAxisCrosshair() && !$this->isVerticalAxisCrosshair()) {
+                $renderData['render_data']['options']['crosshair']['trigger'] = 'both';
+                $renderData['render_data']['options']['crosshair']['orientation'] = 'horizontal';
+            } elseif (!$this->isHorizontalAxisCrosshair() && $this->isVerticalAxisCrosshair()) {
+                $renderData['render_data']['options']['crosshair']['trigger'] = 'both';
+                $renderData['render_data']['options']['crosshair']['orientation'] = 'vertical';
+            } elseif ($this->isHorizontalAxisCrosshair() && $this->isVerticalAxisCrosshair()) {
+                $renderData['render_data']['options']['crosshair']['trigger'] = 'both';
+                $renderData['render_data']['options']['crosshair']['orientation'] = 'both';
+            }
+            $this->setHorizontalAxisDirection($renderData['render_data']['options']['hAxis']);
+            $this->setVerticalAxisDirection($renderData['render_data']['options']['vAxis']);
             $this->setVerticalAxisMin(isset($renderData['render_data']['options']['vAxis']['viewWindow']['min']));
             $this->setVerticalAxisMax(isset($renderData['render_data']['options']['vAxis']['viewWindow']['max']));
+            if ($this->isInverted()) {
+                $renderData['render_data']['options']['orientation'] = 'vertical';
+            } else {
+                $renderData['render_data']['options']['orientation'] = 'horizontal';
+            }
 
             // Title
             if ($this->isTitleFloating()) {
@@ -1684,6 +1888,8 @@ class WPDataChart
         $minified_js = get_option('wdtMinifiedJs');
 
         $this->prepareData();
+
+        $this->groupData();
 
         $this->shiftStringColumnUp();
 
