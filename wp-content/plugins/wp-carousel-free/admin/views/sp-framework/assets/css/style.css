@@ -986,7 +986,25 @@
 	border-top-right-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
 }
-
+.wpcf-field-dimensions_advanced.wpcp_carousel_row_pro_only{
+	pointer-events: none;
+	opacity: .7;
+}
+.wpcf-field-dimensions_advanced.wpcp_carousel_row_pro_only .wpcf-fieldset .wpcf--inputs {
+	position: relative;
+}
+.wpcf-field-dimensions_advanced.wpcp_carousel_row_pro_only .wpcf-fieldset .wpcf--inputs::after {
+	position: absolute;
+    content: "PRO";
+    background-color: #d4d4d4;
+    padding: 2px 4px;
+    font-size: 8px;
+    border-radius: 2px;
+    height: 11px;
+    margin-left: 5px;
+    margin-top: 7px;
+    right: -20px;
+}
 /**
  * 03. 06. Field: button_set
  */

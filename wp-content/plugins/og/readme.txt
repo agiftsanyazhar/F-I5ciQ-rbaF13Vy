@@ -4,7 +4,7 @@ Donate link: https://ko-fi.com/iworks?utm_source=og&utm_medium=readme-donate
 Tags: OpenGraph, Open Graph, social, share, Facebook, meta, graph API, Twitter, social share, share links, meta headers, Pinterest
 Requires at least: 5.0
 Tested up to: 6.0
-Stable tag: 3.1.5
+Stable tag: 3.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,6 +126,9 @@ You can use [Simple SEO Improvements](https://wordpress.org/plugins/simple-seo-i
 Rich filters implementation allows to change almost every output of this plugin, but this is for technicians: learn more on [OG Plugin Documentation Site](http://og.iworks.pl/).
 
 == Changelog ==
+
+= 3.1.6 (2022-08-05) =
+* Removed post data if it is password protected entry (content, taxonomies). Props for cris.
 
 = 3.1.5 (2022-06-23) =
 * Added integration with plugin [Twitter](https://wordpress.org/plugins/twitter/) to use data from this plugin: `twitter:site`, `twitter:widgets` and single content settings.

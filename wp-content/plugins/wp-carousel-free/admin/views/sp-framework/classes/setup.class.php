@@ -347,6 +347,7 @@ if ( ! class_exists( 'SP_WPCF' ) ) {
 					'color',
 					'color_group',
 					'custom_import',
+					'dimensions_advanced',
 					'column',
 					'gallery',
 					'heading',

@@ -2326,11 +2326,20 @@
       $export_type = $(this).find('input:checked').val();
     });
 
+    // Check If the string is a valid JSON string.
+    function isValidJSONString(str) {
+      try {
+        JSON.parse(str);
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }
+
     $('.wpcp_export .wpcf--button').click(function (event) {
       event.preventDefault();
 
       var $shortcode_ids = $('.wpcp_post_ids select').val();
-      console.log($shortcode_ids);
       var $ex_nonce = $('#wpcf_options_noncesp_wpcf_tools').val();
       var selected_shortcode = $export_type === 'selected_shortcodes' ? $shortcode_ids : 'all_shortcodes';
       if ($export_type === 'all_shortcodes' || $export_type === 'selected_shortcodes') {
@@ -2348,10 +2357,14 @@
       $.post(ajaxurl, data, function (resp) {
         if (resp) {
           // Convert JSON Array to string.
-          var json = JSON.stringify(resp);
+          if (isValidJSONString(resp)) {
+            var json = JSON.stringify(JSON.parse(resp));
+          } else {
+            var json = JSON.stringify(resp);
+          }
+
           // Convert JSON string to BLOB.
-          json = [json];
-          var blob = new Blob(json);
+		  var blob = new Blob([json], { type: 'application/json' });
           var link = document.createElement('a');
           var wpcp_time = $.now();
           link.href = window.URL.createObjectURL(blob);
@@ -2371,6 +2384,7 @@
     $('.wpcp_import button.import').click(function (event) {
       event.preventDefault();
       var wpcp_shortcodes = $('#import').prop('files')[0];
+      console.log(wpcp_shortcodes);
       if ($('#import').val() != '') {
         var $im_nonce = $('#wpcf_options_noncesp_wpcf_tools').val();
         var reader = new FileReader();

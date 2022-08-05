@@ -125,7 +125,8 @@ if ( ! class_exists( 'SP_WPCF_Field_image_sizes' ) ) {
 							echo '<option value="' . esc_attr( $option_key ) . '" ' . esc_attr( $selected ) . '>' . esc_html( $option ) . '</option>';
 						}
 					}
-					echo '<option disabled value="custom">Set custom size (Pro)</option>';
+					$custom_selected = ( in_array( 'custom', $this->value, true ) ) ? ' selected' : '';
+					echo '<option ' . esc_attr( $custom_selected ) . ' value="custom">Set custom size</option>';
 
 					echo '</select>';
 

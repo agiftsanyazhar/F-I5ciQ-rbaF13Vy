@@ -111,12 +111,19 @@ function wdtAdminMenu()
         'wpdatatables-welcome-page',
         'wdtWelcomePAge'
     );
+//    add_submenu_page(
+//        'wpdatatables-dashboard',
+//        __('Go Premium', 'wpdatatables'),
+//        '<span class="dashicons dashicons-star-filled" style="color: #ff8c00"></span><span id="wpdatatables-lite-go-premium-link" style="color: #ff8c00;font-weight: 500;display: inline-block;margin-left: 5px;margin-top: 2px;">' . __('Go Premium', 'wpdatatables') . '</span>',
+//        'manage_options',
+//        'https://wpdatatables.com/pricing/?utm_source=lite&utm_medium=plugin&utm_campaign=wpdtlite'
+//    );
     add_submenu_page(
         'wpdatatables-dashboard',
         __('Go Premium', 'wpdatatables'),
         '<span class="dashicons dashicons-star-filled" style="color: #ff8c00"></span><span id="wpdatatables-lite-go-premium-link" style="color: #ff8c00;font-weight: 500;display: inline-block;margin-left: 5px;margin-top: 2px;">' . __('Go Premium', 'wpdatatables') . '</span>',
         'manage_options',
-        'https://wpdatatables.com/pricing/?utm_source=lite&utm_medium=plugin&utm_campaign=wpdtlite'
+        'wpdatatables-lite-vs-premium'
     );
 
 }
@@ -179,12 +186,6 @@ function wdtAdminEnqueue($hook) {
     wp_register_script('wdt-doc-js', WDT_JS_PATH . 'wpdatatables/admin/doc.js', array('jquery', 'wdt-common'), false, true);
 
     wp_enqueue_style('wdt-admin', WDT_CSS_PATH . 'admin/admin.css');
-    wp_enqueue_style('tms-store-checkout', WDT_STORE_URL . '/static/css/checkout/checkout.css');
-    wp_enqueue_style('tms-store-wpdatatables', WDT_STORE_URL . '/static/css/checkout/wpdatatables.css');
-
-    wp_enqueue_script('tms-store-checkout-config', WDT_STORE_URL . '/static/js/checkout/config.js', array('jquery'), 1.12, true);
-    wp_enqueue_script('tms-store-checkout', WDT_STORE_URL . '/static/js/checkout/checkout.js', array('jquery'), 1.12, true);
-    wp_enqueue_script('tms-store-checkout-wpdatatables', WDT_STORE_URL . '/static/js/checkout/wpdatatables.js', array('jquery'), 1.12, true);
 
     wp_enqueue_script('wdt-rating', WDT_JS_PATH . 'wpdatatables/admin/wdtRating.js', array('jquery'), 1.12, true);
 
@@ -456,6 +457,7 @@ function wdtSettingsEnqueue() {
  */
 function wdtDashboardEnqueue()
 {
+    wdtStoreEnqueue();
     WDTTools::wdtUIKitEnqueue();
     wp_enqueue_style('wdt-dashboard-css', WDT_CSS_PATH . 'admin/dashboard.css', array(), WDT_CURRENT_VERSION);
     wp_enqueue_script('wdt-common');
@@ -516,6 +518,7 @@ function wdtSystemInfoEnqueue()
  */
 function wdtLiteVSPremiumEnqueue()
 {
+    wdtStoreEnqueue();
     WDTTools::wdtUIKitEnqueue();
     wp_enqueue_style('wdt-lite-vs-premium-css', WDT_CSS_PATH . 'admin/lite-vs-premium.css', array(), WDT_CURRENT_VERSION);
     wp_enqueue_script('wdt-common');
@@ -533,6 +536,19 @@ function wdtAddOnsEnqueue() {
     wp_enqueue_script('wdt-common');
     wp_enqueue_script('wdt-doc-js');
 
+}
+
+/**
+ * Enqueue JS and CSS from store
+ */
+function wdtStoreEnqueue() {
+    //Enqueue JS and CSS from store for promo
+    wp_enqueue_style('tms-store-checkout', WDT_STORE_URL . '/static/css/checkout/checkout.css');
+    wp_enqueue_style('tms-store-wpdatatables', WDT_STORE_URL . '/static/css/checkout/wpdatatables-promo.css');
+
+    wp_enqueue_script('tms-store-checkout-config', WDT_STORE_URL . '/static/js/checkout/config.js', array('jquery'), 1.12, true);
+    wp_enqueue_script('tms-store-checkout', WDT_STORE_URL . '/static/js/checkout/checkout-wpdatatables-promo.js', array('jquery'), 1.12, true);
+    wp_enqueue_script('tms-store-checkout-wpdatatables', WDT_STORE_URL . '/static/js/checkout/wpdatatables.js', array('jquery'), 1.12, true);
 }
 
 /**

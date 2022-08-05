@@ -59,5 +59,23 @@
             });
         })
 
+        $('.wpdt-promo-notice .wpdt-icon-times-thin.wpdt-notice-dismiss').on('click', function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: ajaxurl,
+                method: "POST",
+                data: {
+                    'action': 'wdt_remove_promo_notice'
+                },
+                dataType: "json",
+                async: !0,
+                success: function (e) {
+                    if (e == "success") {
+                        $('.wpdt-promo-notice').slideUp('fast');
+                    }
+                }
+            });
+        })
+
     });
 })(jQuery);

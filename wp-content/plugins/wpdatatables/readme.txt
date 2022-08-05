@@ -2,11 +2,11 @@
 Contributors: wpDataTables
 Author URI: https://tms-outsource.com
 Plugin URI: https://wpdatatables.com/
-Tags: table, table builder, data tables, tables, charts, datatables, simple table, tables from csv, tables from excel, dynamic tables, responsive tables, csv, chart, pie charts, mysql tables, table plugin, wp table, wordpress table plugin, wordpress tables, google charts, chartjs, excel, json, xml, php array, line chart, donut, bar chart, histogram, area chart, bubble chart, gauge chart, scatter chart, candlestick, waterfall, polar, radar
+Tags: table, table builder, data tables, tables, charts, datatables, simple table, tables from csv, tables from excel, dynamic tables, merge cells, pricing tables, responsive tables, responsive charts, grouping data, pricing table, row grouping, csv, chart, pie charts, mysql tables, table plugin, wp table, wordpress table plugin, wordpress tables, editing charts, google charts, chartjs, excel, json, xml, php array, line chart, donut, bar chart, histogram, area chart, bubble chart, gauge chart, scatter chart, candlestick, waterfall, polar, radar
 Requires at least: 4.0
-Tested up to: 6.0
+Tested up to: 6.0.1
 Requires PHP: 5.6
-Stable tag: 2.1.35
+Stable tag: 2.1.36
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -347,6 +347,10 @@ This can be changed from the “Number format” drop-down menu in the wpDataTab
 12. Google chart settings
 
 == Changelog ==
+
+= 2.1.36 =
+* BugFix: Fixed issue with CSS.
+Other small bug fixes and stability improvements.
 
 = 2.1.35 =
 * Feature: Responsive datatables – now each datatable can be responsive where you can choose which columns do you want to be visible or hidden on tablets and/or mobiles.

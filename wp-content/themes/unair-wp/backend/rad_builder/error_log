@@ -98,3 +98,15 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[23-Jul-2022 07:01:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[02-Aug-2022 12:55:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[04-Aug-2022 19:41:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7

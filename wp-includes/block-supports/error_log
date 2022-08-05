@@ -1,0 +1,16 @@
+[28-Jul-2022 00:07:38 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/border.php:176
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/border.php on line 176
+[30-Jul-2022 06:55:31 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/align.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/align.php on line 59
+[30-Jul-2022 22:47:29 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/layout.php:226
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/layout.php on line 226
+[31-Jul-2022 23:55:52 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/generated-classname.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/generated-classname.php on line 67

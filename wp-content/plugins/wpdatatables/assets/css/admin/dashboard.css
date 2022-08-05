@@ -3,7 +3,7 @@
     font-style: normal;
 }
 
-.wdt-datatables-admin-wrap .wdt-dashbord .card:not('.plugin-dashboard') {
+.wdt-datatables-admin-wrap .wdt-dashbord .card:not(.plugin-dashboard) {
     border-radius: 3px;
     margin-bottom: 24px;
 }

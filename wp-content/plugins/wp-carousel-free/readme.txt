@@ -3,8 +3,8 @@ Contributors: shapedplugin, khalilu, shamimmiashuhagh, rubel_miah
 Donate link: http://shapedplugin.com/donate
 Tags: wordpress carousel, best carousel plugin, image carousel, image slider, post carousel, custom post carousel, custom taxonomy carousel, woocommerce product carousel, content carousel, video carousel, video slider, video lightbox, youtube carousel, video gallery, carousel, slider, responsive slider, responsive carousel, carousel slider, ticker carousel, center mode carousel, slide anything, image gallery, image lightbox, wordpress image gallery, photo gallery, gallery slider, wordpress gallery plugin, gallery, post slider, vimeo slider, self hosted video carousel, content slider, wordpress slider, featured content slider, html slider, horizontal carousel slider, posts content slider, product carousel, woocommerce slider, woocommerce product slider
 Requires at least: 4.5
-Tested up to: 6.0
-Stable tag: 2.4.8
+Tested up to: 6.0.1
+Stable tag: 2.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -326,6 +326,10 @@ Thank you!
 
 
 == Changelog ==
+
+= 2.4.9 – Aug 01, 2022 =
+* Fix: The export option does not work properly along with the WP Debugging plugin.
+* Tested: WooCommerce 6.7.0 compatibility.
 
 = 2.4.8 – Jun 11, 2022 =
 * Improved: Move Gutenberg assets to the assets folder from src.

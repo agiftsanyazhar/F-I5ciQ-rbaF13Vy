@@ -223,6 +223,9 @@ function wdtActivationCreateTables() {
     if (get_option('wdtShowForminatorNotice') === false) {
         update_option('wdtShowForminatorNotice', 'yes' );
     }
+    if (get_option('wdtShowPromoNotice') === false) {
+        update_option('wdtShowPromoNotice', 'yes' );
+    }
     if (get_option('wdtSimpleTableAlert') === false) {
         update_option('wdtSimpleTableAlert', true );
     }
@@ -260,6 +263,11 @@ function wdtAdminRatingMessages() {
              <p class="wpdt-forminator-news"><strong style="color: #ff8c00">NEWS!</strong> wpDataTables just launched a new <strong style="color: #ff8c00">FREE</strong> addon - <strong style="color: #ff8c00">Forminator Forms integration for wpDataTables</strong>. You can download it and read more about it on wp.org on this <a class="wdt-forminator-link" href="https://wordpress.org/plugins/wpdatatables-forminator/" style="color: #ff8c00" target="_blank">link</a>.</p>
          </div>';
     }
+
+    if( is_admin() && (strpos($wpdtPage,'wpdatatables-dashboard') !== false || strpos($wpdtPage,'wpdatatables-lite-vs-premium') !== false) &&
+        get_option( 'wdtShowPromoNotice' ) == "yes" ) {
+        include WDT_TEMPLATE_PATH . 'admin/common/promo.inc.php';
+    }
 }
 
 add_action( 'admin_notices', 'wdtAdminRatingMessages' );
@@ -285,6 +293,16 @@ function wdtRemoveForminatorNotice() {
 }
 
 add_action( 'wp_ajax_wdt_remove_forminator_notice', 'wdtRemoveForminatorNotice' );
+/**
+ * Remove Promo notice message
+ */
+function wdtRemovePromoNotice() {
+    update_option( 'wdtShowPromoNotice', 'no' );
+    echo json_encode( array("success") );
+    exit;
+}
+
+add_action( 'wp_ajax_wdt_remove_promo_notice', 'wdtRemovePromoNotice' );
 
 /**
  * Remove Simple Table alert message
@@ -360,6 +378,7 @@ function wdtUninstallDelete() {
         delete_option('wdtInstallDate');
         delete_option('wdtRatingDiv');
         delete_option('wdtShowForminatorNotice');
+        delete_option('wdtShowPromoNotice');
         delete_option('wdtSimpleTableAlert');
         delete_option('wdtTempFutureDate');
         delete_option('wdtVersion');

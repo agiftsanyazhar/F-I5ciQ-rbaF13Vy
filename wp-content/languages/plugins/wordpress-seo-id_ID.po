@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-31 08:37:52+0000\n"
+"PO-Revision-Date: 2022-07-19 11:20:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,64 +11,369 @@ msgstr ""
 "Language: id\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
 
+#. translators: 1: Link start tag to the first-time configuration, 2: Link
+#. closing tag.
+#: src/integrations/admin/first-time-configuration-notice-integration.php:151
+msgid "We noticed that you haven't fully configured Yoast SEO yet. Optimize your SEO settings even further by using our improved %1$s First-time configuration%2$s."
+msgstr "Kami temukan bahwa Anda belum sepenuhnya mengonfigurasi Yoast SEO. Optimalkan pengaturan SEO Anda lebih jauh lagi dengan menggunakan %1$sKonfigurasi awal%2$s kami yang ditingkatkan."
+
+#: src/integrations/admin/first-time-configuration-notice-integration.php:138
+msgid "SEO configuration"
+msgstr "Konfigurasi SEO"
+
+#: src/integrations/admin/crawl-settings-integration.php:290
+msgid "By removing Global comments feed, Post comments feeds will be removed too."
+msgstr "Dengan menghapus feed komentar Global, feed pos komentar juga akan dihapus."
+
+#: src/integrations/admin/crawl-settings-integration.php:191
+msgid "Remove feed links added by WordPress that aren't needed for this site."
+msgstr "Hapus tautan feed yang ditambahkan oleh WordPress yang tidak diperlukan untuk situs ini."
+
+#: src/integrations/admin/crawl-settings-integration.php:191
+msgid "Feed crawl settings"
+msgstr "Pengaturan perayapan feed"
+
+#: src/integrations/admin/crawl-settings-integration.php:190
+msgid "Remove links added by WordPress to the header and &lt;head&gt;."
+msgstr "Hapus tautan yang ditambahkan oleh WordPress ke header dan &lt;head&gt;."
+
+#: src/integrations/admin/crawl-settings-integration.php:190
+msgid "Basic crawl settings"
+msgstr "Pengaturan perayapan dasar"
+
+#: src/integrations/admin/crawl-settings-integration.php:125
+msgid "Powered by HTTP header"
+msgstr "Ditenagai oleh HTTP header"
+
+#: src/integrations/admin/crawl-settings-integration.php:124
+msgid "Pingback HTTP header"
+msgstr "Pingback HTTP header"
+
+#: src/integrations/admin/crawl-settings-integration.php:123
+msgid "Emoji scripts"
+msgstr "Script emoji"
+
+#: src/integrations/admin/crawl-settings-integration.php:122
+msgid "Generator tag"
+msgstr "Pembuat tag"
+
+#: src/integrations/admin/crawl-settings-integration.php:121
+msgid "oEmbed links"
+msgstr "Tautan oEmbed"
+
+#: src/integrations/admin/crawl-settings-integration.php:120
+msgid "RSD / WLW links"
+msgstr "Tautan RSD / WLW"
+
+#: src/integrations/admin/crawl-settings-integration.php:119
+msgid "REST API links"
+msgstr "Tautan REST API"
+
+#: src/integrations/admin/crawl-settings-integration.php:118
+msgid "Shortlinks"
+msgstr "Shortlink"
+
+#: src/integrations/admin/crawl-settings-integration.php:114
+msgid "Atom/RDF feeds"
+msgstr "Feed Atom/RDF"
+
+#: src/integrations/admin/crawl-settings-integration.php:113
+msgid "Search results feeds"
+msgstr "Feed hasil pencarian"
+
+#: src/integrations/admin/crawl-settings-integration.php:112
+msgid "Custom taxonomy feeds"
+msgstr "Feed taksonomi khusus"
+
+#: src/integrations/admin/crawl-settings-integration.php:111
+msgid "Tag feeds"
+msgstr "Feed tag"
+
+#: src/integrations/admin/crawl-settings-integration.php:110
+msgid "Category feeds"
+msgstr "Feed  kategori"
+
+#: src/integrations/admin/crawl-settings-integration.php:109
+msgid "Post type feeds"
+msgstr "Feed jenis pos"
+
+#: src/integrations/admin/crawl-settings-integration.php:108
+msgid "Post authors feeds"
+msgstr "Feed pos penulis"
+
+#: src/integrations/admin/crawl-settings-integration.php:106
+msgid "Global comment feeds"
+msgstr "Feed komentar global"
+
+#: src/integrations/admin/crawl-settings-integration.php:105
+msgid "Global feed"
+msgstr "Feed global"
+
+#: src/integrations/admin/crawl-settings-integration.php:107
+msgid "Post comments feeds"
+msgstr "Feed pos komentar"
+
+#. translators: %1$s opens the link to the Yoast.com article about Crawl
+#. settings, %2$s closes the link,
+#: admin/views/tabs/network/crawl-settings.php:31
+msgid "%1$sLearn more about crawl settings.%2$s"
+msgstr "%1$sPelajari lebih lanjut tentang pengaturan perayapan.%2$s"
+
+#. translators: %1$s opens the link to the Yoast.com article about Crawl
+#. settings, %2$s closes the link,
+#: admin/views/tabs/dashboard/crawl-settings.php:29
+msgid "%1$sLearn more about crawl settings and how they could benefit your site.%2$s"
+msgstr "%1$sPelajari lebih lanjut tentang pengaturan perayapan dan bagaimana kegunaan pengaturan tersebut untuk situs Anda.%2$s"
+
+#. translators: %1$s expands to Yoast SEO
+#: admin/views/tabs/dashboard/crawl-settings.php:22
+msgid "To make the crawling of your site more efficient and environmental friendly, %1$s allows you to remove URLs (added by WordPress) that might not be needed for your site."
+msgstr "Untuk membuat perayapan situs Anda lebih efisien dan ramah lingkungan, %1$s memungkinkan Anda menghapus URL (ditambahkan oleh WordPress) yang tidak diperlukan untuk situs Anda."
+
+#: admin/views/redirects.php:188
+msgid "No items found."
+msgstr "Tidak menemukan apa-apa."
+
+#: admin/views/redirects.php:137
+msgid "All redirect types"
+msgstr "Semua jenis pengalihan"
+
+#: admin/views/redirects.php:122
+msgid "Add Redirect"
+msgstr "Tambah Pengalihan"
+
+#: admin/views/redirects.php:100 admin/views/redirects.php:165
+#: admin/views/redirects.php:212
+msgid "Old URL"
+msgstr "URL Lama"
+
+#. translators: 1: opens a link. 2: closes the link.
+#: admin/views/redirects.php:91
+msgid "The redirect type is the HTTP response code sent to the browser telling the browser what type of redirect is served. %1$sLearn more about redirect types%2$s."
+msgstr "Tipe pengalihan adalah kode respon HTTP yang dikirim ke browser yang memberitahu browser tipe pengalihan apa yang dilayani. %1$sPelajari lebih lanjut tentang tipe pengalihan%2$s."
+
+#: admin/views/redirects.php:66 admin/views/redirects.php:75
+msgid "301 Moved Permanently"
+msgstr "301 Dialihkan Secara Permanen"
+
+#: admin/views/redirects.php:59 admin/views/redirects.php:155
+#: admin/views/redirects.php:203
+msgid "Type"
+msgstr "Tipe"
+
+#: admin/views/redirects.php:50
+msgid "Plain redirects"
+msgstr "Pengalihan sederhana"
+
+#: admin/views/redirects.php:37
+msgid "Regex Redirects"
+msgstr "Pengalihan Regex"
+
+#: admin/pages/network.php:28 admin/views/tabs/dashboard/crawl-settings.php:17
+#: admin/views/tabs/network/crawl-settings.php:19
+#: src/integrations/admin/crawl-settings-integration.php:151
+msgid "Crawl settings"
+msgstr "Pengaturan perayapan"
+
+#: src/integrations/admin/first-time-configuration-integration.php:115
+msgid "First-time configuration"
+msgstr "Konfigurasi awal"
+
+#. translators: 1: Link start tag to the First time configuration tab in the
+#. General page, 2: Link closing tag.
+#: admin/views/tabs/tool/import-seo.php:99
+msgid "You should finish the %1$sfirst time configuration%2$s to make sure your SEO data has been optimized and you’ve set the essential Yoast SEO settings for your site."
+msgstr "Anda harus menyelesaikan %1$skonfigurasi awal%2$s untuk memastikan data SEO Anda telah dioptimalkan dan Anda telah melakukan pengaturan Yoast SEO yang penting untuk situs Anda."
+
+#: admin/views/tabs/tool/import-seo.php:94
+msgid "Step 4: Go through the first time configuration"
+msgstr "Langkah 4: Buka konfigurasi awal"
+
+#: src/services/health-check/ryte-check.php:48
+msgid "Ryte"
+msgstr "Ryte"
+
+#: src/services/health-check/postname-permalink-check.php:48
+msgid "Postname permalink"
+msgstr "Permalink postname"
+
+#: src/services/health-check/page-comments-check.php:48
+msgid "Page comments"
+msgstr "Komentar halaman"
+
+#: src/services/health-check/links-table-check.php:48
+msgid "Links table"
+msgstr "Tabel tautan"
+
+#: src/services/health-check/curl-check.php:48
+msgid "cURL"
+msgstr "cURL"
+
+#: src/integrations/admin/import-integration.php:218
+msgid "If you already have saved AIOSEO 'Search Appearance' settings and the issue persists, please contact our support team so we can take a closer look."
+msgstr "Jika Anda sudah menyimpan pengaturan 'Penampilan Pencarian' AIOSEO dan masalah terus berlanjut, silakan hubungi tim layanan bantuan kami agar kami dapat memeriksanya lebih detail."
+
+#: src/integrations/admin/import-integration.php:215
+msgid "If you have never saved any AIOSEO 'Search Appearance' settings, please do that first and run the import again."
+msgstr "Jika Anda belum pernah menyimpan pengaturan 'Pencarian Tampilan' AIOSEO, harap lakukan itu terlebih dahulu dan jalankan impor lagi."
+
+#: src/integrations/admin/import-integration.php:212
+msgid "The AIOSEO import was cancelled because some AIOSEO data is missing. Please try and take the following steps to fix this:"
+msgstr "Impor AIOSEO dibatalkan karena beberapa data AIOSEO hilang. Silakan coba dan lakukan langkah-langkah berikut untuk memperbaikinya:"
+
+#: src/exceptions/importing/aioseo-validation-exception.php:17
+msgid "The validation of the AIOSEO data structure has failed."
+msgstr "Validasi struktur data AIOSEO gagal."
+
+#. translators: %s expands to Wincher
+#. translators: %s expands to WordProof
+#: src/integrations/third-party/wincher.php:125
+#: src/integrations/third-party/wordproof-integration-toggle.php:130
+#: src/integrations/third-party/wordproof-integration-toggle.php:152
+msgid "Currently, the %s integration is not available for multisites."
+msgstr "Saat ini integrasi %s tidak tersedia untuk multisitus."
+
+#: src/integrations/admin/import-integration.php:234
+msgid "Cleanup failed with the following error:"
+msgstr "Pembersihan gagal. Terdapat eror berikut:"
+
+#: src/integrations/admin/import-integration.php:118
+msgid "Note: These settings will overwrite the default settings of Yoast SEO."
+msgstr "Catatan: Pengaturan berikut akan mengganti pengaturan default Yoast SEO."
+
+#: src/integrations/admin/import-integration.php:114
+#: src/integrations/admin/import-integration.php:124
+msgid "Note: This metadata will only be imported if there is no existing Yoast SEO metadata yet."
+msgstr "Catatan: Metadata ini hanya akan diimpor jika belum ada metadata Yoast SEO."
+
+#: src/integrations/admin/import-integration.php:113
+#: src/integrations/admin/import-integration.php:123
+msgid "Post metadata (SEO titles, descriptions, etc.)"
+msgstr "Metadata pos (judul SEO, deskripsi, dll.)"
+
+#. translators: %s: expands to the name of the plugin that is selected to be
+#. imported
+#: src/integrations/admin/import-integration.php:109
+msgid "The import from %s includes:"
+msgstr "Impor dari %s termasuk:"
+
+#: src/integrations/admin/import-integration.php:107
+msgid "Once you're certain that your site is working properly with the imported data from another SEO plugin, you can clean up all the original data from that plugin."
+msgstr "Setelah Anda yakin bahwa situs Anda berfungsi dengan baik dengan data yang diimpor dari plugin SEO lainnya, Anda dapat membersihkan semua data asli dari plugin tersebut."
+
+#: src/integrations/admin/import-integration.php:106
+msgid "Please select an SEO plugin below to see what data can be imported."
+msgstr "Silakan pilih plugin SEO berikut untuk melihat data apa yang dapat diimpor."
+
+#: src/integrations/admin/import-integration.php:105
+msgid "Clean up"
+msgstr "Bersihkan"
+
+#: src/integrations/admin/import-integration.php:97
+msgid "After you've imported data from another SEO plugin, please make sure to clean up all the original data from that plugin. (step 5)"
+msgstr "Setelah Anda mengimpor data dari plugin SEO lain, pastikan untuk membersihkan semua data asli dari plugin teresbut. (langkah 5)"
+
+#: src/integrations/admin/import-integration.php:96
+msgid "Note: "
+msgstr "Catatan:"
+
+#: src/integrations/admin/import-integration.php:95
+msgid "The cleanup can take a long time depending on your site's size."
+msgstr "Perlu waktu lama untuk pembersihan, tergantung ukuran situs Anda."
+
+#: src/services/health-check/default-tagline-check.php:48
+msgid "Default tagline"
+msgstr "Tagline default"
+
+#: src/integrations/admin/import-integration.php:236
+msgid "Import failed with the following error:"
+msgstr "Gagal mengimpor. Terdapat eror berikut:"
+
+#: src/integrations/admin/import-integration.php:99
+msgid "No data found from other SEO plugins."
+msgstr "Tidak ada data ditemukan dari plugin SEO lainnya."
+
+#: src/integrations/admin/import-integration.php:98
+msgid "Select SEO plugin"
+msgstr "Pilih plugin SEO"
+
+#: src/integrations/admin/import-integration.php:94
+msgid "The import can take a long time depending on your site's size."
+msgstr "Perlu waktu lama untuk mengimpor, tergantung ukuran situs Anda."
+
 #: src/integrations/admin/installation-success-integration.php:100
 msgid "Installation Successful"
 msgstr "Instalasi Sukses"
 
+#: src/config/schema-types.php:131
+msgid "Blog Post"
+msgstr "Pos Blog"
+
+#. translators: %s: 'Wincher'
+#: src/integrations/third-party/wincher.php:77
+msgid "The %s integration offers the option to track specific keyphrases and gain insights in their positions."
+msgstr "Integrasi %s menawarkan opsi untuk melacak frasa kunci tertentu dan mendapatkan insight tentang posisinya."
+
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:312
+#: src/integrations/admin/workouts-integration.php:310
 msgid "Activate %s"
 msgstr "Aktifkan %s"
 
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:306
+#: src/integrations/admin/workouts-integration.php:304
 msgid "Update %s"
 msgstr "Perbarui %s"
 
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:299
+#: src/integrations/admin/workouts-integration.php:297
 msgid "Renew %s"
 msgstr "Perbarui %s"
 
-#: src/integrations/admin/workouts-integration.php:241
+#: src/integrations/admin/workouts-integration.php:239
 msgid "Get help activating your subscription"
 msgstr "Dapatkan bantuan untuk mengaktifkan langganan Anda"
 
 #. translators: 1: expands to 'Yoast SEO Premium', 2: Link start tag to the
 #. page to update Premium, 3: Link closing tag.
-#: src/integrations/admin/workouts-integration.php:235
+#: src/integrations/admin/workouts-integration.php:233
 msgid "It looks like you’re running an outdated and unactivated version of %1$s, please activate your subscription in %2$sMyYoast%3$s and update to the latest version (at least 17.7) to gain access to our updated workouts section."
 msgstr "Sepertinya Anda menjalankan versi %1$s yang kadaluarsa dan tidak diaktifkan, harap aktifkan langganan Anda di %2$sMyYoast%3$s dan perbarui ke versi terbaru (setidaknya 17.7) untuk mendapatkan akses ke bagian latihan terbaru kami."
 
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:231
+#: src/integrations/admin/workouts-integration.php:229
 msgid "Activate your subscription of %s"
 msgstr "Aktifkan langganan Anda untuk %s"
 
 #. translators: 1: expands to 'Yoast SEO Premium', 2: Link start tag to the
 #. page to update Premium, 3: Link closing tag.
-#: src/integrations/admin/workouts-integration.php:222
+#: src/integrations/admin/workouts-integration.php:220
 msgid "It looks like you're running an outdated version of %1$s, please %2$supdate to the latest version (at least 17.7)%3$s to gain access to our updated workouts section."
 msgstr "Sepertinya Anda menjalankan versi %1$s yang telah kadaluarsa, harap %2$s perbarui ke versi terbaru (setidaknya 17.7)%3$s untuk mendapatkan akses latihan terbaru kami."
 
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:219
+#: src/integrations/admin/workouts-integration.php:217
 msgid "Update to the latest version of %s"
 msgstr "Perbarui ke versi terbaru dari %s"
 
-#: src/integrations/admin/workouts-integration.php:212
+#: src/integrations/admin/workouts-integration.php:210
 msgid "Renew your subscription"
 msgstr "Perbarui langganan Anda"
 
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:205
+#: src/integrations/admin/workouts-integration.php:203
 msgid "Accessing the latest workouts requires an updated version of %s (at least 17.7), but it looks like your subscription has expired. Please renew your subscription to update and gain access to all the latest features."
 msgstr "Mengakses latihan terbaru membutuhkan versi terbaru dari %s (setidaknya 17.7), tetapi sepertinya langganan Anda telah kadaluarsa. Harap perbarui langganan Anda untuk mendapatkan akses semua fitur terbaru."
 
 #. translators: %s: expands to 'Yoast SEO Premium'.
-#: src/integrations/admin/workouts-integration.php:202
+#: src/integrations/admin/workouts-integration.php:200
 msgid "Renew your subscription of %s"
 msgstr "Perbarui langganan Anda untuk %s"
+
+#. translators: 1: Link start tag to the first-time configuration, 2: Yoast
+#. SEO, 3: Link closing tag.
+#: src/integrations/admin/first-time-configuration-notice-integration.php:142
+msgid "Get started quickly with the %1$s%2$s First-time configuration%3$s and configure Yoast SEO with the optimal SEO settings for your site!"
+msgstr "Mulai cepat dengan %1$s%2$s Konfigurasi awal%3$s dan konfigurasikan Yoast SEO dengan pengaturan SEO optimal untuk situs Anda!"
 
 #: inc/class-wpseo-replace-vars.php:1458
 msgid "Current or first category title"
@@ -247,27 +552,28 @@ msgstr "Cari tahu lebih lanjut tentang integrasi %s kami."
 msgid "Set up automated actions when you publish or update your content. By connecting %1$s with %2$s, you can easily send out your published posts to any of its 2000+ destinations, such as Twitter, Facebook and more."
 msgstr "Siapkan tindakan otomatis saat Anda memublikasikan atau memperbarui konten Anda. Dengan menghubungkan %1$s dengan %2$s, Anda dapat dengan mudah mengirimkan artikel yang dipublikasikan ke 2000+ tujuan, seperti Twitter, Facebook, dan lainnya."
 
-#: admin/views/class-yoast-feature-toggles.php:120
+#: admin/views/class-yoast-feature-toggles.php:119
 msgid "Read more about how internal linking can improve your site structure."
 msgstr "Baca lebih lanjut tentang bagaimana tautan internal dapat meningkatkan struktur situs Anda."
 
-#: admin/views/class-yoast-feature-toggles.php:119
+#: admin/views/class-yoast-feature-toggles.php:118
 msgid "Get relevant internal linking suggestions  — while you’re writing! The link suggestions metabox shows a list of posts on your blog with similar content that might be interesting to link to. "
 msgstr "Dapatkan saran penautan internal yang relevan — saat Anda menulis! Metabox saran tautan menunjukkan daftar posting di blog Anda dengan konten serupa yang mungkin menarik untuk ditautkan."
 
-#: admin/views/class-yoast-feature-toggles.php:116
+#: admin/views/class-yoast-feature-toggles.php:115
 msgid "Link suggestions"
 msgstr "Saran tautan"
 
-#: admin/views/class-yoast-feature-toggles.php:110
+#: admin/views/class-yoast-feature-toggles.php:109
 msgid "Find out how Insights can help you improve your content."
 msgstr "Cari tahu bagaimana Wawasan dapat membantu Anda meningkatkan konten Anda."
 
-#: admin/views/class-yoast-feature-toggles.php:109
+#: admin/views/class-yoast-feature-toggles.php:108
 msgid "Find relevant data about your content right in the Insights section in the Yoast SEO metabox. You’ll see what words you use most often and if they’re a match with your keywords! "
 msgstr "Temukan data yang relevan tentang konten Anda langsung di bagian Wawasan di metabox Yoast SEO. Anda akan melihat kata apa yang paling sering Anda gunakan dan apakah kata tersebut cocok dengan kata kunci Anda!"
 
-#: admin/views/class-yoast-feature-toggles.php:106
+#: admin/views/class-yoast-feature-toggles.php:106 js/dist/block-editor.js:101
+#: js/dist/classic-editor.js:97 js/dist/elementor.js:101
 msgid "Insights"
 msgstr "Wawasan"
 
@@ -276,7 +582,7 @@ msgstr "Wawasan"
 #. Translators: %1$s expands to an opening anchor tag for a link leading to the
 #. Premium installation page, %2$s expands to a closing anchor tag.
 #: src/presenters/admin/indexing-error-presenter.php:76
-#: src/presenters/admin/indexing-failed-notification-presenter.php:78
+#: src/presenters/admin/indexing-failed-notification-presenter.php:77
 msgid "Oops, something has gone wrong and we couldn't complete the optimization of your SEO data. Please make sure to activate your subscription in MyYoast by completing %1$sthese steps%2$s."
 msgstr "Ups, ada yang tidak beres dan kami tidak dapat menyelesaikan optimasi data SEO Anda. Pastikan untuk mengaktifkan langganan Anda di MyYoast dengan menyelesaikan %1$slangkah-langkah ini%2$s."
 
@@ -345,7 +651,7 @@ msgid "Recipe description"
 msgstr "Deskripsi resep"
 
 #: admin/views/redirects.php:22
-#: src/integrations/admin/crawl-settings-integration.php:141
+#: src/integrations/admin/crawl-settings-integration.php:304
 #: src/integrations/admin/social-templates-integration.php:251
 msgid "Unlock with Premium"
 msgstr "Buka kunci dengan Premium"
@@ -496,7 +802,7 @@ msgstr "Frasa dianggap tidak valid. Alasan berikut disampaikan oleh WordPress: %
 msgid "The term could not be found."
 msgstr "Frasa tidak dapat ditemukan."
 
-#: admin/class-yoast-form.php:971 js/dist/first-time-configuration.js:14
+#: admin/class-yoast-form.php:1027 js/dist/first-time-configuration.js:14
 msgid "This feature has been disabled since subsites never send tracking data."
 msgstr "Fitur telah dinonaktifkan karena sub-situs tidak pernah mengirimkan data pelacakan."
 
@@ -510,15 +816,15 @@ msgstr "Kami melihat bahwa anda telah menginstal WPML. Untuk memastikan URL kano
 msgid "Because of a change in your category base setting, some of your SEO data needs to be reprocessed."
 msgstr "Karena adanya perubahan di pengaturan kategori dasar Anda, beberapa data SEO Anda perlu diproses ulang. "
 
-#: admin/views/class-yoast-feature-toggles.php:180
+#: admin/views/class-yoast-feature-toggles.php:179
 msgid "Find out how a rich snippet can improve visibility and click-through-rate."
 msgstr "Temukan bagaimana rich snippet dapat meningkatkan visibilitas dan rasio klik-tayang. "
 
-#: admin/views/class-yoast-feature-toggles.php:179
+#: admin/views/class-yoast-feature-toggles.php:178
 msgid "This adds an author byline and reading time estimate to the article’s snippet when shared on Slack."
 msgstr "Menambahkan penulis (byline) dan estimasi waktu baca pada snippet artikel saat dibagikan ke Slack."
 
-#: admin/views/class-yoast-feature-toggles.php:177
+#: admin/views/class-yoast-feature-toggles.php:176
 msgid "Enhanced Slack sharing"
 msgstr "Sharing Slack yang Dioptimalkan"
 
@@ -583,7 +889,7 @@ msgid "You can speed up your site and get insight into your internal linking str
 msgstr "Anda dapat mempercepat situs Anda dan mendapatkan insight dalam struktur internal linking Anda dengan mengizinkan kami menjalankan beberapa optimisasi bagaimana data SEO disimpan."
 
 #: src/presenters/admin/indexing-notification-presenter.php:59
-#: js/dist/first-time-configuration.js:3 js/dist/indexation.js:1
+#: js/dist/first-time-configuration.js:5 js/dist/indexation.js:1
 msgid "Start SEO data optimization"
 msgstr "Mulai SEO optimasi data"
 
@@ -600,13 +906,13 @@ msgid "Optimize SEO Data"
 msgstr "Optimalkan Data SEO"
 
 #: src/presenters/admin/indexing-error-presenter.php:71
-#: src/presenters/admin/indexing-failed-notification-presenter.php:72
+#: src/presenters/admin/indexing-failed-notification-presenter.php:71
 msgid "If the problem persists, please contact support."
 msgstr "Jika terjadi masalah, harap hubungi layanan bantuan."
 
 #. Translators: %1$s expands to an opening anchor tag for a link leading to the
 #. Yoast SEO tools page, %2$s expands to a closing anchor tag.
-#: src/presenters/admin/indexing-failed-notification-presenter.php:60
+#: src/presenters/admin/indexing-failed-notification-presenter.php:59
 msgid "Something has gone wrong and we couldn't complete the optimization of your SEO data. Please %1$sre-start the process%2$s."
 msgstr "Terjadi masalah dan kami tidak dapat menyelesaikan optimasi data SEO Anda. Mohon %1$sulangi kembali%2$s."
 
@@ -627,7 +933,7 @@ msgstr "Butuh bantuan?"
 
 #. translators: %1$s: expands to an opening anchor tag, %2$s: expands to a
 #. closing anchor tag
-#: admin/views/class-yoast-feature-toggles.php:209
+#: admin/views/class-yoast-feature-toggles.php:218
 msgid "Disabling Yoast SEO's XML sitemaps will not disable WordPress' core sitemaps. In some cases, this %1$s may result in SEO errors on your site%2$s. These may be reported in Google Search Console and other tools."
 msgstr "Menonaktifkan sitemap XML Yoast SEO tidak akan menonaktifkan sitemap core WordPress. Dalam kasus tertentu, %1$s ini mengakibatkan eror SEO pada %2$s situs Anda. Hal tersebut mungkin saja dilaporkan dalam Google Search Console dan tool lainnya."
 
@@ -648,11 +954,11 @@ msgid "Stop losing customers to other local businesses"
 msgstr "Berhenti kehilangan pelanggan karena bisnis lokal lainnya"
 
 #. translators: 1: Yoast SEO, 2: translated version of "Off"
-#: admin/views/class-yoast-feature-toggles.php:148
+#: admin/views/class-yoast-feature-toggles.php:147
 msgid "The advanced section of the %1$s meta box allows a user to remove posts from the search results or change the canonical. The settings in the schema tab allows a user to change schema meta data for a post. These are things you might not want any author to do. That's why, by default, only editors and administrators can do this. Setting to \"%2$s\" allows all users to change these settings."
 msgstr "Bagian lanjutan dari kotak meta %1$s memungkinkan pengguna untuk menghapus artikel dari hasil pencarian atau mengubah kanonis. Pengaturan di tab skema memungkinkan pengguna untuk mengubah data meta skema untuk sebuah artikel. Ini adalah hal-hal yang Anda mungkin tidak ingin penulis lakukan. Itulah mengapa, secara standar, hanya penyunting dan administrator yang dapat melakukan ini. Menyetel ke \"%2$s\" memungkinkan semua pengguna mengubah setelan ini."
 
-#: admin/views/class-yoast-feature-toggles.php:144
+#: admin/views/class-yoast-feature-toggles.php:143
 msgid "Security: no advanced or schema settings for authors"
 msgstr "Keamanan: tidak ada pengaturan lanjutan atau skema untuk penulis"
 
@@ -737,12 +1043,12 @@ msgid "Web Page"
 msgstr "Halaman Web"
 
 #. translators: 1: Yoast SEO
-#: admin/views/class-yoast-feature-toggles.php:160
+#: admin/views/class-yoast-feature-toggles.php:159
 msgid "Allow us to track some data about your site to improve our plugin."
 msgstr "Izinkan kami untuk memantau beberapa data tentang situs Anda untuk mengoptimalkan plugin kami."
 
+#: admin/views/class-yoast-feature-toggles.php:154
 #: admin/views/class-yoast-feature-toggles.php:155
-#: admin/views/class-yoast-feature-toggles.php:156
 msgid "Usage tracking"
 msgstr "Pemantauan penggunaan"
 
@@ -881,11 +1187,11 @@ msgid "Term hierarchy"
 msgstr "Hirarki term"
 
 #. translators: 1: Yoast SEO
-#: admin/views/class-yoast-feature-toggles.php:171
+#: admin/views/class-yoast-feature-toggles.php:170
 msgid "This %1$s REST API endpoint gives you all the metadata you need for a specific URL. This will make it very easy for headless WordPress sites to use %1$s for all their SEO meta output."
 msgstr "Endpoint REST API %1$s memberikan semua meta data yang Anda butuhkan untuk URL khusus. Sehingga memudahkan situs web WordPress yang headless menggunakan %1$s untuk semua meta SEO yang dihasilkan."
 
-#: admin/views/class-yoast-feature-toggles.php:167
+#: admin/views/class-yoast-feature-toggles.php:166
 msgid "REST API: Head endpoint"
 msgstr "REST API: Head endpoint"
 
@@ -925,6 +1231,11 @@ msgstr ""
 msgid "Your site can be found by search engines"
 msgstr "Situs Anda dapat ditemukan oleh mesin pencari"
 
+#. translators: %1$s: Expands to 'Ryte', %2$s: Expands to 'Yoast SEO'.
+#: src/services/health-check/ryte-reports.php:146
+msgid "%1$s offers a free indexability check for %2$s users and right now it has trouble determining whether search engines can find your site. This could have several (legitimate) reasons and is not a problem in itself. If this is a live site, it is recommended that you figure out why the %1$s check failed."
+msgstr "%1$s menawarkan pemeriksaan indeksabilitas gratis untuk %2$s pengguna dan saat ini kesulitan menentukan apakah mesin pencari dapat menemukan situs Anda. Hal tersebut disebabkan beberapa alasan (yang valid) dan tidak disebabkan oleh proses pengecekan. Jika kendala terjadi pada adalah situs yang aktif, sebaiknya Anda mencari tahu mengapa pemeriksaan %1$s gagal."
+
 #. translators: %1$s: Expands to 'Ryte'.
 #: src/services/health-check/ryte-reports.php:74
 msgid "%1$s cannot determine whether your site can be found by search engines"
@@ -962,23 +1273,23 @@ msgid "An error occurred while checking whether your site can be found by search
 msgstr "Terjadi kesalahan saat memeriksa apakah situs Anda dapat ditemukan oleh mesin pencari"
 
 #. translators: 1: link open tag; 2: link close tag.
-#: src/services/health-check/default-tagline-reports.php:63
+#: src/services/health-check/default-tagline-reports.php:61
 msgid "%1$sYou can change the tagline in the customizer%2$s."
 msgstr "%1$sAnda dapat mengubah slogan situs di menu Tampilan - Sesuaikan%2$s."
 
-#: src/services/health-check/default-tagline-reports.php:45
+#: src/services/health-check/default-tagline-reports.php:43
 msgid "You still have the default WordPress tagline. Even an empty one is probably better."
 msgstr "Anda masih menggunakan slogan bawaan WordPress. Slogan yang kosong mungkin lebih baik daripada menggunakan slogan bawaan."
 
-#: src/services/health-check/default-tagline-reports.php:43
+#: src/services/health-check/default-tagline-reports.php:41
 msgid "You should change the default WordPress tagline"
 msgstr "Anda sebaiknya mengubah slogan bawaan WordPress"
 
-#: src/services/health-check/default-tagline-reports.php:32
+#: src/services/health-check/default-tagline-reports.php:30
 msgid "You are using a custom tagline or an empty one."
 msgstr "Anda menggunakan slogan baru atau masih kosong."
 
-#: src/services/health-check/default-tagline-reports.php:30
+#: src/services/health-check/default-tagline-reports.php:28
 msgid "You changed the default WordPress tagline"
 msgstr "Anda telah mengubah slogan bawaan WordPress"
 
@@ -1079,14 +1390,23 @@ msgstr "Impor pengaturan dari instalasi %1$s lainnya dengan menempelkannya di si
 msgid "Your %1$s settings:"
 msgstr "Pengaturan %1$s Anda:"
 
-#: admin/metabox/class-metabox.php:424 js/dist/block-editor.js:63
-#: js/dist/elementor.js:61 js/dist/structured-data-blocks.js:9
+#: admin/metabox/class-metabox.php:430 js/dist/block-editor.js:103
+#: js/dist/elementor.js:101 js/dist/structured-data-blocks.js:9
 msgid "Schema"
 msgstr "Skema"
+
+#: admin/views/tabs/social/twitterbox.php:21
+msgid "Twitter uses Open Graph metadata just like Facebook, so be sure to keep the \"Add Open Graph metadata\" setting on the Facebook tab enabled if you want to optimize your site for Twitter."
+msgstr "Twitter menggunakan metadata Open Graph seperti halnya Facebook, jadi pastikan untuk mengaktifkan \"Tambahkan metadata Open Graph\" pada tab Facebook apabila Anda ingin mengoptimalkan situs Anda untuk Twitter."
 
 #: admin/admin-settings-changed-listener.php:81
 msgid "Settings saved."
 msgstr "Pengaturan telah disimpan."
+
+#. translators: %s: additional message with the submitted invalid value
+#: admin/class-yoast-input-validation.php:167
+msgid "Please check the format of the YouTube URL you entered. %s"
+msgstr "Harap periksa format URL YouTube yang Anda masukkan. %s"
 
 #. translators: %s: additional message with the submitted invalid value
 #: admin/class-yoast-input-validation.php:157
@@ -1102,6 +1422,11 @@ msgstr "Harap periksa format URL Pinterest yang anda masukkan. %s"
 #: admin/class-yoast-input-validation.php:137
 msgid "Please check the format of the MySpace URL you entered. %s"
 msgstr "Harap periksa format URL MySpace yang Anda masukkan. %s"
+
+#. translators: %s: additional message with the submitted invalid value
+#: admin/class-yoast-input-validation.php:127
+msgid "Please check the format of the LinkedIn URL you entered. %s"
+msgstr "Harap periksa format URL LinkedIn yang Anda masukkan. %s"
 
 #. translators: %s: additional message with the submitted invalid value
 #: admin/class-yoast-input-validation.php:122
@@ -1259,7 +1584,7 @@ msgid "Personal info"
 msgstr "Info personal"
 
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:52
-#: js/dist/first-time-configuration.js:5
+#: js/dist/first-time-configuration.js:7
 msgid "Organization name"
 msgstr "Nama organisasi"
 
@@ -1277,8 +1602,8 @@ msgstr "Organisasi atau perorangan"
 
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:32
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:38
-#: src/integrations/admin/first-time-configuration-integration.php:423
-#: src/integrations/admin/first-time-configuration-integration.php:436
+#: src/integrations/admin/first-time-configuration-integration.php:422
+#: src/integrations/admin/first-time-configuration-integration.php:435
 msgid "Organization"
 msgstr "Organisasi"
 
@@ -1312,7 +1637,7 @@ msgstr "URL profil SoundCloud"
 msgid "MySpace profile URL"
 msgstr "URL profil MySpace"
 
-#: src/generators/schema/article.php:133
+#: src/generators/schema/article.php:136
 msgid "Uncategorized"
 msgstr "Tidak dikategorikan"
 
@@ -1349,9 +1674,9 @@ msgstr "Menerima tautan internal"
 msgid "Outgoing internal links"
 msgstr "Tautan internal keluar"
 
-#: admin/class-meta-columns.php:102 js/dist/block-editor.js:29
-#: js/dist/classic-editor.js:25 js/dist/dashboard-widget.js:17
-#: js/dist/editor-modules.js:21 js/dist/elementor.js:29
+#: admin/class-meta-columns.php:102 js/dist/block-editor.js:33
+#: js/dist/classic-editor.js:29 js/dist/dashboard-widget.js:17
+#: js/dist/editor-modules.js:21 js/dist/elementor.js:33
 msgid "Keyphrase"
 msgstr "Frasa-kunci"
 
@@ -1451,13 +1776,13 @@ msgstr "Periksa Kepadatan Frasa Kunci"
 
 #: admin/views/tabs/network/features.php:53
 #: admin/views/tabs/network/integrations.php:62
-#: src/integrations/admin/crawl-settings-integration.php:123
+#: src/integrations/admin/crawl-settings-integration.php:274
 msgid "Disable"
 msgstr "Nonaktifkan"
 
 #: admin/views/tabs/network/features.php:52
 #: admin/views/tabs/network/integrations.php:61
-#: src/integrations/admin/crawl-settings-integration.php:122
+#: src/integrations/admin/crawl-settings-integration.php:272
 msgid "Allow Control"
 msgstr "Izinkan Kontrol"
 
@@ -1467,7 +1792,7 @@ msgstr "Izinkan Kontrol"
 msgid "This tab allows you to selectively disable %s features for all sites in the network. By default all features are enabled, which allows site admins to choose for themselves if they want to toggle a feature on or off for their site. When you disable a feature here, site admins will not be able to use that feature at all."
 msgstr "Tab ini memungkinkan Anda untuk secara selektif menonaktifkan fitur %s untuk semua situs di jaringan. Secara default semua fitur diaktifkan, yang memungkinkan admin situs untuk memilih sendiri jika mereka ingin mengaktifkan atau menonaktifkan fitur untuk situs mereka. Ketika Anda menonaktifkan fitur di sini, admin situs tidak akan dapat menggunakan fitur itu sama sekali."
 
-#: admin/views/sidebar.php:29 js/dist/externals-components.js:7
+#: admin/views/sidebar.php:29 js/dist/externals-components.js:34
 msgid "Rank better with synonyms & related keyphrases"
 msgstr "Dapatkan peringkat pencarian yang lebih baik dengan sinonim & frasa kunci terkait"
 
@@ -1492,11 +1817,11 @@ msgstr "Hapus frasa kunci"
 msgid "Keyphrase:"
 msgstr "Frasa kunci:"
 
-#: admin/class-yoast-form.php:967 js/dist/first-time-configuration.js:14
+#: admin/class-yoast-form.php:1023 js/dist/first-time-configuration.js:14
 msgid "This feature has been disabled by the network admin."
 msgstr "Fitur ini telah dinonaktifkan oleh admin jaringan."
 
-#: admin/class-yoast-form.php:701 admin/metabox/class-metabox.php:647
+#: admin/class-yoast-form.php:747 admin/metabox/class-metabox.php:653
 #: admin/taxonomy/class-taxonomy-fields-presenter.php:133
 msgid "Clear Image"
 msgstr "Hapus Gambar"
@@ -1505,7 +1830,7 @@ msgstr "Hapus Gambar"
 msgid "Multiple keyphrases"
 msgstr "Frasa kunci beragam"
 
-#: admin/class-meta-columns.php:152 admin/class-meta-columns.php:645
+#: admin/class-meta-columns.php:152 admin/class-meta-columns.php:666
 msgid "Focus keyphrase not set."
 msgstr "Frasa kunci utama belum diatur."
 
@@ -1513,14 +1838,16 @@ msgstr "Frasa kunci utama belum diatur."
 #. translators: %s expands to 'Yoast SEO Premium'.
 #: admin/class-premium-popup.php:81
 #: admin/class-premium-upsell-admin-block.php:67
-#: admin/formatter/class-metabox-formatter.php:308 admin/views/sidebar.php:45
+#: admin/formatter/class-metabox-formatter.php:309 admin/views/sidebar.php:45
 #: admin/watchers/class-slug-change-watcher.php:223
 #: src/deprecated/admin/add-keyword-modal.php:47
 #: src/deprecated/admin/keyword-synonyms-modal.php:47
 #: src/deprecated/admin/multiple-keywords-modal.php:47
-#: js/dist/externals-components.js:15 js/dist/externals-components.js:25
-#: js/dist/externals-components.js:27 js/dist/externals-components.js:29
-#: js/dist/externals-components.js:31 js/dist/externals-components.js:33
+#: js/dist/block-editor.js:49 js/dist/classic-editor.js:45
+#: js/dist/elementor.js:49 js/dist/externals-components.js:15
+#: js/dist/externals-components.js:42 js/dist/externals-components.js:44
+#: js/dist/externals-components.js:46 js/dist/externals-components.js:48
+#: js/dist/externals-components.js:50
 msgid "Get %s"
 msgstr "Dapatkan %s"
 
@@ -1547,11 +1874,12 @@ msgstr "%1$s Blok Data Terstruktur"
 
 #. translators: %s expands to a 'Yoast SEO Premium' text linked to the
 #. yoast.com website.
-#: admin/formatter/class-metabox-formatter.php:296
+#: admin/formatter/class-metabox-formatter.php:297
 #: src/deprecated/admin/add-keyword-modal.php:35
 #: src/deprecated/admin/keyword-synonyms-modal.php:35
 #: src/deprecated/admin/multiple-keywords-modal.php:35
-#: js/dist/externals-components.js:17
+#: js/dist/block-editor.js:41 js/dist/classic-editor.js:37
+#: js/dist/elementor.js:41 js/dist/externals-components.js:7
 msgid "Great news: you can, with %s!"
 msgstr "Kabar baik: tentu saja bisa, dengan %s!"
 
@@ -1616,14 +1944,20 @@ msgid "Not all required fields are given. Missing field %1$s"
 msgstr "Data yang wajib diisi ada yang kosong. Lengkapi data %1$s"
 
 #: src/deprecated/admin/keyword-synonyms-modal.php:32
-#: js/dist/externals-components.js:29
+#: js/dist/externals-components.js:46
 msgid "Would you like to add keyphrase synonyms?"
 msgstr "Apakah Anda ingin menambahkan sinonim dari frasa kunci?"
 
-#: admin/formatter/class-metabox-formatter.php:293
+#: admin/formatter/class-metabox-formatter.php:294
 #: src/deprecated/admin/add-keyword-modal.php:32
 msgid "Would you like to add more than one keyphrase?"
 msgstr "Apakah Anda ingin menambahkan frasa kunci lebih dari satu?"
+
+#. translators: %1$s expands to an opening anchor tag, %2$s expands to a
+#. closing anchor tag.
+#: admin/views/tabs/metas/paper-content/post_type/woocommerce-shop-page.php:15
+msgid "You can edit the SEO metadata for this custom type on the %1$sShop page%2$s."
+msgstr "Anda dapat mengedit metadata SEO untuk tipe khusus ini di %1$shalaman Toko%2$s."
 
 #: admin/views/tabs/metas/paper-content/post_type/woocommerce-shop-page.php:10
 msgid "You haven't set a Shop page in your WooCommerce settings. Please do this first."
@@ -1897,7 +2231,9 @@ msgid "%s data not found."
 msgstr "%s data tidak ditemukan."
 
 #: admin/class-premium-upsell-admin-block.php:58 admin/views/sidebar.php:38
-#: js/dist/externals-components.js:11 js/dist/externals-components.js:21
+#: js/dist/block-editor.js:45 js/dist/classic-editor.js:41
+#: js/dist/elementor.js:45 js/dist/externals-components.js:11
+#: js/dist/externals-components.js:38
 msgid "24/7 email support"
 msgstr "24/7 bantuan melalui email"
 
@@ -2063,9 +2399,10 @@ msgstr "Anda dapat menggunakan kotak di bawah ini untuk memverifikasi dengan Per
 msgid "Learn more about the Webmaster Tools verification"
 msgstr "Pelajari lebih lanjut tentang verifikasi Webmaster Tools"
 
-#: admin/class-yoast-form.php:863 admin/class-yoast-form.php:903
-#: admin/views/tabs/dashboard/features.php:68
-#: admin/views/tabs/dashboard/integrations.php:87
+#: admin/class-yoast-form.php:919 admin/class-yoast-form.php:959
+#: admin/metabox/class-metabox.php:211
+#: admin/views/tabs/dashboard/features.php:73
+#: admin/views/tabs/dashboard/integrations.php:94
 #: admin/views/tabs/metas/paper-content/author-archive-settings.php:13
 #: admin/views/tabs/metas/paper-content/date-archives-settings.php:13
 #: admin/views/tabs/metas/paper-content/taxonomy-content.php:19
@@ -2087,10 +2424,11 @@ msgstr "Bantuan pada: %s"
 msgid "%1$s comes with a lot of features. You can enable / disable some of them below. Clicking the question mark gives more information about the feature."
 msgstr "%1$s memiliki banyak fitur. Anda dapat aktifkan / nonaktifkan di antaranya melalui pengaturan di bawah ini. Klik tanda tanya untuk mengetahui informasi tentang fitur tersebut."
 
-#: admin/class-yoast-form.php:864 admin/class-yoast-form.php:904
-#: admin/views/class-yoast-feature-toggles.php:150
-#: admin/views/tabs/dashboard/features.php:69
-#: admin/views/tabs/dashboard/integrations.php:88
+#: admin/class-yoast-form.php:920 admin/class-yoast-form.php:960
+#: admin/metabox/class-metabox.php:210
+#: admin/views/class-yoast-feature-toggles.php:149
+#: admin/views/tabs/dashboard/features.php:74
+#: admin/views/tabs/dashboard/integrations.php:95
 #: admin/views/tabs/metas/paper-content/author-archive-settings.php:14
 #: admin/views/tabs/metas/paper-content/date-archives-settings.php:14
 #: admin/views/tabs/metas/paper-content/taxonomy-content.php:19
@@ -2098,12 +2436,12 @@ msgstr "%1$s memiliki banyak fitur. Anda dapat aktifkan / nonaktifkan di antaran
 msgid "Off"
 msgstr "Nonaktif"
 
-#: admin/views/class-yoast-feature-toggles.php:130
+#: admin/views/class-yoast-feature-toggles.php:129
 msgid "Read why XML Sitemaps are important for your site."
 msgstr "Baca mengapa Peta Situs XML penting untuk situs Anda."
 
 #. translators: %s: Yoast SEO
-#: admin/views/class-yoast-feature-toggles.php:129
+#: admin/views/class-yoast-feature-toggles.php:128
 msgid "Enable the XML sitemaps that %s generates."
 msgstr "Aktifkan peta situs XML yang dihasilkan %s."
 
@@ -2154,8 +2492,8 @@ msgstr "Standar untuk %2$s, saat ini: %1$s"
 
 #. translators: %s expands to the post type name.
 #. Translators: %s translates to the Post Label in singular form
-#: admin/metabox/class-metabox.php:176 js/dist/block-editor.js:59
-#: js/dist/classic-editor.js:55 js/dist/elementor.js:59
+#: admin/metabox/class-metabox.php:176 js/dist/block-editor.js:75
+#: js/dist/classic-editor.js:71 js/dist/elementor.js:75
 msgid "Allow search engines to show this %s in search results?"
 msgstr "Izinkan mesin pencari untuk menampilkan %s ini di hasil pencarian?"
 
@@ -2166,7 +2504,7 @@ msgstr "Tampilan Pencarian"
 
 #. translators: %s expands to an indexable object's name, like a post type or
 #. taxonomy
-#: admin/class-yoast-form.php:874
+#: admin/class-yoast-form.php:930
 msgid "Show %s in search results?"
 msgstr "Tampilkan %s di hasil pencarian?"
 
@@ -2184,7 +2522,9 @@ msgid "Enable this feature if you want Facebook and other social media to displa
 msgstr "Aktifkan fitur ini jika Anda ingin Facebook dan media sosial lainnya menampilkan pratinjau dengan gambar dan kutipan teks saat tautan ke situs Anda dibagikan."
 
 #. translators: %s: Ryte
+#. translators: %s expands to WordProof
 #: admin/views/class-yoast-integration-toggles.php:87
+#: src/integrations/third-party/wordproof-integration-toggle.php:90
 msgid "Read more about how %s works."
 msgstr "Baca lebih lanjut tentang bagaimana %s dapat bekerja."
 
@@ -2193,11 +2533,13 @@ msgstr "Baca lebih lanjut tentang bagaimana %s dapat bekerja."
 #. translators: %s: Zapier.
 #. translators: %s: Algolia.
 #. translators: %s: 'Wincher'
+#. translators: %s expands to WordProof
 #: admin/views/class-yoast-integration-toggles.php:67
 #: admin/views/class-yoast-integration-toggles.php:78
 #: admin/views/class-yoast-integration-toggles.php:93
 #: admin/views/class-yoast-integration-toggles.php:110
 #: src/integrations/third-party/wincher.php:73
+#: src/integrations/third-party/wordproof-integration-toggle.php:82
 msgid "%s integration"
 msgstr "integrasi %s"
 
@@ -2234,7 +2576,7 @@ msgid "The SEO analysis offers suggestions to improve the SEO of your text."
 msgstr "Analisis SEO menawarkan saran untuk meningkatkan SEO teks Anda."
 
 #: admin/views/class-yoast-feature-toggles.php:74
-#: js/dist/externals-components.js:33
+#: js/dist/externals-components.js:53
 msgid "SEO analysis"
 msgstr "Analisis SEO"
 
@@ -2247,7 +2589,7 @@ msgstr "Izinkan pelanggan menjemput pesanan %s mereka secara langsung"
 msgid "Get better search results in local search"
 msgstr "Dapatkan hasil pencarian lebih baik di pencarian lokal"
 
-#: admin/formatter/class-metabox-formatter.php:197
+#: admin/formatter/class-metabox-formatter.php:198
 #: js/dist/externals/analysisReport.js:1
 msgid "Good results"
 msgstr "Hasil yang baik"
@@ -2265,26 +2607,26 @@ msgstr "https://yoa.st/1uj"
 msgid "Latest blog posts on %1$s"
 msgstr "Artikel blog terbaru di %1$s"
 
-#: admin/formatter/class-metabox-formatter.php:199
+#: admin/formatter/class-metabox-formatter.php:200
 #: js/dist/externals/analysisReport.js:1
 msgid "Remove highlight from the text"
 msgstr "Hapus sorot dari teks"
 
-#: src/integrations/admin/first-time-configuration-notice-integration.php:123
+#: src/integrations/admin/first-time-configuration-notice-integration.php:138
 msgid "First-time SEO configuration"
 msgstr "Konfigurasi SEO pertama kali"
 
-#: admin/formatter/class-metabox-formatter.php:198
+#: admin/formatter/class-metabox-formatter.php:199
 #: js/dist/externals/analysisReport.js:1
 msgid "Highlight this result in the text"
 msgstr "Sorot hasil ini pada teks"
 
-#: admin/formatter/class-metabox-formatter.php:196
+#: admin/formatter/class-metabox-formatter.php:197
 #: js/dist/externals/analysisReport.js:1
 msgid "Considerations"
 msgstr "Pertimbangan"
 
-#: admin/formatter/class-metabox-formatter.php:193
+#: admin/formatter/class-metabox-formatter.php:194
 #: js/dist/externals/analysisReport.js:1
 msgid "Errors"
 msgstr "Galat"
@@ -2332,6 +2674,10 @@ msgstr "Anda tidak dapat membuat berkas %s."
 msgid "More information about %1$s"
 msgstr "Informasi selengkapnya tentang %1$s"
 
+#: src/integrations/admin/old-configuration-integration.php:39
+msgid "Old Configuration Wizard"
+msgstr "Pemandu Konfigurasi Lama"
+
 #. translators: %s expands to the extension title
 #: admin/views/licenses.php:151 admin/views/licenses.php:255
 msgid "Manage your %s subscription on MyYoast"
@@ -2345,15 +2691,15 @@ msgstr "Tandai %1$s yang paling penting sebagai 'konten landasan' untuk meningka
 
 #: admin/class-admin-utils.php:78 admin/class-premium-popup.php:82
 #: admin/class-premium-upsell-admin-block.php:68
-#: admin/formatter/class-metabox-formatter.php:201
-#: admin/formatter/class-metabox-formatter.php:312 admin/views/licenses.php:97
+#: admin/formatter/class-metabox-formatter.php:202
+#: admin/formatter/class-metabox-formatter.php:313 admin/views/licenses.php:97
 #: admin/watchers/class-slug-change-watcher.php:224
 #: src/deprecated/admin/add-keyword-modal.php:51
 #: src/deprecated/admin/keyword-synonyms-modal.php:51
 #: src/deprecated/admin/multiple-keywords-modal.php:51
-#: src/integrations/admin/workouts-integration.php:213
-#: src/integrations/admin/workouts-integration.php:242
-#: src/presenters/admin/help-link-presenter.php:75 js/dist/block-editor.js:63
+#: src/integrations/admin/workouts-integration.php:211
+#: src/integrations/admin/workouts-integration.php:240
+#: src/presenters/admin/help-link-presenter.php:75 js/dist/block-editor.js:103
 #: js/dist/externals/componentsNew.js:1 js/dist/externals/helpers.js:1
 msgid "(Opens in a new browser tab)"
 msgstr "(Buka di tab peramban baru)"
@@ -2395,11 +2741,11 @@ msgstr "Diaktifkan"
 msgid "%1$s recommendations for you"
 msgstr "Rekomendasi %1$s untuk Anda"
 
-#: admin/class-meta-columns.php:246
+#: admin/class-meta-columns.php:251
 msgid "All Readability Scores"
 msgstr "Semua Skor Keterbacaan"
 
-#: admin/class-meta-columns.php:242
+#: admin/class-meta-columns.php:247
 msgid "Filter by Readability Score"
 msgstr "Saring Berdasarkan Skor Keterbacaan"
 
@@ -2436,36 +2782,45 @@ msgid "Readability score"
 msgstr "Skor keterbacaan"
 
 #. translators: %s expands to 'Yoast SEO Premium'.
-#: admin/formatter/class-metabox-formatter.php:302
+#: admin/formatter/class-metabox-formatter.php:303
 #: src/deprecated/admin/add-keyword-modal.php:41
 #: src/deprecated/admin/keyword-synonyms-modal.php:41
 #: src/deprecated/admin/multiple-keywords-modal.php:41
-#: js/dist/externals-components.js:13 js/dist/externals-components.js:23
+#: js/dist/block-editor.js:47 js/dist/classic-editor.js:43
+#: js/dist/elementor.js:47 js/dist/externals-components.js:13
+#: js/dist/externals-components.js:40
 msgid "Other benefits of %s for you:"
 msgstr "Keuntungan lain dari %s untuk Anda:"
 
 #: admin/filters/class-cornerstone-filter.php:87
 #: admin/views/class-yoast-feature-toggles.php:90
-#: js/dist/externals-components.js:1
+#: js/dist/externals-components.js:15
 msgid "Cornerstone content"
 msgstr "Konten landasan"
 
-#: admin/class-premium-upsell-admin-block.php:56
-#: js/dist/externals-components.js:9 js/dist/externals-components.js:19
+#: src/integrations/admin/crawl-settings-integration.php:304
+msgid "Upgrade Premium"
+msgstr "Upgrade ke Premium"
+
+#: admin/class-premium-upsell-admin-block.php:56 js/dist/block-editor.js:43
+#: js/dist/classic-editor.js:39 js/dist/elementor.js:43
+#: js/dist/externals-components.js:9 js/dist/externals-components.js:36
 msgid "Superfast internal linking suggestions"
 msgstr "Anjuran pemilihan tautan internal yang cepat"
 
-#: admin/class-yoast-form.php:139 admin/class-yoast-form.php:144
-#: js/dist/first-time-configuration.js:3 js/dist/settings.js:14
+#: admin/class-yoast-form.php:140 admin/class-yoast-form.php:145
+#: js/dist/first-time-configuration.js:5 js/dist/settings.js:18
 msgid "Save changes"
 msgstr "Simpan perubahan"
 
 #: admin/class-premium-popup.php:88
-#: admin/formatter/class-metabox-formatter.php:311
+#: admin/formatter/class-metabox-formatter.php:312
 #: src/deprecated/admin/add-keyword-modal.php:50
 #: src/deprecated/admin/keyword-synonyms-modal.php:50
 #: src/deprecated/admin/multiple-keywords-modal.php:50
-#: js/dist/externals-components.js:15 js/dist/externals-components.js:25
+#: js/dist/block-editor.js:49 js/dist/classic-editor.js:45
+#: js/dist/elementor.js:49 js/dist/externals-components.js:15
+#: js/dist/externals-components.js:42
 msgid "1 year free support and updates included!"
 msgstr "Termasuk gratis dukungan dan update selama 1 tahun!"
 
@@ -2477,7 +2832,9 @@ msgid "The plugin %2$s changes your site's output and in doing that differentiat
 msgstr "Plugin %2$s mengubah hasil situs Anda dan membedakan antara mesin pencari dan pengguna biasa, sebuah proses yang disebut cloaking. Kami sangat menyarankan agar Anda menonaktifkannya."
 
 #: admin/class-premium-upsell-admin-block.php:59 admin/views/sidebar.php:39
-#: js/dist/externals-components.js:11 js/dist/externals-components.js:21
+#: js/dist/block-editor.js:45 js/dist/classic-editor.js:41
+#: js/dist/elementor.js:45 js/dist/externals-components.js:11
+#: js/dist/externals-components.js:38
 msgid "No ads!"
 msgstr "Tanpa iklan!"
 
@@ -2530,13 +2887,13 @@ msgstr "Simpan"
 msgid "%1$s, Author at %2$s"
 msgstr "%1$s, Pengarang di %2$s"
 
-#: admin/formatter/class-metabox-formatter.php:200
-#: js/dist/externals/analysis.js:357 js/dist/externals/analysisReport.js:1
+#: admin/formatter/class-metabox-formatter.php:201
+#: js/dist/externals/analysis.js:359 js/dist/externals/analysisReport.js:1
 msgid "Marks are disabled in current view"
 msgstr "Tanda dinonaktifkan pada tampilan saat ini"
 
-#: inc/class-wpseo-replace-vars.php:1475 js/dist/first-time-configuration.js:5
-#: js/dist/settings.js:10
+#: inc/class-wpseo-replace-vars.php:1475 js/dist/first-time-configuration.js:7
+#: js/dist/settings.js:14
 msgid "Name"
 msgstr "Nama"
 
@@ -2578,11 +2935,11 @@ msgid "(no title)"
 msgstr "(tanpa judul)"
 
 #. translators: 1: Yoast SEO
-#: admin/views/class-yoast-feature-toggles.php:140
+#: admin/views/class-yoast-feature-toggles.php:139
 msgid "The %1$s admin bar menu contains useful links to third-party tools for analyzing pages and makes it easy to see if you have new notifications."
 msgstr "Menu bar admin %1$s berisi tautan berguna ke alat pihak ketiga untuk menganalisis halaman dan memudahkan untuk melihat apakah Anda memiliki notifikasi baru."
 
-#: admin/views/class-yoast-feature-toggles.php:137
+#: admin/views/class-yoast-feature-toggles.php:136
 msgid "Admin bar menu"
 msgstr "Menu bar admin"
 
@@ -2597,7 +2954,7 @@ msgstr "%1$s akan memeriksa setiap minggu apakah situs Anda tetap bisa diindeks 
 msgid "Features"
 msgstr "Fitur"
 
-#: admin/metabox/class-metabox.php:172 js/dist/externals/analysis.js:357
+#: admin/metabox/class-metabox.php:172 js/dist/externals/analysis.js:359
 #: js/dist/externals/replacementVariableEditor.js:1
 #: js/dist/externals/searchMetadataPreviews.js:2
 msgid "SEO title"
@@ -2661,15 +3018,15 @@ msgstr "Pilih simbol yang akan digunakan sebagai pemisah judul Anda. Ini akan me
 
 #: admin/metabox/class-metabox.php:183 admin/metabox/class-metabox.php:188
 #: admin/views/tabs/metas/paper-content/media-content.php:20
-#: js/dist/block-editor.js:53 js/dist/classic-editor.js:49
-#: js/dist/elementor.js:53
+#: js/dist/block-editor.js:69 js/dist/classic-editor.js:65
+#: js/dist/elementor.js:69
 msgid "No"
 msgstr "Tidak"
 
 #: admin/metabox/class-metabox.php:182 admin/metabox/class-metabox.php:187
 #: admin/views/tabs/metas/paper-content/media-content.php:19
-#: js/dist/block-editor.js:53 js/dist/classic-editor.js:49
-#: js/dist/elementor.js:53 js/dist/externals/schemaBlocks.js:13
+#: js/dist/block-editor.js:69 js/dist/classic-editor.js:65
+#: js/dist/elementor.js:69 js/dist/externals/schemaBlocks.js:13
 msgid "Yes"
 msgstr "Ya"
 
@@ -2855,7 +3212,7 @@ msgid "Removes the readability analysis section from the metabox and disables al
 msgstr "Menghilangkan bagian analisis keterbacaan dalam metabox dan menonaktifkan semua anjuran terkait keterbacaan."
 
 #: admin/views/class-yoast-feature-toggles.php:82
-#: js/dist/externals-components.js:1
+#: js/dist/externals-components.js:28
 msgid "Readability analysis"
 msgstr "Analisis keterbacaan"
 
@@ -2864,8 +3221,8 @@ msgstr "Analisis keterbacaan"
 #: admin/statistics/class-statistics-service.php:217
 #: inc/class-wpseo-rank.php:140 inc/class-wpseo-rank.php:163
 #: inc/class-wpseo-rank.php:195 js/dist/block-editor.js:1
-#: js/dist/block-editor.js:63 js/dist/editor-modules.js:1
-#: js/dist/externals-components.js:33 js/dist/externals/analysis.js:357
+#: js/dist/block-editor.js:103 js/dist/editor-modules.js:1
+#: js/dist/externals-components.js:53 js/dist/externals/analysis.js:359
 #: js/dist/post-edit.js:1 js/dist/term-edit.js:1
 msgid "Needs improvement"
 msgstr "Butuh perbaikan"
@@ -2875,7 +3232,7 @@ msgstr "Butuh perbaikan"
 msgid "Readability"
 msgstr "Keterbacaan"
 
-#: admin/formatter/class-metabox-formatter.php:195
+#: admin/formatter/class-metabox-formatter.php:196
 #: js/dist/externals/analysisReport.js:1
 msgid "Improvements"
 msgstr "Peningkatan"
@@ -2888,7 +3245,7 @@ msgstr "Bagus! Kami tidak mendeteksi masalah SEO yang serius."
 msgid "We have detected the following issues that affect the SEO of your site."
 msgstr "Kami telah mendeteksi masalah berikut yang memengaruhi SEO situs Anda."
 
-#: admin/formatter/class-metabox-formatter.php:194
+#: admin/formatter/class-metabox-formatter.php:195
 #: admin/views/partial-notifications-errors.php:20
 #: js/dist/externals/analysisReport.js:1
 msgid "Problems"
@@ -2904,7 +3261,7 @@ msgstr "Analisis"
 msgid "Not available"
 msgstr "Tidak tersedia"
 
-#: admin/class-meta-columns.php:214
+#: admin/class-meta-columns.php:219
 msgid "Filter by SEO Score"
 msgstr "Saring menurut Skor SEO"
 
@@ -2966,13 +3323,18 @@ msgstr "Harap memasukkan integer sebagai input."
 msgid "Trying to build the sitemap cache key, but the postfix and prefix combination leaves too little room to do this. You are probably requesting a page that is way out of the expected range."
 msgstr "Mencoba membangun kunci cache peta situs, tapi kombinasi postfix dan prefix membuat ini tidak mudah dilakukan. Anda mungkin meminta sebuah halaman yang jauh di atas jangkauan yang diharapkan."
 
+#: admin/views/redirects.php:32
+#: src/integrations/admin/redirects-integration.php:50
+msgid "Redirects"
+msgstr "Pengalihan"
+
 #: admin/views/tabs/metas/taxonomies/category-url.php:10
-#: src/integrations/admin/crawl-settings-integration.php:101
+#: src/integrations/admin/crawl-settings-integration.php:261
 msgid "Remove"
 msgstr "Hapus"
 
 #: admin/views/tabs/metas/taxonomies/category-url.php:10
-#: src/integrations/admin/crawl-settings-integration.php:100
+#: src/integrations/admin/crawl-settings-integration.php:260
 msgid "Keep"
 msgstr "Simpan"
 
@@ -3022,10 +3384,12 @@ msgstr "Term diatur menjadi noindex."
 msgid "Author archives"
 msgstr "Arsip penulis"
 
+#: src/integrations/admin/crawl-settings-integration.php:197
 #: src/presenters/admin/light-switch-presenter.php:120
 msgid "Enabled"
 msgstr "Aktif"
 
+#: src/integrations/admin/crawl-settings-integration.php:196
 #: src/presenters/admin/light-switch-presenter.php:120
 msgid "Disabled"
 msgstr "Nonaktif"
@@ -3058,7 +3422,7 @@ msgstr "Plugin pertama yang benar-benar memberikan semua solusi SEO untuk WordPr
 
 #. Plugin Name of the plugin
 #: admin/capabilities/class-capability-manager-integration.php:72
-#: js/dist/block-editor.js:63
+#: js/dist/block-editor.js:103
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
@@ -3133,7 +3497,7 @@ msgid "%1$s does not seem to be a valid %2$s verification string. Please correct
 msgstr "%1$s tampaknya bukan string verifikasi %2$s yang valid. Mohon perbaiki."
 
 #. translators: %s expands to the name of a post type (plural).
-#: inc/class-upgrade.php:1279 inc/options/class-wpseo-option-titles.php:283
+#: inc/class-upgrade.php:1300 inc/options/class-wpseo-option-titles.php:283
 msgid "%s Archive"
 msgstr "%s Arsip"
 
@@ -3160,22 +3524,22 @@ msgstr "Ringkasan"
 msgid "The post %1$s appeared first on %2$s."
 msgstr "Artikel %1$s pertama kali tampil pada %2$s."
 
-#: inc/options/class-wpseo-option-ms.php:218
+#: inc/options/class-wpseo-option-ms.php:242
 msgid "No numeric value was received."
 msgstr "Tidak ada nilai numerik yang diterima."
 
 #. translators: %s is the ID number of a blog.
-#: inc/options/class-wpseo-option-ms.php:206
+#: inc/options/class-wpseo-option-ms.php:230
 msgid "This must be an existing blog. Blog %s does not exist or has been marked as deleted."
 msgstr "Ini harus blog yang masih ada. Blog %s tidak ada atau memiliki status dihapus."
 
-#: inc/options/class-wpseo-option-ms.php:202
-#: inc/options/class-wpseo-option-ms.php:218
+#: inc/options/class-wpseo-option-ms.php:226
+#: inc/options/class-wpseo-option-ms.php:242
 msgid "The default blog setting must be the numeric blog id of the blog you want to use as default."
 msgstr "Pengaturan standar blog harus berupa ID blog numerik dari blog yang ingin Anda gunakan sebagai blog utama."
 
 #. translators: %1$s expands to the option name and %2$sexpands to Yoast SEO
-#: inc/options/class-wpseo-option-ms.php:182
+#: inc/options/class-wpseo-option-ms.php:206
 msgid "%1$s is not a valid choice for who should be allowed access to the %2$s settings. Value reset to the default."
 msgstr "%1$s bukan pilihan yang benar untuk siapa yang diijinkan mengakses pengaturan %2$s. Nilai dikembalikan ke pengaturan awal."
 
@@ -3210,8 +3574,8 @@ msgstr "Galat 404: Laman tidak ditemukan"
 #: admin/statistics/class-statistics-service.php:227
 #: inc/class-wpseo-rank.php:142 inc/class-wpseo-rank.php:173
 #: inc/class-wpseo-rank.php:205 js/dist/block-editor.js:1
-#: js/dist/block-editor.js:63 js/dist/editor-modules.js:1
-#: js/dist/externals-components.js:33 js/dist/externals/analysis.js:357
+#: js/dist/block-editor.js:103 js/dist/editor-modules.js:1
+#: js/dist/externals-components.js:53 js/dist/externals/analysis.js:359
 #: js/dist/post-edit.js:1 js/dist/term-edit.js:1
 msgid "Good"
 msgstr "Bagus"
@@ -3376,8 +3740,8 @@ msgid "Page not found"
 msgstr "Laman tidak ditemukan"
 
 #. translators: %s expands to the variable used for term title.
-#: admin/formatter/class-term-metabox-formatter.php:164
-#: inc/class-upgrade.php:1282 inc/options/class-wpseo-option-titles.php:319
+#: admin/formatter/class-term-metabox-formatter.php:165
+#: inc/class-upgrade.php:1303 inc/options/class-wpseo-option-titles.php:319
 msgid "%s Archives"
 msgstr "%s Arsip"
 
@@ -3534,6 +3898,10 @@ msgstr "Perkakas ini membantu Anda mengubah berkas-berkas penting untuk SEO Anda
 #: admin/pages/tools.php:30
 msgid "File editor"
 msgstr "Penyunting Berkas"
+
+#: admin/pages/tools.php:25
+msgid "Import settings from other SEO plugins and export your settings for re-use on (another) site."
+msgstr "Impor pengaturan dari plugin SEO lain dan ekspor pengaturan Anda untuk digunakan kembali di situs lain."
 
 #: admin/pages/tools.php:24
 msgid "Import and Export"
@@ -3767,7 +4135,7 @@ msgid "The premium version of %1$s with more features & support."
 msgstr "Versi premium %1$s dengan lebih banyak fitur dan dukungan."
 
 #: admin/views/tabs/metas/paper-content/general/knowledge-graph.php:33
-#: src/integrations/admin/first-time-configuration-integration.php:428
+#: src/integrations/admin/first-time-configuration-integration.php:427
 msgid "Person"
 msgstr "Orang"
 
@@ -3793,6 +4161,10 @@ msgstr "Permalink"
 msgid "Breadcrumbs"
 msgstr "Breadcrumbs"
 
+#: vendor_prefixed/wordproof/wordpress-sdk/app/Translations/DefaultTranslations.php:43
+msgid "Authenticate"
+msgstr "Autentikasikan"
+
 #. Translators: %1$s: expands to 'Yoast SEO Premium', %2$s: links to Yoast SEO
 #. Premium plugin page.
 #: admin/google_search_console/views/gsc-redirect-nopremium.php:22
@@ -3803,6 +4175,14 @@ msgstr "Untuk dapat membuat pengalihan dan memperbaiki masalah ini, Anda membutu
 #: admin/google_search_console/views/gsc-redirect-nopremium.php:15
 msgid "Creating redirects is a %s feature"
 msgstr "Membuat pengalihan adalah salah satu fitur %s"
+
+#: admin/views/redirects.php:175 admin/views/redirects.php:222
+msgid "New URL"
+msgstr "URL Baru"
+
+#: admin/views/redirects.php:112
+msgid "URL"
+msgstr "URL"
 
 #. translators: %s: 'Facebook' plugin name of possibly conflicting plugin
 #: admin/class-yoast-plugin-conflict.php:214
@@ -3815,7 +4195,7 @@ msgstr "Nonaktifkan %s"
 msgid "The %1$s plugin might cause issues when used in conjunction with %2$s."
 msgstr "Plugin %1$s dapat menyebabkan masalah saat digunakan bersamaan dengan %2$s."
 
-#: admin/class-yoast-form.php:693 admin/metabox/class-metabox.php:642
+#: admin/class-yoast-form.php:739 admin/metabox/class-metabox.php:648
 #: admin/taxonomy/class-taxonomy-fields-presenter.php:127
 msgid "Upload Image"
 msgstr "Unggah Gambar"
@@ -3843,7 +4223,7 @@ msgid "Archives"
 msgstr "Arsip"
 
 #: admin/google_search_console/views/gsc-redirect-nopremium.php:27
-#: js/dist/externals-components.js:25 js/dist/externals/componentsNew.js:1
+#: js/dist/externals-components.js:42 js/dist/externals/componentsNew.js:1
 msgid "Close"
 msgstr "Tutup"
 
@@ -3864,13 +4244,13 @@ msgstr "Mengonfigurasi pengaturan Open Graph %1$s"
 msgid "Both %1$s and %2$s create Open Graph output, which might make Facebook, Twitter, LinkedIn and other social networks use the wrong texts and images when your pages are being shared."
 msgstr "%1$s dan %2$s menampilkan Open Graph, yang bisa jadi akan membuat Facebook, Twitter, LinkedIn, dan jejaring sosial lainnya menggunakan teks dan gambar yang salah ketika laman Anda dibagikan."
 
-#: admin/pages/social.php:20 js/dist/block-editor.js:63
-#: js/dist/first-time-configuration.js:1 js/dist/settings.js:5
+#: admin/pages/social.php:20 js/dist/block-editor.js:103
+#: js/dist/first-time-configuration.js:3 js/dist/settings.js:9
 msgid "Twitter"
 msgstr "Twitter"
 
-#: admin/pages/social.php:19 js/dist/block-editor.js:63
-#: js/dist/first-time-configuration.js:1 js/dist/settings.js:5
+#: admin/pages/social.php:19 js/dist/block-editor.js:103
+#: js/dist/first-time-configuration.js:3 js/dist/settings.js:9
 msgid "Facebook"
 msgstr "Facebook"
 
@@ -3879,8 +4259,8 @@ msgstr "Facebook"
 #: admin/statistics/class-statistics-service.php:222
 #: inc/class-wpseo-rank.php:141 inc/class-wpseo-rank.php:168
 #: inc/class-wpseo-rank.php:200 js/dist/block-editor.js:1
-#: js/dist/editor-modules.js:1 js/dist/externals-components.js:33
-#: js/dist/externals/analysis.js:357 js/dist/post-edit.js:1
+#: js/dist/editor-modules.js:1 js/dist/externals-components.js:53
+#: js/dist/externals/analysis.js:359 js/dist/post-edit.js:1
 #: js/dist/term-edit.js:1
 msgid "OK"
 msgstr "OK"
@@ -3889,30 +4269,30 @@ msgstr "OK"
 msgid "Meta Desc."
 msgstr "Deskripsi Meta"
 
-#: admin/class-meta-columns.php:218
+#: admin/class-meta-columns.php:223
 msgid "All SEO Scores"
 msgstr "Semua Skor SEO"
 
-#: admin/metabox/class-metabox.php:919
-#: src/integrations/third-party/elementor.php:442
+#: admin/metabox/class-metabox.php:925
+#: src/integrations/third-party/elementor.php:443
 msgid "SEO issue: The featured image should be at least 200 by 200 pixels to be picked up by Facebook and other social media sites."
 msgstr "Masalah SEO: gambar utama harus berukuran minimal 200x200 pixel agar dapat tampil di Facebook dan situs media sosial lainnya."
 
-#: admin/metabox/class-metabox.php:875 admin/taxonomy/class-taxonomy.php:151
+#: admin/metabox/class-metabox.php:881 admin/taxonomy/class-taxonomy.php:151
 #: admin/taxonomy/class-taxonomy.php:272
-#: src/integrations/third-party/elementor.php:397
+#: src/integrations/third-party/elementor.php:398
 msgid "(no parent)"
 msgstr "(tanpa induk)"
 
-#: admin/class-meta-columns.php:636
+#: admin/class-meta-columns.php:657
 msgid "Post is set to noindex."
 msgstr "Posting diatur noindex"
 
-#: admin/metabox/class-metabox.php:209
+#: admin/metabox/class-metabox.php:215
 msgid "The URL that this page should redirect to."
 msgstr "URL tujuan dari pengalihan laman ini."
 
-#: admin/metabox/class-metabox.php:208
+#: admin/metabox/class-metabox.php:214
 msgid "301 Redirect"
 msgstr "Pengalihan 301"
 
@@ -3921,8 +4301,8 @@ msgstr "Pengalihan 301"
 msgid "The canonical URL that this page should point to. Leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
 msgstr "URL kanonik untuk menuju laman ini. Biarkan kosong untuk menggunakan permalink bawaan. Juga mendukung %1$skanonik antar domain%2$s."
 
-#: admin/metabox/class-metabox.php:199 js/dist/block-editor.js:61
-#: js/dist/classic-editor.js:57 js/dist/elementor.js:61
+#: admin/metabox/class-metabox.php:199 js/dist/block-editor.js:77
+#: js/dist/classic-editor.js:73 js/dist/elementor.js:77
 msgid "Canonical URL"
 msgstr "URL Kanonik"
 
@@ -3930,23 +4310,23 @@ msgstr "URL Kanonik"
 msgid "Title to use for this page in breadcrumb paths"
 msgstr "Judul digunakan untuk halaman ini dalam path breadcrumb"
 
-#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:61
-#: js/dist/classic-editor.js:57 js/dist/elementor.js:61
+#: admin/metabox/class-metabox.php:196 js/dist/block-editor.js:77
+#: js/dist/classic-editor.js:73 js/dist/elementor.js:77
 msgid "Breadcrumbs Title"
 msgstr "Judul Breadcrumbs"
 
-#: admin/metabox/class-metabox.php:194 js/dist/block-editor.js:61
-#: js/dist/classic-editor.js:57 js/dist/elementor.js:61
+#: admin/metabox/class-metabox.php:194 js/dist/block-editor.js:77
+#: js/dist/classic-editor.js:73 js/dist/elementor.js:77
 msgid "No Snippet"
 msgstr "Tidak ada snippet"
 
-#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:61
-#: js/dist/classic-editor.js:57 js/dist/elementor.js:61
+#: admin/metabox/class-metabox.php:193 js/dist/block-editor.js:77
+#: js/dist/classic-editor.js:73 js/dist/elementor.js:77
 msgid "No Archive"
 msgstr "Tidak ada arsip"
 
-#: admin/metabox/class-metabox.php:192 js/dist/block-editor.js:61
-#: js/dist/classic-editor.js:57 js/dist/elementor.js:61
+#: admin/metabox/class-metabox.php:192 js/dist/block-editor.js:77
+#: js/dist/classic-editor.js:73 js/dist/elementor.js:77
 msgid "No Image Index"
 msgstr "Tidak ada indeks gambar"
 
@@ -3957,8 +4337,8 @@ msgstr "Tidak ada indeks gambar"
 msgid "None"
 msgstr "Tidak ada"
 
-#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:61
-#: js/dist/classic-editor.js:57 js/dist/elementor.js:61
+#: admin/metabox/class-metabox.php:190 js/dist/block-editor.js:77
+#: js/dist/classic-editor.js:73 js/dist/elementor.js:77
 msgid "Meta robots advanced"
 msgstr "Robot meta lanjutan"
 
@@ -3966,7 +4346,7 @@ msgstr "Robot meta lanjutan"
 msgid "Warning: even though you can set the meta robots setting here, the entire site is set to noindex in the sitewide privacy settings, so these settings won't have an effect."
 msgstr "Peringatan: walaupun Anda dapat mengatur meta robots di pengaturan ini, namun seluruh situs pada  konfigurasi privasi diatur ke noindex, sehingga pengaturan ini tidak akan berpengaruh."
 
-#: admin/metabox/class-metabox.php:173 js/dist/externals/analysis.js:357
+#: admin/metabox/class-metabox.php:173 js/dist/externals/analysis.js:359
 #: js/dist/externals/replacementVariableEditor.js:1
 #: js/dist/externals/searchMetadataPreviews.js:2
 msgid "Meta description"
@@ -4017,9 +4397,9 @@ msgstr "Pemisah breadcrumbs:"
 msgid "%s Breadcrumbs"
 msgstr "Breadcrumbs %s"
 
-#: admin/class-config.php:123 admin/metabox/class-metabox.php:900
+#: admin/class-config.php:128 admin/metabox/class-metabox.php:906
 #: admin/taxonomy/class-taxonomy.php:166
-#: src/integrations/third-party/elementor.php:423
+#: src/integrations/third-party/elementor.php:424
 msgid "Use Image"
 msgstr "Gunakan Gambar"
 
@@ -4043,10 +4423,10 @@ msgstr "Status Pos"
 msgid "WP Page Title"
 msgstr "Judul Laman WP"
 
-#: admin/class-bulk-editor-list-table.php:826 js/dist/block-editor.js:11
-#: js/dist/classic-editor.js:7 js/dist/dashboard-widget.js:3
+#: admin/class-bulk-editor-list-table.php:826 js/dist/block-editor.js:15
+#: js/dist/classic-editor.js:11 js/dist/dashboard-widget.js:3
 #: js/dist/dashboard-widget.js:13 js/dist/editor-modules.js:7
-#: js/dist/elementor.js:11
+#: js/dist/elementor.js:15
 msgid "View"
 msgstr "Lihat"
 
@@ -4065,8 +4445,8 @@ msgid "Preview &#8220;%s&#8221;"
 msgstr "Pratinjau &#8220;%s&#8221;"
 
 #: admin/class-bulk-editor-list-table.php:804
-#: js/dist/first-time-configuration.js:1 js/dist/first-time-configuration.js:15
-#: js/dist/installation-success.js:11
+#: js/dist/first-time-configuration.js:3 js/dist/first-time-configuration.js:15
+#: js/dist/installation-success.js:13
 msgid "Edit"
 msgstr "Sunting"
 
@@ -4145,16 +4525,16 @@ msgstr "Konsol Pencarian"
 msgid "Tools"
 msgstr "Alat"
 
-#: admin/views/class-yoast-feature-toggles.php:126
+#: admin/views/class-yoast-feature-toggles.php:125
 msgid "XML sitemaps"
 msgstr "Peta situs XML"
 
-#: admin/menu/class-admin-menu.php:96 admin/metabox/class-metabox.php:432
+#: admin/menu/class-admin-menu.php:96 admin/metabox/class-metabox.php:438
 #: admin/taxonomy/class-taxonomy-metabox.php:146
 msgid "Social"
 msgstr "Sosial"
 
-#: admin/metabox/class-metabox.php:411
+#: admin/metabox/class-metabox.php:417
 #: admin/taxonomy/class-taxonomy-metabox.php:132
 #: inc/class-wpseo-admin-bar-menu.php:471
 #: src/presenters/meta-description-presenter.php:36

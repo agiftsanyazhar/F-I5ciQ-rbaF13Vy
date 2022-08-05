@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-23 22:45:24+0000\n"
+"PO-Revision-Date: 2022-08-01 14:22:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,30 @@ msgstr ""
 "X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: id\n"
 "Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
+
+#: grid/templates/other-plugins.php:40
+msgid "Self-hosted, Privacy-friendly analytics tool"
+msgstr "Self-hosted, Alat analitik yang ramah privasi"
+
+#: upgrade/upgrade-to-pro.php:540
+msgid "Invalid license."
+msgstr "Lisensi tidak valid."
+
+#: upgrade/upgrade-to-pro.php:537
+msgid "Missing license."
+msgstr "Lisensi hilang."
+
+#: upgrade/upgrade-to-pro.php:543
+msgid "Your license is not active for this URL."
+msgstr "Lisensi Anda tidak aktif untuk URL ini."
+
+#: upgrade/upgrade-to-pro.php:549
+msgid "Your license key has reached its activation limit."
+msgstr "Kunci lisensi Anda telah mencapai batas aktivasi."
+
+#: upgrade/upgrade-to-pro.php:546
+msgid "This appears to be an invalid license key for this plugin."
+msgstr "Tampaknya ini adalah kunci lisensi yang tidak valid untuk plugin ini."
 
 #: class-admin.php:605
 msgid "No SSL certificate has been detected."

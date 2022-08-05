@@ -707,6 +707,55 @@ SP_WPCF::createSection(
 				'dependency' => array( 'wpcp_carousel_type|show_image', 'any|==', 'image-carousel,post-carousel,product-carousel|true', true ),
 			),
 			array(
+				'id'                => 'wpcp_image_crop_size',
+				'type'              => 'dimensions_advanced',
+				'title'             => __( 'Custom Size', 'wp-carousel-free' ),
+				'class'             => 'wpcp_carousel_row_pro_only',
+				'subtitle'          => __( 'Set width and height of the image.', 'wp-carousel-free' ),
+				'chosen'            => true,
+				'bottom'            => false,
+				'left'              => false,
+				'color'             => false,
+				'top_icon'          => '<i class="fa fa-arrows-h"></i>',
+				'right_icon'        => '<i class="fa fa-arrows-v"></i>',
+				'top_placeholder'   => 'width',
+				'right_placeholder' => 'height',
+				'styles'            => array(
+					'Soft-crop',
+					'Hard-crop',
+				),
+				'default'           => array(
+					'top'   => '600',
+					'right' => '400',
+					'style' => 'Soft-crop',
+					'unit'  => 'px',
+				),
+				'attributes'        => array(
+					'min' => 0,
+				),
+				'dependency'        => array( 'wpcp_carousel_type|wpcp_image_sizes|show_image', 'any|==|==', 'image-carousel,post-carousel,product-carousel|custom|true', true ),
+			),
+			array(
+				'id'         => 'load_2x_image',
+				'class'      => 'only_pro_switcher',
+				'type'       => 'switcher',
+				'text_on'    => __( 'Enabled', 'wp-carousel-free' ),
+				'text_off'   => __( 'Disabled', 'wp-carousel-free' ),
+				'text_width' => 95,
+				'title'      => __(
+					'Load 2x Resolution Image in Retina Display
+				',
+					'wp-carousel-free'
+				),
+				'subtitle'   => __(
+					'You should upload 2x sized images to show in retina display.
+				',
+					'wp-carousel-free'
+				),
+				'default'    => false,
+				'dependency' => array( 'wpcp_carousel_type|wpcp_image_sizes|show_image', 'any|==|==', 'image-carousel,post-carousel,product-carousel|custom|true', true ),
+			),
+			array(
 				'id'       => 'wpcp_image_gray_scale',
 				'type'     => 'select',
 				'class'    => 'wpcp_image_gray_scale_pro',
