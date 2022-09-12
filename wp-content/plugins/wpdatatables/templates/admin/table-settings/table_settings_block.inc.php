@@ -287,6 +287,11 @@
 
                         </div>
 
+                    </div>
+                    <!-- /.row -->
+
+                    <div class="row">
+
                         <div class="col-sm-4 m-b-20 wdt-hide-until-load-block">
 
                             <h4 class="c-title-color m-b-2">
@@ -301,11 +306,6 @@
                             </div>
 
                         </div>
-
-                    </div>
-                    <!-- /.row -->
-
-                    <div class="row">
 
                         <div class="col-sm-4 wdt-default-rows-per-page">
                             <h4 class="c-title-color m-b-2">
@@ -380,6 +380,11 @@
 
                         </div>
 
+                    </div>
+                    <!-- /.row -->
+
+                    <div class="row">
+
                         <div class="col-sm-4 m-b-20 wdt-scrollable-block">
 
                             <h4 class="c-title-color m-b-2">
@@ -411,11 +416,6 @@
                             </div>
 
                         </div>
-
-                    </div>
-                    <!-- /.row -->
-
-                    <div class="row">
 
                         <div class="col-sm-4 m-b-20">
 
@@ -479,6 +479,10 @@
                             </div>
                         </div>
 
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+
                         <div class="col-sm-4 m-b-20 word-wrap-settings-block hidden">
 
                             <h4 class="c-title-color m-b-2">
@@ -509,10 +513,6 @@
                             </div>
 
                         </div>
-
-                    </div>
-                    <!-- /.row -->
-                    <div class="row">
 
                         <div class="col-sm-4 m-b-16">
 
@@ -573,6 +573,18 @@
 
                         </div>
 
+                    </div>
+                    <!-- /.row -->
+
+
+                </div>
+                <!-- /Table display settings -->
+
+                <!-- Table sorting and filtering settings -->
+                <div role="tabpanel" class="tab-pane fade" id="table-sorting-filtering-settings">
+                    <!-- .row -->
+                    <div class="row">
+
                         <div class="col-sm-4 m-b-16 pagination-layout-settings-block">
 
                             <h4 class="c-title-color m-b-2">
@@ -606,18 +618,6 @@
                             </div>
 
                         </div>
-
-                    </div>
-                    <!-- /.row -->
-
-
-                </div>
-                <!-- /Table display settings -->
-
-                <!-- Table sorting and filtering settings -->
-                <div role="tabpanel" class="tab-pane fade" id="table-sorting-filtering-settings">
-                    <!-- .row -->
-                    <div class="row">
 
                         <div class="col-sm-4 m-b-20">
 
@@ -684,6 +684,11 @@
 
                         </div>
 
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- row -->
+                    <div class="row">
                         <div class="col-sm-4 m-b-20">
 
                             <h4 class="c-title-color m-b-2">
@@ -714,12 +719,6 @@
                             </div>
 
                         </div>
-
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- row -->
-                    <div class="row">
 
                         <div class="col-sm-4 m-b-20 filtering-form-block <?php echo 'hidden' ?>">
 

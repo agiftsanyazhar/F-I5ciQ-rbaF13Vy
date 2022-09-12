@@ -647,6 +647,9 @@ class WDTTools
      */
     private static function wdtDetectColumnType($values)
     {
+        if (self::_detect($values, 'self::wdtIsIP')) {
+            return 'string';
+        }
         if (self::_detect($values, 'self::wdtIsInteger')) {
             return 'int';
         }
@@ -682,6 +685,16 @@ class WDTTools
     private static function wdtIsInteger($input)
     {
         return ctype_digit((string)$input);
+    }
+
+    /**
+     * Function that checks if the passed values are IP's
+     * @param $input
+     * @return bool
+     */
+    private static function wdtIsIP($input)
+    {
+        return (bool)filter_var($input, FILTER_VALIDATE_IP);
     }
 
     /**

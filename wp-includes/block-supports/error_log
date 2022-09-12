@@ -14,3 +14,27 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/generated-classname.php on line 67
+[06-Aug-2022 08:02:38 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/spacing.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/spacing.php on line 83
+[08-Aug-2022 10:35:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/perpajakanvokasi/public_html/wp-includes/block-supports/elements.php:138
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/elements.php on line 138
+[08-Aug-2022 21:40:30 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/dimensions.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/dimensions.php on line 67
+[14-Aug-2022 21:28:51 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/colors.php:152
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/colors.php on line 152
+[17-Aug-2022 10:09:25 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/typography.php:217
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/typography.php on line 217
+[20-Aug-2022 04:50:19 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/custom-classname.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/custom-classname.php on line 59

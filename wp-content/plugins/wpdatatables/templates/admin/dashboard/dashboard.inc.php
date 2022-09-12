@@ -337,17 +337,12 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                  </span>
                         </p>
                         <p class="wpdt-text wpdt-font m-b-18">
-                            A major update with new features, improvements and stability improvements:
+                            A minor update with new a bug fix and stability improvements:
                         </p>
                         <div class="alert alert-info m-b-0" role="alert">
                             <i class="wpdt-icon-info-circle-full"></i>
                             <ul>
-                                <li><strong>Feature:</strong> Responsive datatables – now each datatable can be responsive where you can choose which columns do you want to be visible or hidden on tablets and/or mobiles.</li>
-                                <li><strong>Feature:</strong> Added options for responsive actions in datatables – icon, row or cell.</li>
-                                <li><strong>Feature:</strong> Responsive Charts – now each chart (both Google and Chartjs) can be responsive – just tick the “responsive” checkbox near the width input. Responsive chart will occupy 100% width of the container, instead of having fixed width, therefore always render correctly on any device types, and when you resize browser window.</li>
-                                <li><strong>Feature:</strong> Grouping Charts – rows with same labels would be treated as a single entry, summing up all the values in other cells.</li>
-                                <li><strong>Improvement:</strong> Enabled options in Google chart: Horizontal crosshair, Horizontal axis direction, Vertical crosshair, Vertical axis direction and Invert axis</li>
-                                <li><strong>BugFix:</strong> Fixed issue with PHP notice.</li>
+                                <li><strong>BugFix:</strong> Fix for Display tab settings not being aligned inside rows.</li>
                                 <li>Other small bug fixes and stability improvements.</li>
                             </ul>
                         </div>
@@ -712,7 +707,7 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
         </div>
         <div class="row">
             <h4 class="wdt-row-title m-b-20 text-center">
-                <?php esc_html_e('Need free booking plugin?', 'wpdatatables'); ?></h4>
+                <?php esc_html_e('Need a free booking plugin?', 'wpdatatables'); ?></h4>
         </div>
         <div class="row">
             <div class="col-sm-12 p-l-0 p-r-0">

@@ -9,7 +9,7 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 
 // Current version
 
-define('WDT_CURRENT_VERSION', '2.1.36');
+define('WDT_CURRENT_VERSION', '2.1.39');
 
 // Number of active plugin installs for wpDataTables
 define('WDT_NUMBER_OF_ACTIVE_INSTALLS', '66,000+');

@@ -224,7 +224,7 @@ function wdtActivationCreateTables() {
         update_option('wdtShowForminatorNotice', 'yes' );
     }
     if (get_option('wdtShowPromoNotice') === false) {
-        update_option('wdtShowPromoNotice', 'yes' );
+        delete_option('wdtShowPromoNotice');
     }
     if (get_option('wdtSimpleTableAlert') === false) {
         update_option('wdtSimpleTableAlert', true );
@@ -263,11 +263,11 @@ function wdtAdminRatingMessages() {
              <p class="wpdt-forminator-news"><strong style="color: #ff8c00">NEWS!</strong> wpDataTables just launched a new <strong style="color: #ff8c00">FREE</strong> addon - <strong style="color: #ff8c00">Forminator Forms integration for wpDataTables</strong>. You can download it and read more about it on wp.org on this <a class="wdt-forminator-link" href="https://wordpress.org/plugins/wpdatatables-forminator/" style="color: #ff8c00" target="_blank">link</a>.</p>
          </div>';
     }
-
-    if( is_admin() && (strpos($wpdtPage,'wpdatatables-dashboard') !== false || strpos($wpdtPage,'wpdatatables-lite-vs-premium') !== false) &&
-        get_option( 'wdtShowPromoNotice' ) == "yes" ) {
-        include WDT_TEMPLATE_PATH . 'admin/common/promo.inc.php';
-    }
+//    Notice bar for Lite promo
+//    if( is_admin() && (strpos($wpdtPage,'wpdatatables-dashboard') !== false || strpos($wpdtPage,'wpdatatables-lite-vs-premium') !== false) &&
+//        get_option( 'wdtShowPromoNotice' ) == "yes" ) {
+//        include WDT_TEMPLATE_PATH . 'admin/common/promo.inc.php';
+//    }
 }
 
 add_action( 'admin_notices', 'wdtAdminRatingMessages' );
@@ -537,6 +537,188 @@ function wdtWpDataChartShortcodeHandler($atts, $content = null) {
     do_action('wpdatatables_before_render_chart', $wpDataChart->getId());
 
     return $wpDataChart->renderChart();
+}
+
+/**
+ * Handler for the table cell shortcode
+ * @param $atts
+ * @param null $content
+ * @return mixed|string
+ * @throws Exception
+ */
+function wdtWpDataTableCellShortcodeHandler($atts, $content = null) {
+    global $wpdb;
+    extract(shortcode_atts(array(
+        'table_id' => '0',
+        'row_id' => '0',
+        'column_key' => '%%no_val%%',
+        'column_id' => '%%no_val%%',
+        'column_id_value' => '%%no_val%%',
+        'sort' => '1'
+    ), $atts));
+
+    /**
+     * Protection
+     * @var int $table_id
+     */
+    if (!$table_id)
+        return esc_html__('wpDataTable with provided ID not found!', 'wpdatatables');
+
+    /** @var int $row_id */
+    $rowID = !$row_id ? 0 : $row_id;
+
+    /** @var int $sort */
+    $includeSort = $sort == 1;
+
+    /** @var mixed $column_key */
+    $columnKey = $column_key !== '%%no_val%%' ? $column_key : '';
+
+    /** @var mixed $column_id */
+    $columnID = $column_id !== '%%no_val%%' ? $column_id : '';
+
+    /** @var mixed $column_id_value */
+    $columnIDValue = $column_id_value !== '%%no_val%%' ? $column_id_value : '';
+
+    $rowID         = apply_filters('wpdatatables_cell_filter_row_id', $rowID, $columnKey, $columnID, $columnIDValue, $table_id);
+    $columnKey     = apply_filters('wpdatatables_cell_filter_column_key', $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
+    $columnID      = apply_filters('wpdatatables_cell_filter_column_id', $columnID, $columnKey, $rowID, $columnIDValue, $table_id);
+    $columnIDValue = apply_filters('wpdatatables_cell_filter_column_id_value', $columnIDValue, $columnKey, $rowID, $columnID, $table_id);
+
+    if ($columnKey == '')
+        return esc_html__('Column key for provided table ID not found!', 'wpdatatables');
+
+    $tableData = WDTConfigController::loadTableFromDB($table_id, false);
+
+    if (empty($tableData->content))
+        return esc_html__('wpDataTable with provided ID not found!', 'wpdatatables');
+
+    if ($tableData->table_type === 'simple') {
+
+        if ($columnIDValue != '' || $columnID != '')
+            return esc_html__('For getting cell value from simple table, column_id and column_id_value are not supported. Please use row_id.', 'wpdatatables');
+
+        if ($rowID == 0)
+            return esc_html__('Row ID for provided table ID not found!', 'wpdatatables');
+
+        try {
+            $wpDataTableRows = WPDataTableRows::loadWpDataTableRows($table_id);
+            $rowsData = $wpDataTableRows->getRowsData();
+            $columnHeaders = array_flip($wpDataTableRows->getColHeaders());
+            $columnKey = strtoupper($columnKey);
+            if (isset($columnHeaders[$columnKey])) {
+                $rowID = $rowID - 1;
+                if(isset($rowsData[$rowID])){
+                    $columnKey = $columnHeaders[$columnKey];
+                    $cellMetaClasses = array_unique($wpDataTableRows->getCellClassesByIndexes($rowsData, $rowID, $columnKey));
+                    $cellValue = $wpDataTableRows->getCellDataByIndexes($rowsData, $rowID, $columnKey);
+                    $cellValue = apply_filters('wpdatatables_cell_value_filter', $cellValue, $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
+                    $cellValueOutput = WPDataTableRows::prepareCellDataOutput($cellValue, $cellMetaClasses, $rowID, $columnKey, $table_id);
+                } else {
+                    return esc_html__('Row ID for provided table ID not found!', 'wpdatatables');
+                }
+            } else {
+                return esc_html__('Column key for provided table ID not found!', 'wpdatatables');
+            }
+        } catch (Exception $e) {
+            return ltrim($e->getMessage(), '<br/><br/>');
+        }
+    } else {
+        try {
+            $wpDataTable = WPDataTable::loadWpDataTable($table_id);
+
+            if (!isset($wpDataTable->getWdtColumnTypes()[$columnKey]))
+                return esc_html__('Column key for provided table ID not found!', 'wpdatatables');
+
+            if ($columnIDValue != '' || $columnID != ''){
+                if ($columnID == '')
+                    return esc_html__('Column ID for provided table ID not found!', 'wpdatatables');
+
+                if ($columnIDValue == '')
+                    return esc_html__('Column ID value for provided table ID not found!', 'wpdatatables');
+
+                if (!isset($wpDataTable->getWdtColumnTypes()[$columnID]))
+                    return esc_html__('Column ID for provided table ID not found!', 'wpdatatables');
+
+                if (in_array($wpDataTable->getWdtColumnTypes()[$columnID],['date','datetime','time','float']))
+                    return esc_html__('At the moment float, date, datetime and time columns can not be used as column_id. Please use other column that contains unique identifiers.', 'wpdatatables');
+
+                if ($columnKey == $columnID)
+                    return esc_html__('Column Key an Column ID can not be the same!', 'wpdatatables');
+            }
+
+            $isTableSortable = $wpDataTable->sortEnabled();
+            if ($includeSort && $isTableSortable){
+                $sortDirection = $wpDataTable->getDefaultSortDirection();
+                if ( $wpDataTable->getDefaultSortColumn()){
+                    $sortColumn = $wpDataTable->getColumns()[$wpDataTable->getDefaultSortColumn()]->getOriginalHeader();
+                    $columnType = $wpDataTable->getColumns()[$wpDataTable->getDefaultSortColumn()]->getDataType();
+                } else {
+                    $sortColumn = $wpDataTable->getColumns()[0]->getOriginalheader();
+                    $columnType = $wpDataTable->getColumns()[0]->getDataType();
+                }
+            }
+
+            $dataRows = $wpDataTable->getDataRows();
+            if ($dataRows == [])
+                return esc_html__('Table do not have data for provided table ID!', 'wpdatatables');
+            if ($includeSort && $isTableSortable){
+                $sortDirection = $sortDirection == 'ASC' ? SORT_ASC : SORT_DESC;
+                $sortingType = in_array($columnType, array('float', 'int')) ? SORT_NUMERIC : SORT_REGULAR;
+                array_multisort(
+                    array_column($dataRows, $sortColumn),
+                    $sortDirection,
+                    $sortingType,
+                    $dataRows
+                );
+            }
+
+            $dataRows = apply_filters('wpdatatables_cell_data_rows_filter', $dataRows, $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
+
+            if ($columnIDValue != '' || $columnID != '') {
+                $filteredData = array_filter($dataRows, function ($item) use ($columnIDValue, $columnID) {
+                    if ($item[$columnID] == $columnIDValue) {
+                        return true;
+                    }
+                    return false;
+                });
+                if ($filteredData == [])
+                    return esc_html__('Column ID value for provided table ID not found!', 'wpdatatables');
+                $dataRows = array_values($filteredData);
+                $dataRows = apply_filters('wpdatatables_cell_filtered_data_rows_filter', $dataRows, $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
+                $cellValue = $dataRows[0][$columnKey];
+            } else {
+                if ($tableData->table_type == 'forminator') {
+                    $entryIdName = 'entryid';
+                    if (!isset($dataRows[0][$entryIdName]))
+                        return esc_html__('Entry ID not found! Please provide existing entry id from form.', 'wpdatatables');
+                    $rowID = str_replace(array('.', ','), '' , $rowID);
+                    $filteredData = array_filter($dataRows, function ($item) use ($rowID, $entryIdName) {
+                        if ($item[$entryIdName] == $rowID) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if ($filteredData == [])
+                        return esc_html__('Entry ID value for provided table ID not found!', 'wpdatatables');
+                    $dataRows = array_values($filteredData);
+                    $dataRows = apply_filters('wpdatatables_cell_filtered_data_rows_filter', $dataRows, $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
+                    $cellValue = $dataRows[0][$columnKey];
+                } else {
+                    $rowID = $rowID != 0 ? $rowID - 1 : 0;
+                    $wpDataTable->setDataRows($dataRows);
+                    $cellValue = $wpDataTable->getCell($columnKey, $rowID);
+                }
+
+            }
+
+            $cellValue = apply_filters('wpdatatables_cell_value_filter', $cellValue, $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
+            $cellValueOutput = $wpDataTable->getColumn($columnKey)->prepareCellOutput($cellValue);
+        } catch (Exception $e) {
+            return ltrim($e->getMessage(), '<br/><br/>');
+        }
+    }
+
+    return apply_filters('wpdatatables_cell_output_filter', $cellValueOutput, $cellValue, $columnKey, $rowID, $columnID, $columnIDValue, $table_id);
 }
 
 /**

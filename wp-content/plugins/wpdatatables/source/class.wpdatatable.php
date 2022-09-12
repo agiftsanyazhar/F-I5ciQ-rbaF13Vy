@@ -104,6 +104,14 @@ class WPDataTable
     }
 
     /**
+     * @return array
+     */
+    public function getWdtColumnTypes()
+    {
+        return $this->_wdtColumnTypes;
+    }
+
+    /**
      * @param bool $clearFilters
      */
     public function setClearFilters($clearFilters)
@@ -1340,6 +1348,10 @@ class WPDataTable
     public function getDataRows()
     {
         return $this->_dataRows;
+    }
+
+    public function setDataRows($dataRows) {
+        return $this->_dataRows= $dataRows;
     }
 
     public function getDataRowsFormatted()

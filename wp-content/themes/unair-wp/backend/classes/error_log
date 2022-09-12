@@ -154,3 +154,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_options.php on line 43
+[13-Aug-2022 20:21:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_radunit.php:449
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_radunit.php on line 449

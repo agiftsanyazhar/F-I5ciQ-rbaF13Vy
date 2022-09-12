@@ -480,7 +480,7 @@ SP_WPCF::createSection(
 				'type'       => 'image_select',
 				'title'      => __( 'Content Position', 'wp-carousel-free' ),
 				'subtitle'   => __( 'Select a position for the title, content, meta etc.', 'wp-carousel-free' ),
-				'desc'       => __( 'To unlock the more amazing Content Positions and Settings, <a href="https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1" target="_blank"><b>Upgrade To Pro</b></a>!', 'wp-carousel-free' ),
+				'desc'       => __( 'To unlock the more amazing Content Positions and Settings, <a href="https://shapedplugin.com/wp-carousel/?ref=1" target="_blank"><b>Upgrade To Pro</b></a>!', 'wp-carousel-free' ),
 				'options'    => array(
 					'bottom'       => array(
 						'image' => plugin_dir_url( __DIR__ ) . 'img/bottom.svg',
@@ -855,7 +855,7 @@ SP_WPCF::createSection(
 			array(
 				'type'    => 'notice',
 				'style'   => 'normal',
-				'content' => __( 'To unlock the following <strong>28+ amazing Lightbox</strong> options, <a href="https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1" target="_blank"><b>Upgrade To Pro!</b></a>', 'wp-carousel-free' ),
+				'content' => __( 'To unlock the following <strong>28+ amazing Lightbox</strong> options, <a href="https://shapedplugin.com/wp-carousel/?ref=1" target="_blank"><b>Upgrade To Pro!</b></a>', 'wp-carousel-free' ),
 			),
 			array(
 				'id'       => 'l_box_icon_style',
@@ -1486,7 +1486,7 @@ SP_WPCF::createSection(
 			array(
 				'type'    => 'notice',
 				'style'   => 'normal',
-				'content' => __( 'To unlock These Typography (940+ Google Fonts) options, <a href="https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1" target="_blank"><b>Upgrade To Pro!</b></a>', 'wp-carousel-free' ),
+				'content' => __( 'To unlock These Typography (940+ Google Fonts) options, <a href="https://shapedplugin.com/wp-carousel/?ref=1" target="_blank"><b>Upgrade To Pro!</b></a>', 'wp-carousel-free' ),
 			),
 			array(
 				'id'       => 'section_title_font_load',

@@ -48,3 +48,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-post-statuses-controller.php on line 17
+[20-Aug-2022 16:24:00 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php on line 17

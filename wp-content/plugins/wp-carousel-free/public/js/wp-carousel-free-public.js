@@ -12,5 +12,8 @@
                 nextArrow: '<div class="slick-next"><i class="fa fa-angle-right"></i></div>',
             });
         }
+		$(window).on('resize orientationchange', function () {
+			jQuery('#' + carousel_id).slick('resize');
+		});
     });
 })(jQuery);

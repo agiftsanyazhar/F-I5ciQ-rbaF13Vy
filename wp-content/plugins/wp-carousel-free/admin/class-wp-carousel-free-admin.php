@@ -142,11 +142,11 @@ class WP_Carousel_Free_Admin {
 	public function add_plugin_action_links( $links, $plugin_file ) {
 
 		if ( WPCAROUSELF_BASENAME === $plugin_file ) {
-			$ui_links = sprintf( '<a href="%s">%s</a>', admin_url( 'post-new.php?post_type=sp_wp_carousel' ), __( 'Create Carousel', 'wp-carousel-free' ) );
+			$ui_links = sprintf( '<a href="%s">%s</a>', admin_url( 'post-new.php?post_type=sp_wp_carousel' ), __( 'Add New', 'wp-carousel-free' ) );
 
 			array_unshift( $links, $ui_links );
 
-			$links['go_pro'] = sprintf( '<a target="_blank" href="%1$s" style="color: #35b747; font-weight: 700;">Go Premium!</a>', 'https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1' );
+			$links['go_pro'] = sprintf( '<a target="_blank" href="%1$s" style="color: #35b747; font-weight: 700;">Go Pro!</a>', 'https://shapedplugin.com/wp-carousel/?ref=1' );
 		}
 
 		return $links;

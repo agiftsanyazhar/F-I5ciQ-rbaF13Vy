@@ -11,6 +11,9 @@
                 prevArrow: '<div class="slick-prev"><i class="fa fa-angle-left"></i></div>',
                 nextArrow: '<div class="slick-next"><i class="fa fa-angle-right"></i></div>',
             });
+			$(window).on('resize orientationchange', function () {
+				wpSlick.slick('resize');
+			});
         }
     });
 })(jQuery);

@@ -4,7 +4,7 @@ Donate link: http://shapedplugin.com/donate
 Tags: wordpress carousel, best carousel plugin, image carousel, image slider, post carousel, custom post carousel, custom taxonomy carousel, woocommerce product carousel, content carousel, video carousel, video slider, video lightbox, youtube carousel, video gallery, carousel, slider, responsive slider, responsive carousel, carousel slider, ticker carousel, center mode carousel, slide anything, image gallery, image lightbox, wordpress image gallery, photo gallery, gallery slider, wordpress gallery plugin, gallery, post slider, vimeo slider, self hosted video carousel, content slider, wordpress slider, featured content slider, html slider, horizontal carousel slider, posts content slider, product carousel, woocommerce slider, woocommerce product slider
 Requires at least: 4.5
 Tested up to: 6.0.1
-Stable tag: 2.4.9
+Stable tag: 2.4.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ The Most Powerful and User-friendly Carousel & Gallery plugin. Create beautiful 
 
 [youtube https://www.youtube.com/embed/videoseries?list=PLoUb-7uG-5jO_zo3exhqUNlZ7h0FQVJTt]
 
-[__Live Demo__](https://wordpresscarousel.com/) | [__Video Tutorials__](https://www.youtube.com/shapedplugin/) | [__Documentation__](https://docs.shapedplugin.com/docs/wordpress-carousel/introduction/) | [__PRO Features &raquo;__](https://wordpresscarousel.com/#feature)
+[__Live Demo__](https://shapedplugin.com/wp-carousel/wp-carousel-free-demo/) | [__Video Tutorials__](https://www.youtube.com/shapedplugin/) | [__Documentation__](https://docs.shapedplugin.com/docs/wordpress-carousel/introduction/) | [__Upgrade to Pro &raquo;__](https://shapedplugin.com/wp-carousel/pricing/?ref=1)
 
 
 = Overview =
@@ -82,7 +82,7 @@ We believe that you shouldn't be a coder or hire a developer to create a carouse
 
 = WordPress Carousel Pro =
 
-[__WordPress Carousel Pro__](https://wordpresscarousel.com/) is the most powerful and user-friendly multi-purpose WordPress Carousel plugin to create beautiful carousels with **images, Posts, WooCommerce Products, Contents (Images, Text, HTML, Shortcodes), Video** etc. The plugin has own image and content management system and also supports **Posts, Pages, Custom Post Type, Taxonomy, Custom Taxonomy, Custom Contents, YouTube, Vimeo, Dailymotion, mp4, WebM, Self-hosted Video with Lightbox.** It's fully responsive, highly customizable and works smoothly on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Edge.
+[__WordPress Carousel Pro__](https://shapedplugin.com/wp-carousel/?ref=1) is the most powerful and user-friendly multi-purpose WordPress Carousel plugin to create beautiful carousels with **images, Posts, WooCommerce Products, Contents (Images, Text, HTML, Shortcodes), Video** etc. The plugin has own image and content management system and also supports **Posts, Pages, Custom Post Type, Taxonomy, Custom Taxonomy, Custom Contents, YouTube, Vimeo, Dailymotion, mp4, WebM, Self-hosted Video with Lightbox.** It's fully responsive, highly customizable and works smoothly on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Edge.
 
 It’s even easier to put images of different height together so the width is dynamic with fixed height so that your site looks pretty. The plugin vastly improves user experience and lets you create different types of beautiful carousels easily and quickly.
 
@@ -98,7 +98,7 @@ It’s even easier to put images of different height together so the width is dy
 
 = WordPress Carousel Pro Features =
 
-* [__All Sample Carousels__](https://wordpresscarousel.com/) (Live Demo in action).
+* [__All Sample Carousels__](https://shapedplugin.com/wp-carousel/simple-image-carousel/?ref=1) (Live Demo in action).
 * Fully Responsive and Touch-friendly.
 * Advanced Shortcode Generator.
 * **Slide Anything. (e.g. Image, Post, Product, Content, Video, Text, HTML, Shortcodes etc.)**
@@ -172,7 +172,7 @@ It’s even easier to put images of different height together so the width is dy
 * Extensive Online docs & Video Tutorials.
 * **Fast and friendly support.**
 * Any new features we add in the future (which is often).
-* [__Full list of PRO features.__](https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1)
+* [__Full list of PRO features.__](https://shapedplugin.com/wp-carousel/#features)
 
 
 = Multilingual Ready =
@@ -206,7 +206,7 @@ It’s even easier to put images of different height together so the width is dy
 
 = Premium Support and Documentation =
 
-The premium version of the plugin entitles you to get fast, friendly, and priority support with replies posted within 24 hours (without holidays). Please [__submit__](https://shapedplugin.com/ask-question/) a support ticket here. This will create a support thread in our support portal.
+The premium version of the plugin entitles you to get fast, friendly, and priority support with replies posted within 24 hours (without holidays). Please [__submit__](https://shapedplugin.com/create-new-ticket/) a support ticket here. This will create a support thread in our support portal.
 
 For documentation and tutorials go to our [__Documentation__](https://docs.shapedplugin.com/docs/wordpress-carousel/introduction/).
 
@@ -261,7 +261,7 @@ The WordPress codex contains <a href="https://codex.wordpress.org/Managing_Plugi
 
 
 = What types of carousel you can create using WordPress Carousel? =
-You can create three (3) types of carousel using **WordPress Carousel** such as: **Image Carousel, Post Carousel, and Product Carousel.** And with the [__Premium Version__](https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1), you can create also **Content Carousel** and **Video Carousel**.
+You can create three (3) types of carousel using **WordPress Carousel** such as: **Image Carousel, Post Carousel, and Product Carousel.** And with the [__Premium Version__](https://shapedplugin.com/wp-carousel/?ref=1), you can create also **Content Carousel** and **Video Carousel**.
 
 = Do I need to have coding skills to use WordPress Carousel? =
 No. You don’t need any coding skill. No more pain writing any shortcode attributes to display carousel in your site. With just a few clicks, you can amazingly create unlimited Image, Post, and Product Carousels.
@@ -286,13 +286,13 @@ Deactivate all plugins you are using and check if the problem is still occurring
 
 If none of the previously listed actions helps you solve the problem, then, submit a ticket in the forum and describe your problem accurately, specify WordPress and plugin versions you are using and any other information that might help us solve your problem as quickly as possible.
 
-Pro version users [__Support__](https://shapedplugin.com/support/) and Free or Lite Version [__Support__](https://shapedplugin.com/support/?user=lite).
+Pro version users [__Support__](https://shapedplugin.com/create-new-ticket/) and Free or Lite Version [__Support__](https://shapedplugin.com/support/?user=lite).
 
 = Where can I report bugs? =
 If you find a bug, please report it in our active [support](https://shapedplugin.com/support/?user=lite). You will be replied once the issue is resolved.
 
 = I’d like access to more features. How can I get them? =
-You can get access to more features when you purchase a license of the plugin. Purchasing a license of [__WordPress Carousel Pro__](https://shapedplugin.com/plugin/wordpress-carousel-pro/?ref=1) gets you to access the full version of WordPress Carousel, automatic lifetime updates, and support.
+You can get access to more features when you purchase a license of the plugin. Purchasing a license of [__WordPress Carousel Pro__](https://shapedplugin.com/wp-carousel/?ref=1) gets you to access the full version of WordPress Carousel, automatic lifetime updates, and support.
 
 =Is WordPress Carousel Multilingual Ready?=
 Yes, WordPress Carousel is 100% translation ready and tested with [WPML](https://wpml.org/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-x](https://wordpress.org/plugins/qtranslate-x/), [GTranslate](https://wordpress.org/plugins/gtranslate/), [Google Language Translator](https://wordpress.org/plugins/google-language-translator/), [WPGlobus](https://wordpress.org/plugins/wpglobus/) etc.
@@ -326,6 +326,10 @@ Thank you!
 
 
 == Changelog ==
+
+= 2.4.10 – Aug 29, 2022 =
+* Fix: WP Carousel does not works properly inside tab content of WP Tabs Pro.
+* Removed: Unused codes and assets from the plugin.
 
 = 2.4.9 – Aug 01, 2022 =
 * Fix: The export option does not work properly along with the WP Debugging plugin.

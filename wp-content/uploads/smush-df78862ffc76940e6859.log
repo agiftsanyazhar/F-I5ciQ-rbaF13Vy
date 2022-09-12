@@ -1514,3 +1514,635 @@
 [2022-07-03 07:05:15 : INFO] - Could not find file for image: ID=90, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak3.png 
 [2022-07-03 07:05:15 : INFO] - Could not find file for image: ID=89, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak2.png 
 [2022-07-03 07:05:15 : INFO] - Could not find file for image: ID=88, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak1.png 
+[2022-08-16 03:52:08 : INFO] - Re_Smush_It_Task with attachment ID : 7771, autocreated on : August 16, 2022 03:52:08 
+[2022-08-16 03:52:19 : INFO] - Re_Smush_It_Task with attachment ID : 7772, autocreated on : August 16, 2022 03:52:19 
+[2022-08-16 03:57:39 : INFO] - 
+ 
+[2022-08-16 03:57:39 : INFO] - Header for logs at time:  Tue, 16 Aug 2022 03:57:39 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-08-16 03:57:39 : INFO] - WP: 6.0.1 
+[2022-08-16 03:57:39 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-08-16 03:57:39 : INFO] - MySQL: 5.7.39 
+[2022-08-16 03:57:39 : INFO] - WPLANG: en_US 
+[2022-08-16 03:57:39 : INFO] - Server: LiteSpeed 
+[2022-08-16 03:57:39 : INFO] - Outbound connections: N 
+[2022-08-16 03:57:39 : INFO] - safe_mode: 0 
+[2022-08-16 03:57:39 : INFO] - max_execution_time: 30 
+[2022-08-16 03:57:39 : INFO] - memory_limit: 128M (used: 59.9M | 62.5M) 
+[2022-08-16 03:57:39 : INFO] - multisite: N 
+[2022-08-16 03:57:39 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-08-16 03:57:39 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2022-08-16 03:57:39 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-08-16 03:57:39 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-08-16 03:57:39 : INFO] - Processing task with ID : 1, and type 'smush' 
+[2022-08-16 03:57:39 : INFO] - Re_Smush_It_Task with attachment ID : 7771, autocreated on : August 16, 2022 03:52:08 
+[2022-08-16 03:57:39 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:39 : INFO] - 85 
+[2022-08-16 03:57:41 : INFO] - Task with ID 1 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-08-16 03:57:41 : INFO] - Re_Smush_It_Task with attachment ID : 7771, autocreated on : August 16, 2022 03:52:08 
+[2022-08-16 03:57:41 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:41 : INFO] - 85 
+[2022-08-16 03:57:41 : INFO] - Re_Smush_It_Task with attachment ID : 7771, autocreated on : August 16, 2022 03:52:08 
+[2022-08-16 03:57:41 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:41 : INFO] - 85 
+[2022-08-16 03:57:43 : INFO] - Re_Smush_It_Task with attachment ID : 7771, autocreated on : August 16, 2022 03:52:08 
+[2022-08-16 03:57:43 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:43 : INFO] - 85 
+[2022-08-16 03:57:44 : INFO] - Re_Smush_It_Task with attachment ID : 7771, autocreated on : August 16, 2022 03:52:08 
+[2022-08-16 03:57:44 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:44 : INFO] - 85 
+[2022-08-16 03:57:45 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/08/kompak-2.jpg.The file was compressed from 229.43 KB to 229.43 KB saving 0 percent using WP-Optimize 
+[2022-08-16 03:57:45 : INFO] - Completed processing task with ID : 1, and type 'smush' 
+[2022-08-16 03:57:45 : INFO] - Processing task with ID : 2, and type 'smush' 
+[2022-08-16 03:57:45 : INFO] - Re_Smush_It_Task with attachment ID : 7772, autocreated on : August 16, 2022 03:52:19 
+[2022-08-16 03:57:45 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:45 : INFO] - 85 
+[2022-08-16 03:57:48 : INFO] - Backing up the original image - 2022/08/Kompak-1-updraft-pre-smush-original.jpg 
+[2022-08-16 03:57:48 : INFO] - Re_Smush_It_Task with attachment ID : 7772, autocreated on : August 16, 2022 03:52:19 
+[2022-08-16 03:57:48 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:48 : INFO] - 85 
+[2022-08-16 03:57:49 : INFO] - Re_Smush_It_Task with attachment ID : 7772, autocreated on : August 16, 2022 03:52:19 
+[2022-08-16 03:57:49 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:49 : INFO] - 85 
+[2022-08-16 03:57:51 : INFO] - Re_Smush_It_Task with attachment ID : 7772, autocreated on : August 16, 2022 03:52:19 
+[2022-08-16 03:57:51 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:51 : INFO] - 85 
+[2022-08-16 03:57:51 : INFO] - Re_Smush_It_Task with attachment ID : 7772, autocreated on : August 16, 2022 03:52:19 
+[2022-08-16 03:57:51 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 03:57:51 : INFO] - 85 
+[2022-08-16 03:57:53 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/08/Kompak-1.jpg.The file was compressed from 272.58 KB to 224.98 KB saving 17.46 percent using WP-Optimize 
+[2022-08-16 03:57:53 : INFO] - Completed processing task with ID : 2, and type 'smush' 
+[2022-08-16 03:57:53 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-08-16 03:57:53 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2022-08-16 03:57:53 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-08-16 03:57:53 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2022-08-16 04:03:58 : INFO] - Re_Smush_It_Task with attachment ID : 7777, autocreated on : August 16, 2022 04:03:58 
+[2022-08-16 04:04:13 : INFO] - Re_Smush_It_Task with attachment ID : 7778, autocreated on : August 16, 2022 04:04:13 
+[2022-08-16 04:07:49 : INFO] - 
+ 
+[2022-08-16 04:07:49 : INFO] - Header for logs at time:  Tue, 16 Aug 2022 04:07:49 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-08-16 04:07:49 : INFO] - WP: 6.0.1 
+[2022-08-16 04:07:49 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-08-16 04:07:49 : INFO] - MySQL: 5.7.39 
+[2022-08-16 04:07:49 : INFO] - WPLANG: en_US 
+[2022-08-16 04:07:49 : INFO] - Server: LiteSpeed 
+[2022-08-16 04:07:49 : INFO] - Outbound connections: N 
+[2022-08-16 04:07:49 : INFO] - safe_mode: 0 
+[2022-08-16 04:07:49 : INFO] - max_execution_time: 30 
+[2022-08-16 04:07:49 : INFO] - memory_limit: 128M (used: 59.9M | 62.5M) 
+[2022-08-16 04:07:49 : INFO] - multisite: N 
+[2022-08-16 04:07:49 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-08-16 04:07:49 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2022-08-16 04:07:49 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-08-16 04:07:49 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-08-16 04:07:49 : INFO] - Processing task with ID : 3, and type 'smush' 
+[2022-08-16 04:07:49 : INFO] - Task with ID 3 and type (smush) failed with error code invalid_file_type - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/08/PLOTING-DAN-JADWAL-KULIAH-PRODI-D3-PERPAJAKAN-GASAL-2022-2023-5-9.pdf - cannot be optimized, it has an invalid file type 
+[2022-08-16 04:07:49 : INFO] - Processing task with ID : 4, and type 'smush' 
+[2022-08-16 04:07:49 : INFO] - Task with ID 4 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2022-08-16 04:07:49 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-08-16 04:07:49 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2022-08-16 04:07:49 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-08-16 04:07:49 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2022-08-16 04:08:45 : INFO] - Re_Smush_It_Task with attachment ID : 7782, autocreated on : August 16, 2022 04:08:45 
+[2022-08-16 04:08:46 : INFO] - Re_Smush_It_Task with attachment ID : 7783, autocreated on : August 16, 2022 04:08:46 
+[2022-08-16 04:14:11 : INFO] - Re_Smush_It_Task with attachment ID : 7785, autocreated on : August 16, 2022 04:14:11 
+[2022-08-16 04:18:11 : INFO] - 
+ 
+[2022-08-16 04:18:11 : INFO] - Header for logs at time:  Tue, 16 Aug 2022 04:18:11 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-08-16 04:18:11 : INFO] - WP: 6.0.1 
+[2022-08-16 04:18:11 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-08-16 04:18:11 : INFO] - MySQL: 5.7.39 
+[2022-08-16 04:18:11 : INFO] - WPLANG: en_US 
+[2022-08-16 04:18:11 : INFO] - Server: LiteSpeed 
+[2022-08-16 04:18:11 : INFO] - Outbound connections: N 
+[2022-08-16 04:18:11 : INFO] - safe_mode: 0 
+[2022-08-16 04:18:11 : INFO] - max_execution_time: 30 
+[2022-08-16 04:18:11 : INFO] - memory_limit: 128M (used: 59.9M | 62.5M) 
+[2022-08-16 04:18:11 : INFO] - multisite: N 
+[2022-08-16 04:18:11 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-08-16 04:18:11 : INFO] - A total of 3 tasks of type smush found and will be processed in this iteration 
+[2022-08-16 04:18:11 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-08-16 04:18:11 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-08-16 04:18:11 : INFO] - Processing task with ID : 5, and type 'smush' 
+[2022-08-16 04:18:11 : INFO] - Task with ID 5 and type (smush) failed with error code invalid_file_type - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/08/STRUKTUR-KURIKULUM-PROGRAM-STUDI-D3-PERPAJAKAN-2018.pdf - cannot be optimized, it has an invalid file type 
+[2022-08-16 04:18:11 : INFO] - Processing task with ID : 6, and type 'smush' 
+[2022-08-16 04:18:11 : INFO] - Task with ID 6 and type (smush) failed with error code invalid_file_type - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/08/STRUKTUR-KURIKULUM-PROGRAM-STUDI-D3-PERPAJAKAN-2021.pdf - cannot be optimized, it has an invalid file type 
+[2022-08-16 04:18:11 : INFO] - Processing task with ID : 7, and type 'smush' 
+[2022-08-16 04:18:11 : INFO] - Re_Smush_It_Task with attachment ID : 7785, autocreated on : August 16, 2022 04:14:11 
+[2022-08-16 04:18:11 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 04:18:11 : INFO] - 85 
+[2022-08-16 04:18:13 : INFO] - Backing up the original image - 2022/08/Screenshot-2022-08-16-111348-updraft-pre-smush-original.jpg 
+[2022-08-16 04:18:13 : INFO] - Re_Smush_It_Task with attachment ID : 7785, autocreated on : August 16, 2022 04:14:11 
+[2022-08-16 04:18:13 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 04:18:13 : INFO] - 85 
+[2022-08-16 04:18:14 : INFO] - Re_Smush_It_Task with attachment ID : 7785, autocreated on : August 16, 2022 04:14:11 
+[2022-08-16 04:18:14 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 04:18:14 : INFO] - 85 
+[2022-08-16 04:18:16 : INFO] - Re_Smush_It_Task with attachment ID : 7785, autocreated on : August 16, 2022 04:14:11 
+[2022-08-16 04:18:16 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 04:18:16 : INFO] - 85 
+[2022-08-16 04:18:17 : INFO] - Re_Smush_It_Task with attachment ID : 7785, autocreated on : August 16, 2022 04:14:11 
+[2022-08-16 04:18:17 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-08-16 04:18:17 : INFO] - 85 
+[2022-08-16 04:18:18 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/08/Screenshot-2022-08-16-111348.jpg.The file was compressed from 236.31 KB to 181.81 KB saving 23.06 percent using WP-Optimize 
+[2022-08-16 04:18:18 : INFO] - Completed processing task with ID : 7, and type 'smush' 
+[2022-08-16 04:18:18 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-08-16 04:18:18 : INFO] - Successfully processed the queue (smush). 3 tasks were processed out of 3. 
+[2022-08-16 04:18:18 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-08-16 04:18:18 : INFO] - Cleaning up tasks of type (smush). A total of 3 tasks will be deleted. 
+[2022-08-16 04:28:12 : INFO] - 
+ 
+[2022-08-16 04:28:12 : INFO] - Header for logs at time:  Tue, 16 Aug 2022 04:28:12 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-08-16 04:28:12 : INFO] - WP: 6.0.1 
+[2022-08-16 04:28:12 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-08-16 04:28:12 : INFO] - MySQL: 5.7.39 
+[2022-08-16 04:28:12 : INFO] - WPLANG: en_US 
+[2022-08-16 04:28:12 : INFO] - Server: LiteSpeed 
+[2022-08-16 04:28:12 : INFO] - Outbound connections: N 
+[2022-08-16 04:28:12 : INFO] - safe_mode: 0 
+[2022-08-16 04:28:12 : INFO] - max_execution_time: 30 
+[2022-08-16 04:28:12 : INFO] - memory_limit: 128M (used: 59.9M | 62.5M) 
+[2022-08-16 04:28:12 : INFO] - multisite: N 
+[2022-08-16 04:28:12 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-08-16 04:28:12 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2022-09-10 15:28:13 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:32:00 : INFO] - Re_Smush_It_Task with attachment ID : 7792, autocreated on : September 10, 2022 03:32:00 
+[2022-09-10 15:34:02 : INFO] - 
+ 
+[2022-09-10 15:34:02 : INFO] - Header for logs at time:  Sat, 10 Sep 2022 15:34:02 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-09-10 15:34:02 : INFO] - WP: 6.0.2 
+[2022-09-10 15:34:02 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-09-10 15:34:02 : INFO] - MySQL: 5.7.39 
+[2022-09-10 15:34:02 : INFO] - WPLANG: en_US 
+[2022-09-10 15:34:02 : INFO] - Server: LiteSpeed 
+[2022-09-10 15:34:02 : INFO] - Outbound connections: N 
+[2022-09-10 15:34:02 : INFO] - safe_mode: 0 
+[2022-09-10 15:34:02 : INFO] - max_execution_time: 30 
+[2022-09-10 15:34:02 : INFO] - memory_limit: 128M (used: 60.1M | 62.5M) 
+[2022-09-10 15:34:02 : INFO] - multisite: N 
+[2022-09-10 15:34:02 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-09-10 15:34:02 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2022-09-10 15:34:02 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-09-10 15:34:02 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-09-10 15:34:02 : INFO] - Processing task with ID : 1, and type 'smush' 
+[2022-09-10 15:34:02 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:02 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:02 : INFO] - 85 
+[2022-09-10 15:34:05 : INFO] - Backing up the original image - 2022/09/IMG_7130-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:34:05 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:05 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:05 : INFO] - 85 
+[2022-09-10 15:34:06 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:06 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:06 : INFO] - 85 
+[2022-09-10 15:34:09 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:09 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:09 : INFO] - 85 
+[2022-09-10 15:34:09 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:09 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:09 : INFO] - 85 
+[2022-09-10 15:34:11 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:11 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:11 : INFO] - 85 
+[2022-09-10 15:34:13 : INFO] - Re_Smush_It_Task with attachment ID : 7791, autocreated on : September 10, 2022 03:28:13 
+[2022-09-10 15:34:13 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:13 : INFO] - 85 
+[2022-09-10 15:34:16 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7130-scaled.jpg.The file was compressed from 404.94 KB to 391.01 KB saving 3.44 percent using WP-Optimize 
+[2022-09-10 15:34:16 : INFO] - Completed processing task with ID : 1, and type 'smush' 
+[2022-09-10 15:34:16 : INFO] - Processing task with ID : 2, and type 'smush' 
+[2022-09-10 15:34:16 : INFO] - Re_Smush_It_Task with attachment ID : 7792, autocreated on : September 10, 2022 03:32:00 
+[2022-09-10 15:34:16 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:34:16 : INFO] - 85 
+[2022-09-10 15:34:19 : INFO] - Backing up the original image - 2022/09/IMG_7108-updraft-pre-smush-original.jpg 
+[2022-09-10 15:34:19 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7108.jpg.The file was compressed from 408.61 KB to 408.61 KB saving 0 percent using WP-Optimize 
+[2022-09-10 15:34:19 : INFO] - Completed processing task with ID : 2, and type 'smush' 
+[2022-09-10 15:34:19 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-09-10 15:34:19 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2022-09-10 15:34:19 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-09-10 15:34:19 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2022-09-10 15:37:00 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:39:31 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:13 : INFO] - 
+ 
+[2022-09-10 15:44:13 : INFO] - Header for logs at time:  Sat, 10 Sep 2022 15:44:13 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-09-10 15:44:13 : INFO] - WP: 6.0.2 
+[2022-09-10 15:44:13 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-09-10 15:44:13 : INFO] - MySQL: 5.7.39 
+[2022-09-10 15:44:13 : INFO] - WPLANG: en_US 
+[2022-09-10 15:44:13 : INFO] - Server: LiteSpeed 
+[2022-09-10 15:44:13 : INFO] - Outbound connections: N 
+[2022-09-10 15:44:13 : INFO] - safe_mode: 0 
+[2022-09-10 15:44:13 : INFO] - max_execution_time: 30 
+[2022-09-10 15:44:13 : INFO] - memory_limit: 128M (used: 60.1M | 62.5M) 
+[2022-09-10 15:44:13 : INFO] - multisite: N 
+[2022-09-10 15:44:13 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-09-10 15:44:13 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2022-09-10 15:44:13 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-09-10 15:44:13 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-09-10 15:44:13 : INFO] - Processing task with ID : 3, and type 'smush' 
+[2022-09-10 15:44:13 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:13 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:13 : INFO] - 85 
+[2022-09-10 15:44:15 : INFO] - Backing up the original image - 2022/09/IMG_7108-1-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:44:15 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:15 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:15 : INFO] - 85 
+[2022-09-10 15:44:16 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:16 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:16 : INFO] - 85 
+[2022-09-10 15:44:18 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:18 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:18 : INFO] - 85 
+[2022-09-10 15:44:18 : INFO] - Task with ID 3 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 15:44:18 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:18 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:18 : INFO] - 85 
+[2022-09-10 15:44:20 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:20 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:20 : INFO] - 85 
+[2022-09-10 15:44:22 : INFO] - Re_Smush_It_Task with attachment ID : 7793, autocreated on : September 10, 2022 03:37:00 
+[2022-09-10 15:44:22 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:22 : INFO] - 85 
+[2022-09-10 15:44:24 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7108-1-scaled.jpg.The file was compressed from 298.62 KB to 294.95 KB saving 1.23 percent using WP-Optimize 
+[2022-09-10 15:44:24 : INFO] - Completed processing task with ID : 3, and type 'smush' 
+[2022-09-10 15:44:24 : INFO] - Processing task with ID : 4, and type 'smush' 
+[2022-09-10 15:44:24 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:24 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:24 : INFO] - 85 
+[2022-09-10 15:44:27 : INFO] - Backing up the original image - 2022/09/IMG_7108-2-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:44:27 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:27 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:27 : INFO] - 85 
+[2022-09-10 15:44:27 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:27 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:27 : INFO] - 85 
+[2022-09-10 15:44:29 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:29 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:29 : INFO] - 85 
+[2022-09-10 15:44:30 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:30 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:30 : INFO] - 85 
+[2022-09-10 15:44:31 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:31 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:31 : INFO] - 85 
+[2022-09-10 15:44:33 : INFO] - Re_Smush_It_Task with attachment ID : 7795, autocreated on : September 10, 2022 03:39:31 
+[2022-09-10 15:44:33 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:44:33 : INFO] - 85 
+[2022-09-10 15:44:36 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7108-2-scaled.jpg.The file was compressed from 298.62 KB to 294.95 KB saving 1.23 percent using WP-Optimize 
+[2022-09-10 15:44:36 : INFO] - Completed processing task with ID : 4, and type 'smush' 
+[2022-09-10 15:44:36 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-09-10 15:44:36 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2022-09-10 15:44:36 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-09-10 15:44:36 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2022-09-10 15:47:52 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:49:03 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:49:28 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:50:10 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:52:36 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:53:04 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:54:13 : INFO] - 
+ 
+[2022-09-10 15:54:13 : INFO] - Header for logs at time:  Sat, 10 Sep 2022 15:54:13 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-09-10 15:54:13 : INFO] - WP: 6.0.2 
+[2022-09-10 15:54:13 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-09-10 15:54:13 : INFO] - MySQL: 5.7.39 
+[2022-09-10 15:54:13 : INFO] - WPLANG: en_US 
+[2022-09-10 15:54:13 : INFO] - Server: LiteSpeed 
+[2022-09-10 15:54:13 : INFO] - Outbound connections: N 
+[2022-09-10 15:54:13 : INFO] - safe_mode: 0 
+[2022-09-10 15:54:13 : INFO] - max_execution_time: 30 
+[2022-09-10 15:54:13 : INFO] - memory_limit: 128M (used: 60.1M | 62.5M) 
+[2022-09-10 15:54:13 : INFO] - multisite: N 
+[2022-09-10 15:54:13 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-09-10 15:54:13 : INFO] - A total of 6 tasks of type smush found and will be processed in this iteration 
+[2022-09-10 15:54:13 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-09-10 15:54:13 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-09-10 15:54:13 : INFO] - Processing task with ID : 5, and type 'smush' 
+[2022-09-10 15:54:13 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:13 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:13 : INFO] - 85 
+[2022-09-10 15:54:16 : INFO] - Backing up the original image - 2022/09/IMG_7172-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:54:16 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:16 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:16 : INFO] - 85 
+[2022-09-10 15:54:17 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:17 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:17 : INFO] - 85 
+[2022-09-10 15:54:19 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:19 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:19 : INFO] - 85 
+[2022-09-10 15:54:20 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:20 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:20 : INFO] - 85 
+[2022-09-10 15:54:21 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:21 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:21 : INFO] - 85 
+[2022-09-10 15:54:24 : INFO] - Re_Smush_It_Task with attachment ID : 7796, autocreated on : September 10, 2022 03:47:52 
+[2022-09-10 15:54:24 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:24 : INFO] - 85 
+[2022-09-10 15:54:26 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7172-scaled.jpg.The file was compressed from 404.36 KB to 404.08 KB saving 0.07 percent using WP-Optimize 
+[2022-09-10 15:54:26 : INFO] - Completed processing task with ID : 5, and type 'smush' 
+[2022-09-10 15:54:26 : INFO] - Processing task with ID : 6, and type 'smush' 
+[2022-09-10 15:54:26 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:26 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:26 : INFO] - 85 
+[2022-09-10 15:54:28 : INFO] - Backing up the original image - 2022/09/IMG_7151-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:54:28 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:28 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:28 : INFO] - 85 
+[2022-09-10 15:54:29 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:29 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:29 : INFO] - 85 
+[2022-09-10 15:54:31 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:31 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:31 : INFO] - 85 
+[2022-09-10 15:54:31 : INFO] - Task with ID 6 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 15:54:31 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:31 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:31 : INFO] - 85 
+[2022-09-10 15:54:33 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:33 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:33 : INFO] - 85 
+[2022-09-10 15:54:34 : INFO] - Task with ID 6 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 15:54:34 : INFO] - Re_Smush_It_Task with attachment ID : 7797, autocreated on : September 10, 2022 03:49:03 
+[2022-09-10 15:54:34 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:34 : INFO] - 85 
+[2022-09-10 15:54:36 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7151-scaled.jpg.The file was compressed from 335.69 KB to 330.78 KB saving 1.46 percent using WP-Optimize 
+[2022-09-10 15:54:36 : INFO] - Completed processing task with ID : 6, and type 'smush' 
+[2022-09-10 15:54:36 : INFO] - Processing task with ID : 7, and type 'smush' 
+[2022-09-10 15:54:36 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:36 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:36 : INFO] - 85 
+[2022-09-10 15:54:40 : INFO] - Backing up the original image - 2022/09/IMG_7151-1-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:54:40 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:40 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:40 : INFO] - 85 
+[2022-09-10 15:54:41 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:41 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:41 : INFO] - 85 
+[2022-09-10 15:54:43 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:43 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:43 : INFO] - 85 
+[2022-09-10 15:54:43 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:43 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:43 : INFO] - 85 
+[2022-09-10 15:54:45 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:45 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:45 : INFO] - 85 
+[2022-09-10 15:54:47 : INFO] - Re_Smush_It_Task with attachment ID : 7798, autocreated on : September 10, 2022 03:49:28 
+[2022-09-10 15:54:47 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:47 : INFO] - 85 
+[2022-09-10 15:54:50 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7151-1-scaled.jpg.The file was compressed from 335.69 KB to 330.78 KB saving 1.46 percent using WP-Optimize 
+[2022-09-10 15:54:50 : INFO] - Completed processing task with ID : 7, and type 'smush' 
+[2022-09-10 15:54:50 : INFO] - Processing task with ID : 8, and type 'smush' 
+[2022-09-10 15:54:50 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:54:50 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:50 : INFO] - 85 
+[2022-09-10 15:54:54 : INFO] - Backing up the original image - 2022/09/IMG_7303-1-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:54:54 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:54:54 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:54 : INFO] - 85 
+[2022-09-10 15:54:55 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:54:55 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:55 : INFO] - 85 
+[2022-09-10 15:54:56 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:54:56 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:56 : INFO] - 85 
+[2022-09-10 15:54:57 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:54:57 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:57 : INFO] - 85 
+[2022-09-10 15:54:59 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:54:59 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:54:59 : INFO] - 85 
+[2022-09-10 15:55:00 : INFO] - Task with ID 8 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 15:55:00 : INFO] - Re_Smush_It_Task with attachment ID : 7799, autocreated on : September 10, 2022 03:50:10 
+[2022-09-10 15:55:00 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:00 : INFO] - 85 
+[2022-09-10 15:55:03 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7303-1-scaled.jpg.The file was compressed from 328.62 KB to 318.15 KB saving 3.19 percent using WP-Optimize 
+[2022-09-10 15:55:03 : INFO] - Completed processing task with ID : 8, and type 'smush' 
+[2022-09-10 15:55:03 : INFO] - Processing task with ID : 9, and type 'smush' 
+[2022-09-10 15:55:03 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:03 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:03 : INFO] - 85 
+[2022-09-10 15:55:06 : INFO] - Backing up the original image - 2022/09/IMG_7227-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:55:06 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:06 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:06 : INFO] - 85 
+[2022-09-10 15:55:07 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:07 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:07 : INFO] - 85 
+[2022-09-10 15:55:08 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:08 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:08 : INFO] - 85 
+[2022-09-10 15:55:09 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:09 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:09 : INFO] - 85 
+[2022-09-10 15:55:11 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:11 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:11 : INFO] - 85 
+[2022-09-10 15:55:13 : INFO] - Re_Smush_It_Task with attachment ID : 7800, autocreated on : September 10, 2022 03:52:36 
+[2022-09-10 15:55:13 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:13 : INFO] - 85 
+[2022-09-10 15:55:16 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7227-scaled.jpg.The file was compressed from 291.44 KB to 284.91 KB saving 2.24 percent using WP-Optimize 
+[2022-09-10 15:55:16 : INFO] - Completed processing task with ID : 9, and type 'smush' 
+[2022-09-10 15:55:16 : INFO] - Processing task with ID : 10, and type 'smush' 
+[2022-09-10 15:55:16 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:16 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:16 : INFO] - 85 
+[2022-09-10 15:55:19 : INFO] - Backing up the original image - 2022/09/IMG_7227-1-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 15:55:19 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:19 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:19 : INFO] - 85 
+[2022-09-10 15:55:20 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:20 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:20 : INFO] - 85 
+[2022-09-10 15:55:21 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:21 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:21 : INFO] - 85 
+[2022-09-10 15:55:22 : INFO] - Task with ID 10 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 15:55:22 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:22 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:22 : INFO] - 85 
+[2022-09-10 15:55:23 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:23 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:23 : INFO] - 85 
+[2022-09-10 15:55:24 : INFO] - Task with ID 10 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 15:55:24 : INFO] - Re_Smush_It_Task with attachment ID : 7801, autocreated on : September 10, 2022 03:53:04 
+[2022-09-10 15:55:24 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 15:55:24 : INFO] - 85 
+[2022-09-10 15:55:27 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7227-1-scaled.jpg.The file was compressed from 291.44 KB to 284.91 KB saving 2.24 percent using WP-Optimize 
+[2022-09-10 15:55:27 : INFO] - Completed processing task with ID : 10, and type 'smush' 
+[2022-09-10 15:55:27 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-09-10 15:55:27 : INFO] - Successfully processed the queue (smush). 6 tasks were processed out of 6. 
+[2022-09-10 15:55:27 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-09-10 15:55:27 : INFO] - Cleaning up tasks of type (smush). A total of 6 tasks will be deleted. 
+[2022-09-10 16:02:40 : INFO] - Re_Smush_It_Task with attachment ID : 7804, autocreated on : September 10, 2022 04:02:40 
+[2022-09-10 16:04:15 : INFO] - 
+ 
+[2022-09-10 16:04:15 : INFO] - Header for logs at time:  Sat, 10 Sep 2022 16:04:15 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-09-10 16:04:15 : INFO] - WP: 6.0.2 
+[2022-09-10 16:04:15 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-09-10 16:04:15 : INFO] - MySQL: 5.7.39 
+[2022-09-10 16:04:15 : INFO] - WPLANG: en_US 
+[2022-09-10 16:04:15 : INFO] - Server: LiteSpeed 
+[2022-09-10 16:04:15 : INFO] - Outbound connections: N 
+[2022-09-10 16:04:15 : INFO] - safe_mode: 0 
+[2022-09-10 16:04:15 : INFO] - max_execution_time: 30 
+[2022-09-10 16:04:15 : INFO] - memory_limit: 128M (used: 60.1M | 62.5M) 
+[2022-09-10 16:04:15 : INFO] - multisite: N 
+[2022-09-10 16:04:15 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-09-10 16:04:15 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2022-09-10 16:04:15 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-09-10 16:04:15 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-09-10 16:04:15 : INFO] - Processing task with ID : 11, and type 'smush' 
+[2022-09-10 16:04:15 : INFO] - Re_Smush_It_Task with attachment ID : 7804, autocreated on : September 10, 2022 04:02:40 
+[2022-09-10 16:04:15 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:04:15 : INFO] - 85 
+[2022-09-10 16:04:16 : INFO] - Task with ID 11 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 16:04:16 : INFO] - Re_Smush_It_Task with attachment ID : 7804, autocreated on : September 10, 2022 04:02:40 
+[2022-09-10 16:04:16 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:04:16 : INFO] - 85 
+[2022-09-10 16:04:17 : INFO] - Re_Smush_It_Task with attachment ID : 7804, autocreated on : September 10, 2022 04:02:40 
+[2022-09-10 16:04:17 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:04:17 : INFO] - 85 
+[2022-09-10 16:04:18 : INFO] - Re_Smush_It_Task with attachment ID : 7804, autocreated on : September 10, 2022 04:02:40 
+[2022-09-10 16:04:18 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:04:18 : INFO] - 85 
+[2022-09-10 16:04:20 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-10-at-09.25.20.jpeg.The file was compressed from 119.50 KB to 119.50 KB saving 0 percent using WP-Optimize 
+[2022-09-10 16:04:20 : INFO] - Completed processing task with ID : 11, and type 'smush' 
+[2022-09-10 16:04:20 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-09-10 16:04:20 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2022-09-10 16:04:20 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-09-10 16:04:20 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2022-09-10 16:09:30 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:11:19 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:19 : INFO] - 
+ 
+[2022-09-10 16:14:19 : INFO] - Header for logs at time:  Sat, 10 Sep 2022 16:14:19 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-09-10 16:14:19 : INFO] - WP: 6.0.2 
+[2022-09-10 16:14:19 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-09-10 16:14:19 : INFO] - MySQL: 5.7.39 
+[2022-09-10 16:14:19 : INFO] - WPLANG: en_US 
+[2022-09-10 16:14:19 : INFO] - Server: LiteSpeed 
+[2022-09-10 16:14:19 : INFO] - Outbound connections: N 
+[2022-09-10 16:14:19 : INFO] - safe_mode: 0 
+[2022-09-10 16:14:19 : INFO] - max_execution_time: 30 
+[2022-09-10 16:14:19 : INFO] - memory_limit: 128M (used: 60.1M | 62.5M) 
+[2022-09-10 16:14:19 : INFO] - multisite: N 
+[2022-09-10 16:14:19 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-09-10 16:14:19 : INFO] - A total of 2 tasks of type smush found and will be processed in this iteration 
+[2022-09-10 16:14:19 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-09-10 16:14:19 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-09-10 16:14:19 : INFO] - Processing task with ID : 12, and type 'smush' 
+[2022-09-10 16:14:19 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:19 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:19 : INFO] - 85 
+[2022-09-10 16:14:23 : INFO] - Backing up the original image - 2022/09/IMG_7044-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 16:14:23 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:23 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:23 : INFO] - 85 
+[2022-09-10 16:14:24 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:24 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:24 : INFO] - 85 
+[2022-09-10 16:14:26 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:26 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:26 : INFO] - 85 
+[2022-09-10 16:14:26 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:26 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:26 : INFO] - 85 
+[2022-09-10 16:14:28 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:28 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:28 : INFO] - 85 
+[2022-09-10 16:14:30 : INFO] - Re_Smush_It_Task with attachment ID : 7808, autocreated on : September 10, 2022 04:09:30 
+[2022-09-10 16:14:30 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:30 : INFO] - 85 
+[2022-09-10 16:14:33 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7044-scaled.jpg.The file was compressed from 331.93 KB to 327.68 KB saving 1.28 percent using WP-Optimize 
+[2022-09-10 16:14:33 : INFO] - Completed processing task with ID : 12, and type 'smush' 
+[2022-09-10 16:14:33 : INFO] - Processing task with ID : 13, and type 'smush' 
+[2022-09-10 16:14:33 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:33 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:33 : INFO] - 85 
+[2022-09-10 16:14:37 : INFO] - Backing up the original image - 2022/09/IMG_7044-1-scaled-updraft-pre-smush-original.jpg 
+[2022-09-10 16:14:37 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:37 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:37 : INFO] - 85 
+[2022-09-10 16:14:38 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:38 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:38 : INFO] - 85 
+[2022-09-10 16:14:40 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:40 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:40 : INFO] - 85 
+[2022-09-10 16:14:40 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:40 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:40 : INFO] - 85 
+[2022-09-10 16:14:41 : INFO] - Task with ID 13 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 16:14:41 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:41 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:41 : INFO] - 85 
+[2022-09-10 16:14:44 : INFO] - Re_Smush_It_Task with attachment ID : 7810, autocreated on : September 10, 2022 04:11:19 
+[2022-09-10 16:14:44 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-09-10 16:14:44 : INFO] - 85 
+[2022-09-10 16:14:45 : INFO] - Task with ID 13 and type (smush) failed with error code 402 - Cannot copy from uploaded file 
+[2022-09-10 16:14:45 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/09/IMG_7044-1-scaled.jpg.The file was compressed from 331.93 KB to 327.68 KB saving 1.28 percent using WP-Optimize 
+[2022-09-10 16:14:45 : INFO] - Completed processing task with ID : 13, and type 'smush' 
+[2022-09-10 16:14:45 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-09-10 16:14:45 : INFO] - Successfully processed the queue (smush). 2 tasks were processed out of 2. 
+[2022-09-10 16:14:45 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-09-10 16:14:45 : INFO] - Cleaning up tasks of type (smush). A total of 2 tasks will be deleted. 
+[2022-09-10 16:26:03 : INFO] - 
+ 
+[2022-09-10 16:26:03 : INFO] - Header for logs at time:  Sat, 10 Sep 2022 16:26:03 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-09-10 16:26:03 : INFO] - WP: 6.0.2 
+[2022-09-10 16:26:03 : INFO] - PHP: 7.4.30 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.49.el7.x86_64 #1 SMP Thu Mar 4 05:39:46 EST 2021 x86_64) 
+[2022-09-10 16:26:03 : INFO] - MySQL: 5.7.39 
+[2022-09-10 16:26:03 : INFO] - WPLANG: en_US 
+[2022-09-10 16:26:03 : INFO] - Server: LiteSpeed 
+[2022-09-10 16:26:03 : INFO] - Outbound connections: N 
+[2022-09-10 16:26:03 : INFO] - safe_mode: 0 
+[2022-09-10 16:26:03 : INFO] - max_execution_time: 30 
+[2022-09-10 16:26:03 : INFO] - memory_limit: 128M (used: 60.1M | 62.5M) 
+[2022-09-10 16:26:03 : INFO] - multisite: N 
+[2022-09-10 16:26:03 : INFO] - openssl: OpenSSL 1.1.1d  10 Sep 2019 
+[2022-09-10 16:26:03 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=466, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/IMG20170530134314.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=465, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/IMG20170530134104.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=464, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/IMG20170526141102.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=463, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/IMG-20170505-WA0010.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=462, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/IMG-20170505-WA0009.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=461, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/IMG20170526141048.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=460, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/Jadwal-Perkuliahan-Semester-Gasal-17-18.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=459, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/cover.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=458, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/20031905_1361400363928366_8089599907921093929_n.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=454, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170803135232.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=452, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170714095942.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=451, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170714095823.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=447, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2018/01/IMG20180131093542.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=443, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2019/08/slider-anti-gratifikasi.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=442, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2019/08/Banner-Home-1C.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=440, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2019/08/pajak.png 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=432, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2018/01/IMG20180131093555.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=431, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2018/01/IMG20180131093542.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=408, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/11/IMG20170526141048.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=398, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170714095942.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=397, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170714095823.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=382, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170803135325.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=381, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170803135232.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=380, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/08/IMG20170803135200.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=368, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/Jadwal-Perkuliahan-Semester-Gasal-17-18.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=356, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/cover.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=349, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/07/20031905_1361400363928366_8089599907921093929_n.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=198, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/06/IMG20170526141102.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=189, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/06/IMG-20170505-WA0010.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=188, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/06/IMG-20170505-WA0009.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=181, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/06/IMG20170530134314.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=180, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/06/IMG20170530134104.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=179, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2017/06/IMG20170530134323.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=129, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/kurikulum-perpajakan-5.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=128, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/kurikulum-perpajakan-4.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=127, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/kurikulum-perpajakan-3.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=126, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/kurikulum-perpajakan-2.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=125, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/kurikulum-perpajakan-1.jpg 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=107, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/10/pajak.png 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=91, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak4.png 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=90, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak3.png 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=89, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak2.png 
+[2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=88, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak1.png 

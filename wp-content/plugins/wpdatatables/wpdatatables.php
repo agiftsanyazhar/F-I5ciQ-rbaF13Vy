@@ -3,7 +3,7 @@
 Plugin Name: wpDataTables - Tables & Table Charts
 Plugin URI: https://wpdatatables.com
 Description: Create responsive, sortable tables & charts from Excel, CSV or PHP. Add tables & charts to any post in minutes with DataTables.
-Version: 2.1.36
+Version: 2.1.39
 Author: TMS-Plugins
 Author URI: https://tms-outsource.com
 Text Domain: wpdatatables
@@ -88,6 +88,7 @@ register_uninstall_hook(__FILE__, 'wdtUninstall');
 
 add_shortcode('wpdatatable', 'wdtWpDataTableShortcodeHandler');
 add_shortcode('wpdatachart', 'wdtWpDataChartShortcodeHandler');
+add_shortcode('wpdatatable_cell', 'wdtWpDataTableCellShortcodeHandler');
 add_shortcode('wpdatatable_sum', 'wdtFuncsShortcodeHandler');
 add_shortcode('wpdatatable_avg', 'wdtFuncsShortcodeHandler');
 add_shortcode('wpdatatable_min', 'wdtFuncsShortcodeHandler');

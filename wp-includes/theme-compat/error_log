@@ -46,3 +46,23 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/vokasi/public_html/perpajakan/wp-includes/theme-compat/header.php on line 9
+[28-Aug-2022 01:03:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/embed-content.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/embed-content.php on line 13
+[29-Aug-2022 00:07:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/comments.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/comments.php on line 9
+[30-Aug-2022 22:36:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/embed-404.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/embed-404.php on line 14
+[31-Aug-2022 18:24:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function do_action() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/footer-embed.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/footer-embed.php on line 18
+[08-Sep-2022 11:26:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/header-embed.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/header-embed.php on line 19

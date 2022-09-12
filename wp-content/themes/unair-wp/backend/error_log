@@ -1537,3 +1537,36 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer.php on line 9
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; GoogleMap has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 100
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; CustomBoxWidget has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 192
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; FBLike has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 293
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; IOACustomPostW has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 410
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Dribbbble has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 612
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; SocialSet has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 711
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; VideoBox has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 1104
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ImageBox has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 1204
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Testimonial has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 1324
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Testimonial_Slider has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 1457
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; IOAAdsense has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 1574
+[16-Aug-2022 11:42:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; Flickr has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 1683
+[16-Aug-2022 11:42:24 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/theme_widgets.php on line 22
+[30-Aug-2022 22:30:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_init.php(8): require_once()
+#1 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[02-Sep-2022 05:10:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer.php on line 9
+[06-Sep-2022 02:50:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/media_manager.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/media_manager.php on line 9
+[07-Sep-2022 05:43:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function did_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/class-tgm-plugin-activation.php:1910
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/class-tgm-plugin-activation.php on line 1910

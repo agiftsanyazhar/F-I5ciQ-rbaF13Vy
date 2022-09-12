@@ -2,11 +2,11 @@
 Contributors: wpDataTables
 Author URI: https://tms-outsource.com
 Plugin URI: https://wpdatatables.com/
-Tags: table, table builder, data tables, tables, charts, datatables, simple table, tables from csv, tables from excel, dynamic tables, merge cells, pricing tables, responsive tables, responsive charts, grouping data, pricing table, row grouping, csv, chart, pie charts, mysql tables, table plugin, wp table, wordpress table plugin, wordpress tables, editing charts, google charts, chartjs, excel, json, xml, php array, line chart, donut, bar chart, histogram, area chart, bubble chart, gauge chart, scatter chart, candlestick, waterfall, polar, radar
+Tags: table, table builder, data tables, tables, charts, datatables, csv, excel, json, simple table, tables from csv, tables from excel, dynamic tables, merge cells, pricing tables, responsive tables, responsive charts, grouping data, pricing table, row grouping, chart, pie charts, mysql tables, table plugin, wp table, wordpress table plugin, wordpress tables, editing charts, google charts, chartjs, xml, php array, line chart, donut, bar chart, histogram, area chart, bubble chart, gauge chart, scatter chart, candlestick, waterfall, polar, radar
 Requires at least: 4.0
 Tested up to: 6.0.1
 Requires PHP: 5.6
-Stable tag: 2.1.36
+Stable tag: 2.1.39
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -157,6 +157,10 @@ Following column data types are supported in data tables (Data tables created fr
 
 If one column of your table contains similar values for many rows, it often makes sense to use it as a “group column”.This means it will not be displayed as a column, but its values will be used to group the rows.
 For detail explanation check out [How to set up row grouping in WordPress tables](https://wpdatatables.com/documentation/column-features/row-grouping/).
+
+== Single cell shortcode ==
+
+Most of the users need to show a single value from their tables. wpDataTables presents dynamic single-cell shortcodes that you can use in many options. There are differences in shortcode parameters depending on the table type. More about [Single cell shortcode](https://wpdatatables.com/documentation/table-features/single-cell-shortcode/) you can read in our docs.
 
 Please note some limitations compared to the Premium version of the wpDataTables plugin:
 
@@ -347,6 +351,18 @@ This can be changed from the “Number format” drop-down menu in the wpDataTab
 12. Google chart settings
 
 == Changelog ==
+= 2.1.39 =
+Bugfix: Fix for Display tab settings not being aligned inside rows.
+Other small bug fixes and stability improvements.
+
+= 2.1.38 =
+* Feature: Added single cell shortcode. More about this in our docs about [Single cell shortcode](https://wpdatatables.com/documentation/table-features/single-cell-shortcode/).
+* BugFix: Fixed issue bootstrap CSS.
+Other small bug fixes and stability improvements.
+
+= 2.1.37 =
+* BugFix: Fixed issue with fatal error with old versions of Avada theme.
+Other small bug fixes and stability improvements.
 
 = 2.1.36 =
 * BugFix: Fixed issue with CSS.
