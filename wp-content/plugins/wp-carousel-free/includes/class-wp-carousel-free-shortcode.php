@@ -68,13 +68,16 @@ class WP_Carousel_Free_Shortcode {
 		$section_title = isset( $shortcode_data['section_title'] ) ? $shortcode_data['section_title'] : '';
 
 		$wpcp_layout = isset( $shortcode_data['wpcp_layout'] ) ? $shortcode_data['wpcp_layout'] : 'carousel';
-
+		$item_gap    = isset( $shortcode_data['wpcp_slide_margin'] ) ? $shortcode_data['wpcp_slide_margin'] : array(
+			'top'   => '20',
+			'right' => '20',
+		);
 		// Carousel Column.
 		$column_number = isset( $shortcode_data['wpcp_number_of_columns'] ) ? $shortcode_data['wpcp_number_of_columns'] : '';
 
 		// Carousel Settings.
 		$preloader = isset( $shortcode_data['wpcp_preloader'] ) ? $shortcode_data['wpcp_preloader'] : true;
-		$nav_class = 'gallery' === $wpcp_layout ? 'wpcp-gallery-wrapper' : ' nav-vertical-center';
+		$nav_class = 'grid' === $wpcp_layout ? 'wpcp-gallery-wrapper' : ' nav-vertical-center';
 		// Carousel Classes.
 		$carousel_classes = 'wpcp-carousel-section sp-wpcp-' . $post_id . ' ' . $nav_class;
 		if ( 'image-carousel' === $carousel_type ) {
@@ -150,23 +153,25 @@ class WP_Carousel_Free_Shortcode {
 			$carousel_direction    = isset( $shortcode_data['wpcp_carousel_direction'] ) ? $shortcode_data['wpcp_carousel_direction'] : '';
 			$lazy_load_image       = isset( $shortcode_data['wpcp_image_lazy_load'] ) ? $shortcode_data['wpcp_image_lazy_load'] : 'false';
 			$draggable             = $shortcode_data['slider_draggable'] ? 'true' : 'false';
+			$free_mode             = isset( $shortcode_data['free_mode'] ) && $shortcode_data['free_mode'] ? 'true' : 'false';
 			$swipe                 = $shortcode_data['slider_swipe'] ? 'true' : 'false';
 			$is_swipetoslide       = isset( $shortcode_data['carousel_swipetoslide'] ) ? $shortcode_data['carousel_swipetoslide'] : true;
 			$swipetoslide          = $is_swipetoslide ? 'true' : 'false';
 			$rtl                   = ( 'ltr' === $carousel_direction ) ? 'true' : 'false';
 			$carousel_classes     .= ' wpcp-standard';
-			$wpcp_slick_options    = 'data-slick=\'{ "accessibility":true, "arrows":' . $arrows . ', "autoplay":' . $auto_play . ', "autoplaySpeed":' . $autoplay_speed . ', "dots":' . $dots . ', "infinite":' . $infinite . ', "speed":' . $speed . ', "pauseOnHover":' . $pause_on_hover . ', "slidesToShow":' . $column_lg_desktop . ', "responsive":[ { "breakpoint":' . $desktop_size . ', "settings": { "slidesToShow":' . $column_desktop . ' } }, { "breakpoint":' . $laptop_size . ', "settings":{ "slidesToShow":' . $column_sm_desktop . ' } }, { "breakpoint":' . $tablet_size . ', "settings": { "slidesToShow":' . $column_tablet . ' } }, {"breakpoint":' . $mobile_size . ', "settings":{ "slidesToShow":' . $column_mobile . ', "arrows": ' . $arrows_mobile . ', "dots": ' . $dots_mobile . ' } } ], "rtl":' . $rtl . ', "lazyLoad": "' . $lazy_load_image . '", "swipe": ' . $swipe . ', "draggable": ' . $draggable . ', "swipeToSlide":' . $swipetoslide . ' }\' ';
+			$wpcp_swiper_options   = 'data-swiper=\'{ "accessibility":true, "spaceBetween":' . $item_gap['top'] . ', "arrows":' . $arrows . ', "freeMode": ' . $free_mode . ', "autoplay":' . $auto_play . ', "autoplaySpeed":' . $autoplay_speed . ', "dots":' . $dots . ', "infinite":' . $infinite . ', "speed":' . $speed . ', "pauseOnHover":' . $pause_on_hover . ',
+			"slidesToShow":{"lg_desktop":' . $column_lg_desktop . ', "desktop": ' . $column_desktop . ', "laptop": ' . $column_sm_desktop . ', "tablet": ' . $column_tablet . ', "mobile": ' . $column_mobile . '}, "responsive":{"desktop":' . $desktop_size . ', "laptop": ' . $laptop_size . ', "tablet": ' . $tablet_size . ', "mobile": ' . $mobile_size . '}, "rtl":' . $rtl . ', "lazyLoad": "' . $lazy_load_image . '", "swipe": ' . $swipe . ', "draggable": ' . $draggable . ', "swipeToSlide":' . $swipetoslide . ' }\' ';
 			// Carousel Configurations.
-			if ( wpcf_get_option( 'wpcp_slick_js', true ) ) {
-				wp_enqueue_script( 'wpcf-slick' );
+			if ( wpcf_get_option( 'wpcp_swiper_js', true ) ) {
+				wp_enqueue_script( 'wpcf-swiper' );
 			}
-			wp_enqueue_script( 'wpcf-slick-config' );
+			wp_enqueue_script( 'wpcf-swiper-config' );
 			ob_start();
 			include WPCAROUSELF_PATH . '/public/templates/carousel.php';
 			$html = ob_get_contents();
 			return apply_filters( 'sp_wpcp_carousel_slider', $html, $post_id );
 		}
-		if ( 'gallery' === $wpcp_layout ) {
+		if ( 'grid' === $wpcp_layout ) {
 			ob_start();
 			include WPCAROUSELF_PATH . '/public/templates/gallery.php';
 			$html = ob_get_contents();

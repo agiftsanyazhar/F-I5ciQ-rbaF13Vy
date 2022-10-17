@@ -66,3 +66,11 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/header-embed.php on line 19
+[12-Sep-2022 17:36:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/sidebar.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/sidebar.php on line 9
+[16-Sep-2022 03:32:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/header.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/theme-compat/header.php on line 9

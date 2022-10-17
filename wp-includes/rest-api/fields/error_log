@@ -12,3 +12,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-comment-meta-fields.php on line 17
+[12-Sep-2022 04:43:50 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Meta_Fields' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-user-meta-fields.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-user-meta-fields.php on line 17

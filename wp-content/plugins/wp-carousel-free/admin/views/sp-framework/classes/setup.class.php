@@ -353,6 +353,7 @@ if ( ! class_exists( 'SP_WPCF' ) ) {
 					'heading',
 					'image_select',
 					'image_sizes',
+					'media',
 					'notice',
 					'radio',
 					'select',
@@ -474,7 +475,7 @@ if ( ! class_exists( 'SP_WPCF' ) ) {
 					'wpcf',
 					'wpcf_vars',
 					array(
-						'previewJS'     => self::include_plugin_url( 'assets/js/preview' . $min . '.js' ),
+						'previewJS'     => WPCAROUSELF_URL . 'public/js/wp-carousel-free-public.min.js',
 						'color_palette' => apply_filters( 'wpcf_color_palette', array() ),
 						'i18n'          => array(
 							'confirm'         => esc_html__( 'Are you sure?', 'wp-carousel-free' ),

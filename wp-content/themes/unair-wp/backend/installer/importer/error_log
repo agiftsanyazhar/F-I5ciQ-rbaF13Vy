@@ -7,3 +7,7 @@
 [27-Sep-2021 10:52:29 UTC] PHP Fatal error:  Class 'WP_Import' not found in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php on line 5
 [26-Oct-2021 19:16:27 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor in /home/vokasi/public_html/perpajakan/wp-content/themes/unair-wp/backend/installer/importer/wordpress-importer.php on line 38
 [06-Sep-2022 12:49:41 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/wordpress-importer.php on line 38
+[12-Oct-2022 16:13:44 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Import' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php on line 5

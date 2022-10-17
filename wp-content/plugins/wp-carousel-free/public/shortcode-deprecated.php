@@ -147,13 +147,14 @@ if ( ! function_exists( 'wp_carousel_free_shortcode' ) ) {
 		$gallery_div   = '';
 
 		// Carousel Configurations.
-		wp_enqueue_script( 'wpcf-slick' );
-		wp_enqueue_script( 'wpcf-slick-config' );
+		wp_enqueue_script( 'wpcf-swiper' );
+		wp_enqueue_script( 'wpcf-swiper-config' );
 		$rtl                = ( 'ltr' === $carousel_direction ) ? 'true' : 'false';
-		$wpcp_slick_options = 'data-slick=\'{ "accessibility": true, "arrows":' . $nav . ', "autoplay":' . $auto_play . ', "autoplaySpeed":' . $autoplay_speed . ', "dots":' . $bullets . ', "infinite":' . $infinite . ', "speed":' . $speed . ', "pauseOnHover":' . $pause_on_hover . ', "slidesToShow":' . $items . ', "responsive":[ { "breakpoint":1200, "settings": { "slidesToShow":' . $items_desktop . ' } }, { "breakpoint":980, "settings":{ "slidesToShow":' . $items_desktop_small . ' } }, { "breakpoint":736, "settings": { "slidesToShow":' . $items_tablet . ' } }, {"breakpoint":480, "settings":{ "slidesToShow":' . $items_mobile . ', "arrows":' . $nav_mobile . ',  "dots":' . $bullets_mobile . ' } } ], "rows":1, "rtl":' . $rtl . ', "swipe":' . $swipe . ', "draggable":' . $draggable . ' }\' ';
+		$wpcp_swiper_options = 'data-swiper=\'{ "accessibility":true, "arrows":' . $arrows . ', "autoplay":' . $auto_play . ', "autoplaySpeed":' . $autoplay_speed . ', "dots":' . $dots . ', "infinite":' . $infinite . ', "speed":' . $speed . ', "pauseOnHover":' . $pause_on_hover . ',
+		"slidesToShow":{"lg_desktop":' . $column_lg_desktop . ', "desktop": ' . $column_desktop . ', "laptop": ' . $column_sm_desktop . ', "tablet": ' . $column_tablet . ', "mobile": ' . $column_mobile . '}, "responsive":{"desktop":' . $desktop_size . ', "laptop": ' . $laptop_size . ', "tablet": ' . $tablet_size . ', "mobile": ' . $mobile_size . '}, "rtl":' . $rtl . ', "lazyLoad": "' . $lazy_load_image . '", "swipe": ' . $swipe . ', "draggable": ' . $draggable . ', "swipeToSlide":' . $swipetoslide . ' }\' ';
 
 		$gallery_div = "
-		<div id='wordpress-carousel-free-$id' class='wpcp-carousel-section wpcp-standard nav-vertical-center' $wpcp_slick_options>";
+		<div id='wordpress-carousel-free-$id' class='wpcp-carousel-section wpcp-standard nav-vertical-center' $wpcp_swiper_options>";
 
 		$output = apply_filters( 'gallery_style', $gallery_style . $gallery_div );
 

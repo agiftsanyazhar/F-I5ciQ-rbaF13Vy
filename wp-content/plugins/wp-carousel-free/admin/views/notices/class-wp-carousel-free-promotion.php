@@ -38,7 +38,7 @@ class WP_Carousel_Free_Promotion {
 				'key'        => 'black-friday-2020',
 				'start_date' => '2020-11-24 14:00:00 EST',
 				'end_date'   => '2020-11-30 23:59:00 EST',
-				'title'      => 'Enjoy Black Friday Deals <strong>30% OFF</strong> on <strong>WordPress Carousel Pro!</strong>',
+				'title'      => 'Enjoy Black Friday Deals <strong>30% OFF</strong> on <strong>WP Carousel Pro!</strong>',
 				'content'    => ' Discount Code: <strong>BF2020</strong>',
 				'link'       => 'https://shapedplugin.com/plugin/wordpress-carousel-pro/?utm_source=wordpress-wpcf&utm_medium=get-it-now&utm_campaign=BlackFriday2020',
 			),

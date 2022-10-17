@@ -124,6 +124,28 @@ if ( ! class_exists( 'WPCF_Helper' ) ) {
 				echo apply_filters( 'sp_wpcp_section_title', ob_get_clean() );
 			}
 		}
+
+		/**
+		 * Image tag of the single item.
+		 *
+		 * @param  boolean $lazy_load_image true or false.
+		 * @param  string  $wpcp_layout layout types.
+		 * @param  string  $img_url image main url.
+		 * @param  string  $title_attr image title attr.
+		 * @param  string  $width image width.
+		 * @param  string  $height image height.
+		 * @param  string  $alt_text image alt text.
+		 * @param  string  $lazy_img_url lazy load image.
+		 * @return string
+		 */
+		public static function get_item_image( $lazy_load_image, $wpcp_layout, $img_url, $title_attr, $width, $height, $alt_text, $lazy_img_url ) {
+			if ( 'false' !== $lazy_load_image && 'carousel' === $wpcp_layout ) {
+				$image = sprintf( '<img class="wcp-lazy swiper-lazy" data-src="%1$s" src="%6$s" %2$s alt="%3$s" width="%4$s" height="%5$s">', $img_url, $title_attr, $alt_text, $width, $height, $lazy_img_url );
+			} else {
+				$image = sprintf( '<img class="skip-lazy" src="%1$s"%2$s alt="%3$s" width="%4$s" height="%5$s">', $img_url, $title_attr, $alt_text, $width, $height );
+			}
+			return $image;
+		}
 		/**
 		 * Preloader
 		 *
@@ -162,7 +184,7 @@ if ( ! class_exists( 'WPCF_Helper' ) ) {
 			$post_order_by         = isset( $shortcode_data['wpcp_post_order_by'] ) ? $shortcode_data['wpcp_post_order_by'] : '';
 			$post_order            = isset( $shortcode_data['wpcp_post_order'] ) ? $shortcode_data['wpcp_post_order'] : '';
 			$grid_column           = '';
-			if ( 'gallery' === $wpcp_layout ) {
+			if ( 'grid' === $wpcp_layout ) {
 				$column_number     = isset( $shortcode_data['wpcp_number_of_columns'] ) ? $shortcode_data['wpcp_number_of_columns'] : '';
 				$column_lg_desktop = isset( $column_number['lg_desktop'] ) && ! empty( $column_number['lg_desktop'] ) ? $column_number['lg_desktop'] : '5';
 				$column_desktop    = isset( $column_number['desktop'] ) && ! empty( $column_number['desktop'] ) ? $column_number['desktop'] : '4';
@@ -170,6 +192,10 @@ if ( ! class_exists( 'WPCF_Helper' ) ) {
 				$column_tablet     = isset( $column_number['tablet'] ) && ! empty( $column_number['tablet'] ) ? $column_number['tablet'] : '2';
 				$column_mobile     = isset( $column_number['mobile'] ) && ! empty( $column_number['mobile'] ) ? $column_number['mobile'] : '1';
 				$grid_column       = "wpcpro-col-xs-$column_mobile wpcpro-col-sm-$column_tablet  wpcpro-col-md-$column_sm_desktop wpcpro-col-lg-$column_desktop wpcpro-col-xl-$column_lg_desktop";
+			}
+
+			if ( 'carousel' === $wpcp_layout ) {
+				$grid_column = 'swiper-slide';
 			}
 
 			if ( 'product-carousel' === $carousel_type ) {
@@ -236,8 +262,8 @@ if ( ! class_exists( 'WPCF_Helper' ) ) {
 			if ( $wpcp_pagination && 'carousel' !== $wpcp_layout ) {
 				$carousel_type = isset( $upload_data['wpcp_carousel_type'] ) ? $upload_data['wpcp_carousel_type'] : '';
 				if ( 'post-carousel' === $carousel_type || 'product-carousel' === $carousel_type ) {
-					$wpcp_layout = isset( $shortcode_data['wpcp_layout'] ) ? $shortcode_data['wpcp_layout'] : 'carousel';
-					$wpcp_query  = self::wpcp_query( $upload_data, $shortcode_data, $post_id );
+					// $wpcp_layout = isset( $shortcode_data['wpcp_layout'] ) ? $shortcode_data['wpcp_layout'] : 'carousel';
+					$wpcp_query = self::wpcp_query( $upload_data, $shortcode_data, $post_id );
 
 					$total_pages = $wpcp_query->max_num_pages;
 					// Full wp pagination example.

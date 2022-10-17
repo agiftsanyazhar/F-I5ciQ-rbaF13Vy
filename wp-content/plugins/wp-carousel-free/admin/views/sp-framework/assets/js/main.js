@@ -2418,16 +2418,16 @@
     });
 
     // hide Carousel Settings when grid layout will be selected.
-    if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'gallery') {
-      $(".wpcf-nav-metabox li:nth-child(4)").hide();
+	  if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'grid') {
+      $(".wpcf-nav-metabox li:nth-child(5)").hide();
     } else {
-      $(".wpcf-nav-metabox li:nth-child(4)").show();
+      $(".wpcf-nav-metabox li:nth-child(5)").show();
     }
     $('.wpcf-field-image_select.wpcp_layout').on('change', function () {
-      if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'gallery') {
-        $(".wpcf-nav-metabox li:nth-child(4)").hide();
+		if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'grid') {
+        $(".wpcf-nav-metabox li:nth-child(5)").hide();
       } else {
-        $(".wpcf-nav-metabox li:nth-child(4)").show();
+        $(".wpcf-nav-metabox li:nth-child(5)").show();
       }
     });
   });

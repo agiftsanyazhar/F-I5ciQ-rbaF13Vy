@@ -1,0 +1,8 @@
+[06-Oct-2022 08:20:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _x() in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-small-posts.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-small-posts.php on line 9
+[07-Oct-2022 18:53:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _x() in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-standard-posts.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-standard-posts.php on line 9

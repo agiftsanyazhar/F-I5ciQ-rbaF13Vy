@@ -27,8 +27,10 @@ class WP_Carousel_Free_Updates {
 	 * @var array
 	 */
 	private static $updates = array(
-		'2.1.7' => 'updates/update-2.1.7.php',
-		'2.4.7' => 'updates/update-2.4.7.php',
+		'2.1.7'  => 'updates/update-2.1.7.php',
+		'2.4.7'  => 'updates/update-2.4.7.php',
+		'2.4.11' => 'updates/update-2.4.11.php',
+		'2.4.12' => 'updates/update-2.4.12.php',
 	);
 
 	/**

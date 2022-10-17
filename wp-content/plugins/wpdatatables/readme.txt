@@ -2,11 +2,11 @@
 Contributors: wpDataTables
 Author URI: https://tms-outsource.com
 Plugin URI: https://wpdatatables.com/
-Tags: table, table builder, data tables, tables, charts, datatables, csv, excel, json, simple table, tables from csv, tables from excel, dynamic tables, merge cells, pricing tables, responsive tables, responsive charts, grouping data, pricing table, row grouping, chart, pie charts, mysql tables, table plugin, wp table, wordpress table plugin, wordpress tables, editing charts, google charts, chartjs, xml, php array, line chart, donut, bar chart, histogram, area chart, bubble chart, gauge chart, scatter chart, candlestick, waterfall, polar, radar
+Tags: table, table builder, data tables, tables, charts, datatables, csv, excel, json, simple table, tables from csv, tables from excel, dynamic tables, merge cells, cache, cache tables, caching, auto update, auto update tables, pricing tables, responsive tables, responsive charts, grouping data, pricing table, row grouping, chart, pie charts, mysql tables, table plugin, wp table, wordpress table plugin, wordpress tables, editing charts, google charts, chartjs, xml, php array, line chart, donut, bar chart, histogram, area chart, bubble chart, gauge chart, scatter chart, candlestick, waterfall, polar, radar
 Requires at least: 4.0
-Tested up to: 6.0.1
+Tested up to: 6.0.2
 Requires PHP: 5.6
-Stable tag: 2.1.39
+Stable tag: 2.1.42
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,15 @@ XML - *(Extensible Markup Language)* is a universal standard for presenting data
 
 JSON *(JavaScript Object Notation)* is a popular interlingual data exchange format. Many server applications provide public data in JSON format. JSON is based on the syntax of Javascript objects. Since most web applications use client-side JavaScript, JSON has become the 'de facto' standard for packing data on the web and wpDataTables also supports the JSON format as an input data source.
 Learn [How to create WordPress tables from JSON](https://wpdatatables.com/documentation/creating-wpdatatables/creating-wpdatatables-from-json-input/) in our documentation.
+
+== NEW! Cache tables data ==
+
+We are introducing a new feature that will dramatically increase the loading performance of your tables created from existing data sources like CSV, Excel, XML, JSON, and PHP array. As you know, in this case, you will upload the file and initialize the table, whereupon it will be read every time the page loads. Before this version of wpDataTables, if the source file was larger than 3.000 – 5.000 rows, the page load and generation time was slow. But not anymore!
+More details in our docs about [Caching tables in Wordpress](https://wpdatatables.com/documentation/table-features/caching-data-and-auto-update-cache-in-wordpress-tables/).
+
+== NEW! Auto update table cache from source file ==
+
+This new option is related with previous option caching tables. If you are updating your source file frequently, and want to keep the data in the table updated after a custom interval, the new feature Auto update cache from the source file will be perfect for you. It will update table cached data based on the source file following the time interval that you will set in the cron job. You can read more in our docs about [Auto update cache from source and cron job instructions](https://wpdatatables.com/documentation/table-features/caching-data-and-auto-update-cache-in-wordpress-tables/#auto-update-cache).
 
 == Develop dynamic WordPress table from Serialized PHP array ==
 
@@ -351,8 +360,24 @@ This can be changed from the “Number format” drop-down menu in the wpDataTab
 12. Google chart settings
 
 == Changelog ==
+
+= 2.1.42 =
+* Feature: [Caching tables data](https://wpdatatables.com/documentation/table-features/caching-data-and-auto-update-cache-in-wordpress-tables/) for non-server-side tables (Excel, CSV, XML, JSON, and PHP array).
+* Feature: [Auto update table cache](https://wpdatatables.com/documentation/table-features/caching-data-and-auto-update-cache-in-wordpress-tables/) for non-server-side tables (Excel, CSV, XML, JSON, and PHP array).
+Other small bug fixes and stability improvements.
+
+= 2.1.41 =
+* CSS update.
+Other small bug fixes and stability improvements.
+
+= 2.1.40 =
+* Bugfix: Fixed issue with saving CSS rules on simple table.
+* Bugfix: Fixed issue with popup CSS style.
+* Compatibility with WordPress 6.0.2 approved.
+Other small bug fixes and stability improvements.
+
 = 2.1.39 =
-Bugfix: Fix for Display tab settings not being aligned inside rows.
+* Bugfix: Fix for Display tab settings not being aligned inside rows.
 Other small bug fixes and stability improvements.
 
 = 2.1.38 =

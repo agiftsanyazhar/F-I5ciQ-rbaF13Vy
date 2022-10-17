@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the WordPress - 6.0.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-18 06:25:15+0000\n"
+"PO-Revision-Date: 2022-10-06 09:02:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: id\n"
 "Project-Id-Version: WordPress - 6.0.x - Development\n"
 
@@ -26,7 +26,7 @@ msgstr "Noto Serif:400,400i,700,700i"
 #, gp-priority: high
 msgctxt "Comment number declension: on or off"
 msgid "off"
-msgstr "matikan"
+msgstr "off"
 
 #. translators: Translate this to the correct language tag for your locale, see
 #. https://www.w3.org/International/articles/language-tags/ for reference. Do
@@ -34,7 +34,7 @@ msgstr "matikan"
 #: wp-includes/general-template.php:871
 #, gp-priority: high
 msgid "html_lang_attribute"
-msgstr "id-ID"
+msgstr "id"
 
 #. translators: If months in your language require a genitive case, translate
 #. this to 'on'. Do not translate into your own language.
@@ -42,7 +42,7 @@ msgstr "id-ID"
 #, gp-priority: high
 msgctxt "decline months names: on or off"
 msgid "off"
-msgstr "off"
+msgstr "nonaktifkan"
 
 #. translators: If your word count is based on single characters (e.g. East
 #. Asian characters), enter 'characters_excluding_spaces' or
@@ -153,14 +153,14 @@ msgstr "&#8220;"
 #: wp-includes/class-wp-locale.php:208
 #, gp-priority: high
 msgid "number_format_thousands_sep"
-msgstr "."
+msgstr "number_format_thousands_sep"
 
 #. translators: $dec_point argument for https://www.php.net/number_format,
 #. default is '.'
 #: wp-includes/class-wp-locale.php:216
 #, gp-priority: high
 msgid "number_format_decimal_point"
-msgstr ","
+msgstr "number_format_decimal_point"
 
 #. translators: Weekday.
 #: wp-includes/class-wp-locale.php:136
@@ -289,6 +289,10 @@ msgstr "Tak Berkategori"
 msgid "Whether a theme uses block-based templates."
 msgstr "Jika tema menggunakan template berbasis blok."
 
+#: wp-includes/option.php:2250
+msgid "The ID of the page that should display the latest posts"
+msgstr "ID halaman yang dapat menampilkan pos terbaru"
+
 #: wp-includes/option.php:2240
 msgid "The ID of the page that should be displayed on the front page"
 msgstr "ID halaman yang seharusnya ditampilkan di halaman depan"
@@ -297,15 +301,66 @@ msgstr "ID halaman yang seharusnya ditampilkan di halaman depan"
 msgid "What to show on the front page"
 msgstr "Yang akan ditampilkan di halaman depan"
 
+#. translators: 1: PHP file name, 2: Version number.
+#: wp-includes/functions.php:5575
+msgid "File %1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
+msgstr "Berkas %1$s <strong>tidak digunakan lagi</strong> sejak versi %2$s dan tidak tersedia penggantinya."
+
+#. translators: 1: PHP file name, 2: Version number, 3: Alternative file name.
+#: wp-includes/functions.php:5564
+msgid "File %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
+msgstr "Berkas %1$s <strong>tidak digunakan lagi</strong> sejak versi %2$s! Gunakan %3$s sebagai penggantinya"
+
+#. translators: 1: PHP function name, 2: Version number.
+#: wp-includes/functions.php:5385
+msgid "Function %1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
+msgstr "Fungsi %1$s <strong>tidak digunakan lagi</strong> sejak versi %2$s tidak ada alternatif yang tersedia."
+
+#. translators: 1: PHP function name, 2: Version number, 3: Alternative
+#. function name.
+#: wp-includes/functions.php:5374
+msgid "Function %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
+msgstr "Fungsi %1$s <strong>tidak berlaku lagi</strong> sejak versi %2$s! Gunakan %3$s sebagai penggantinya."
+
+#: wp-includes/blocks/read-more/block.json
+msgctxt "block description"
+msgid "Displays the link of a post, page, or any other content-type."
+msgstr "Menampilkan tautan dari pos, halaman, atau tipe konten lainnya."
+
 #: wp-includes/blocks/read-more/block.json
 msgctxt "block title"
 msgid "Read More"
 msgstr "Baca Lebih Lanjut"
 
 #: wp-includes/blocks/query-no-results/block.json
+msgctxt "block description"
+msgid "Contains the block elements used to render content when no query results are found."
+msgstr "Berisi elemen blok yang akan digunakan untuk memuat konten saat tidak ada kata kunci yang ditemukan."
+
+#: wp-includes/blocks/query-no-results/block.json
 msgctxt "block title"
 msgid "No results"
 msgstr "Tidak ada hasil"
+
+#: wp-includes/blocks/post-comments/block.json
+msgctxt "block description"
+msgid "This block is deprecated. Please use the Comments Query Loop block instead."
+msgstr "Blok berikut tidak digunakan lagi. Silakan gunakan blok Query Loop Komentar sebagai penggantinya."
+
+#: wp-includes/blocks/post-comments/block.json
+msgctxt "block title"
+msgid "Post Comments (deprecated)"
+msgstr "Komentar Pos (tidak digunakan lagi)"
+
+#: wp-includes/blocks/post-author/block.json
+msgctxt "block description"
+msgid "Display post author details such as name, avatar, and bio."
+msgstr "Menampilkan detail penulis pos seperti nama, foto, dan biografi."
+
+#: wp-includes/blocks/post-author-biography/block.json
+msgctxt "block description"
+msgid "The author biography."
+msgstr "Biografi penulis."
 
 #: wp-includes/blocks/post-author-biography/block.json
 msgctxt "block title"
@@ -313,9 +368,19 @@ msgid "Post Author Biography"
 msgstr "Biografi Penulis Artikel"
 
 #: wp-includes/blocks/home-link/block.json
+msgctxt "block description"
+msgid "Create a link that always points to the homepage of the site. Usually not necessary if there is already a site title link present in the header."
+msgstr "Buat tautan yang akan selalu mengarah ke beranda situs. Biasanya tidak diperlukan jika sudah ada tautan judul situs di header."
+
+#: wp-includes/blocks/home-link/block.json
 msgctxt "block title"
 msgid "Home Link"
 msgstr "Tautan Beranda"
+
+#: wp-includes/blocks/group/block.json
+msgctxt "block description"
+msgid "Gather blocks in a layout container."
+msgstr "Kumpulkan blok dalam panel tata letak."
 
 #: wp-includes/blocks/comments-title/block.json
 msgctxt "block description"
@@ -327,6 +392,26 @@ msgctxt "block title"
 msgid "Comments Title"
 msgstr "Judul Komentar"
 
+#: wp-includes/blocks/comments-query-loop/block.json
+msgctxt "block description"
+msgid "An advanced block that allows displaying post comments using different visual configurations."
+msgstr "Sebuah blok tingkat lanjut yang memungkinkan menampilkan komentar pos menggunakan beragam pengaturan visual."
+
+#: wp-includes/blocks/comments-query-loop/block.json
+msgctxt "block title"
+msgid "Comments Query Loop"
+msgstr "Query Loop Komentar"
+
+#: wp-includes/blocks/comments-pagination/block.json
+msgctxt "block description"
+msgid "Displays a paginated navigation to next/previous set of comments, when applicable."
+msgstr "Menampilkan navigasi halaman ke sejumlah pos berikutnya/sebelumnya, jika memungkinkan."
+
+#: wp-includes/blocks/comments-pagination/block.json
+msgctxt "block title"
+msgid "Comments Pagination"
+msgstr "Paginasi Komentar"
+
 #: wp-includes/blocks/comments-pagination-previous/block.json
 msgctxt "block description"
 msgid "Displays the previous comment's page link."
@@ -337,15 +422,65 @@ msgctxt "block description"
 msgid "Displays a list of page numbers for comments pagination."
 msgstr "Menampilkan daftar nomor halaman untuk paginasi halaman."
 
+#: wp-includes/blocks/comments-pagination-next/block.json
+msgctxt "block description"
+msgid "Displays the next comment's page link."
+msgstr "Menampilkan tautan halaman komentar selanjutnya."
+
+#: wp-includes/blocks/comment-template/block.json
+msgctxt "block description"
+msgid "Contains the block elements used to display a comment, like the title, date, author, avatar and more."
+msgstr "Mengandung elemen blok yang digunakan untuk menampilkan komentar, seperti judul, tanggal, penulis, avatar, dan lainnya."
+
+#: wp-includes/blocks/comment-template/block.json
+msgctxt "block title"
+msgid "Comment Template"
+msgstr "Templat Komentar"
+
+#: wp-includes/blocks/comment-reply-link/block.json
+msgctxt "block description"
+msgid "Displays a link to reply to a comment."
+msgstr "Menampilkan tautan untuk membalas komentar."
+
+#: wp-includes/blocks/comment-reply-link/block.json
+msgctxt "block title"
+msgid "Comment Reply Link"
+msgstr "Tautan Balas Komentar"
+
+#: wp-includes/blocks/comment-edit-link/block.json
+msgctxt "block description"
+msgid "Displays a link to edit the comment in the WordPress Dashboard. This link is only visible to users with the edit comment capability."
+msgstr "Menampilkan tautan untuk mengedit komentar di Dasbor WordPress. Tautan ini hanya dapat dilihat oleh pengguna yang diizinkan untuk mengedit komentar."
+
+#: wp-includes/blocks/comment-edit-link/block.json
+msgctxt "block title"
+msgid "Comment Edit Link"
+msgstr "Tautan Edit Komentar"
+
 #: wp-includes/blocks/comment-date/block.json
 msgctxt "block description"
 msgid "Displays the date on which the comment was posted."
 msgstr "Menampilkan tanggal saat komentar dibuat."
 
+#: wp-includes/blocks/comment-content/block.json
+msgctxt "block description"
+msgid "Displays the contents of a comment."
+msgstr "Menampilkan isi komentar."
+
 #: wp-includes/blocks/comment-author-name/block.json
 msgctxt "block description"
 msgid "Displays the name of the author of the comment."
 msgstr "Menampilkan nama penulis komentar."
+
+#: wp-includes/blocks/comment-author-name/block.json
+msgctxt "block title"
+msgid "Comment Author Name"
+msgstr "Nama Penulis Komentar"
+
+#: wp-includes/blocks/avatar/block.json
+msgctxt "block description"
+msgid "Add a user's avatar."
+msgstr "Tambahkan avatar pengguna."
 
 #: wp-includes/blocks/avatar/block.json
 msgctxt "block title"
@@ -380,6 +515,12 @@ msgstr "Tanggal Komentar"
 msgctxt "block title"
 msgid "Comment Content"
 msgstr "Konten Komentar"
+
+#: wp-includes/js/dist/block-library.js:1910
+#: wp-includes/js/dist/block-library.js:1953
+#: wp-admin/options-discussion.php:267 wp-admin/options-discussion.php:268
+msgid "Default Avatar"
+msgstr "Avatar Standar"
 
 #: wp-trackback.php:130
 msgid "There is already a ping from that URL for this post."
@@ -418,17 +559,78 @@ msgstr "Video tersebut tidak dapat ditemukan. Periksa <a href=\"%s\">pustaka med
 msgid "That image cannot be found. Check your <a href=\"%s\">media library</a> and make sure it was not deleted."
 msgstr "Gambar tersebut tidak dapat ditemukan. Periksa <a href=\"%s\">pustaka media</a> Anda dan pastikan gambar tidak dihapus."
 
+#: wp-includes/user.php:2192
+msgid "User URL may not be longer than 100 characters."
+msgstr "URL pengguna tidak boleh lebih dari 100 karakter."
+
+#: wp-includes/script-loader.php:3223
+msgid "Webfont font weight must be a properly formatted string or integer."
+msgstr "Ketebalan font webfont harus berupa string atau bilangan bulat yang diformat dengan benar."
+
+#: wp-includes/script-loader.php:3215
+msgid "Each webfont src must be a non-empty string."
+msgstr "Setiap webfont src harus berupa string yang tidak kosong."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:650
+msgid "Ancestor blocks."
+msgstr "Blok pendahulu"
+
 #: wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:207
 msgid "Determines whether the pattern is visible in inserter."
 msgstr "Menentukan apakah pola terlihat di penyisip."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:195
+msgid "The pattern keywords."
+msgstr "Kata kunci pola."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:189
+msgid "The pattern category slugs."
+msgstr "Slug kategori pola."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:177
 msgid "The pattern viewport width for inserter preview."
 msgstr "Lebar area tampilan pola untuk pratinjau penyisip."
 
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:159
+msgid "The pattern name."
+msgstr "Nama pola."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-pattern-categories-controller.php:134
+msgid "The category name."
+msgstr "Nama kategori."
+
+#: wp-includes/media.php:4508 wp-admin/edit.php:171 wp-admin/post.php:322
+#: wp-admin/upload.php:198
+msgid "Error in deleting the attachment."
+msgstr "Terjadi kesalahan saat menghapus lampiran."
+
 #: wp-includes/functions.php:1603
 msgid "<strong>Error</strong>: This is not a valid feed template."
 msgstr "<strong>Eror</strong>: Ini bukan templat feed yang sah."
+
+#. translators: Unit symbol for petabyte.
+#: wp-includes/functions.php:473
+msgctxt "unit symbol"
+msgid "PB"
+msgstr "PB"
+
+#. translators: Unit symbol for exabyte.
+#: wp-includes/functions.php:471
+msgctxt "unit symbol"
+msgid "EB"
+msgstr "EB"
+
+#. translators: Unit symbol for zettabyte.
+#: wp-includes/functions.php:469
+msgctxt "unit symbol"
+msgid "ZB"
+msgstr "ZB"
+
+#. translators: Unit symbol for yottabyte.
+#: wp-includes/functions.php:467
+msgctxt "unit symbol"
+msgid "YB"
+msgstr "YB"
 
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:133
 #: wp-admin/includes/class-walker-nav-menu-edit.php:235
@@ -458,6 +660,61 @@ msgstr "<strong>Eror</strong>: Direktori tema kosong atau tidak ditemukan. Mohon
 #: wp-includes/class-wp-image-editor-imagick.php:132
 msgid "File does not exist?"
 msgstr "Berkas tidak ditemukan?"
+
+#: wp-includes/blocks/comments-title.php:74
+#: wp-includes/js/dist/block-library.js:9619
+msgid "Responses"
+msgstr "Tanggapan"
+
+#: wp-includes/blocks/comments-title.php:72
+#: wp-includes/js/dist/block-library.js:9617
+msgid "Response"
+msgstr "Tanggapan"
+
+#: wp-includes/blocks/comments-pagination-previous.php:18
+#: wp-includes/js/dist/block-library.js:8700
+#: wp-includes/js/dist/block-library.js:31296
+#: wp-includes/js/dist/block-library.js:31367
+msgid "Older Comments"
+msgstr "Komentar Sebelumnya"
+
+#: wp-includes/blocks/comments-pagination-next.php:25
+#: wp-includes/js/dist/block-library.js:9194
+#: wp-includes/js/dist/block-library.js:31300
+#: wp-includes/js/dist/block-library.js:31371
+msgid "Newer Comments"
+msgstr "Komentar Terbaru"
+
+#. translators: %s is the Comment Author name.
+#: wp-includes/blocks/avatar.php:127
+msgid "(%s website link, opens in a new tab)"
+msgstr "(%s tautan situs web, buka di tab baru)"
+
+#. translators: %s is the Author name.
+#: wp-includes/blocks/avatar.php:100
+msgid "(%s author archive, opens in a new tab)"
+msgstr "(%s arsip penulis, buka di tab baru)"
+
+#. translators: %s is the Author name.
+#. translators: %s is the Comment Author name
+#: wp-includes/blocks/avatar.php:85 wp-includes/blocks/avatar.php:109
+#: wp-includes/js/dist/block-library.js:1910
+#: wp-includes/js/dist/block-library.js:1953
+msgid "%s Avatar"
+msgstr "Avatar %s"
+
+#: wp-includes/block-template-utils.php:170
+msgid "Displays search results."
+msgstr "Menampilkan hasil pencarian."
+
+#: wp-includes/block-template-utils.php:126
+msgid "Displays the homepage."
+msgstr "Menampilkan beranda."
+
+#: wp-includes/block-patterns.php:41
+msgctxt "Block pattern category"
+msgid "Featured"
+msgstr "Unggulan"
 
 #: wp-includes/script-loader.php:1271
 msgid "Use Site Editor"
@@ -15254,6 +15511,24 @@ msgstr "%1$s dan %2$s"
 #: wp-includes/theme-compat/footer.php:26
 msgid "%1$s is proudly powered by %2$s"
 msgstr "%1$s dengan bangga diberdayakan dengan %2$s"
+
+#. translators: %s: Post title.
+#: wp-includes/blocks/comments-title.php:27
+msgid "&#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221;"
+
+#. translators: %s: Number of comments.
+#: wp-includes/blocks/comments-title.php:59
+#: wp-includes/js/dist/block-library.js:9606
+msgid "%s responses"
+msgid_plural "%s responses"
+msgstr[0] "%s tanggapan"
+msgstr[1] "%s tanggapan"
+
+#: wp-includes/blocks/comments-title.php:55
+#: wp-includes/js/dist/block-library.js:9602
+msgid "One response"
+msgstr "Satu tanggapan"
 
 #: wp-includes/theme-compat/comments.php:24
 msgid "This post is password protected. Enter the password to view comments."

@@ -11,10 +11,11 @@
 	display: none;
 }
 
-.wpcp-carousel-section.wpcp-standard.slick-initialized:not(.wpcp-preloader) {
+.wpcp-carousel-section.wpcp-standard.swiper-initialized:not(.wpcp-preloader) {
 	display: block;
 }
 
+.wpcp-carousel-wrapper .wpcp-carousel-content-wrapper,
 .wpcp-carousel-wrapper {
 	position: relative;
 }
@@ -42,7 +43,7 @@
 	margin-bottom: 0;
 }
 
-.wpcp-carousel-section.wpcp-standard .slick-list,
+/* .wpcp-carousel-section.wpcp-standard .slick-list, */
 .wpcp-carousel-section.wpcp-standard {
 	overflow: hidden;
 }
@@ -52,13 +53,12 @@
 	padding-right: 2px;
 }
 
-.wpcp-carousel-section.wpcp-standard.slick-initialized {
-	position: relative;
+.wpcp-carousel-section .swiper-wrapper {
+	align-items: center;
 }
 
 .wpcp-carousel-section .wpcp-single-item {
 	overflow: hidden;
-	display: inline-block;
 	vertical-align: middle;
 	float: none;
 	max-width: 100%;
@@ -105,21 +105,6 @@
 
 .wpcp-carousel-section .wpcp-single-item .wpcp-slide-image a:focus {
 	outline: none;
-}
-
-.wpcp-carousel-section .slick-slide:focus {
-	outline: none;
-}
-
-.wpcp-carousel-section.slick-initialized .slick-slide {
-	margin-right: 20px;
-	float: none;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.wpcp-carousel-section .slick-list {
-	margin-right: -20px;
 }
 
 .wpcp-carousel-section a,
@@ -269,8 +254,8 @@
 	color: #545454;
 	border: 1px solid #d1d1d1;
 	font-weight: 500;
-	padding: 0 20px;
-	line-height: 38px;
+	padding: 8px 20px;
+	line-height: 22px;
 	display: inline-block;
 	font-size: 14px;
 }
@@ -337,25 +322,25 @@
 /*--------------------------------------------------------------
 ## Carousel Navigation
 --------------------------------------------------------------*/
-.wpcp-carousel-section .slick-prev:before,
-.wpcp-carousel-section .slick-next:before,
-.wpcp-carousel-section .slick-prev:after,
-.wpcp-carousel-section .slick-next:after {
+.wpcp-carousel-section .swiper-button-prev:before,
+.wpcp-carousel-section .swiper-button-next:before,
+.wpcp-carousel-section .swiper-button-prev:after,
+.wpcp-carousel-section .swiper-button-next:after {
 	display: none;
 }
 
-.wpcp-carousel-section .slick-prev {
+.wpcp-carousel-section .swiper-button-prev {
 	left: 0;
 	right: auto;
 }
 
-.wpcp-carousel-section .slick-next {
+.wpcp-carousel-section .swiper-button-next {
 	right: 0;
 	left: auto;
 }
 
-.wpcp-carousel-section .slick-prev,
-.wpcp-carousel-section .slick-next {
+.wpcp-carousel-section .swiper-button-prev,
+.wpcp-carousel-section .swiper-button-next {
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
@@ -374,63 +359,54 @@
 }
 
 .wpcp-carousel-section.nav-vertical-center {
-	padding: 0 25px;
+	margin: 0 25px;
 }
 
-.wpcp-carousel-section .slick-prev i,
-.wpcp-carousel-section .slick-next i,
-.wpcp-carousel-section .slick-prev,
-.wpcp-carousel-section .slick-next {
+.wpcp-carousel-section .swiper-button-prev i,
+.wpcp-carousel-section .swiper-button-next i,
+.wpcp-carousel-section .swiper-button-prev,
+.wpcp-carousel-section .swiper-button-next {
 	line-height: 28px;
 	font-family: fontawesome;
 	color: #000;
 }
 
-.wpcp-carousel-section.nav-vertical-center .slick-next,
-.wpcp-carousel-section.nav-vertical-center .slick-prev {
+.wpcp-carousel-section.nav-vertical-center .swiper-button-next,
+.wpcp-carousel-section.nav-vertical-center .swiper-button-prev {
 	top: 50%;
 }
 
-.wpcp-carousel-section.nav-vertical-center .slick-prev {
-	left: 0;
+.wpcp-carousel-section.nav-vertical-center .swiper-button-prev {
+	left: -5px;
 	right: auto;
 	text-align: left;
 }
 
-.wpcp-carousel-section.nav-vertical-center .slick-next,
-.wpcp-carousel-section.nav-vertical-center .slick-prev {
+.wpcp-carousel-section.nav-vertical-center .swiper-button-next,
+.wpcp-carousel-section.nav-vertical-center .swiper-button-prev {
 	margin-top: -15px;
 }
 
-.wpcp-carousel-section.nav-vertical-center.slick-dotted .slick-next,
-.wpcp-carousel-section.nav-vertical-center.slick-dotted .slick-prev {
+.wpcp-carousel-section.nav-vertical-center .swiper-pagination ~ .swiper-button-next,
+.wpcp-carousel-section.nav-vertical-center .swiper-pagination ~ .swiper-button-prev {
 	margin-top: -35px;
 }
 
-.wpcp-carousel-section.nav-vertical-center .slick-next {
-	right: 0;
+.wpcp-carousel-section.nav-vertical-center .swiper-button-next {
+	right: -5px;
 	text-align: right;
+	left: auto;
 }
 
 /*--------------------------------------------------------------
 ## Carousel Pagination Dots
 --------------------------------------------------------------*/
-.wpcp-carousel-section ul.slick-dots {
-	list-style: none;
-	padding: 0 !important;
-	margin: 0;
-	text-align: center;
-	margin-top: 18px;
-	position: relative;
-	bottom: 0px;
+.wpcp-carousel-section .wpcp-swiper-dots {
+	position: inherit;
+	margin-top: 10px;
 }
 
-.wpcp-carousel-section ul.slick-dots li {
-	display: inline;
-	margin: 0;
-}
-
-.wpcp-carousel-section ul.slick-dots li button {
+.wpcp-carousel-section .wpcp-swiper-dots .swiper-pagination-bullet {
 	background-color: #cccccc;
 	border: 0 solid;
 	border-radius: 50%;
@@ -442,21 +418,7 @@
 	width: 12px;
 	height: 12px;
 	cursor: pointer;
-	display: initial;
-}
-
-.wpcp-carousel-section ul.slick-dots,
-.wpcp-carousel-section ul.slick-dots li,
-.wpcp-carousel-section ul.slick-dots li button {
-	line-height: 1 !important;
-}
-
-.wpcp-carousel-section ul.slick-dots li button:focus {
-	outline: none;
-}
-
-.wpcp-carousel-section ul.slick-dots li.slick-active button {
-	background-color: #666;
+	opacity: 1;
 }
 
 /* Gallery CSS */
@@ -477,7 +439,19 @@
 	margin-left: -10px;
 }
 
-/* Pagination */
+/* .wpcp-standard .wpcp-gallery-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin-left: -20px;
+}
+
+.wpcp-standard .wpcp-gallery-wrapper {
+	width: calc(100% / 4);
+	min-width: calc(100% / 4);
+	padding-left: 20px;
+} */
+
 /* Pagination css */
 .wpcpro-post-pagination .ajax-page-numbers,
 .wpcpro-post-pagination .page-numbers {
@@ -530,17 +504,8 @@ html[dir="rtl"] .wpcp-single-item {
 
 .wpcp-carousel-section .wpcp-slide-image {
 	font-size: 0;
+	text-align: center;
 }
-
-.wpcp-standard:not(.slick-initialized) {
-	display: flex;
-	justify-content: space-between;
-	padding: 0;
-	margin-left: -20px;
-}
-
-.wpcp-standard:not(.slick-initialized)>div:not(.slick-slide) {
-	width: calc(100% / 4);
-	min-width: calc(100% / 4);
-	padding-left: 20px;
+.wpcp-carousel-section i.fa {
+	font-style: normal;
 }

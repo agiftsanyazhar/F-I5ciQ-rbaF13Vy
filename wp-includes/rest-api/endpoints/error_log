@@ -52,3 +52,67 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php on line 17
+[22-Sep-2022 15:48:45 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php on line 17
+[22-Sep-2022 19:07:43 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-widgets-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-widgets-controller.php on line 17
+[22-Sep-2022 22:34:25 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php on line 17
+[23-Sep-2022 02:54:57 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-application-passwords-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-application-passwords-controller.php on line 17
+[23-Sep-2022 15:17:31 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-block-pattern-categories-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-block-pattern-categories-controller.php on line 17
+[23-Sep-2022 16:40:56 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-search-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-search-controller.php on line 17
+[24-Sep-2022 06:35:41 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php on line 17
+[27-Sep-2022 01:06:32 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php on line 17
+[27-Sep-2022 12:49:53 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php on line 19
+[28-Sep-2022 11:02:43 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Posts_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php on line 17
+[28-Sep-2022 21:07:46 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php on line 17
+[29-Sep-2022 01:21:36 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php on line 17
+[29-Sep-2022 04:49:02 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-block-renderer-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-block-renderer-controller.php on line 17
+[29-Sep-2022 11:01:55 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-post-statuses-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-post-statuses-controller.php on line 17
+[29-Sep-2022 22:24:40 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Terms_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-menus-controller.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-menus-controller.php on line 17
+[01-Oct-2022 14:10:24 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Controller' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php on line 13

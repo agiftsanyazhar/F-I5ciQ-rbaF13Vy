@@ -61,6 +61,10 @@
                                 <a href="#google-sheet-api-settings" aria-controls="google_sheet_settings" role="tab"
                                    data-toggle="html-input-premium-popover" data-placement="bottom" title="" data-content="content"><i class="wpdt-icon-star-full m-r-5" style="color: #FFC078;"></i><span class="opacity-6"><?php esc_html_e('Google Spreadsheet API settings', 'wpdatatables'); ?></span></a>
                             </li>
+                            <li class="cache_settings-tab">
+                                <a href="#cache-settings" aria-controls="cache_settings" role="tab"
+                                   data-toggle="tab"><?php esc_html_e('Cache settings', 'wpdatatables'); ?></a>
+                            </li>
                         </ul>
 
                         <div class="tab-content">
@@ -79,6 +83,10 @@
                             <!-- Custom JS and CSS settings tab-->
                             <?php include 'tabs/custom_js_and_css.php' ?>
                             <!-- /Custom JS and CSS settings tab-->
+
+                            <!-- Cache settings tab-->
+	                        <?php include 'tabs/cache_settings.php' ?>
+                            <!-- /Cache settings tab-->
 
                         </div>
                     </div>

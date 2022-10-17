@@ -146,3 +146,11 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/container_toolbar.php on line 13
+[11-Sep-2022 14:12:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10
+[19-Sep-2022 11:12:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _e() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_live_builder/settings_bar.php on line 10

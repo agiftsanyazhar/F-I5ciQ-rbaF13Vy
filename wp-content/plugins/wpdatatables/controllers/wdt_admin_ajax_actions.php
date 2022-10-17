@@ -113,6 +113,8 @@ function wdtDuplicateTable() {
             'filtering' => $tableData->filtering,
             'filtering_form' => $tableData->filtering_form,
             'sorting' => $tableData->sorting,
+            'cache_source_data' => $tableData->cache_source_data,
+            'auto_update_cache' => $tableData->auto_update_cache,
             'tools' => $tableData->tools,
             'server_side' => $tableData->server_side,
             'editable' => $tableData->editable,
@@ -407,7 +409,29 @@ function wdtGetColumnsDataByTableId() {
 
 add_action('wp_ajax_wpdatatables_get_columns_data_by_table_id', 'wdtGetColumnsDataByTableId');
 
+/**
+ * Delete log_errors in cache table
+ */
+function wdtDeleteLogErrorsCache()
+{
+	global $wpdb;
 
+	if (!current_user_can('manage_options') || !wp_verify_nonce($_POST['wdtNonce'], 'wdtSettingsNonce')) {
+		exit();
+	}
+	$result = '';
+
+	$wpdb->query("UPDATE " . $wpdb->prefix . "wpdatatables_cache SET log_errors = ''");
+
+	if ($wpdb->last_error != '') {
+		$result = 'Database error: ' . $wpdb->last_error;
+	}
+
+	echo $result;
+	exit();
+}
+
+add_action('wp_ajax_wpdatatables_delete_log_errors_cache', 'wdtDeleteLogErrorsCache');
 
 /**
  * List all tables in JSON

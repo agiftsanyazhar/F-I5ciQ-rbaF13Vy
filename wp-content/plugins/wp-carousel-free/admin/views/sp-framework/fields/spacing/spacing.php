@@ -112,8 +112,12 @@ if ( ! class_exists( 'SP_WPCF_Field_spacing' ) ) {
 				foreach ( $properties as $property ) {
 
 					$placeholder = ( ! empty( $args[ $property . '_placeholder' ] ) ) ? ' placeholder="' . esc_attr( $args[ $property . '_placeholder' ] ) . '"' : '';
+					$text        = ( ! empty( $args[ $property . '_text' ] ) ) && isset( $args[ $property . '_text' ] ) ? $args[ $property . '_text' ] : '';
 
 					echo '<div class="wpcf--input">';
+					if ( ! empty( $text ) ) {
+						echo '<div class="sp_wpcp--title">' . $text . '</div>';
+					}
 					echo ( ! empty( $args[ $property . '_icon' ] ) ) ? '<span class="wpcf--label wpcf--icon">' . wp_kses_post( $args[ $property . '_icon' ] ) . '</span>' : '';
 					echo '<input type="number" name="' . esc_attr( $this->field_name( '[' . $property . ']' ) ) . '" value="' . esc_attr( $value[ $property ] ) . '"' . $placeholder . ' class="wpcf-input-number' . esc_attr( $is_unit ) . '" step="any" />';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- $placeholder is escaped before being passed in
 					echo ( $unit ) ? '<span class="wpcf--label wpcf--unit">' . esc_attr( $args['units'][0] ) . '</span>' : '';
@@ -136,70 +140,6 @@ if ( ! class_exists( 'SP_WPCF_Field_spacing' ) ) {
 			echo '</div>';
 
 			echo wp_kses_post( $this->field_after() );
-
-		}
-
-		/**
-		 * Output
-		 *
-		 * @return CSS
-		 */
-		public function output() {
-
-			$output    = '';
-			$element   = ( is_array( $this->field['output'] ) ) ? join( ',', $this->field['output'] ) : $this->field['output'];
-			$important = ( ! empty( $this->field['output_important'] ) ) ? '!important' : '';
-			$unit      = ( ! empty( $this->value['unit'] ) ) ? $this->value['unit'] : 'px';
-
-			$mode = ( ! empty( $this->field['output_mode'] ) ) ? $this->field['output_mode'] : 'padding';
-
-			if ( 'border-radius' === $mode || 'radius' === $mode ) {
-
-				$top    = 'border-top-left-radius';
-				$right  = 'border-top-right-radius';
-				$bottom = 'border-bottom-right-radius';
-				$left   = 'border-bottom-left-radius';
-
-			} elseif ( 'relative' === $mode || 'absolute' === $mode || 'none' === $mode ) {
-
-				$top    = 'top';
-				$right  = 'right';
-				$bottom = 'bottom';
-				$left   = 'left';
-
-			} else {
-
-				$top    = $mode . '-top';
-				$right  = $mode . '-right';
-				$bottom = $mode . '-bottom';
-				$left   = $mode . '-left';
-
-			}
-
-			if ( ! empty( $this->field['all'] ) && isset( $this->value['all'] ) && '' !== $this->value['all'] ) {
-
-				$output  = $element . '{';
-				$output .= $top . ':' . $this->value['all'] . $unit . $important . ';';
-				$output .= $right . ':' . $this->value['all'] . $unit . $important . ';';
-				$output .= $bottom . ':' . $this->value['all'] . $unit . $important . ';';
-				$output .= $left . ':' . $this->value['all'] . $unit . $important . ';';
-				$output .= '}';
-
-			} else {
-
-				$top    = ( isset( $this->value['top'] ) && '' !== $this->value['top'] ) ? $top . ':' . $this->value['top'] . $unit . $important . ';' : '';
-				$right  = ( isset( $this->value['right'] ) && '' !== $this->value['right'] ) ? $right . ':' . $this->value['right'] . $unit . $important . ';' : '';
-				$bottom = ( isset( $this->value['bottom'] ) && '' !== $this->value['bottom'] ) ? $bottom . ':' . $this->value['bottom'] . $unit . $important . ';' : '';
-				$left   = ( isset( $this->value['left'] ) && '' !== $this->value['left'] ) ? $left . ':' . $this->value['left'] . $unit . $important . ';' : '';
-
-				if ( '' !== $top || '' !== $right || '' !== $bottom || '' !== $left ) {
-					$output = $element . '{' . $top . $right . $bottom . $left . '}';
-				}
-			}
-
-			$this->parent->output_css .= $output;
-
-			return $output;
 
 		}
 

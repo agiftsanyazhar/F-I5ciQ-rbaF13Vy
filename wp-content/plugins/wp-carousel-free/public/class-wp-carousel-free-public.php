@@ -58,8 +58,8 @@ class WP_Carousel_Free_Public {
 	 * @return void
 	 */
 	public function enqueue_styles() {
-		if ( wpcf_get_option( 'wpcp_enqueue_slick_css', true ) ) {
-			wp_enqueue_style( 'wpcf-slick', WPCAROUSELF_URL . 'public/css/slick' . $this->suffix . '.css', array(), $this->version, 'all' );
+		if ( wpcf_get_option( 'wpcp_enqueue_swiper_css', true ) ) {
+			wp_enqueue_style( 'wpcf-swiper', WPCAROUSELF_URL . 'public/css/swiper-bundle.min.css', array(), $this->version, 'all' );
 		}
 		if ( wpcf_get_option( 'wpcp_enqueue_fa_css', true ) ) {
 			wp_enqueue_style( $this->plugin_name . '-fontawesome', WPCAROUSELF_URL . 'public/css/font-awesome.min.css', array(), $this->version, 'all' );
@@ -79,8 +79,8 @@ class WP_Carousel_Free_Public {
 		foreach ( $carousel_ids as $post_id ) {
 			include WPCAROUSELF_PATH . '/public/dynamic-style.php';
 		}
-		$the_wpcf_dynamic_css .= trim( html_entity_decode( wpcf_get_option( 'wpcp_custom_css' ) ) );
 		include WPCAROUSELF_PATH . '/public/responsive.php';
+		$the_wpcf_dynamic_css .= trim( html_entity_decode( wpcf_get_option( 'wpcp_custom_css' ) ) );
 		wp_add_inline_style( $this->plugin_name, $the_wpcf_dynamic_css );
 	}
 
@@ -92,8 +92,8 @@ class WP_Carousel_Free_Public {
 	 */
 	public function enqueue_scripts() {
 		wp_register_script( 'wpcp-preloader', WPCAROUSELF_URL . 'public/js/preloader' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
-		wp_register_script( 'wpcf-slick', WPCAROUSELF_URL . 'public/js/slick' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
-		wp_register_script( 'wpcf-slick-config', WPCAROUSELF_URL . 'public/js/wp-carousel-free-public' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
+		wp_register_script( 'wpcf-swiper', WPCAROUSELF_URL . 'public/js/swiper-bundle.min.js', array( 'jquery' ), $this->version, true );
+		wp_register_script( 'wpcf-swiper-config', WPCAROUSELF_URL . 'public/js/wp-carousel-free-public' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
 	}
 
 	/**
@@ -107,8 +107,8 @@ class WP_Carousel_Free_Public {
 		$the_current_post_type = $current_screen->post_type;
 		if ( 'sp_wp_carousel' === $the_current_post_type ) {
 			// Enqueue css file.
-			if ( wpcf_get_option( 'wpcp_enqueue_slick_css', true ) ) {
-				wp_enqueue_style( 'wpcf-slick', WPCAROUSELF_URL . 'public/css/slick' . $this->suffix . '.css', array(), $this->version, 'all' );
+			if ( wpcf_get_option( 'wpcp_enqueue_swiper_css', true ) ) {
+				wp_enqueue_style( 'wpcf-swiper', WPCAROUSELF_URL . 'public/css/swiper-bundle.min.css', array(), $this->version, 'all' );
 			}
 			if ( wpcf_get_option( 'wpcp_enqueue_fa_css', true ) ) {
 				wp_enqueue_style( $this->plugin_name . '-fontawesome', WPCAROUSELF_URL . 'public/css/font-awesome.min.css', array(), $this->version, 'all' );
@@ -116,7 +116,7 @@ class WP_Carousel_Free_Public {
 			wp_enqueue_style( $this->plugin_name, WPCAROUSELF_URL . 'public/css/wp-carousel-free-public' . $this->suffix . '.css', array(), $this->version, 'all' );
 
 			// Enqueue js file.
-			wp_enqueue_script( 'wpcf-slick', WPCAROUSELF_URL . 'public/js/slick' . $this->suffix . '.js', array( 'jquery' ), $this->version, true );
+			wp_enqueue_script( 'wpcf-swiper', WPCAROUSELF_URL . 'public/js/swiper-bundle.min.js', array( 'jquery' ), $this->version, true );
 		}
 	}
 }

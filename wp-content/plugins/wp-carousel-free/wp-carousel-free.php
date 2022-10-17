@@ -6,10 +6,10 @@
  * @since   2.0.0
  * @package WP_Carousel_Free
  *
- * Plugin Name:       WordPress Carousel
+ * Plugin Name:       WP Carousel
  * Plugin URI:        https://shapedplugin.com/wp-carousel/
- * Description:       The Most Powerful and User-friendly WordPress Carousel Plugin. Create beautiful carousels in minutes using Images, Posts, WooCommerce Products etc.
- * Version:           2.4.10
+ * Description:       The most powerful and user-friendly carousel, slider, and gallery plugin for WordPress. Create unlimited beautiful carousels, sliders, and galleries in minutes using images, posts, WooCommerce products, etc.
+ * Version:           2.5.0
  * Author:            ShapedPlugin
  * Author URI:        https://shapedplugin.com/
  * License:           GPL-2.0+
@@ -17,7 +17,7 @@
  * Text Domain:       wp-carousel-free
  * Domain Path:       /languages
  * WC requires at least: 4.0
- * WC tested up to: 6.8.2
+ * WC tested up to: 6.9.4
  */
 
 // If this file is called directly, abort.
@@ -119,7 +119,7 @@ class SP_WP_Carousel_Free {
 	 */
 	public function setup() {
 		$this->plugin_name = 'wp-carousel-free';
-		$this->version     = '2.4.10';
+		$this->version     = '2.5.0';
 		$this->define_constants();
 		$this->includes();
 		$this->load_dependencies();
@@ -262,11 +262,11 @@ class SP_WP_Carousel_Free {
 
 		// Help Page.
 		$help_page = new WP_Carousel_Free_Help( $this->get_plugin_name(), $this->get_version() );
-		$this->loader->add_action( 'admin_menu', $help_page, 'help_admin_menu', 40 );
+		$this->loader->add_action( 'admin_menu', $help_page, 'help_admin_menu', 35 );
 
 		// Premium Page.
 		$upgrade_page = new WP_Carousel_Free_Upgrade( $this->get_plugin_name(), $this->get_version() );
-		$this->loader->add_action( 'admin_menu', $upgrade_page, 'upgrade_admin_menu', 35 );
+		$this->loader->add_action( 'admin_menu', $upgrade_page, 'upgrade_admin_menu', 40 );
 
 		// Gutenberg block.
 		if ( version_compare( $GLOBALS['wp_version'], '5.3', '>=' ) ) {

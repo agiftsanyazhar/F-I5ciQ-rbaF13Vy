@@ -23,10 +23,10 @@ class WP_Carousel_Free_Upgrade {
 	 * @return void
 	 */
 	public function upgrade_admin_menu() {
-		$landing_page = 'https://shapedplugin.com/wp-carousel/?ref=1';
+		$landing_page = 'https://shapedplugin.com/wp-carousel/pricing/?ref=1';
 		add_submenu_page(
 			'edit.php?post_type=sp_wp_carousel',
-			__( 'WordPress Carousel', 'logo-carousel-free' ),
+			__( 'WP Carousel', 'wp-carousel-free' ),
 			'<span class="sp-go-pro-icon"></span>Go Pro',
 			'manage_options',
 			$landing_page

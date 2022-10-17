@@ -2,3 +2,7 @@
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/SimplePie/Cache/Redis.php on line 27
+[30-Sep-2022 18:45:58 UTC] PHP Fatal error:  Uncaught Error: Interface 'SimplePie_Cache_Base' not found in /home/perpajakanvokasi/public_html/wp-includes/SimplePie/Cache/File.php:50
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/SimplePie/Cache/File.php on line 50

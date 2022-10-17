@@ -128,7 +128,6 @@
                             </tr>
                             <tr>
                                 <td data-title="Features"><?php esc_html_e('Create a Simple tables', 'wpdatatables'); ?>
-                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW!', 'wpdatatables'); ?></span>
                                     <hr>
                                 </td>
                                 <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
@@ -141,6 +140,31 @@
                             </tr>
                             <tr>
                                 <td data-title="Features"><?php esc_html_e('Merge cells', 'wpdatatables'); ?>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Features"><?php esc_html_e('Caching data', 'wpdatatables'); ?>
+                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW!', 'wpdatatables'); ?></span>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Features"><?php esc_html_e('Auto update caching data', 'wpdatatables'); ?>
                                     <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW!', 'wpdatatables'); ?></span>
                                     <hr>
                                 </td>
@@ -329,7 +353,6 @@
                             </tr>
                             <tr>
                                 <td data-title="Features"><?php esc_html_e('Table Customization', 'wpdatatables'); ?>
-                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW!', 'wpdatatables'); ?></span>
                                     <hr>
                                 </td>
                                 <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-minus"></i>

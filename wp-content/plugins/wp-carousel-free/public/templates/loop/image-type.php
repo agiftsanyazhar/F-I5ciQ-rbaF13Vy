@@ -23,17 +23,15 @@ $image_url        = is_array( $image_url ) ? $image_url : array( '', '', '' );
 $the_image_title_attr = ' title="' . $image_title . '"';
 $image_title_attr     = 'true' === $show_image_title_attr ? $the_image_title_attr : '';
 
-if ( 'false' !== $lazy_load_image && 'carousel' === $wpcp_layout ) {
-	$image = sprintf( '<img class="wcp-lazy" data-lazy="%1$s" src="%2$s"%3$s alt="%4$s" width="%5$s" height="%6$s">', $image_url[0], $lazy_load_img, $image_title_attr, $image_alt_title, $image_url[1], $image_url[2] );
-} else {
-	$image = sprintf( '<img class="skip-lazy" src="%1$s"%2$s alt="%3$s" width="%4$s" height="%5$s">', $image_url[0], $image_title_attr, $image_alt_title, $image_url[1], $image_url[2] );
-}
-?>
+if ( ! empty( $image_url[0] ) ) {
+	$image = WPCF_Helper::get_item_image( $lazy_load_image, $wpcp_layout, $image_url[0], $image_title_attr, $image_url[1], $image_url[2], $image_alt_title, $lazy_load_img );
+	?>
 <div class="<?php echo esc_attr( $grid_column ); ?>">
 	<div class="wpcp-single-item">
 		<?php
-
 			require WPCF_Helper::wpcf_locate_template( 'loop/image-type/image.php' );
 		?>
 	</div>
 </div>
+	<?php
+}

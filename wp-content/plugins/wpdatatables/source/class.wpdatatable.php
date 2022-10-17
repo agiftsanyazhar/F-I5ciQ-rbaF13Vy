@@ -38,6 +38,8 @@ class WPDataTable
     private $_firstOnPage = false;
     private $_groupingEnabled = false;
     private $_wdtColumnGroupIndex = 0;
+	private $_cache_source_data = false;
+	private $_auto_update_cache = false;
     private $_showAdvancedFilter = false;
     private $_wdtTableSort = true;
     private $_serverProcessing = false;
@@ -966,6 +968,22 @@ class WPDataTable
         $this->_responsiveAction = $responsiveAction;
     }
 
+	public function setCacheSourceData($cacheSourceData) {
+		$this->_cache_source_data = (bool)$cacheSourceData;
+	}
+
+	public function getCacheSourceData() {
+		return $this->_cache_source_data;
+	}
+
+	public function setAutoUpdateCache($autoUpdateCache) {
+		$this->_auto_update_cache = (bool)$autoUpdateCache;
+	}
+
+	public function getAutoUpdateCache() {
+		return $this->_auto_update_cache;
+	}
+
 
     public function enableGrouping()
     {
@@ -1547,101 +1565,251 @@ class WPDataTable
         return array_values($row);
     }
 
+	public function customBasedConstruct($tableData, $wdtParameters = array()) {
+		if (has_action('wpdatatables_generate_' . $tableData->table_type)) {
+			do_action(
+				'wpdatatables_generate_' . $tableData->table_type,
+				$this,
+				$tableData->content,
+				$wdtParameters
+			);
+		} else {
+			throw new WDTException(__('You are trying to load a table of an unknown type. Probably you did not activate the addon which is required to use this table type.', 'wpdatatables'));
+		}
+	}
 
-    public function jsonBasedConstruct($json, $wdtParameters = array())
-    {
-        $json = WDTTools::curlGetData($json);
-        $json = apply_filters('wpdatatables_filter_json', $json, $this->getWpId());
-        return $this->arrayBasedConstruct(json_decode($json, true), $wdtParameters);
-    }
 
-    public function XMLBasedConstruct($xml, $wdtParameters = array())
-    {
-        if (!$xml) {
-            throw new WDTException('File you provided cannot be found.');
-        }
-        if (strpos($xml, '.xml') === false) {
-            throw new WDTException('Non-XML file provided!');
-        }
-        $XMLObject = simplexml_load_file($xml);
-        $XMLObject = apply_filters('wpdatatables_filter_simplexml', $XMLObject, $this->getWpId());
-        $XMLArray = WDTTools::convertXMLtoArr($XMLObject);
-        foreach ($XMLArray as &$xml_el) {
-            if (is_array($xml_el) && array_key_exists('attributes', $xml_el)) {
-                $xml_el = $xml_el['attributes'];
-            }
-        }
-        return $this->arrayBasedConstruct($XMLArray, $wdtParameters);
-    }
+	/**
+	 * @throws Exception
+	 */
+	public function jsonBasedConstruct($json, $wdtParameters = array()) {
+		$cache = WPDataTableCache::maybeCache($this->getCacheSourceData(), (int)$this->getWpId());
+		if (!$cache){
+			$jsonArray = self::sourceRenderData($this, 'json', $json);
+		} else {
+			$jsonArray = $cache;
+		}
 
-    public function excelBasedConstruct($xls_url, $wdtParameters = array())
-    {
-        ini_set('memory_limit', '2048M');
-        if (!$xls_url) {
-            throw new WDTException('Excel file not found!');
-        }
-        if (!file_exists($xls_url)) {
-            throw new WDTException('Provided file ' . stripcslashes($xls_url) . ' does not exist!');
-        }
+		$jsonArray = apply_filters('wpdatatables_filter_json_array', $jsonArray, $this->getWpId(), $json);
 
-        $format = 'xls';
-        if (strpos(strtolower($xls_url), '.xlsx')) {
-            $objReader = new Xlsx();
-        } elseif (strpos(strtolower($xls_url), '.xls')) {
-            $objReader = new Xls();
-        } elseif (strpos(strtolower($xls_url), '.ods')) {
-            $format = 'ods';
-            $objReader = new Ods();
-        } elseif (strpos(strtolower($xls_url), '.csv')) {
-            $format = 'csv';
-            $objReader = new Csv();
-            $csvDelimiter = stripcslashes(get_option('wdtCSVDelimiter')) ? stripcslashes(get_option('wdtCSVDelimiter')) : WDTTools::detectCSVDelimiter($xls_url);
-            $objReader->setDelimiter($csvDelimiter);
-        } else {
-            throw new WDTException('File format not supported!');
-        }
+		return $this->arrayBasedConstruct($jsonArray, $wdtParameters);
+	}
 
-        $objPHPExcel = $objReader->load($xls_url);
-        $objWorksheet = $objPHPExcel->getActiveSheet();
-        $highestRow = $objWorksheet->getHighestRow();
-        $highestColumn = $objWorksheet->getHighestDataColumn();
+	/**
+	 * @throws Exception
+	 */
+	public function serializedPHPBasedConstruct($url, $wdtParameters = array()) {
+		$cache = WPDataTableCache::maybeCache($this->getCacheSourceData(), (int)$this->getWpId());
+		if (!$cache){
+			$PHPArray = self::sourceRenderData($this, 'serialized', $url);
+		} else {
+			$PHPArray = $cache;
+		}
 
-        $headingsArray = $objWorksheet->rangeToArray('A1:' . $highestColumn . '1', null, true, true, true);
-        $headingsArray = array_map('trim', $headingsArray[1]);
+		$PHPArray = apply_filters('wpdatatables_filter_php_array', $PHPArray, $this->getWpId(), $url);
 
-        $r = -1;
-        $namedDataArray = array();
-        $dataRows = $objWorksheet->rangeToArray('A2:' . $highestColumn . $highestRow, null, true, true, true);
-        for ($row = 2; $row <= $highestRow; ++$row) {
-            if (max($dataRows[$row]) !== null) {
-                ++$r;
-                foreach ($headingsArray as $dataColumnIndex => $dataColumnHeading) {
-                    $dataColumnHeading = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $dataColumnHeading)));
-                    $namedDataArray[$r][$dataColumnHeading] = $dataRows[$row][$dataColumnIndex];
-                    $currentDateFormat = isset($wdtParameters['dateInputFormat'][$dataColumnHeading]) ? $wdtParameters['dateInputFormat'][$dataColumnHeading] : null;
-                    if (!empty($wdtParameters['data_types'][$dataColumnHeading]) && in_array($wdtParameters['data_types'][$dataColumnHeading], array('date', 'datetime', 'time'))) {
-                        if ($format === 'xls') {
-                            $cell = $objPHPExcel->getActiveSheet()->getCell($dataColumnIndex . '' . $row);
-                            if (Date::isDateTime($cell) && $cell->getValue() !== null) {
-                                $namedDataArray[$r][$dataColumnHeading] = Date::excelToTimestamp($cell->getValue());
-                            } else {
-                                $namedDataArray[$r][$dataColumnHeading] = WDTTools::wdtConvertStringToUnixTimestamp($dataRows[$row][$dataColumnIndex], $currentDateFormat);
-                            }
-                        } elseif ($format === 'csv') {
-                            $namedDataArray[$r][$dataColumnHeading] = WDTTools::wdtConvertStringToUnixTimestamp($dataRows[$row][$dataColumnIndex], $currentDateFormat);
-                        }
-                    }
-                }
-            }
-        }
+		return $this->arrayBasedConstruct($PHPArray, $wdtParameters);
+	}
 
-        // Let arrayBasedConstruct know that dates have been converted to timestamps
-        $wdtParameters['dates_detected'] = true;
+	/**
+	 * @throws WDTException
+	 */
+	public function XMLBasedConstruct($xml, $wdtParameters = array()) {
+		$cache = WPDataTableCache::maybeCache($this->getCacheSourceData(), (int)$this->getWpId());
+		if (!$cache){
+			if (!$xml) {
+				throw new WDTException('File you provided cannot be found.');
+			}
+			$XMLArray = self::sourceRenderData($this, 'xml', $xml);
+		} else {
+			$XMLArray = $cache;
+		}
 
-        $namedDataArray = apply_filters('wpdatatables_filter_excel_array', $namedDataArray, $this->getWpId(), $xls_url);
+		$XMLArray = apply_filters('wpdatatables_filter_xml_array', $XMLArray, $this->getWpId(), $xml);
 
-        return $this->arrayBasedConstruct($namedDataArray, $wdtParameters);
-    }
+		return $this->arrayBasedConstruct($XMLArray, $wdtParameters);
+	}
+
+	/**
+	 * @throws WDTException
+	 * @throws \PhpOffice\PhpSpreadsheet\Exception
+	 * @throws \PhpOffice\PhpSpreadsheet\Reader\Exception
+	 * @throws Exception
+	 */
+	public function excelBasedConstruct($xls_url, $wdtParameters = array()) {
+		$cache = WPDataTableCache::maybeCache($this->getCacheSourceData(), (int)$this->getWpId());
+		if (!$cache){
+			ini_set('memory_limit', '2048M');
+			if (!$xls_url) {
+				throw new WDTException(esc_html__('Excel file not found!','wpdatatables'));
+			}
+			if (!file_exists($xls_url)) {
+				throw new WDTException('Provided file ' . stripcslashes($xls_url) . ' does not exist!');
+			}
+
+			$format = substr(strrchr($xls_url, "."), 1);
+			$objReader = self::createObjectReader($xls_url);
+			$xls_url = apply_filters( 'wpdatatables_filter_excel_based_data_url', $xls_url, $this->getWpId() );
+			$objPHPExcel = $objReader->load($xls_url);
+			$objWorksheet = $objPHPExcel->getActiveSheet();
+			$highestRow = $objWorksheet->getHighestRow();
+			$highestColumn = $objWorksheet->getHighestDataColumn();
+
+			$headingsArray = $objWorksheet->rangeToArray('A1:' . $highestColumn . '1', null, true, true, true);
+			$headingsArray = array_map('trim', $headingsArray[1]);
+
+			$r = -1;
+			$namedDataArray = array();
+
+			$dataRows = $objWorksheet->rangeToArray('A2:' . $highestColumn . $highestRow, null, true, true, true);
+			for ($row = 2; $row <= $highestRow; ++$row) {
+				if (max($dataRows[$row]) !== null) {
+					++$r;
+					foreach ($headingsArray as $dataColumnIndex => $dataColumnHeading) {
+						$dataColumnHeading = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $dataColumnHeading)));
+						$namedDataArray[$r][$dataColumnHeading] = trim($dataRows[$row][$dataColumnIndex]);
+						$currentDateFormat = isset($wdtParameters['dateInputFormat'][$dataColumnHeading]) ? $wdtParameters['dateInputFormat'][$dataColumnHeading] : null;
+						if (!empty($wdtParameters['data_types'][$dataColumnHeading]) && in_array($wdtParameters['data_types'][$dataColumnHeading], array('date', 'datetime', 'time'))) {
+							if ($format === 'xls' || $format === 'ods') {
+								$cell = $objPHPExcel->getActiveSheet()->getCell($dataColumnIndex . '' . $row);
+								if (Date::isDateTime($cell) && $cell->getValue() !== null) {
+									$namedDataArray[$r][$dataColumnHeading] = Date::excelToTimestamp($cell->getValue());
+								} else {
+									$namedDataArray[$r][$dataColumnHeading] = WDTTools::wdtConvertStringToUnixTimestamp($dataRows[$row][$dataColumnIndex], $currentDateFormat);
+								}
+							} elseif ($format === 'csv') {
+								$namedDataArray[$r][$dataColumnHeading] = WDTTools::wdtConvertStringToUnixTimestamp($dataRows[$row][$dataColumnIndex], $currentDateFormat);
+							}
+						}
+					}
+				}
+			}
+			if (empty($namedDataArray)) {
+				throw new WDTException(esc_html__('There is no data in your source file. Please check your source file and try again.','wpdatatables'));
+			}
+
+			WPDataTableCache::maybeSaveData(
+				(int)$this->getWpId(),
+				$format,
+				$xls_url,
+				$this->getAutoUpdateCache(),
+				$namedDataArray,
+				$this->getCacheSourceData()
+			);
+
+		} else {
+			$namedDataArray = $cache;
+		}
+
+		// Let arrayBasedConstruct know that dates have been converted to timestamps
+		$wdtParameters['dates_detected'] = true;
+
+		$namedDataArray = apply_filters('wpdatatables_filter_excel_array', $namedDataArray, $this->getWpId(), $xls_url);
+
+		return $this->arrayBasedConstruct($namedDataArray, $wdtParameters);
+	}
+
+	/**
+	 * Helper method to get data from source URL
+	 * @param $sourceObj
+	 * @param $sourceType
+	 * @param $source
+	 * @return array|mixed|string|void|null
+	 * @throws WDTException
+	 * @throws Exception
+	 */
+	public static function sourceRenderData($sourceObj, $sourceType, $source) {
+		$wpId = $sourceObj->getWpId();
+		$sourceArray = array();
+		if ($sourceType == 'json') {
+			$sourceArray = self::jsonRenderData($source, $wpId);
+		}
+
+		if ($sourceType == 'serialized') {
+			$sourceArray = self::serializedPhpRenderData($source, $wpId);
+		}
+
+		if ($sourceType == 'xml') {
+			$sourceArray = self::xmlRenderData($source, $wpId);
+		}
+
+		WPDataTableCache::maybeSaveData(
+			(int)$wpId,
+			$sourceType,
+			$source,
+			$sourceObj->getAutoUpdateCache(),
+			$sourceArray,
+			$sourceObj->getCacheSourceData()
+		);
+
+		return $sourceArray;
+	}
+
+	/**
+	 * Helper method to get data from source URL
+	 * @param $json
+	 * @param $id
+	 * @return mixed|null
+	 * @throws Exception
+	 */
+	public static function jsonRenderData($json, $id) {
+		$json = WDTTools::curlGetData($json);
+		$json = apply_filters('wpdatatables_filter_json', $json, $id);
+		return json_decode($json, true);
+	}
+
+	/**
+	 * Helper method to get data from source URL
+	 * @param $url
+	 * @param $id
+	 * @return mixed
+	 */
+	public static function serializedPhpRenderData($url, $id) {
+		$url = apply_filters('wpdatatables_filter_url_php_array', $url, $id);
+		$serialized_content = apply_filters('wpdatatables_filter_serialized', WDTTools::curlGetData($url), $id);
+		return unserialize($serialized_content);
+	}
+
+	/**
+	 * Helper method to get data from source URL
+	 * @param $xml
+	 * @return array|string
+	 */
+	public static function xmlRenderData( $xml, $id) {
+		$XMLObject = simplexml_load_file($xml);
+		$XMLObject = apply_filters('wpdatatables_filter_simplexml', $XMLObject, $id);
+		$XMLArray = WDTTools::convertXMLtoArr($XMLObject);
+		foreach ($XMLArray as &$xml_el) {
+			if (is_array($xml_el) && array_key_exists('attributes', $xml_el)) {
+				$xml_el = $xml_el['attributes'];
+			}
+		}
+		return $XMLArray;
+	}
+
+	/**
+	 * Creates a reader depending on the file extension
+	 * @param $file
+	 * @return Csv|Ods|Xls|Xlsx
+	 * @throws WDTException
+	 */
+	public static function createObjectReader($file) {
+		if (strpos(strtolower($file), '.xlsx')) {
+			$objReader = new Xlsx();
+		} elseif (strpos(strtolower($file), '.xls')) {
+			$objReader = new Xls();
+		} elseif (strpos(strtolower($file), '.ods')) {
+			$objReader = new Ods();
+		} elseif (strpos(strtolower($file), '.csv')) {
+			$objReader = new Csv();
+			$csvDelimiter = stripcslashes(get_option('wdtCSVDelimiter')) ? stripcslashes(get_option('wdtCSVDelimiter')) : WDTTools::detectCSVDelimiter($file);
+			$objReader->setDelimiter($csvDelimiter);
+		} else {
+			throw new WDTException('File format not supported!');
+		}
+
+		return $objReader;
+	}
 
     /**
      * Helper method that renders the modal
@@ -1905,7 +2073,10 @@ class WPDataTable
      *
      * @param $tableData
      * @param $columnData
+     * @throws WDTException
+     * @throws Exception
      */
+
     public function fillFromData($tableData, $columnData)
     {
         if (empty($tableData->table_type)) {
@@ -1995,6 +2166,8 @@ class WPDataTable
         } else {
             $this->disablePagination();
         }
+	    $this->setCacheSourceData(!empty($tableData->cache_source_data));
+	    $this->setAutoUpdateCache(!empty($tableData->auto_update_cache));
 
         switch ($tableData->table_type) {
 
@@ -2018,28 +2191,18 @@ class WPDataTable
                 );
                 break;
             case 'serialized':
-                $url =  apply_filters('wpdatatables_filter_url_php_array', $tableData->content, $this->getWpId());
-                $serialized_content = apply_filters('wpdatatables_filter_serialized', WDTTools::curlGetData($url), $this->getWpId());
-                $array = unserialize($serialized_content);
-                $this->arrayBasedConstruct(
-                    $array,
-                    $params
-                );
+	            $this->serializedPHPBasedConstruct(
+		            $tableData->content,
+		            $params
+	            );
                 break;
-
-
             default:
                 // Solution for addons
-                if (has_action('wpdatatables_generate_' . $tableData->table_type)) {
-                    do_action(
-                        'wpdatatables_generate_' . $tableData->table_type,
-                        $this,
-                        $tableData->content,
-                        $params
-                    );
-                } else {
-                    throw new WDTException(__('You are trying to load a table of an unknown type. Probably you did not activate the addon which is required to use this table type.', 'wpdatatables'));
-                }
+	            $this->customBasedConstruct(
+		            $tableData->content,
+		            $params
+	            );
+
                 break;
         }
         if (!empty($tableData->content)) {
@@ -2639,6 +2802,8 @@ class WPDataTable
 
         $wpdb->delete("{$wpdb->prefix}wpdatatables", array('id' => (int)$tableId));
         $wpdb->delete("{$wpdb->prefix}wpdatatables_columns", array('table_id' => (int)$tableId));
+	    $wpdb->delete("{$wpdb->prefix}wpdatatables_rows", array('table_id' => (int)$tableId));
+	    $wpdb->delete("{$wpdb->prefix}wpdatatables_cache", array('table_id' => (int)$tableId));
         $wpdb->delete("{$wpdb->prefix}wpdatacharts", array('wpdatatable_id' => (int)$tableId));
 
         return true;

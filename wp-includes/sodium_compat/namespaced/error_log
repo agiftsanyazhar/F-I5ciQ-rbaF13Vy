@@ -1,0 +1,4 @@
+[02-Oct-2022 15:23:33 UTC] PHP Fatal error:  Uncaught Error: Class 'ParagonIE_Sodium_File' not found in /home/perpajakanvokasi/public_html/wp-includes/sodium_compat/namespaced/File.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/sodium_compat/namespaced/File.php on line 4

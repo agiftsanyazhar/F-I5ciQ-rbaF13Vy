@@ -711,3 +711,99 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[11-Sep-2022 11:40:22 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[11-Sep-2022 11:40:22 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[11-Sep-2022 11:40:22 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[11-Sep-2022 11:40:22 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[11-Sep-2022 11:40:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[12-Sep-2022 01:08:09 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[12-Sep-2022 01:08:09 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[12-Sep-2022 01:08:09 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[12-Sep-2022 01:08:09 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[12-Sep-2022 01:08:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[13-Sep-2022 14:15:44 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[13-Sep-2022 14:15:44 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[13-Sep-2022 14:15:44 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[13-Sep-2022 14:15:44 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[13-Sep-2022 14:16:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[14-Sep-2022 03:51:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/perpajakanvokasi/public_html/wp-includes/registration.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/registration.php on line 9
+[15-Sep-2022 22:58:55 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[15-Sep-2022 22:58:56 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[15-Sep-2022 22:58:56 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[15-Sep-2022 22:58:56 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[15-Sep-2022 22:59:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[20-Sep-2022 14:43:43 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_HTTP_Response' not found in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http-requests-response.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http-requests-response.php on line 17
+[22-Sep-2022 11:11:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Text_Diff_Renderer' not found in /home/perpajakanvokasi/public_html/wp-includes/class-wp-text-diff-renderer-table.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/class-wp-text-diff-renderer-table.php on line 16
+[24-Sep-2022 00:46:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/perpajakanvokasi/public_html/wp-includes/class-json.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/class-json.php on line 2
+[28-Sep-2022 08:45:01 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[28-Sep-2022 08:45:01 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[28-Sep-2022 08:45:01 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[28-Sep-2022 08:45:01 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[28-Sep-2022 08:45:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[30-Sep-2022 03:16:57 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 03:16:57 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 03:16:57 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 03:16:57 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 03:17:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[30-Sep-2022 04:46:18 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 04:46:18 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 04:46:18 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 04:46:18 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[30-Sep-2022 04:46:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[01-Oct-2022 11:16:41 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[01-Oct-2022 11:16:41 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[01-Oct-2022 11:16:41 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[01-Oct-2022 11:16:41 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[01-Oct-2022 11:16:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[02-Oct-2022 17:24:26 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[02-Oct-2022 17:24:26 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[02-Oct-2022 17:24:26 UTC] PHP Warning:  require(ABSPATHWPINC/class-requests.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[02-Oct-2022 17:24:26 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-requests.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-wp-http.php on line 11
+[02-Oct-2022 17:24:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/template-canvas.php on line 12
+[04-Oct-2022 14:24:57 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/wp-diff.php on line 13
+[04-Oct-2022 14:24:57 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/wp-diff.php on line 13
+[04-Oct-2022 14:24:57 UTC] PHP Warning:  require(ABSPATHWPINC/Text/Diff.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/wp-diff.php on line 13
+[04-Oct-2022 14:24:57 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/Text/Diff.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/wp-diff.php on line 13
+[11-Oct-2022 22:05:41 UTC] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5
+[11-Oct-2022 22:05:41 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5
+[11-Oct-2022 22:05:41 UTC] PHP Warning:  require(ABSPATHWPINC/SimplePie/Misc.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5
+[11-Oct-2022 22:05:41 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5

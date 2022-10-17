@@ -101,8 +101,8 @@ class WP_Carousel_Free_Help {
 				<div class="upgrade-img">
 				<img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/wpcp-Icon.svg'; ?>" alt="">
 				</div>
-				<h2>Upgrade To Unleash the Power of  WordPress Carousel Pro</h2>
-				<p>Get the most out of WordPress Carousel by upgrading to unlock all of its powerful features. With WordPress Carousel Pro, you can unlock amazing features like:</p>
+				<h2>Upgrade To Unleash the Power of WP Carousel Pro</h2>
+				<p>Get the most out of WP Carousel by upgrading to unlock all of its powerful features. With WP Carousel Pro, you can unlock amazing features like:</p>
 			</div>
 			<div class="upgrade-info">
 				<div class="container">
@@ -110,6 +110,7 @@ class WP_Carousel_Free_Help {
 						<div class="col-lg-6">
 							<ul class="upgrade-list">
 								<li><img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/checkmark.svg'; ?>" alt="">Fully responsive, SEO-friendly & optimized.</li>
+								<li><img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/checkmark.svg'; ?>" alt="">6 Beautiful layout presets (Carousel, Tiles, Masonry, Grid, Justified, Thumbnails Slider).</li>
 								<li><img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/checkmark.svg'; ?>" alt="">Advanced Shortcode Generator.</li>
 								<li><img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/checkmark.svg'; ?>" alt="">Slide Anything (e.g. Image, Post, Product, Content, Video, Text, HTML, Shortcodes, etc.)</li>
 								<li><img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/checkmark.svg'; ?>" alt="">Display posts from multiple Categories, Tags, Formats, or Types. (e.g. Latest, Taxonomies, Specific, etc.).</li>
@@ -163,12 +164,12 @@ class WP_Carousel_Free_Help {
 							<img src="<?php echo esc_url( WPCAROUSELF_URL ) . 'admin/img/images/wp-carousel-pro.svg'; ?>" alt="">
 						</div>
 						<div class="pro-text">
-							<h2>Upgrade To WordPress Carousel Pro Today!</h2>
-							<p>Start creating beautiful WordPress carousels in minutes.</p>
+							<h2>Upgrade To WP Carousel Pro Today!</h2>
+							<p>Start creating beautiful WordPress Carousels, Sliders, Galleries in minutes.</p>
 						</div>
 					</div>
 					<div class="pro-btn">
-						<a href="https://shapedplugin.com/wp-carousel/?ref=1" target="_blank">Upgrade To Pro Now</a>
+						<a href="https://shapedplugin.com/wp-carousel/pricing/?ref=1" target="_blank">Upgrade To Pro Now</a>
 					</div>
 				</div>
 			</div>

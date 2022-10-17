@@ -3,8 +3,8 @@ Contributors: shapedplugin, khalilu, shamimmiashuhagh, rubel_miah
 Donate link: http://shapedplugin.com/donate
 Tags: wordpress carousel, best carousel plugin, image carousel, image slider, post carousel, custom post carousel, custom taxonomy carousel, woocommerce product carousel, content carousel, video carousel, video slider, video lightbox, youtube carousel, video gallery, carousel, slider, responsive slider, responsive carousel, carousel slider, ticker carousel, center mode carousel, slide anything, image gallery, image lightbox, wordpress image gallery, photo gallery, gallery slider, wordpress gallery plugin, gallery, post slider, vimeo slider, self hosted video carousel, content slider, wordpress slider, featured content slider, html slider, horizontal carousel slider, posts content slider, product carousel, woocommerce slider, woocommerce product slider
 Requires at least: 4.5
-Tested up to: 6.0.1
-Stable tag: 2.4.10
+Tested up to: 6.0.2
+Stable tag: 2.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,13 +21,13 @@ The Most Powerful and User-friendly Carousel & Gallery plugin. Create beautiful 
 
 = Overview =
 
-**WordPress Carousel** is the most powerful and user-friendly WordPress Carousel plugin to create beautiful carousels with **Images, Posts, WooCommerce Products etc.** This plugin will allow you simply select images from WordPress media library, drag and drop them into place and also supports WordPress posts and WooCommerce products. It's fully responsive, highly customizable and works smoothly on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Edge.
+**WP Carousel** is the most powerful and user-friendly WordPress Carousel plugin to create beautiful carousels with **Images, Posts, WooCommerce Products etc.** This plugin will allow you simply select images from WordPress media library, drag and drop them into place and also supports WordPress posts and WooCommerce products. It's fully responsive, highly customizable and works smoothly on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Edge.
 
 We believe that you shouldn't be a coder or hire a developer to create a carousel for your WordPress site. That’s why we built the **WordPress Carousel** plugin that’s both **EASY and POWERFUL.**
 
-= WordPress Carousel 2.0 =
+= WP Carousel 2.0 =
 
-**WordPress Carousel 2.0** has completely been rebuilt and this provides you now many improvements and new amazing features.
+**WP Carousel 2.0** has completely been rebuilt and this provides you now many improvements and new amazing features.
 
 = You'll be able to display =
 
@@ -80,15 +80,15 @@ We believe that you shouldn't be a coder or hire a developer to create a carouse
 >Ask us at [__Support.__](https://shapedplugin.com/support/?user=lite)
 
 
-= WordPress Carousel Pro =
+= WP Carousel Pro =
 
-[__WordPress Carousel Pro__](https://shapedplugin.com/wp-carousel/?ref=1) is the most powerful and user-friendly multi-purpose WordPress Carousel plugin to create beautiful carousels with **images, Posts, WooCommerce Products, Contents (Images, Text, HTML, Shortcodes), Video** etc. The plugin has own image and content management system and also supports **Posts, Pages, Custom Post Type, Taxonomy, Custom Taxonomy, Custom Contents, YouTube, Vimeo, Dailymotion, mp4, WebM, Self-hosted Video with Lightbox.** It's fully responsive, highly customizable and works smoothly on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Edge.
+[__WP Carousel Pro__](https://shapedplugin.com/wp-carousel/?ref=1) is the most powerful and user-friendly multi-purpose WordPress Carousel plugin to create beautiful carousels with **images, Posts, WooCommerce Products, Contents (Images, Text, HTML, Shortcodes), Video** etc. The plugin has own image and content management system and also supports **Posts, Pages, Custom Post Type, Taxonomy, Custom Taxonomy, Custom Contents, YouTube, Vimeo, Dailymotion, mp4, WebM, Self-hosted Video with Lightbox.** It's fully responsive, highly customizable and works smoothly on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Edge.
 
 It’s even easier to put images of different height together so the width is dynamic with fixed height so that your site looks pretty. The plugin vastly improves user experience and lets you create different types of beautiful carousels easily and quickly.
 
 = Popular Carousel Types =
 
-* **Image Carousel** - WordPress Carousel Pro allows you to create beautiful image carousels for your site in minutes! Upload images via WordPress regular media gallery, create a gallery to make carousel.
+* **Image Carousel** - WP Carousel Pro allows you to create beautiful image carousels for your site in minutes! Upload images via WordPress regular media gallery, create a gallery to make carousel.
 * **Post Carousel** - Display posts from multiple Categories, Tags, Formats, or Types: Latest, Taxonomies, Specific etc. Show the standard post contents: title, image, excerpt, read more, category, date, author, tags, comments etc.
 * **Product Carousel** - Filter by different product types. (e.g. latest, categories, specific products etc.). Show/hide the product name, image, price, excerpt, read more, rating, add to cart button etc.
 * **Content Carousel (Slide Anything)** - Slide anything you want based on your WordPress site. (e.g. images, text, HTML, shortcodes, any custom contents etc.) You can sort slide content by drag and drop easily.
@@ -96,7 +96,7 @@ It’s even easier to put images of different height together so the width is dy
 
 
 
-= WordPress Carousel Pro Features =
+= WP Carousel Pro Features =
 
 * [__All Sample Carousels__](https://shapedplugin.com/wp-carousel/simple-image-carousel/?ref=1) (Live Demo in action).
 * Fully Responsive and Touch-friendly.
@@ -198,7 +198,7 @@ It’s even easier to put images of different height together so the width is dy
 * Themify Builder etc.
 
 
-**WordPress Carousel Pro - Admin Panel Overview**
+**WP Carousel Pro - Admin Panel Overview**
 
 [youtube https://www.youtube.com/embed/videoseries?list=PLoUb-7uG-5jNgTTcnUflIiytxgTWaBEzm]
 
@@ -227,9 +227,9 @@ Designed and Developed by [__ShapedPlugin__](https://shapedplugin.com/)
 
 = AUTOMATIC INSTALLATION (EASIEST WAY) =
 
-To do an automatic install of WordPress Carousel, log in to your WordPress dashboard, navigate to the Plugins menu and
+To do an automatic install of WP Carousel, log in to your WordPress dashboard, navigate to the Plugins menu and
 click Add New.
-In the search field type "WordPress Carousel". Once you have found it you can install it by simply
+In the search field type "WP Carousel". Once you have found it you can install it by simply
 clicking "Install Now" and then "Activate".
 
 = MANUAL INSTALLATION =
@@ -255,28 +255,28 @@ The WordPress codex contains <a href="https://codex.wordpress.org/Managing_Plugi
 
 == Frequently Asked Questions ==
 
-= Who should use WordPress Carousel? =
+= Who should use WP Carousel? =
 
-**WordPress Carousel** is perfect for photographers, designers, bloggers, different organizations, and small to large businesses. Basically, if you want to create beautiful carousels like, Image Carousel, Post Carousel, and Product Carousel, then you need to use WordPress Carousel.
+**WP Carousel** is perfect for photographers, designers, bloggers, different organizations, and small to large businesses. Basically, if you want to create beautiful carousels like, Image Carousel, Post Carousel, and Product Carousel, then you need to use WP Carousel.
 
 
-= What types of carousel you can create using WordPress Carousel? =
-You can create three (3) types of carousel using **WordPress Carousel** such as: **Image Carousel, Post Carousel, and Product Carousel.** And with the [__Premium Version__](https://shapedplugin.com/wp-carousel/?ref=1), you can create also **Content Carousel** and **Video Carousel**.
+= What types of carousel you can create using WP Carousel? =
+You can create three (3) types of carousel using **WP Carousel** such as: **Image Carousel, Post Carousel, and Product Carousel.** And with the [__Premium Version__](https://shapedplugin.com/wp-carousel/pricing/?ref=1), you can create also **Content Carousel** and **Video Carousel**.
 
-= Do I need to have coding skills to use WordPress Carousel? =
+= Do I need to have coding skills to use WP Carousel? =
 No. You don’t need any coding skill. No more pain writing any shortcode attributes to display carousel in your site. With just a few clicks, you can amazingly create unlimited Image, Post, and Product Carousels.
 
-= Is WordPress Carousel responsive? =
-Yes, WordPress Carousel is fully responsive, mobile and touch-friendly.
+= Is WP Carousel responsive? =
+Yes, WP Carousel is fully responsive, mobile and touch-friendly.
 
-= Can I add WordPress Carousel anywhere on my website?=
-Yes, you can add Logo Carousel inside your blog posts, pages, widgets, and anywhere else on your WordPress website with a shortcode or PHP function.
+= Can I add WP Carousel anywhere on my website?=
+Yes, you can add WP Carousel inside your blog posts, pages, widgets, and anywhere else on your WordPress website with a shortcode or PHP function.
 
 = Can I have multiple carousels with the separate setting?
 Yes. You can have an unlimited carousel with each separate setting in the page, post, template, widget or anywhere you like.
 
-= Will WordPress Carousel work with my theme? =
-WordPress Carousel works with any WordPress theme if themes are developed according to WordPress standard.
+= Will WP Carousel work with my theme? =
+WP Carousel works with any WordPress theme if themes are developed according to WordPress standard.
 
 = How can I get support if the plugin is not working? =
 If you face any problem with our plugin or something is not working as it should, first follow the preliminary steps:
@@ -292,16 +292,16 @@ Pro version users [__Support__](https://shapedplugin.com/create-new-ticket/) and
 If you find a bug, please report it in our active [support](https://shapedplugin.com/support/?user=lite). You will be replied once the issue is resolved.
 
 = I’d like access to more features. How can I get them? =
-You can get access to more features when you purchase a license of the plugin. Purchasing a license of [__WordPress Carousel Pro__](https://shapedplugin.com/wp-carousel/?ref=1) gets you to access the full version of WordPress Carousel, automatic lifetime updates, and support.
+You can get access to more features when you purchase a license of the plugin. Purchasing a license of [__WP Carousel Pro__](https://shapedplugin.com/wp-carousel/pricing/?ref=1) gets you to access the full version of WP Carousel, automatic lifetime updates, and support.
 
-=Is WordPress Carousel Multilingual Ready?=
-Yes, WordPress Carousel is 100% translation ready and tested with [WPML](https://wpml.org/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-x](https://wordpress.org/plugins/qtranslate-x/), [GTranslate](https://wordpress.org/plugins/gtranslate/), [Google Language Translator](https://wordpress.org/plugins/google-language-translator/), [WPGlobus](https://wordpress.org/plugins/wpglobus/) etc.
+=Is WP Carousel Multilingual Ready?=
+Yes, WP Carousel is 100% translation ready and tested with [WPML](https://wpml.org/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-x](https://wordpress.org/plugins/qtranslate-x/), [GTranslate](https://wordpress.org/plugins/gtranslate/), [Google Language Translator](https://wordpress.org/plugins/google-language-translator/), [WPGlobus](https://wordpress.org/plugins/wpglobus/) etc.
 
-= Is WordPress Carousel compatible with WordPress multisite? =
-Yes, WordPress Carousel works perfectly with WordPress multi-site network.
+= Is WP Carousel compatible with WordPress multisite? =
+Yes, WP Carousel works perfectly with WordPress multi-site network.
 
-= How to use ‘WordPress Carousel’ in WordPress 5.0 Gutenberg Block Editor =
-Adding a **WordPress Carousel (Image Carousel, Post Carousel, Product Carousel)** using the WordPress 5.0 **Block Editor** is pretty straight-forward. You can paste the generated shortcode into a ‘Paragraph Block’ or use the ‘Shortcode Block’. It works nicely as classic editor.
+= How to use ‘WP Carousel’ in WordPress 5.0 Gutenberg Block Editor =
+Adding a **WP Carousel (Image Carousel, Post Carousel, Product Carousel)** using the WordPress 5.0 **Block Editor** is pretty straight-forward. You can paste the generated shortcode into a ‘Paragraph Block’ or use the ‘Shortcode Block’. It works nicely as classic editor.
 
 = Do you Like this Plugin and want to encourage us for improvement? =
 Please give the plugin [__5 stars__](https://wordpress.org/support/plugin/wp-carousel-free/reviews/?filter=5#new-post) rating and your precious appreciation will help us to make it much great in the future.
@@ -326,6 +326,19 @@ Thank you!
 
 
 == Changelog ==
+
+= 2.5.0 – Sept 30, 2022 =
+* New: The Free mode of Carousel layout.
+* Fix: Border width value 0 or empty does not work.
+* Fix: Grid layout breaks when the unclosed comment remains in the custom CSS field. 
+
+= 2.4.12 – Sept 23, 2022 =
+* New: Item vertical gap added.
+* Improved: Help page.
+
+= 2.4.11 – Sept 19, 2022 =
+* Improved: Migrated from Slick to Swiper for carousel layout.
+* Fix: Navigation icon issue at Gutenberg edit page with Astra theme.
 
 = 2.4.10 – Aug 29, 2022 =
 * Fix: WP Carousel does not works properly inside tab content of WP Tabs Pro.

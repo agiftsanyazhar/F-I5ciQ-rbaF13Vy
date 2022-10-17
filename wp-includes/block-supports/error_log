@@ -38,3 +38,15 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/custom-classname.php on line 59
+[30-Sep-2022 15:37:07 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/typography.php:217
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/typography.php on line 217
+[05-Oct-2022 18:04:14 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/border.php:176
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/border.php on line 176
+[06-Oct-2022 22:11:43 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/duotone.php:580
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/duotone.php on line 580

@@ -33,3 +33,55 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[11-Sep-2022 11:41:26 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[12-Sep-2022 01:10:22 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[13-Sep-2022 14:17:03 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[15-Sep-2022 23:00:43 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[28-Sep-2022 08:46:16 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[30-Sep-2022 03:18:55 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[30-Sep-2022 04:47:46 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[01-Oct-2022 11:17:43 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[02-Oct-2022 17:26:06 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[03-Oct-2022 11:35:52 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-custom-html.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-custom-html.php on line 17
+[13-Oct-2022 02:15:53 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-links.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-links.php on line 17
+[13-Oct-2022 14:48:36 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-text.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-text.php on line 17
+[17-Oct-2022 01:15:50 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-nav-menu-widget.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-nav-menu-widget.php on line 17

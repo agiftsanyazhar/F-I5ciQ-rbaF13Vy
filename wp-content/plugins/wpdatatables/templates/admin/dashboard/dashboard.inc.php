@@ -337,13 +337,14 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                  </span>
                         </p>
                         <p class="wpdt-text wpdt-font m-b-18">
-                            A minor update with new a bug fix and stability improvements:
+                            A minor update with CSS updates and stability improvements:
                         </p>
                         <div class="alert alert-info m-b-0" role="alert">
                             <i class="wpdt-icon-info-circle-full"></i>
                             <ul>
-                                <li><strong>BugFix:</strong> Fix for Display tab settings not being aligned inside rows.</li>
-                                <li>Other small bug fixes and stability improvements.</li>
+                                <li><strong>Feature:</strong> Caching table data for non-server-side tables (Excel, CSV, Google sheet, XML, JSON, Nested JSON and PHP array).</li>
+                                <li><strong>Feature:</strong> Auto update cache for non server-side tables (Excel, CSV, Google sheet, XML, JSON, Nested JSON and PHP array).</li>
+                                <li>Other small bug fixes.</li>
                             </ul>
                         </div>
 
@@ -510,9 +511,8 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                     about 1 message per month and never spam!', 'wpdatatables'); ?> </p>
                             </div>
                             <div class="wdt-subscribe-form">
-                                <div class="_form_36"></div>
-                                <script src="https://tmsoutsource.activehosted.com/f/embed.php?id=36"
-                                        type="text/javascript" charset="utf-8"></script>
+                                <div id="form-acm_31410"></div>
+                                <script type="text/javascript" src="https://acumbamail.com/newform/dynamic/js/ET8rshmNeLvQox6J8U99sSJZ8B1DZo1mhOgs408R0mHYiwgmM/31410/"></script>
                             </div>
                         </div>
                     </div>

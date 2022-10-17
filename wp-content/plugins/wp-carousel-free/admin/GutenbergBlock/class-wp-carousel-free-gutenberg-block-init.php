@@ -53,8 +53,8 @@ if ( ! class_exists( 'WP_Carousel_Free_Gutenberg_Block_Init' ) ) {
 			/**
 			 * Register block editor css file enqueue for backend.
 			 */
-			if ( wpcf_get_option( 'wpcp_enqueue_slick_css', true ) ) {
-				wp_enqueue_style( 'wpcf-slick', WPCAROUSELF_URL . 'public/css/slick' . $this->suffix . '.css', array(), WPCAROUSELF_VERSION, 'all' );
+			if ( wpcf_get_option( 'wpcp_enqueue_swiper_css', true ) ) {
+				wp_enqueue_style( 'wpcf-swiper', WPCAROUSELF_URL . 'public/css/swiper-bundle.min.css', array(), WPCAROUSELF_VERSION, 'all' );
 			}
 			if ( wpcf_get_option( 'wpcp_enqueue_fa_css', true ) ) {
 				wp_enqueue_style( 'wp-carousel-free-fontawesome', WPCAROUSELF_URL . 'public/css/font-awesome.min.css', array(), WPCAROUSELF_VERSION, 'all' );
@@ -98,11 +98,11 @@ if ( ! class_exists( 'WP_Carousel_Free_Gutenberg_Block_Init' ) ) {
 			 * Register block editor js file enqueue for backend.
 			 */
 			wp_register_script( 'wpcp-preloader', WPCAROUSELF_URL . 'public/js/preloader' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
-			wp_register_script( 'wpcf-slick', WPCAROUSELF_URL . 'public/js/slick' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
-			wp_register_script( 'wpcf-slick-config', WPCAROUSELF_URL . 'public/js/wp-carousel-free-public' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
+			wp_register_script( 'wpcf-swiper', WPCAROUSELF_URL . 'public/js/swiper-bundle.min.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
+			wp_register_script( 'wpcf-swiper-config', WPCAROUSELF_URL . 'public/js/wp-carousel-free-public' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
 
 			wp_localize_script(
-				'wpcf-slick-config',
+				'wpcf-swiper-config',
 				'sp_wp_carousel_free',
 				array(
 					'url'           => WPCAROUSELF_URL,
@@ -147,8 +147,8 @@ if ( ! class_exists( 'WP_Carousel_Free_Gutenberg_Block_Init' ) ) {
 					// Enqueue blocks.editor.build.js in the editor only.
 					'editor_script'   => array(
 						'wpcp-preloader',
-						'wpcf-slick',
-						'wpcf-slick-config',
+						'wpcf-swiper',
+						'wpcf-swiper-config',
 					),
 					// Enqueue blocks.editor.build.css in the editor only.
 					'editor_style'    => array(),

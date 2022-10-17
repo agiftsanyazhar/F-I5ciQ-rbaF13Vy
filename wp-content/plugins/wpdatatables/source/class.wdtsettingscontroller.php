@@ -33,6 +33,26 @@ class WDTSettingsController {
 
 	public static function saveSettings( $settings ){
 		$settings = self::sanitizeSettings( stripslashes_deep( $settings ) );
+		$autoUpdateOption = (int)$settings['wdtAutoUpdateOption'];
+
+		if (!$autoUpdateOption){
+			global $wpdb;
+			$wpdb->query(
+				$wpdb->prepare(
+					"UPDATE " . $wpdb->prefix . "wpdatatables_cache
+                           SET auto_update = %d",
+					$autoUpdateOption
+				)
+			);
+			$wpdb->query(
+				$wpdb->prepare(
+					"UPDATE " . $wpdb->prefix . "wpdatatables
+                           SET auto_update_cache = %d",
+					$autoUpdateOption
+				)
+			);
+
+		}
 
 		foreach($settings as $key=>$value) {
             update_option($key, $value);
@@ -81,6 +101,7 @@ class WDTSettingsController {
 			'wdtMinFunctionsLabel'      => get_option('wdtMinFunctionsLabel'),
 			'wdtMaxFunctionsLabel'      => get_option('wdtMaxFunctionsLabel'),
             'wdtFontColorSettings'      => get_option('wdtFontColorSettings') ? get_option('wdtFontColorSettings') : new stdClass(),
+		    'wdtAutoUpdateOption'       => get_option('wdtAutoUpdateOption'),
 		);
 	}
 

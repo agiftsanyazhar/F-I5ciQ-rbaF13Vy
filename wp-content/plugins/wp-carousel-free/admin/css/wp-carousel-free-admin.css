@@ -253,17 +253,18 @@
 /**
 Go Pro
 **/
-#adminmenu #menu-posts-sp_wp_carousel li:nth-child(6) a,
-#adminmenu #menu-posts-sp_wp_carousel li:nth-child(6) a:hover {
+#adminmenu #menu-posts-sp_wp_carousel li:last-child a,
+#adminmenu #menu-posts-sp_wp_carousel li:last-child a:hover {
     color:#11b916;
     font-weight: 700;
 }
 #adminmenu #menu-posts-sp_wp_carousel li a .sp-go-pro-icon {
-    background-image: url(../img/rocket.svg);
+    background-image: url(../img/premium.svg);
     width: 20px;
     height: 20px;
     display: block;
     float: left;
     margin-right: 1px;
     margin-left: -2px;
+    margin-top: -1px;
 }

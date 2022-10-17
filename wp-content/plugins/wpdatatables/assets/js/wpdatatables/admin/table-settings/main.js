@@ -235,6 +235,20 @@
         });
 
         /**
+         * Toggle cache source data
+         */
+        $('#wpdt-cache-source-data').change(function (e) {
+            wpdatatable_config.setCacheSourceData($(this).is(':checked') ? 1 : 0);
+        });
+
+        /**
+         * Toggle auto update cache
+         */
+        $('#wpdt-auto-update-cache').change(function (e) {
+            wpdatatable_config.setAutoUpdateCache($(this).is(':checked') ? 1 : 0);
+        });
+
+        /**
          * Toggle Filters in form
          */
         $('#wdt-filter-in-form').change(function(e){

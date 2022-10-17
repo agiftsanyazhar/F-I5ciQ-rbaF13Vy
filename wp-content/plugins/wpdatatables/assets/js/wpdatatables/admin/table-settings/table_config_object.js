@@ -38,6 +38,8 @@ var wpdatatable_config = {
     verticalScrollHeight: 600,
     filtering: 1,
     global_search: 1,
+    cache_source_data: 0,
+    auto_update_cache: 0,
     editable: 0,
     popover_tools: 0,
     mysql_table_name: '',
@@ -537,6 +539,37 @@ var wpdatatable_config = {
         jQuery('#wdt-global-sorting').prop('checked', sorting);
     },
     /**
+     * Enable or disable cache source data
+     * @param cacheSourceData 1 or 0
+     */
+    setCacheSourceData: function( cacheSourceData ){
+        wpdatatable_config.cache_source_data = cacheSourceData;
+        let allowedTableTypes = ['csv', 'xls', 'xml', 'json','serialized'];
+        if (allowedTableTypes.includes(wpdatatable_config.table_type)){
+            jQuery('.wdt-table-settings .cache-settings-block').removeClass('hidden');
+            jQuery('.wdt-table-settings .auto-update-cache-block').removeClass('hidden');
+        } else {
+            jQuery('.wdt-table-settings .cache-settings-block').addClass('hidden');
+            jQuery('.wdt-table-settings .auto-update-cache-block').addClass('hidden');
+        }
+        if (cacheSourceData == 0){
+            wpdatatable_config.auto_update_cache = 0
+            jQuery('#wpdt-auto-update-cache').prop( 'checked', 0 );
+            jQuery('.wdt-table-settings .auto-update-cache-block').addClass('hidden');
+        } else {
+            jQuery('.wdt-table-settings .auto-update-cache-block').removeClass('hidden');
+        }
+        jQuery('#wpdt-cache-source-data').prop( 'checked', cacheSourceData );
+    },
+    /**
+     * Enable or disable auto update data in cache
+     * @param autoUpdateCache 1 or 0
+     */
+    setAutoUpdateCache: function( autoUpdateCache ){
+        wpdatatable_config.auto_update_cache = autoUpdateCache;
+        jQuery('#wpdt-auto-update-cache').prop( 'checked', autoUpdateCache );
+    },
+    /**
      * Enable or disable Global Search block
      * @param globalSearch 1 or 0
      */
@@ -884,7 +917,8 @@ var wpdatatable_config = {
             wpdatatable_config.addColumn(new WDTColumn(tableJSON.columns[i]));
         }
         wpdatatable_config.fillColumnsBlock();
-
+        wpdatatable_config.setCacheSourceData( parseInt( tableJSON.cache_source_data ) );
+        wpdatatable_config.setAutoUpdateCache( parseInt( tableJSON.auto_update_cache ) );
 
         wpdatatable_config.setLimitLayout(parseInt(tableJSON.fixed_layout));
         wpdatatable_config.setGlobalSearch(parseInt(tableJSON.global_search));

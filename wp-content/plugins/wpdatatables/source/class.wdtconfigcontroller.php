@@ -270,7 +270,8 @@ class WDTConfigController {
             'scrollable' => $table->scrollable,
             'auto_refresh' => $table->auto_refresh,
             'editor_roles' => $table->editor_roles,
-
+            'cache_source_data' => $table->cache_source_data,
+            'auto_update_cache' => $table->auto_update_cache,
             
 
             'userid_column_id' => (int)$table->userid_column_id,
@@ -352,6 +353,8 @@ class WDTConfigController {
         $table->auto_refresh = (int)$table->auto_refresh;
         $table->info_block = (int)$table->info_block;
         $table->responsiveAction = sanitize_text_field($table->responsiveAction);
+	    $table->cache_source_data = (int)$table->cache_source_data;
+	    $table->auto_update_cache = (int)$table->auto_update_cache;
         $table->pagination = (int)$table->pagination;
         $table->paginationAlign = sanitize_text_field($table->paginationAlign);
         $table->paginationLayout = sanitize_text_field($table->paginationLayout);
@@ -1044,6 +1047,8 @@ class WDTConfigController {
         $table->paginationAlign = 'right';
         $table->paginationLayout = 'full_numbers';
         $table->simpleResponsive = 0;
+	    $table->cache_source_data = 0;
+	    $table->auto_update_cache = 0;
         $table->simpleHeader = 0;
         $table->stripeTable = 0;
         $table->cellPadding = 10;

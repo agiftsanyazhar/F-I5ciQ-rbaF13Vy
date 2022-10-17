@@ -1,0 +1,4 @@
+[12-Oct-2022 10:48:58 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Search_Handler' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/search/class-wp-rest-post-search-handler.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/search/class-wp-rest-post-search-handler.php on line 17

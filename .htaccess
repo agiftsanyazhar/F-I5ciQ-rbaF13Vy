@@ -1,6 +1,6 @@
 
 
-# BEGIN Really Simple SSL Redirect 5.3.1
+# BEGIN Really Simple SSL Redirect 5.3.5
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{HTTPS} !=on [NC]
@@ -20,5 +20,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-
 # END WordPress

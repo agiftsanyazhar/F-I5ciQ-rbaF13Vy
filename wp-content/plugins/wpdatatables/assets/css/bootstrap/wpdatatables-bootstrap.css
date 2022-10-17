@@ -218,6 +218,8 @@
     border-spacing: 0;
 }
 
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
 @media print {
     *,
     .wpdt-c *:before,
@@ -7620,6 +7622,14 @@ select.input-group-lg > .input-group-btn > .btn {
     visibility: hidden;
 }
 
+.wpdt-c .text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
 .wpdt-c .hidden {
     display: none !important;
 }
@@ -7628,6 +7638,9 @@ select.input-group-lg > .input-group-btn > .btn {
     position: fixed;
 }
 
+@-ms-viewport {
+    width: device-width;
+}
 
 .wpdt-c .visible-xs, .wpdt-c .visible-sm, .wpdt-c .visible-md, .wpdt-c .visible-lg {
     display: none !important;
@@ -9203,6 +9216,10 @@ select.input-group-lg > .input-group-btn > .btn {
 }
 
 :-ms-fullscreen [data-ma-action="fullscreen"] {
+    display: none;
+}
+
+:full-screen [data-ma-action="fullscreen"] {
     display: none;
 }
 

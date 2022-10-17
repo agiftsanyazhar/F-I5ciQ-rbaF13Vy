@@ -19,13 +19,9 @@ if ( has_post_thumbnail() && $show_slide_image ) {
 	$image_title_attr     = $show_image_title_attr ? $the_image_title_attr : '';
 
 	// Product Thumbnail.
-	$wpcp_product_image = '';
+	$wpcp_product_thumb = '';
 	if ( ! empty( $image_url[0] ) ) {
-		if ( 'false' !== $lazy_load_image && 'carousel' === $wpcp_layout ) {
-			$wpcp_product_thumb = sprintf( '<img class="wcp-lazy" data-lazy="%1$s" src="%2$s"%3$s alt="%4$s" width="%5$s" height="%6$s">', $image_url[0], $lazy_load_img, $image_title_attr, $product_thumb_alt_text, $image_url[1], $image_url[2] );
-		} else {
-			$wpcp_product_thumb = sprintf( '<img class="skip-lazy" src="%1$s"%2$s alt="%3$s" width="%4$s" height="%5$s">', $image_url[0], $image_title_attr, $product_thumb_alt_text, $image_url[1], $image_url[2] );
-		}
+		$wpcp_product_thumb = WPCF_Helper::get_item_image( $lazy_load_image, $wpcp_layout, $image_url[0], $image_title_attr, $image_url[1], $image_url[2], $product_thumb_alt_text, $lazy_load_img );
 		?>
 	<div class="wpcp-slide-image">
 		<a href="<?php the_permalink(); ?>"><?php echo wp_kses_post( $wpcp_product_thumb ); ?></a>

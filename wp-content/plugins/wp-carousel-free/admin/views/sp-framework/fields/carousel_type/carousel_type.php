@@ -71,7 +71,14 @@ if ( ! class_exists( 'SP_WPCF_Field_carousel_type' ) ) {
 					$pro_only_text = isset( $option['pro_only'] ) ? '<strong class="ct-pro-only">' . esc_html__( 'PRO', 'wp-carousel-free' ) . '</strong>' : '';
 					echo '<div class="wpcf--sibling wpcf--image' . $active . '">';
 					// echo '<img src="' . $option . '" alt="img-' . $num++ . '" />';
-					echo '<label><input' . esc_attr( $pro_only ) . ' type="' . esc_attr( $type ) . '" name="' . esc_attr( $this->field_name( $extra ) ) . '" value="' . esc_attr( $key ) . '"' . $this->field_attributes() . esc_attr( $checked ) . '/>' . $pro_only_text . '<i class="' . $option['icon'] . '"></i><p class="sp-carousel-type">' . esc_html( $option['text'] ) . '</p></label>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					echo '<label><input' . esc_attr( $pro_only ) . ' type="' . esc_attr( $type ) . '" name="' . esc_attr( $this->field_name( $extra ) ) . '" value="' . esc_attr( $key ) . '"' . $this->field_attributes() . esc_attr( $checked ) . '/>' . $pro_only_text;
+					if ( isset( $option['image'] ) ) {
+						echo '<img  src="' . $option['image'] . '" class="svg-icon">';
+					} else {
+
+						echo '<i class="' . esc_attr( $option['icon'] ) . '"></i>';
+					}
+					echo '<p class="sp-carousel-type">' . esc_html( $option['text'] ) . '</p></label>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo '</div>';
 
 				}

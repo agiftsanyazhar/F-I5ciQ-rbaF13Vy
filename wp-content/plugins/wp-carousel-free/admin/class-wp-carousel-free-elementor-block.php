@@ -84,8 +84,8 @@ class Wp_Carousel_Free_Element_Shortcode_Block {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		wp_enqueue_script( 'wpcf-slick', WPCAROUSELF_URL . 'public/js/slick' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
-		wp_enqueue_script( 'wpcf-slick-config', WPCAROUSELF_URL . 'public/js/wp-carousel-free-public' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
+		wp_enqueue_script( 'wpcf-swiper', WPCAROUSELF_URL . 'public/js/swiper-bundle.min.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
+		wp_enqueue_script( 'wpcf-swiper-config', WPCAROUSELF_URL . 'public/js/wp-carousel-free-public' . $this->suffix . '.js', array( 'jquery' ), WPCAROUSELF_VERSION, true );
 	}
 
 	/**

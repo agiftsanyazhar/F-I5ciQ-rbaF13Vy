@@ -6,6 +6,7 @@
  * @author Alexander Gilmanov
  * @since 13.10.2016
  */
+$globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
 ?>
 
 <div class="card wdt-table-settings">
@@ -197,6 +198,65 @@
                         </div>
                     </div>
                     <!-- /.row -->
+
+                    <div class="row" id="wdt-cache-block">
+                        <div class="col-sm-3 m-b-16 hidden cache-settings-block">
+
+                            <h4 class="c-title-color m-b-2">
+				                <?php esc_html_e('Cache data', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-popover-content="#cache-source-data-hint"
+                                   data-toggle="html-popover" data-trigger="hover" data-placement="right"></i>
+                            </h4>
+
+                            <!-- Hidden popover with image hint -->
+                            <div class="hidden" id="cache-source-data-hint">
+                                <div class="popover-heading">
+					                <?php esc_html_e('Cache data from source', 'wpdatatables'); ?>
+                                </div>
+
+                                <div class="popover-body">
+					                <?php esc_html_e('Enable this to cache data from source file. Available for tables created from existing data source like Excel, CSV, JSON, Nested JSON, Google Spredsheet and PHP array.', 'wpdatatables'); ?>
+                                </div>
+                            </div>
+                            <!-- /Hidden popover with image hint -->
+
+                            <div class="toggle-switch" data-ts-color="blue">
+                                <input id="wpdt-cache-source-data" type="checkbox">
+                                <label for="wpdt-cache-source-data"
+                                       class="ts-label"><?php esc_html_e('Cache data from source', 'wpdatatables'); ?></label>
+                            </div>
+
+                        </div>
+		                <?php if ($globalAutoUpdateOption) { ?>
+                            <div class="col-sm-3 m-b-16 hidden auto-update-cache-block">
+
+                                <h4 class="c-title-color m-b-2">
+					                <?php esc_html_e('Auto update cache', 'wpdatatables'); ?>
+                                    <i class=" wpdt-icon-info-circle-thin" data-popover-content="#auto-update-cache-hint"
+                                       data-toggle="html-popover" data-trigger="hover" data-placement="right"></i>
+                                </h4>
+
+                                <!-- Hidden popover with image hint -->
+                                <div class="hidden" id="auto-update-cache-hint">
+                                    <div class="popover-heading">
+						                <?php esc_html_e('Auto update cache from source', 'wpdatatables'); ?>
+                                    </div>
+
+                                    <div class="popover-body">
+						                <?php esc_html_e('Enable this to auto update cache from source file.', 'wpdatatables'); ?>
+                                    </div>
+                                </div>
+                                <!-- /Hidden popover with image hint -->
+
+                                <div class="toggle-switch" data-ts-color="blue">
+                                    <input id="wpdt-auto-update-cache" type="checkbox">
+                                    <label for="wpdt-auto-update-cache"
+                                           class="ts-label"><?php esc_html_e('Auto update cache from source', 'wpdatatables'); ?></label>
+                                </div>
+
+                            </div>
+		                <?php } ?>
+                    </div>
 
                 </div>
                 <!-- /Main table settings -->

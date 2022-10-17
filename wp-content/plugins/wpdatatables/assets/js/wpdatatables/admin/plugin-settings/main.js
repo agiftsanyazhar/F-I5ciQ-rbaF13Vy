@@ -25,6 +25,7 @@
             wpdatatable_plugin_config.setDateFormat( $(this).val() );
         });
 
+
         /**
          * Number of tables on admin page - "Tables per admin page"
          */
@@ -209,6 +210,13 @@
         });
 
         /**
+         * Turn on auto update option - "Auto update cache option"
+         */
+        $('#wdt-auto-update-option').change(function (e) {
+            wpdatatable_plugin_config.setAutoUpdateOption($(this).is(':checked') ? 1 : 0);
+        });
+
+        /**
          * Toggle minified JS - "Use minified wpDataTables Javascript"
          */
         $('#wdt-minified-js').change(function(e){
@@ -233,7 +241,7 @@
         wpdatatable_plugin_config.setDecimalPlaces      ( wdt_current_config.wdtDecimalPlaces );
         wpdatatable_plugin_config.setTabletWidth(wdt_current_config.wdtTabletWidth);
         wpdatatable_plugin_config.setMobileWidth(wdt_current_config.wdtMobileWidth);
-        
+        wpdatatable_plugin_config.setAutoUpdateOption(wdt_current_config.wdtAutoUpdateOption == 1 ? 1 : 0);
 
         wpdatatable_plugin_config.setPurchaseCode       ( wdt_current_config.wdtPurchaseCode );
         wpdatatable_plugin_config.setGettingStartedPageStatus(wdt_current_config.wdtGettingStartedPageStatus== 1 ? 1 : 0);
@@ -305,6 +313,14 @@
         });
 
         /**
+         * Delete Google settings
+         */
+        $(document).on('click', '#wdt-delete-log-errors-cache', function (e) {
+            $('.wdt-preload-layer').animateFadeIn();
+            deleteLogErrorsCache();
+        });
+
+        /**
          * Add ace editor on Global custom CSS
          */
         createAceEditor('wdt-custom-css');
@@ -342,6 +358,36 @@
                     );
                 }
             })
+        }
+
+        function deleteLogErrorsCache() {
+            $.ajax({
+                url: ajaxurl,
+                method: 'POST',
+                data: {
+                    action: 'wpdatatables_delete_log_errors_cache',
+                    wdtNonce: $('#wdtNonce').val()
+                },
+                success: function (result) {
+                    if (result != '') {
+                        $('#wdt-error-modal .modal-body').html(result);
+                        $('#wdt-error-modal').modal('show');
+                        $('.wdt-preload-layer').animateFadeOut();
+                    } else {
+                        $('.wdt-preload-layer').animateFadeOut();
+                        wdtNotify(
+                            wpdatatables_edit_strings.success,
+                            'Deleted errors log from cache table!',
+                            'success'
+                        );
+                    }
+                },
+                error: function (){
+                    $('#wdt-error-modal .modal-body').html('There was an error while trying to delete errors log in cache table!');
+                    $('#wdt-error-modal').modal('show');
+                    $('.wdt-preload-layer').animateFadeOut();
+                }
+            });
         }
     });
 })(jQuery);
