@@ -2199,7 +2199,7 @@ class WPDataTable
             default:
                 // Solution for addons
 	            $this->customBasedConstruct(
-		            $tableData->content,
+		            $tableData,
 		            $params
 	            );
 

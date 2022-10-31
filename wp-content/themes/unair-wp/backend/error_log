@@ -1586,3 +1586,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer.php on line 9
+[23-Oct-2022 10:44:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/home_page_panel.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/home_page_panel.php on line 9

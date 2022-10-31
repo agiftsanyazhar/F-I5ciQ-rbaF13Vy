@@ -6,7 +6,7 @@ Tags: table, table builder, data tables, tables, charts, datatables, csv, excel,
 Requires at least: 4.0
 Tested up to: 6.0.2
 Requires PHP: 5.6
-Stable tag: 2.1.42
+Stable tag: 2.1.43
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -360,6 +360,11 @@ This can be changed from the “Number format” drop-down menu in the wpDataTab
 12. Google chart settings
 
 == Changelog ==
+
+= 2.1.43 =
+* CSS fixes.
+* Bugfix: Fixed issue loading tables crated from Forminator.
+Other small bug fixes and stability improvements.
 
 = 2.1.42 =
 * Feature: [Caching tables data](https://wpdatatables.com/documentation/table-features/caching-data-and-auto-update-cache-in-wordpress-tables/) for non-server-side tables (Excel, CSV, XML, JSON, and PHP array).

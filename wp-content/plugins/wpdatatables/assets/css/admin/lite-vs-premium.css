@@ -197,6 +197,7 @@
         top: 12px !important;
     }
 }
+
 @media (max-width: 480px) {
     .wdt-datatables-admin-wrap  .wdt-lite-vs-premium-card .card-header.wdt-admin-card-header {
         background: #ffffff !important;

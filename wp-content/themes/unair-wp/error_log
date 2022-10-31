@@ -69,3 +69,8 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/index.php on line 13
+[27-Oct-2022 21:37:25 UTC] PHP Notice:  Undefined variable: helper in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/index.php on line 13
+[27-Oct-2022 21:37:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function preparePage() on null in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/index.php on line 13

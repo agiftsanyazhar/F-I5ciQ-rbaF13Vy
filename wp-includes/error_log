@@ -807,3 +807,11 @@ Stack trace:
 [11-Oct-2022 22:05:41 UTC] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5
 [11-Oct-2022 22:05:41 UTC] PHP Warning:  require(ABSPATHWPINC/SimplePie/Misc.php): failed to open stream: No such file or directory in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5
 [11-Oct-2022 22:05:41 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/perpajakanvokasi/public_html/wp-includes/class-simplepie.php on line 5
+[29-Oct-2022 16:07:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/perpajakanvokasi/public_html/wp-includes/class-smtp.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/class-smtp.php on line 6
+[29-Oct-2022 16:37:32 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Dependencies' not found in /home/perpajakanvokasi/public_html/wp-includes/class.wp-styles.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/class.wp-styles.php on line 18

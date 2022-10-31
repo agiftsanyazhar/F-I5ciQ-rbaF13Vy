@@ -1606,6 +1606,13 @@ div.mce-widget button i.mce-i-wpdatachart{
         display: none !important;
     }
 }
+
+@media(min-width: 625px) and (max-width: 960px) {
+    .tms-store-col:nth-child(2) {
+        background: none !important;
+    }
+}
+
 @media only screen and (max-width : 480px) {
     .wpdt-c .wdt-datatables-admin-wrap .column-settings-panel .wdt-column-calc-total-block,
     .wpdt-c .wdt-datatables-admin-wrap .column-settings-panel .wdt-column-calc-avg-block,

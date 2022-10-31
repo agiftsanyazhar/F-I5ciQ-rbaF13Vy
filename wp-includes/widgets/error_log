@@ -85,3 +85,15 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-nav-menu-widget.php on line 17
+[19-Oct-2022 15:19:09 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-block.php on line 17
+[22-Oct-2022 04:06:26 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget_Media' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-media-image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-media-image.php on line 18
+[25-Oct-2022 12:58:20 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-calendar.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-calendar.php on line 17

@@ -247,6 +247,9 @@ function wdtActivationCreateTables() {
     if (get_option('wdtShowPromoNotice') === false) {
         delete_option('wdtShowPromoNotice');
     }
+	if (get_option('wdtShowPromoDiscountNotice') === false) {
+		update_option('wdtShowPromoDiscountNotice', 'yes' );
+    }
     if (get_option('wdtSimpleTableAlert') === false) {
         update_option('wdtSimpleTableAlert', true );
     }
@@ -284,11 +287,13 @@ function wdtAdminRatingMessages() {
              <p class="wpdt-forminator-news"><strong style="color: #ff8c00">NEWS!</strong> wpDataTables just launched a new <strong style="color: #ff8c00">FREE</strong> addon - <strong style="color: #ff8c00">Forminator Forms integration for wpDataTables</strong>. You can download it and read more about it on wp.org on this <a class="wdt-forminator-link" href="https://wordpress.org/plugins/wpdatatables-forminator/" style="color: #ff8c00" target="_blank">link</a>.</p>
          </div>';
     }
-//    Notice bar for Lite promo
-//    if( is_admin() && (strpos($wpdtPage,'wpdatatables-dashboard') !== false || strpos($wpdtPage,'wpdatatables-lite-vs-premium') !== false) &&
-//        get_option( 'wdtShowPromoNotice' ) == "yes" ) {
-//        include WDT_TEMPLATE_PATH . 'admin/common/promo.inc.php';
-//    }
+    //Notice bar for Lite promo
+    if( is_admin() && (strpos($wpdtPage,'wpdatatables-dashboard') !== false || strpos($wpdtPage,'wpdatatables-lite-vs-premium') !== false) &&
+        get_option( 'wdtShowPromoDiscountNotice' ) == "yes" ) {
+        include WDT_TEMPLATE_PATH . 'admin/common/promo.inc.php';
+	    wp_enqueue_style('wdt-promo-css', WDT_CSS_PATH . 'admin/promo.css');
+
+    }
 }
 
 add_action( 'admin_notices', 'wdtAdminRatingMessages' );
@@ -318,7 +323,7 @@ add_action( 'wp_ajax_wdt_remove_forminator_notice', 'wdtRemoveForminatorNotice' 
  * Remove Promo notice message
  */
 function wdtRemovePromoNotice() {
-    update_option( 'wdtShowPromoNotice', 'no' );
+    update_option( 'wdtShowPromoDiscountNotice', 'no' );
     echo json_encode( array("success") );
     exit;
 }
@@ -402,6 +407,7 @@ function wdtUninstallDelete() {
         delete_option('wdtRatingDiv');
         delete_option('wdtShowForminatorNotice');
         delete_option('wdtShowPromoNotice');
+        delete_option('wdtShowPromoDiscountNotice');
         delete_option('wdtSimpleTableAlert');
         delete_option('wdtTempFutureDate');
         delete_option('wdtVersion');
