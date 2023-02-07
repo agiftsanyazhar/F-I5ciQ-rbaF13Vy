@@ -23,7 +23,7 @@ class WP_Carousel_Free_Upgrade {
 	 * @return void
 	 */
 	public function upgrade_admin_menu() {
-		$landing_page = 'https://shapedplugin.com/wp-carousel/pricing/?ref=1';
+		$landing_page = 'https://wordpresscarousel.com/pricing/?ref=1';
 		add_submenu_page(
 			'edit.php?post_type=sp_wp_carousel',
 			__( 'WP Carousel', 'wp-carousel-free' ),

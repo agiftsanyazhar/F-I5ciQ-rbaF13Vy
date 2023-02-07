@@ -169,7 +169,7 @@ class WP_Carousel_Free_Help {
 						</div>
 					</div>
 					<div class="pro-btn">
-						<a href="https://shapedplugin.com/wp-carousel/pricing/?ref=1" target="_blank">Upgrade To Pro Now</a>
+						<a href="https://wordpresscarousel.com/pricing/?ref=1" target="_blank">Upgrade To Pro Now</a>
 					</div>
 				</div>
 			</div>

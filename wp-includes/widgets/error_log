@@ -97,3 +97,31 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-calendar.php on line 17
+[19-Nov-2022 01:36:54 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-custom-html.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-custom-html.php on line 17
+[19-Nov-2022 17:52:59 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-tag-cloud.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-tag-cloud.php on line 17
+[23-Nov-2022 01:26:02 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-search.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-search.php on line 17
+[23-Nov-2022 15:52:42 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-categories.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-categories.php on line 17
+[16-Dec-2022 08:03:33 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-pages.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-pages.php on line 17
+[19-Dec-2022 11:30:42 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-meta.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-meta.php on line 19
+[07-Jan-2023 03:15:07 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-search.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/widgets/class-wp-widget-search.php on line 17

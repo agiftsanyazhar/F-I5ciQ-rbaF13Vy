@@ -2,16 +2,16 @@
 Contributors: Steve85b
 Tags: SSL, https, force SSL, mixed content, insecure content, secure website, website security, TLS, security, secure socket layers, HSTS
 Requires at least: 4.6
-Tested up to: 5.8.1
-Stable tag: 3.2.1
+Tested up to: 6.1.1
+Stable tag: 3.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 A fix for mixed content! This Plugin creates protocol relative urls by removing http + https from links. Works in Front- and Backend!
 
 == Description ==
-
-**To see a demo of the plugin in action please click here: [https://tastewp.com/new/?pre-installed-plugin-slug=http-https-remover](https://tastewp.com/new/?pre-installed-plugin-slug=http-https-remover)**
+**Try it out on your free dummy site: Click here => [https://tastewp.com/plugins/http-https-remover](https://tastewp.com/plugins/http-https-remover).**
+(this trick works for all plugins in the WP repo - just replace "wordpress" with "tastewp" in the URL)
 
 UPDATE: This plugin will be maintained again! It changed ownership and we're currently collecting ideas how to further improve it. If you have any cool ideas, please let us know in Support Forum. Thank you!
 
@@ -97,6 +97,19 @@ Change all your CDN references to load with // (this will adapt based on how the
 1. The Sourcecode of the Website will look like this!
 
 == Changelog ==
+
+= 3.2.3 =
+* Adjusted PHP compatibility
+* Tested with WP 6.1.1
+
+= 3.2.2 =
+* Added support for PHP 8
+* Fixed activation issues on PHP 8 and 8.1
+* Tested up to WordPress 6.1-RC5
+* Fixed issues with option saving
+* Resolved errors of missing options
+* Added new option for enable/disable plugin testing module
+* Updated carrousel banner
 
 = 3.2.1 =
 * Fixed function call issue
@@ -261,6 +274,6 @@ Change all your CDN references to load with // (this will adapt based on how the
 * Initial release
 
 == Upgrade Notice ==
-
-= 3.2.1 =
-* Fixed function call issue
+= 3.2.3 =
+* Adjusted PHP compatibility
+* Tested with WP 6.1.1

@@ -130,3 +130,47 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[31-Dec-2022 20:40:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[31-Dec-2022 20:40:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[31-Dec-2022 20:40:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[31-Dec-2022 20:41:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[31-Dec-2022 20:46:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[31-Dec-2022 20:46:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[31-Dec-2022 20:46:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290
+[13-Jan-2023 11:39:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_ajax.php on line 7
+[14-Jan-2023 07:25:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php:61
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_rad_helper.php on line 61
+[18-Jan-2023 23:00:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_shortcode() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php:56
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/rad_shortcodes.php on line 56
+[04-Feb-2023 14:23:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php:290
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/rad_builder/class_radpagebuilder.php on line 290

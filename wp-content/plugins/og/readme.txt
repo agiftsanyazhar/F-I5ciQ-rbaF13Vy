@@ -3,8 +3,8 @@ Contributors: iworks
 Donate link: https://ko-fi.com/iworks?utm_source=og&utm_medium=readme-donate
 Tags: OpenGraph, Open Graph, social, share, Facebook, meta, graph API, Twitter, social share, share links, meta headers, Pinterest
 Requires at least: 5.0
-Tested up to: 6.0
-Stable tag: 3.1.7
+Tested up to: 6.1
+Stable tag: 3.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,6 +126,14 @@ You can use [Simple SEO Improvements](https://wordpress.org/plugins/simple-seo-i
 Rich filters implementation allows to change almost every output of this plugin, but this is for technicians: learn more on [OG Plugin Documentation Site](http://og.iworks.pl/).
 
 == Changelog ==
+
+
+= 3.1.9 (2022-11-21) =
+* Added `og_head_link_rel_image_src_enabled` filter to disable head link output.
+* Added `og_head_meta_title_image_enabled` filter to disable head meta output.
+
+= 3.1.8 (2022-11-08) =
+* Fixed two PHP warnings due to lack of array index. Props for [Leonidas](https://wordpress.org/support/users/visionoptika/).
 
 = 3.1.7 (2022-08-16) =
 * Fixed issue with [Reading Time WP](https://wordpress.org/plugins/reading-time-wp/) it returns string instead number for reading time less than 1 minute. Props for Radosław Serba.

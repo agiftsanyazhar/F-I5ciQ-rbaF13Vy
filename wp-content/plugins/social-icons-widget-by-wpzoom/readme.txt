@@ -4,8 +4,8 @@ Donate link: https://www.wpzoom.com/
 Tags: social icons, social networks, social media, social media icons, icons, social profiles, social widget, widget, block, social block, block icons, academicons, elementor, social networking, sharing, share buttons, fontawesome
 Requires at least: 5.2
 Requires PHP: 7.2
-Tested up to: 6.0
-Stable tag: 4.2.8
+Tested up to: 6.1
+Stable tag: 4.2.10
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -145,6 +145,13 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 8. Widget Settings
 
 == Changelog ==
+
+= 4.2.10 =
+* Big performance improvements: removed old font formats needed for outdated browsers, reduced the number of loaded assets
+
+= 4.2.9 =
+* Fix Mastodon icon color
+* Add 'rel="me"' parameter
 
 = 4.2.8 =
 * Updating Academicons set to the latest version with new icons
@@ -355,6 +362,9 @@ Add the Social Icons Block to the editor and customize the icons as you want.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 4.2.10 =
+Major performance improvements. Make sure to clear the WordPress cache and regenerate combined/minified CSS.
 
 = 4.0.0 =
 Major update. We've added a new Social Icons Block in the new Gutenberg editor!

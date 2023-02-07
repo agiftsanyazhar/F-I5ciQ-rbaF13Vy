@@ -33,7 +33,11 @@ class WDTConfigController {
             sanitize_text_field($tableData->var3) : '';
 
         // trying to generate/validate the WPDataTable config
-        $res = WDTConfigController::tryCreateTable($tableData->table_type, $tableData->content);
+        $res = WDTConfigController::tryCreateTable(
+            $tableData->table_type,
+            $tableData->content,
+            $tableData->file_location
+        );
 
         if (empty($res->error)) {
             // If the table can be created by wpDataTables performing the save to DB
@@ -53,7 +57,9 @@ class WDTConfigController {
                     if (count($wpDataTable->getDataRows()) > 2000) {
                         $tableData->server_side = 1;
                     }
-                    if ($tableData->table_type == 'csv' || $tableData->table_type == 'xls') {
+                    if ($tableData->file_location == 'wp_media_lib' &&
+                        ($tableData->table_type === 'csv' || $tableData->table_type === 'xls')
+                    ) {
                         $tableData->content = WDTTools::pathToUrl($tableData->content);
                     }
                     $tableData->editor_roles = !empty($tableData->editor_roles) ? explode(",", $tableData->editor_roles) : '';
@@ -95,7 +101,9 @@ class WDTConfigController {
             if (count($wpDataTable->getDataRows()) > 2000) {
                 $tableData->server_side = 1;
             }
-            if ($tableData->table_type == 'csv' || $tableData->table_type == 'xls') {
+            if ($tableData->file_location == 'wp_media_lib' &&
+                ($tableData->table_type === 'csv' || $tableData->table_type === 'xls')
+            ) {
                 $tableData->content = WDTTools::pathToUrl($tableData->content);
             }
             $tableData->editor_roles = !empty($tableData->editor_roles) ? explode(",", $tableData->editor_roles) : '';
@@ -152,6 +160,7 @@ class WDTConfigController {
             $table->columns = self::getColumnsConfig($tableId);
             $table->info_block = (isset($advancedSettings->info_block)) ? $advancedSettings->info_block : 1;
             $table->showTableToolsIncludeHTML = (isset($advancedSettings->showTableToolsIncludeHTML)) ? $advancedSettings->showTableToolsIncludeHTML : 0;
+            $table->showTableToolsIncludeTitle = (isset($advancedSettings->showTableToolsIncludeTitle)) ? $advancedSettings->showTableToolsIncludeTitle : 0;
             $table->responsiveAction = (isset($advancedSettings->responsiveAction)) ? $advancedSettings->responsiveAction : 'icon';
             $table->pagination = (isset($advancedSettings->pagination)) ? $advancedSettings->pagination : 1;
             $table->paginationAlign = (isset($advancedSettings->paginationAlign)) ? $advancedSettings->paginationAlign : 'right';
@@ -259,6 +268,7 @@ class WDTConfigController {
             'show_title' => $table->show_title,
             'table_type' => $table->table_type,
             'content' => $table->content,
+            'file_location' => $table->file_location,
             'sorting' => $table->sorting,
             'fixed_layout' => $table->fixed_layout,
             'word_wrap' => $table->word_wrap,
@@ -282,6 +292,7 @@ class WDTConfigController {
                 array(
                     'info_block' => $table->info_block,
                     'showTableToolsIncludeHTML' => $table->showTableToolsIncludeHTML,
+                    'showTableToolsIncludeTitle' => $table->showTableToolsIncludeTitle,
                     'responsiveAction' => $table->responsiveAction,
                     'pagination' => $table->pagination,
                     'paginationAlign' => $table->paginationAlign,
@@ -343,6 +354,7 @@ class WDTConfigController {
         $table->table_type = sanitize_text_field($table->table_type);
         $table->tools = (int)$table->tools;
         $table->showTableToolsIncludeHTML = (int)$table->showTableToolsIncludeHTML;
+        $table->showTableToolsIncludeTitle = (int)$table->showTableToolsIncludeTitle;
         $table->responsive = (int)$table->responsive;
         $table->hide_before_load = (int)$table->hide_before_load;
         $table->fixed_layout = (int)$table->fixed_layout;
@@ -358,6 +370,7 @@ class WDTConfigController {
         $table->pagination = (int)$table->pagination;
         $table->paginationAlign = sanitize_text_field($table->paginationAlign);
         $table->paginationLayout = sanitize_text_field($table->paginationLayout);
+        $table->file_location = sanitize_text_field($table->file_location);
         $table->simpleResponsive = (int)$table->simpleResponsive;
         $table->simpleHeader = (int)$table->simpleHeader;
         $table->stripeTable = (int)$table->stripeTable;
@@ -402,9 +415,20 @@ class WDTConfigController {
             $table->tabletools_config = array();
         }
 
-        $table->columns = WDTConfigController::sanitizeColumnsConfig($table->columns);
+	    if ($table->table_type == 'nested_json' && isset($table->jsonAuthParams)) {
+		    $table->jsonAuthParams = WDTConfigController::sanitizeNestedJsonParams($table->jsonAuthParams);
+		    $table->content = json_encode($table->jsonAuthParams);
+	    }
 
-        if (($table->table_type == 'csv') || ($table->table_type == 'xls')) {
+	    if ($table->table_type != 'simple') {
+		    $table->columns = WDTConfigController::sanitizeColumnsConfig($table->columns);
+	    } else {
+		    $table = self::sanitizeTableSettingsSimpleTable($table);
+	    }
+
+        if ($table->file_location == 'wp_media_lib' &&
+            (($table->table_type == 'csv') || ($table->table_type == 'xls'))
+        ) {
             $table->content = WDTTools::urlToPath($table->content);
         }
 
@@ -510,6 +534,69 @@ class WDTConfigController {
         return $rowsDataSanitized;
     }
 
+	/**
+	 * Helper method for sanitizing the user input for nested JSON params
+	 * @param stdClass $jsonParams object with nested JSON params
+	 * @return stdClass object with sanitized nested JSON params
+	 */
+	public static function sanitizeNestedJsonParams($jsonParams){
+		$sanitizedParams = new stdClass();
+
+		if (isset($jsonParams->url)){
+			$sanitizedParams->url = sanitize_url($jsonParams->url);
+			if ( is_admin() && ! current_user_can( 'unfiltered_html' ) )
+				$sanitizedParams->url = sanitize_url(wp_kses_post($jsonParams->url));
+		} else {
+			$sanitizedParams->url = '';
+		}
+
+		if (isset($jsonParams->method)){
+			$sanitizedParams->method = sanitize_text_field($jsonParams->method);
+		} else {
+			$sanitizedParams->method = 'get';
+		}
+
+		if (isset($jsonParams->authOption)){
+			$sanitizedParams->authOption = sanitize_text_field($jsonParams->authOption);
+		} else {
+			$sanitizedParams->authOption = '';
+		}
+		if (isset($jsonParams->username)){
+			$sanitizedParams->username = sanitize_text_field($jsonParams->username);
+			if ( is_admin() && ! current_user_can( 'unfiltered_html' ) )
+				$sanitizedParams->username = sanitize_text_field(wp_kses_post($jsonParams->username));
+		} else {
+			$sanitizedParams->username = '';
+		}
+		if (isset($jsonParams->password)){
+			$sanitizedParams->password = sanitize_text_field($jsonParams->password);
+			if ( is_admin() && ! current_user_can( 'unfiltered_html' ) )
+				$sanitizedParams->password = sanitize_text_field(wp_kses_post($jsonParams->password));
+		} else {
+			$sanitizedParams->password = '';
+		}
+		if (isset($jsonParams->customHeaders) && !empty($jsonParams->customHeaders)){
+			foreach ($jsonParams->customHeaders as &$customHeader){
+				$customHeader->setKeyName = sanitize_text_field($customHeader->setKeyName);
+				$customHeader->setKeyValue = sanitize_textarea_field($customHeader->setKeyValue);
+				if ( is_admin() && ! current_user_can( 'unfiltered_html' ) ) {
+					$customHeader->setKeyName = sanitize_text_field(wp_kses_post($customHeader->setKeyName));
+					$customHeader->setKeyValue = sanitize_textarea_field(wp_kses_post($customHeader->setKeyValue));
+				}
+			}
+			$sanitizedParams->customHeaders = $jsonParams->customHeaders;
+		} else {
+			$sanitizedParams->customHeaders = [];
+		}
+		if (isset($jsonParams->root)){
+			$sanitizedParams->root = sanitize_text_field($jsonParams->root);
+		} else {
+			$sanitizedParams->root = '';
+		}
+
+		return $sanitizedParams;
+	}
+
     /**
      * Helper method for sanitizing the user input in the table config
      * @param array $columns Array with the columns coming from front-end form
@@ -550,7 +637,7 @@ class WDTConfigController {
                 $column->possibleValuesType = sanitize_text_field($column->possibleValuesType);
                 $column->skip_thousands_separator = (int)$column->skip_thousands_separator;
                 $column->sorting = (int)$column->sorting;
-                if ( ! current_user_can( 'unfiltered_html' ) ) {
+                if (is_admin() && ! current_user_can( 'unfiltered_html' ) ) {
                     $column->text_after = sanitize_text_field(wp_kses_post($column->text_after));
                     $column->text_before = sanitize_text_field(wp_kses_post($column->text_before));
                 } else {
@@ -584,7 +671,7 @@ class WDTConfigController {
      * @param $content - Content for creating the table (path to source or a MySQL query)
      * @return stdClass Object which has an 'error' property in case there were problems, or a 'table' on success
      */
-    public static function tryCreateTable($type, $content) {
+    public static function tryCreateTable($type, $content, $fileLocation = '') {
 
         global $wdtVar1, $wdtVar2, $wdtVar3;
 
@@ -597,6 +684,7 @@ class WDTConfigController {
         $tableData = new stdClass();
         $tableData->table_type = $type;
         $tableData->content = $content;
+        $tableData->file_location = $fileLocation;
         $tableData->init_read = true;
         $tableData->limit = 10;
         $tableData->var1 = !empty($wdtVar1) ? $wdtVar1 : '';
@@ -1031,6 +1119,7 @@ class WDTConfigController {
         $table->show_title = 0;
         $table->table_type = '';
         $table->showTableToolsIncludeHTML = 0;
+        $table->showTableToolsIncludeTitle = 0;
         $table->tools = 1;
         $table->responsive = 0;
         $table->hide_before_load = 1;
@@ -1046,6 +1135,7 @@ class WDTConfigController {
         $table->pagination = 1;
         $table->paginationAlign = 'right';
         $table->paginationLayout = 'full_numbers';
+        $table->file_location = 'wp_media_lib';
         $table->simpleResponsive = 0;
 	    $table->cache_source_data = 0;
 	    $table->auto_update_cache = 0;

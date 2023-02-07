@@ -2277,7 +2277,7 @@
           opacity: 0,
         }, 200);
         jQuery(".spwpc-after-copy-text").animate({
-          bottom: 0
+          bottom: -100
         }, 0);
       }, 2000);
     });
@@ -2314,7 +2314,7 @@
           opacity: 0,
         }, 200);
         jQuery(".spwpc-after-copy-text").animate({
-          bottom: 0
+          bottom: -100
         }, 0);
       }, 2000);
     });
@@ -2364,7 +2364,7 @@
           }
 
           // Convert JSON string to BLOB.
-		  var blob = new Blob([json], { type: 'application/json' });
+          var blob = new Blob([json], { type: 'application/json' });
           var link = document.createElement('a');
           var wpcp_time = $.now();
           link.href = window.URL.createObjectURL(blob);
@@ -2416,15 +2416,22 @@
         }, 3000);
       }
     });
-
+    // Hide justified layout if source type is not "image carousel".
+    $('.wpcf-field-carousel_type').on('change', function () {
+      if ($('.wpcf-field-carousel_type input[name="sp_wpcp_upload_options[wpcp_carousel_type]"]:checked').val() == 'image-carousel') {
+        $('.wpcp_layout .wpcf--sibling.wpcf--image').eq(4).show();
+      } else {
+        $('.wpcp_layout .wpcf--sibling.wpcf--image').eq(4).hide();
+      }
+    });
     // hide Carousel Settings when grid layout will be selected.
-	  if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'grid') {
+    if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'grid') {
       $(".wpcf-nav-metabox li:nth-child(5)").hide();
     } else {
       $(".wpcf-nav-metabox li:nth-child(5)").show();
     }
     $('.wpcf-field-image_select.wpcp_layout').on('change', function () {
-		if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'grid') {
+      if ($('.wpcp_layout input[name="sp_wpcp_shortcode_options[wpcp_layout]"]:checked').val() == 'grid') {
         $(".wpcf-nav-metabox li:nth-child(5)").hide();
       } else {
         $(".wpcf-nav-metabox li:nth-child(5)").show();

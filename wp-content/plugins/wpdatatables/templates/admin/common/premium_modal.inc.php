@@ -34,7 +34,7 @@
             <div class="modal-footer">
                 <a id="wdt-premium-compare-link"><?php esc_html_e('Compare', 'wpdatatables') ?></a>
                 <span><?php esc_html_e('or', 'wpdatatables') ?></span>
-                <a href="https://wpdatatables.com/pricing/" target="_blank"><?php esc_html_e('View Pricing', 'wpdatatables') ?></a>
+                <a href="https://wpdatatables.com/pricing/?utm_source=wpdt-lite&utm_medium=lite-upgrade&utm_content=wpdt&utm_campaign=wpdt" target="_blank"><?php esc_html_e('View Pricing', 'wpdatatables') ?></a>
             </div>
             <!--/ .modal-footer -->
         </div>

@@ -4,7 +4,7 @@
    * File for our cool Carousel in the footer
    *
    * @category Child Plugin
-   * @version v0.1.0
+   * @version v0.2.0
    * @since v0.1.0
    * @author iClyde <kontakt@iclyde.pl>
    */
@@ -32,6 +32,7 @@
         private $cdp_premium = 'copy-delete-posts-premium/copy-delete-posts-premium.php';
         private $cdp_slug = 'copy-delete-posts/copy-delete-posts.php';
         private $mpu_slug = 'pop-up-pop-up/pop-up-pop-up.php';
+        private $redi_slug = 'redirect-redirection/redirect-redirection.php';
 
         /*
         * Compile some variables for "future us"
@@ -44,7 +45,7 @@
           $this->_root_dir = $root_dir;
 
           // Add handler for Ajax request
-          if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Check if slug is defined
             if (isset($_POST['slug']) && !empty($_POST['slug'])) {
@@ -129,7 +130,7 @@
           // Get menu slug name
           if (!$this->menu_name($menu)) return false;
 
-          if ($this->page === $this->menu && !defined('INISEV_CAROUSEL')) {
+          if (/*$this->page === $this->menu && */!defined('INISEV_CAROUSEL')) {
 
             // Initialize Carousel constant
             define('INISEV_CAROUSEL', true);
@@ -142,7 +143,9 @@
             wp_enqueue_style('inisev-carousel-style', ($this->url . 'assets/style.min.css'), [], filemtime($this->_root_dir . '/assets/style.min.css'));
 
             // Print the footer
-            add_action('in_admin_footer', [&$this, '_print'], 1);
+            if (!has_action('ins_global_print_carrousel')) {
+              add_action('ins_global_print_carrousel', [&$this, '_print'], 1);
+            }
 
           }
 
@@ -235,7 +238,8 @@
 
           // Make sure it found something
           if (isset($this->menu)) return true;
-          else return $this->fail(6);
+          else return true;
+          // else return $this->fail(6);
 
         }
 
@@ -379,6 +383,12 @@
                 $url = admin_url() . 'admin.php?page=backup-migration';
               }
 
+              // Redirection for RED
+              if ($_POST['slug'] === 'redi') {
+                update_option('irrp_activation_redirect', true);
+                $url = admin_url() . 'admin.php?page=irrp-redirection';
+              }
+
               // Send success
               wp_send_json_success([ 'installed' => true, 'url' => $url ]);
 
@@ -434,6 +444,10 @@
 
             $this->install($this->mpu_slug, 'pop-up-pop-up');
 
+          } elseif ($slug == 'redi') {
+
+            $this->install($this->redi_slug, 'redirect-redirection');
+
             // Anything else error
           } else wp_send_json_error();
 
@@ -446,7 +460,7 @@
     if (!defined('INISEV_CAROUSEL')) {
 
       // Make sure settings/menu page slug exsits
-      if (!empty($_GET['page']) || $_SERVER['REQUEST_METHOD'] === 'POST') {
+      if (!empty($_GET['page']) || (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST')) {
 
         // Initialize the Carousel
         $carousel = new Inisev_Carousel(__FILE__, __DIR__);

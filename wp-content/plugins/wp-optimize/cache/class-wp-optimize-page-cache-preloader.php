@@ -2,6 +2,9 @@
 
 if (!defined('ABSPATH')) die('No direct access allowed');
 
+if (!class_exists('WP_Optimize_Load_Url_Task')) {
+	require_once(WPO_PLUGIN_MAIN_PATH . 'cache/class-wpo-load-url-task.php');
+}
 
 class WP_Optimize_Page_Cache_Preloader extends WP_Optimize_Preloader {
 
@@ -327,18 +330,6 @@ class WP_Optimize_Page_Cache_Preloader extends WP_Optimize_Preloader {
 		}
 
 		return $urls;
-	}
-
-	/**
-	 * Get the path to a local sitemap file
-	 *
-	 * @return string
-	 */
-	private function get_local_sitemap_file() {
-		if (!function_exists('get_home_path')) {
-			include_once ABSPATH . '/wp-admin/includes/file.php';
-		}
-		return trailingslashit(get_home_path()) . $this->get_sitemap_filename();
 	}
 
 	/**

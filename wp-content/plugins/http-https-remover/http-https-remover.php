@@ -3,11 +3,13 @@
  * Plugin Name: HTTP / HTTPS Removal
  * Plugin URI: https://wordpress.org/plugins/http-https-Removal/
  * Description: This Plugin creates protocol relative urls by removing http + https from links.
- * Version: 3.2.1
+ * Version: 3.2.3
  * Author: Steve85b
  * Author URI: https://inisev.com
  * License: GPLv3
  */
+
+if (!defined('ABSPATH')) exit;
 
 require_once 'analyst/main.php';
 analyst_init(array(
@@ -15,8 +17,6 @@ analyst_init(array(
 	'client-secret' => 'f07b52982090022fd84d273455f40dc3a5ccf328',
 	'base-dir' => __FILE__
 ));
-
-if (!defined('ABSPATH')) exit;
 
 function jr_httphttpsremover_default_activation_hook() {
 	set_transient('jr-wp-admin-notice', true, 0);
@@ -36,7 +36,7 @@ class HTTP_HTTPS_Removal
 		), 99, 1);
 
 		/* Plugin Activation Hook */
-		register_activation_hook(__FILE__,   array('jr_httphttpsremover_default_activation_hook'));
+		register_activation_hook(__FILE__, 'jr_httphttpsremover_default_activation_hook');
 		/* Add admin notice */
 		add_action('admin_notices', array($this, 'jr_activation_notice_hook'));
 		/* Adding links filter */
@@ -57,13 +57,13 @@ class HTTP_HTTPS_Removal
 	}
 
 	public function httpHttpsRegisterSettings() {
-		register_setting('httphttpsRemovalOptionGroup', 'httpHttpsRemovalOptions');
+		register_setting('httphttpsRemovalOptionGroup', 'httpHttpsRemovalOptions', array($this, 'jr_settings_save_control'));
 
 		add_settings_section('httphttpsRemovalSection','','','httphttpsRemovalOptionGroup');
 
 		add_settings_field(
 			'enableDisable',
-			__('Enable/Disable', 'httphttpsRemovalOptionGroup'),
+			__('Enable/Disable', 'http-https-remover'),
 			array($this,'enableDisableCallback'),
 			'httphttpsRemovalOptionGroup',
 			'httphttpsRemovalSection',
@@ -74,7 +74,7 @@ class HTTP_HTTPS_Removal
 
 		add_settings_field(
 			'fixGoogleFonts',
-			__( 'Fix Google Fonts Issue', 'httphttpsRemovalOptionGroup' ),
+			__( 'Fix Google Fonts Issue', 'http-https-remover' ),
 			array($this,'fixGoogleFontsCallback'),
 			'httphttpsRemovalOptionGroup',
 			'httphttpsRemovalSection',
@@ -85,7 +85,7 @@ class HTTP_HTTPS_Removal
 
 		add_settings_field(
 			'ignoreURLs',
-			__( 'Ignore URLs', 'httphttpsRemovalOptionGroup' ),
+			__( 'Ignore URLs', 'http-https-remover' ),
 			array($this,'ignoreURLsCallback'),
 			'httphttpsRemovalOptionGroup',
 			'httphttpsRemovalSection',
@@ -96,7 +96,7 @@ class HTTP_HTTPS_Removal
 
 		add_settings_field(
 			'ignoreAdmin',
-			__( 'Ignore Admin Links', 'httphttpsRemovalOptionGroup' ),
+			__( 'Ignore Admin Links', 'http-https-remover' ),
 			array($this,'ignoreAdminCallback'),
 			'httphttpsRemovalOptionGroup',
 			'httphttpsRemovalSection',
@@ -104,6 +104,32 @@ class HTTP_HTTPS_Removal
 				'label_for' => 'ignoreAdmin'
 			]
 		);
+
+		add_settings_field(
+			'manageTasteWPModule',
+			__( 'Test new plugins before installing', 'http-https-remover' ),
+			array($this,'manageTasteWPModule'),
+			'httphttpsRemovalOptionGroup',
+			'httphttpsRemovalSection',
+			[
+				'label_for' => 'manageTasteWPModule'
+			]
+		);
+	}
+
+	public function jr_settings_save_control($input)
+	{
+		if (is_array($input)) {
+			if (isset($input['manageTasteWPModule']) && $input['manageTasteWPModule'] == '1') {
+				update_option('_tifm_feature_enabled', 'enabled');
+				delete_option('_tifm_disable_feature_forever', true);
+			} else {
+				update_option('_tifm_feature_enabled', 'disabled');
+				update_option('_tifm_disable_feature_forever', true);
+			}
+		}
+
+		return $input;
 	}
 
 	public function enableDisableCallback($args)
@@ -111,15 +137,15 @@ class HTTP_HTTPS_Removal
 		// get the value of the setting we've registered with register_setting()
 		$options = get_option('httpHttpsRemovalOptions');
 		$checked = "";
-		if ( is_array( $options ) && $options['enableDisable'] == '1' ) {
+		if ( is_array( $options ) && isset($options['enableDisable']) && $options['enableDisable'] == '1' ) {
 			$checked = 'Checked';
 		}
 		// output the field
 		?>
 		<input type="checkbox" name="httpHttpsRemovalOptions[<?php echo esc_attr( $args['label_for'] ); ?>]" value="1" <?php echo $checked;?> id="<?php echo esc_attr( $args['label_for'] ); ?>">
-		<span>Enable HTTP/HTTPs Removal</span>
+		<span><?php esc_html_e( 'Enable HTTP/HTTPs Removal', 'http-https-remover' ); ?></span>
 		<p class="description">
-			<?php esc_html_e( '(Only when you enable it the http/https removal will be active. Please don\'t forget to click on "Save" below!)', 'httpHttpsRemovalOptions' ); ?>
+			<?php esc_html_e( '(Only when you enable it the http/https removal will be active. Please don\'t forget to click on "Save" below!)', 'http-https-remover' ); ?>
 		</p>
 		<?php
 	}
@@ -128,25 +154,25 @@ class HTTP_HTTPS_Removal
 	{
 		$options = get_option('httpHttpsRemovalOptions');
 		$checked = "";
-		if ( is_array( $options ) && $options['fixGoogleFonts'] == '1' ) {
+		if ( is_array( $options ) && isset($options['fixGoogleFonts']) && $options['fixGoogleFonts'] == '1' ) {
 			$checked = 'Checked';
 		}
 		?>
 		<input type="checkbox" name="httpHttpsRemovalOptions[<?php echo esc_attr( $args['label_for'] ); ?>]" value="1" <?php echo $checked;?> id="<?php echo esc_attr( $args['label_for'] ); ?>">
-		<span>Fix Google Fonts Issue.</span>
+		<span><?php esc_html_e( 'Fix Google Fonts Issue.', 'http-https-remover' ); ?></span>
 		<p class="description">
-			<?php esc_html_e( '(If you don\'t want to remove http/https from Google Fonts URL, please check this option!)', 'httpHttpsRemovalOptions' ); ?>
+			<?php esc_html_e( '(If you don\'t want to remove http/https from Google Fonts URL, please check this option!)', 'http-https-remover' ); ?>
 		</p>
 		<?php
 	}
 
 	public function ignoreURLsCallback($args)
 	{
-		$options = get_option('httpHttpsRemovalOptions');
+		$options = get_option('httpHttpsRemovalOptions', array());
 		?>
-		<textarea name="httpHttpsRemovalOptions[<?php echo esc_attr( $args['label_for'] ); ?>]" id="<?php echo esc_attr( $args['label_for'] ); ?>" cols="15" rows="10" class="textarea"><?php echo $options['ignoreURLs']?></textarea>
+		<textarea name="httpHttpsRemovalOptions[<?php echo esc_attr( $args['label_for'] ); ?>]" id="<?php echo esc_attr( $args['label_for'] ); ?>" cols="15" rows="10" class="textarea"><?php echo (isset($options['ignoreURLs']) ? $options['ignoreURLs']:'')?></textarea>
 		<p class="description">
-			<?php esc_html_e( '(Please add URL of the website here [one URL in one line]). Plugin will ignore those URLs to remove http/https!)', 'httpHttpsRemovalOptions' ); ?>
+			<?php esc_html_e( '(Please add URL of the website here [one URL in one line]). Plugin will ignore those URLs to remove http/https!)', 'http-https-remover' ); ?>
 		</p>
 		<?php
 	}
@@ -155,15 +181,63 @@ class HTTP_HTTPS_Removal
 	{
 		$options = get_option('httpHttpsRemovalOptions');
 		$checked = "";
-		if ( is_array( $options ) && $options['ignoreAdmin'] == '1' ) {
+		if ( is_array( $options ) && isset($options['ignoreAdmin']) && $options['ignoreAdmin'] == '1' ) {
 			$checked = 'Checked';
 		}
 		?>
 		<input type="checkbox" name="httpHttpsRemovalOptions[<?php echo esc_attr( $args['label_for'] ); ?>]" value="1" <?php echo $checked;?> id="<?php echo esc_attr( $args['label_for'] ); ?>">
-		<span>Ignore dashboard links</span>
+		<span><?php esc_html_e( 'Ignore dashboard links', 'http-https-remover' ); ?></span>
 		<p class="description">
-			<?php esc_html_e( '(If you check this, plugin will ignore links from administrator area!)', 'httpHttpsRemovalOptions' ); ?>
+			<?php esc_html_e( '(If you check this, plugin will ignore links from administrator area!)', 'http-https-remover' ); ?>
 		</p>
+		<?php
+	}
+
+	public function manageTasteWPModule($args)
+	{
+		$options = get_option('httpHttpsRemovalOptions');
+		$checked = "";
+		if ( is_array( $options ) && isset($options['manageTasteWPModule']) && $options['manageTasteWPModule'] == '1' ) {
+			$checked = 'checked';
+		}
+
+		$tifm_disabled = 'false';
+		if (get_option('_tifm_feature_enabled') === 'disabled') {
+			$tifm_disabled = 'true';
+		}
+
+		if ($tifm_disabled === 'false') {
+			$checked = 'checked';
+		} else {
+			$checked = '';
+		}
+
+		$tifm_scrollTo = false;
+		if (isset($_GET['scrollToSection']) && $_GET['scrollToSection'] === 'testPlugins') {
+			$tifm_scrollTo = true;
+		}
+		?>
+
+		<input type="checkbox" name="httpHttpsRemovalOptions[<?php echo esc_attr( $args['label_for'] ); ?>]" value="1" <?php echo $checked;?> id="<?php echo esc_attr( $args['label_for'] ); ?>">
+		<span><?php esc_html_e( 'Show "Try it first" button in add new plugin section', 'http-https-remover' ); ?></span>
+		<p class="description">
+			<?php esc_html_e( '(If this feature is activated, you’ll see “Try it out”-buttons on the screen where you can', 'http-https-remover' ); ?> <a href="<?php echo admin_url('plugin-install.php') ?>"><?php esc_html_e( 'add new plugins', 'http-https-remover' ); ?></a>.
+			<?php esc_html_e( 'Clicking on it will spin up a new WordPress instance with the respective plugin installed. Powered by', 'http-https-remover' ); ?> <a href="https://tastewp.com" target="_blank">TasteWP</a>)
+		</p>
+		<?php if ($tifm_scrollTo == true) { ?>
+		<script type="text/javascript">
+			let tr = document.querySelector('#manageTasteWPModule').closest('tr');
+			tr.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+			tr.style.transition = 'background-color .3s';
+			setTimeout(function () {
+				tr.style.backgroundColor = 'lightyellow';
+				setTimeout(function () {
+					tr.style.backgroundColor = '';
+				}, 1600);
+			}, 300);
+		</script>
+		<?php } ?>
+
 		<?php
 	}
 
@@ -187,6 +261,10 @@ class HTTP_HTTPS_Removal
 			</form>
 		</div>
 		<div class="clear"></div>
+
+		<!-- CARROUSEL -->
+		<?php do_action('ins_global_print_carrousel'); ?>
+		<!-- END OF CARROUSEL -->
 		<?php
 	}
 
@@ -244,11 +322,11 @@ class HTTP_HTTPS_Removal
 	{
 		$options = get_option('httpHttpsRemovalOptions');
 		// If plugin settings is not enabled, do not proceed
-		if (!is_array($options) || $options['enableDisable'] != '1') {
+		if (!is_array($options) || !isset($options['enableDisable']) || $options['enableDisable'] != '1') {
 			return;
 		}
 		// If ignore admin links
-		if ((is_admin() && is_array($options) && $options['ignoreAdmin'] == '1')) {
+		if ((is_admin() && is_array($options) && isset($options['ignoreAdmin']) && $options['ignoreAdmin'] == '1')) {
 			return;
 		}
 
@@ -259,7 +337,7 @@ class HTTP_HTTPS_Removal
 	public function removeHttpHttps($url)
 	{
 		$options = get_option('httpHttpsRemovalOptions');
-		if (is_array($options) && $options['fixGoogleFonts'] == '1') {
+		if (is_array($options) && isset($options['fixGoogleFonts']) && $options['fixGoogleFonts'] == '1') {
 			if (strpos($url, 'fonts.googleapis.com') !== false) {
 				return $url;
 			}
@@ -333,9 +411,25 @@ function jr_temp_function_to_check_checkbox_update_24_to_31()
     	if(!isset($removalOptions["ignoreAdmin"])) {
     		$removalOptions["ignoreAdmin"] = "0";
     	}
-		update_option('httpHttpsRemovalOptions', $removalOptions);
+    	if(!isset($removalOptions["manageTasteWPModule"])) {
+				$removalOptions["manageTasteWPModule"] = "1";
+				if (get_option('_tifm_feature_enabled') === 'disabled') {
+					$removalOptions["manageTasteWPModule"] = "0";
+				}
+    	}
+			update_option('httpHttpsRemovalOptions', $removalOptions);
     	update_option("jr_plugin_version",$current_version_function);
     }
 }
 add_action("init", "jr_temp_function_to_check_checkbox_update_24_to_31");
 include_once __DIR__ . '/banner/misc.php';
+
+// Activation of tryOutPlugins module
+add_action('plugins_loaded', function () {
+
+  if (!(class_exists('\Inisev\Subs\Inisev_Try_Out_Plugins') || class_exists('Inisev\Subs\Inisev_Try_Out_Plugins') || class_exists('Inisev_Try_Out_Plugins'))) {
+    require_once __DIR__ . '/modules/tryOutPlugins/tryOutPlugins.php';
+    $try_out_plugins = new \Inisev\Subs\Inisev_Try_Out_Plugins(__FILE__, __DIR__, 'HTTP / HTTPS Removal', 'options-general.php?page=httphttpsRemoval');
+  }
+
+});

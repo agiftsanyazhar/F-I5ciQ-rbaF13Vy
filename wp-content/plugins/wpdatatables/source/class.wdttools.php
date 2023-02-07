@@ -56,35 +56,47 @@ class WDTTools
      * @return mixed|null
      * @throws Exception
      */
-    public static function curlGetData($url)
-    {
-        $ch = curl_init();
-        $timeout = 5;
-        $agent = 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:17.0) Gecko/20100101 Firefox/17.0';
+	public static function curlGetData($url)
+	{
+		$ch = curl_init();
+		$timeout = 100;
+		$agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36';
 
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-        curl_setopt($ch, CURLOPT_REFERER, site_url());
-        $data = curl_exec($ch);
-        if (curl_error($ch)) {
-            $error = curl_error($ch);
-            curl_close($ch);
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+		curl_setopt($ch, CURLOPT_USERAGENT, $agent);
+		curl_setopt($ch, CURLOPT_REFERER, site_url());
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-            throw new Exception($error);
-        }
-        if (strpos($data, '<TITLE>Moved Temporarily</TITLE>')) {
-            throw new Exception(__('wpDataTables was unable to read your Google Spreadsheet, probably it is not published correctly. <br/> You can publish it by going to <b>File -> Publish to the web</b> ', 'wpdatatables'));
-        }
-        $info = curl_getinfo($ch);
-        curl_close($ch);
-        if ($info['http_code'] !== 404) {
-            return $data;
-        } else {
-            return NULL;
-        }
-    }
+		$data = apply_filters('wpdatatables_curl_get_data', null, $ch, $url);
+		if( null === $data ) {
+			$data = curl_exec($ch);
+			if (curl_error($ch)) {
+				$error = curl_error($ch);
+				curl_close($ch);
+
+				throw new Exception($error);
+			}
+			if (strpos($data, '<TITLE>Moved Temporarily</TITLE>') ||
+			    strpos($data, 'Error 400 (Bad Request)')) {
+				throw new Exception(__('wpDataTables was unable to read your Google Spreadsheet, as it\'s not been published correctly. <br/> You can publish it by going to <b>File ->Share -> Publish to the web</b> ', 'wpdatatables'));
+			}
+			$info = curl_getinfo($ch);
+			curl_close($ch);
+
+			if ($info['http_code'] === 404) {
+				return NULL;
+			}
+			if ($info['http_code'] === 401) {
+				throw new Exception(__('wpDataTables was unable to access data. Unauthorized access. Please make file accessible.', 'wpdatatables'));
+			}
+
+			$data = apply_filters('wpdatatables_curl_get_data_complete', $data, $url);
+		}
+
+		return $data;
+	}
 
 
     /**
@@ -266,7 +278,36 @@ class WDTTools
             'sZeroRecords' => __('No matching records found', 'wpdatatables'),
             'systemInfoSaved' => __('System info data has been copied to the clipboard. You can now paste it in file or in support topic.', 'wpdatatables'),
             'tableSaved' => __('Table saved successfully!', 'wpdatatables'),
-            'to' => __('To', 'wpdatatables')
+            'to' => __('To', 'wpdatatables'),
+            'clear_table_data' => __('Clear table data', 'wpdatatables'),
+            'star_rating' => __('Star rating', 'wpdatatables'),
+            'shortcode' => __('Shortcode', 'wpdatatables'),
+            'html_code' => __('HTML code', 'wpdatatables'),
+            'media' => __('Media', 'wpdatatables'),
+            'link' => __('Link', 'wpdatatables'),
+            'clip' => __('Clip', 'wpdatatables'),
+            'overflow' => __('Overflow', 'wpdatatables'),
+            'wrap' => __('Wrap', 'wpdatatables'),
+            'left' => __('Left', 'wpdatatables'),
+            'center' => __('Center', 'wpdatatables'),
+            'right' => __('Right', 'wpdatatables'),
+            'justify' => __('Justify', 'wpdatatables'),
+            'top' => __('Top', 'wpdatatables'),
+            'middle' => __('Middle', 'wpdatatables'),
+            'bottom' => __('Bottom', 'wpdatatables'),
+            'insert_row_above' => __('Insert row above', 'wpdatatables'),
+            'insert_row_below' => __('Insert row below', 'wpdatatables'),
+            'remove_row' => __('Remove row', 'wpdatatables'),
+            'insert_col_left' => __('Insert column left', 'wpdatatables'),
+            'insert_col_right' => __('Insert column right', 'wpdatatables'),
+            'remove_column' => __('Remove column', 'wpdatatables'),
+            'alignment' => __('Alignment', 'wpdatatables'),
+            'cut' => __('Cut', 'wpdatatables'),
+            'insert_custom' => __('Insert custom', 'wpdatatables'),
+            'undo' => __('Undo', 'wpdatatables'),
+            'redo' => __('Redo', 'wpdatatables'),
+            'text_wrapping' => __('Text wrapping', 'wpdatatables'),
+            'merge_cells' => __('Merge cells', 'wpdatatables'),
         );
     }
 
@@ -1215,6 +1256,9 @@ class WDTTools
             case 'json':
                 return 'JSON';
                 break;
+	        case 'nested_json':
+		        return 'Nested JSON';
+		        break;
             case 'serialized':
                 return 'Serialized PHP array';
                 break;

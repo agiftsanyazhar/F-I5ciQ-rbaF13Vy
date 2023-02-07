@@ -2,3 +2,7 @@
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/sodium_compat/src/File.php on line 9
+[12-Nov-2022 12:05:59 UTC] PHP Fatal error:  Uncaught Error: Class 'ParagonIE_Sodium_Core_Util' not found in /home/perpajakanvokasi/public_html/wp-includes/sodium_compat/src/File.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/sodium_compat/src/File.php on line 9

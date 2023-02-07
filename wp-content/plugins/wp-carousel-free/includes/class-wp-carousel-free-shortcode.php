@@ -17,8 +17,6 @@
  * This is used to define shortcode, shortcode attributes, and carousel types.
  */
 class WP_Carousel_Free_Shortcode {
-
-
 	/**
 	 * Holds the class object.
 	 *
@@ -34,7 +32,6 @@ class WP_Carousel_Free_Shortcode {
 	 */
 	public $post_id;
 
-
 	/**
 	 * Allows for accessing single instance of class. Class should only be constructed once per call.
 	 *
@@ -48,7 +45,6 @@ class WP_Carousel_Free_Shortcode {
 		}
 		return self::$instance;
 	}
-
 
 	/**
 	 * Full html show.
@@ -163,16 +159,14 @@ class WP_Carousel_Free_Shortcode {
 			"slidesToShow":{"lg_desktop":' . $column_lg_desktop . ', "desktop": ' . $column_desktop . ', "laptop": ' . $column_sm_desktop . ', "tablet": ' . $column_tablet . ', "mobile": ' . $column_mobile . '}, "responsive":{"desktop":' . $desktop_size . ', "laptop": ' . $laptop_size . ', "tablet": ' . $tablet_size . ', "mobile": ' . $mobile_size . '}, "rtl":' . $rtl . ', "lazyLoad": "' . $lazy_load_image . '", "swipe": ' . $swipe . ', "draggable": ' . $draggable . ', "swipeToSlide":' . $swipetoslide . ' }\' ';
 			// Carousel Configurations.
 			if ( wpcf_get_option( 'wpcp_swiper_js', true ) ) {
-				wp_enqueue_script( 'wpcf-swiper' );
+				wp_enqueue_script( 'wpcf-swiper-js' );
 			}
 			wp_enqueue_script( 'wpcf-swiper-config' );
-			ob_start();
 			include WPCAROUSELF_PATH . '/public/templates/carousel.php';
 			$html = ob_get_contents();
 			return apply_filters( 'sp_wpcp_carousel_slider', $html, $post_id );
 		}
 		if ( 'grid' === $wpcp_layout ) {
-			ob_start();
 			include WPCAROUSELF_PATH . '/public/templates/gallery.php';
 			$html = ob_get_contents();
 			return apply_filters( 'sp_wpcp_carousel_gallery', $html, $post_id );
@@ -186,17 +180,32 @@ class WP_Carousel_Free_Shortcode {
 	 * @return void
 	 */
 	public function sp_wp_carousel_shortcode( $attributes ) {
-		if ( empty( $attributes['id'] ) ) {
+		if ( empty( $attributes['id'] ) || 'sp_wp_carousel' !== get_post_type( $attributes['id'] ) || ( get_post_status( $attributes['id'] ) === 'trash' ) ) {
 			return;
 		}
-
-		$post_id = intval( $attributes['id'] );
+		$post_id = esc_attr( intval( $attributes['id'] ) );
 
 		// Video Carousel.
 		$upload_data        = get_post_meta( $post_id, 'sp_wpcp_upload_options', true );
 		$shortcode_data     = get_post_meta( $post_id, 'sp_wpcp_shortcode_options', true );
 		$main_section_title = get_the_title( $post_id );
 
+		// Stylesheet loading problem solving here. Shortcode id to push page id option for getting how many shortcode in the page.
+		// Get the existing shortcode ids from the current page.
+		$get_page_data      = WP_Carousel_Free_Public::get_page_data();
+		$found_generator_id = $get_page_data['generator_id'];
+		ob_start();
+		// This shortcode id not in page id option. Enqueue stylesheets in shortcode.
+		if ( ! is_array( $found_generator_id ) || ! $found_generator_id || ! in_array( $post_id, $found_generator_id ) ) {
+			wp_enqueue_style( 'wpcf-swiper' );
+			wp_enqueue_style( 'wp-carousel-free-fontawesome' );
+			wp_enqueue_style( 'wp-carousel-free' );
+
+			$dynamic_style = WP_Carousel_Free_Public::load_dynamic_style( $post_id, $shortcode_data, $upload_data );
+			echo '<style id="wp_carousel_dynamic_css' . esc_attr( $post_id ) . '">' . $dynamic_style['dynamic_css'] . '</style>';
+		}
+		// Update options if the existing shortcode id option not found.
+		WP_Carousel_Free_Public::wpf_db_options_update( $post_id, $get_page_data );
 		self::wpcf_html_show( $upload_data, $shortcode_data, $post_id, $main_section_title );
 		return ob_get_clean();
 	}

@@ -7,9 +7,9 @@
  * @package WP_Carousel_Free
  *
  * Plugin Name:       WP Carousel
- * Plugin URI:        https://shapedplugin.com/wp-carousel/
+ * Plugin URI:        https://wordpresscarousel.com/
  * Description:       The most powerful and user-friendly carousel, slider, and gallery plugin for WordPress. Create unlimited beautiful carousels, sliders, and galleries in minutes using images, posts, WooCommerce products, etc.
- * Version:           2.5.0
+ * Version:           2.5.3
  * Author:            ShapedPlugin
  * Author URI:        https://shapedplugin.com/
  * License:           GPL-2.0+
@@ -17,7 +17,7 @@
  * Text Domain:       wp-carousel-free
  * Domain Path:       /languages
  * WC requires at least: 4.0
- * WC tested up to: 6.9.4
+ * WC tested up to: 7.2.0
  */
 
 // If this file is called directly, abort.
@@ -119,7 +119,7 @@ class SP_WP_Carousel_Free {
 	 */
 	public function setup() {
 		$this->plugin_name = 'wp-carousel-free';
-		$this->version     = '2.5.0';
+		$this->version     = '2.5.3';
 		$this->define_constants();
 		$this->includes();
 		$this->load_dependencies();
@@ -290,9 +290,9 @@ class SP_WP_Carousel_Free {
 	 */
 	private function define_public_hooks() {
 		$plugin_public = new WP_Carousel_Free_Public( $this->get_plugin_name(), $this->get_version() );
-
+		$this->loader->add_action( 'wp_loaded', $plugin_public, 'register_all_scripts' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'save_post', $plugin_public, 'delete_page_wp_carousel_option_on_save' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_public, 'admin_enqueue_scripts' );
 
 		$plugin_shortcode = new WP_Carousel_Free_Shortcode( $this->get_plugin_name(), $this->get_version() );

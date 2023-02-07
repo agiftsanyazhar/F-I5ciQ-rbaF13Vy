@@ -70,6 +70,10 @@
 
     <!-- Templates -->
 
+    <!-- Custom headers row block-->
+	<?php include WDT_TEMPLATE_PATH . 'admin/table-settings/custom_headers_row_block.inc.php'; ?>
+    <!-- /Custom headers row block -->
+
     <!-- Conditional formatting block for column -->
     <?php include WDT_TEMPLATE_PATH . 'admin/table-settings/conditional_formatting_block.inc.php'; ?>
     <!-- /Conditional formatting block for column -->

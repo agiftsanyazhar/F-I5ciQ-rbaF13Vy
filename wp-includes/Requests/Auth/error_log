@@ -1,0 +1,4 @@
+[25-Dec-2022 10:53:25 UTC] PHP Fatal error:  Uncaught Error: Interface 'Requests_Auth' not found in /home/perpajakanvokasi/public_html/wp-includes/Requests/Auth/Basic.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/Requests/Auth/Basic.php on line 18

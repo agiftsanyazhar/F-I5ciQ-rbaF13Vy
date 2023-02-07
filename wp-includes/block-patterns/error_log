@@ -6,3 +6,11 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-standard-posts.php on line 9
+[08-Nov-2022 03:56:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _x() in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-medium-posts.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-medium-posts.php on line 9
+[17-Nov-2022 01:53:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _x() in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-offset-posts.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-patterns/query-offset-posts.php on line 9

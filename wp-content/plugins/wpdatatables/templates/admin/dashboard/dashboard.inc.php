@@ -337,13 +337,14 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                  </span>
                         </p>
                         <p class="wpdt-text wpdt-font m-b-18">
-                            A major update new features and stability improvements:
+                            A minor update with some bug fixes:
                         </p>
                         <div class="alert alert-info m-b-0" role="alert">
                             <i class="wpdt-icon-info-circle-full"></i>
                             <ul>
-                                <li><strong>Feature:</strong> Caching table data for non-server-side tables (Excel, CSV, Google sheet, XML, JSON, Nested JSON and PHP array).</li>
-                                <li><strong>Feature:</strong> Auto update cache for non server-side tables (Excel, CSV, Google sheet, XML, JSON, Nested JSON and PHP array).</li>
+                                <li><strong>BugFix:</strong> Fix for table title showing inside h2 instead of h3 tag.</li>
+                                <li><strong>BugFix:</strong> Fixed issue with simple tables in the back-end.</li>
+                                <li><strong>BugFix:</strong> Fixed bug for row height when displaying empty fields.</li>
                                 <li>Other small bug fixes.</li>
                             </ul>
                         </div>
@@ -375,6 +376,9 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                         <div class="wdt-premium-features">
                             <p class="wpdt-font">
                                 <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Create a table manually', 'wpdatatables'); ?>
+                            </p>
+                            <p class="wpdt-font">
+                                <i class="wpdt-icon-check m-r-8"></i><span style="color: red;font-weight: bold;">NEW! </span><?php esc_html_e('Update manual tables', 'wpdatatables'); ?>
                             </p>
                             <p class="wpdt-font">
                                 <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Creating tables from Google Spreadsheet', 'wpdatatables'); ?>
@@ -446,7 +450,7 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                 <i class="wpdt-icon-check m-r-8"></i><?php esc_html_e('Premium support', 'wpdatatables'); ?>
                             </p>
                         </div>
-                        <a class="btn btn-primary m-t-20 tms-store-checkout-wpdatatables">
+                        <a class="btn btn-primary m-t-20" target="_blank" href="https://wpdatatables.com/pricing/?utm_source=wpdt-lite&utm_medium=lite-upgrade&utm_content=wpdt&utm_campaign=wpdt">
                             <?php esc_html_e('Get Premium Today', 'wpdatatables'); ?></a>
                     </div>
                 </div>
@@ -719,7 +723,7 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                                 <?php esc_html_e('Appointments and Events WordPress Booking Plugin', 'wpdatatables'); ?>
                             </div>
                             <p class="wpdt-text wpdt-font m-b-0">
-                                <?php echo sprintf(esc_html__('Amelia Lite is a free appointment booking WordPress plugin that allows to set up a fully-featured automated booking system on your WordPress website and is a handy tool for small businesses and individuals that depend on stable appointment booking processes. %s businesses from healthcare, beauty, sports, automotive, educational, creative, HR and other industries use Amelia to flawlessly manage %s appointments and events worldwide each month.', 'wpdatatables') ,AMELIA_NUMBER_OF_ACTIVE_INSTALLS , AMELIA_NUMBER_OF_APPOINTMENTS ); ?></p>
+                                <?php echo sprintf(esc_html__('Amelia Lite is a free appointment and event WordPress booking plugin that allows to set up a fully-featured automated booking system on your WordPress website and is a handy tool for small businesses and individuals that depend on stable appointment booking processes and for premium %s businesses from healthcare, beauty, sports, automotive, educational, creative, HR and other industries use Amelia to flawlessly manage %s appointments and events worldwide each month.', 'wpdatatables') ,AMELIA_NUMBER_OF_ACTIVE_INSTALLS , AMELIA_NUMBER_OF_APPOINTMENTS ); ?></p>
                             <p>
                                 <span class="wdt-stars-container stars-88">★★★★★</span>
                                 <span class="wdt-rating"> <?php esc_html_e('Rating: 4.3 - 255 reviews') ?></span>
@@ -730,7 +734,7 @@ $tableChartsCount = (int)WDTTools::getTablesCount('chart');
                             </a>
                             <a href="https://wordpress.org/plugins/ameliabooking/" target="_blank" class="btn btn-primary">
                                 <?php esc_html_e('Learn More', 'wpdatatables'); ?>
-                                <i class="wpdt-icon-external-link-square-alt"></i>
+                                <i class="wpdt-icon-arrow-right"></i>
                             </a>
 
                         </div>

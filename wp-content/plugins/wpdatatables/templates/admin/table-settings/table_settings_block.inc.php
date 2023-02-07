@@ -118,8 +118,30 @@ $globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
                                                     data-content="<i class='wpdt-icon-star-full m-r-5' style='color: #FFC078;'></i> <span ><?php esc_attr_e('Google Spreadsheet ', 'wpdatatables'); ?><span class='wdt-premium'><?php esc_attr_e('Available in Premium', 'wpdatatables'); ?></span></span>"></option>
                                             <option value="xml"><?php esc_html_e('XML file', 'wpdatatables'); ?></option>
                                             <option value="json"><?php esc_html_e('JSON file', 'wpdatatables'); ?></option>
+                                            <option value="nested_json"><?php esc_html_e('Nested JSON', 'wpdatatables'); ?></option>
                                             <option value="serialized"><?php esc_html_e('Serialized PHP array', 'wpdatatables'); ?></option>
                                             <?php do_action('wdt_add_table_type_option'); ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /input source type selection -->
+                        </div>
+
+                        <div class="col-sm-4 wdt-file-location hidden">
+                            <h4 class="c-title-color m-b-2">
+                                <?php esc_html_e('File location', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Please choose a file location (WordPress Media Library or URL from any domain) for CSV or Excel files. Default option is WordPress Media Library.', 'wpdatatables'); ?>"></i>
+                            </h4>
+
+                            <!-- input source type selection -->
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <div class="select">
+                                        <select class="selectpicker" id="wdt-file-location">
+                                            <option value="wp_media_lib"><?php esc_html_e('WordPress Media Library', 'wpdatatables'); ?></option>
+                                            <option value="wp_any_url"><?php esc_html_e('URL from any domain', 'wpdatatables'); ?></option>
                                         </select>
                                     </div>
                                 </div>
@@ -146,6 +168,27 @@ $globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
                                 </div>
                             </div>
                             <!-- /input URL or path -->
+                        </div>
+
+                        <div class="col-sm-6 input-nested-json-url-block hidden">
+                            <h4 class="c-title-color m-b-2">
+			                    <?php esc_html_e('Input JSON URL', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Insert JSON URL. Please note that you are able to use dynamic Placeholders for this input like https://api.com/v1/data/%VAR1%/', 'wpdatatables'); ?>"></i>
+                            </h4>
+                            <!-- input JSON URL -->
+                            <div class="form-group">
+                                <div class="fg-line col-sm-9 p-0">
+                                    <input type="text" id="wdt-nested-json-url" class="form-control input-sm" autocomplete="new-password"
+                                           placeholder="<?php esc_attr_e('Insert or paste JSON URL', 'wpdatatables'); ?>">
+                                </div>
+                                <div class="col-sm-3 p-r-0">
+                                    <button class="btn btn-primary" id="wdt-get-nested-json-roots">
+					                    <?php esc_html_e('Get JSON roots', 'wpdatatables'); ?>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /input JSON URL -->
                         </div>
 
                         <div class="col-sm-6 mysql-settings-block hidden">
@@ -198,6 +241,137 @@ $globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
                         </div>
                     </div>
                     <!-- /.row -->
+
+                    <!-- Block for Nested JSON options -->
+                    <div class="row hidden" id="wdt-nested-json-block" >
+                        <!-- Choose method -->
+                        <div class="col-sm-3 nested-json-get-method">
+                            <h4 class="c-title-color m-b-2">
+				                <?php esc_html_e('Choose method', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Choose method GET or POST for getting data. GET is set by default.', 'wpdatatables'); ?>"></i>
+                            </h4>
+                            <!-- select JSON HTTP method -->
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <div class="select">
+                                        <select class="selectpicker" id="wdt-nested-json-get-type">
+                                            <option value="get"><?php esc_html_e('GET', 'wpdatatables'); ?></option>
+                                            <option value="post"><?php esc_html_e('POST', 'wpdatatables'); ?></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /select JSON HTTP method -->
+                        </div>
+                        <!-- /Choose method -->
+
+                        <!-- JSON authentication -->
+                        <div class="col-sm-3 nested-json-auth-options">
+                            <h4 class="c-title-color m-b-2">
+				                <?php esc_html_e('JSON authentication', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Set JSON authentication option. You can choose "Basic Authentication" with username and password or "No Auth" option. By default is set to "No Auth".', 'wpdatatables'); ?>"></i>
+                            </h4>
+                            <!-- select JSON Auth option -->
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <div class="select">
+                                        <select class="selectpicker" id="wdt-nested-json-auth-option">
+                                            <option value=""><?php esc_html_e('No Auth', 'wpdatatables'); ?></option>
+                                            <option value="basic_auth"><?php esc_html_e('Basic Authentication', 'wpdatatables'); ?></option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /select JSON Auth option -->
+                        </div>
+                        <!-- /JSON authentication -->
+
+                        <!-- Basic Authentication Credentials -->
+                        <div class="col-sm-6 nested-json-basic-auth-inputs hidden">
+                            <h4 class="c-title-color m-b-2">
+				                <?php esc_html_e('Basic Authentication Credentials', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Credentials for Basic Authentication ex. Username and Password', 'wpdatatables'); ?>"></i>
+                            </h4>
+                            <!-- input Username and Password -->
+                            <div class="form-group">
+                                <div class="col-sm-6 p-l-0">
+                                    <input type="text" id="wdt-nested-json-username" class="form-control input-sm" autocomplete="new-password"
+                                           placeholder="<?php esc_attr_e('ex. Username', 'wpdatatables'); ?>">
+                                </div>
+                                <div class="col-sm-6 p-0">
+                                    <input type="password" id="wdt-nested-json-password" class="form-control input-sm" autocomplete="new-password"
+                                           placeholder="<?php esc_attr_e('ex. Password', 'wpdatatables'); ?>">
+                                </div>
+                            </div>
+                            <!-- input Username and Password -->
+                        </div>
+                        <!-- /Basic Authentication Credentials -->
+                    </div>
+                    <!-- /Block for Nested JSON options -->
+
+                    <!-- Block for Nested JSON additional options -->
+                    <div class="row hidden" id="wdt-nested-json-additional-block" >
+                        <!-- Custom headers option-->
+                        <div class="col-sm-6 json-custom-headers">
+                            <h4 class="c-title-color m-b-2">
+				                <?php esc_html_e('Custom headers', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Headers are a key–value pair in clear-text string format. Add custom headers for API like key value pairs, ex. for key name insert apiKey, and for key value apiKeyValue.', 'wpdatatables'); ?>"></i>
+                            </h4>
+                            <!-- inputs for custom headers: Key Name and Key Value-->
+                            <div class="wdt-nested-json-custom-headers-container">
+                                <div class="row wdt-custom-headers-row-rule">
+                                    <div class="col-sm-6 wdt-custom-header-key-name">
+                                        <div class="form-group m-b-10">
+                                            <input placeholder="<?php esc_attr_e('Insert key name', 'wpdatatables'); ?>" type="text" class="form-control input-sm custom-header-key-name-value" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 wdt-custom-header-key-value">
+                                        <div class="form-group m-b-10">
+                                            <textarea placeholder="<?php esc_attr_e('Insert key value', 'wpdatatables'); ?>" type="text" class="form-control input-sm custom-header-key-value-value" value=""></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- /inputs for custom headers: Key Name and Key Value-->
+
+                            <!-- Add row button for custom headers -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <button class="btn pull-left m-t-10 wdt-add-nested-json-custom-headers-row">
+                                        <i class="wpdt-icon-plus-thin"></i> <?php esc_html_e('Add Row', 'wpdatatables'); ?>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /Add row button for custom headers -->
+                        </div>
+                        <!-- /Custom headers option-->
+
+                        <!-- JSON root-->
+                        <div class="col-sm-6 nested-json-roots hidden">
+                            <h4 class="c-title-color m-b-2">
+				                <?php esc_html_e('Choose JSON root', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-toggle="tooltip" data-placement="right"
+                                   title="<?php esc_attr_e('Here will be listed all roots from JSON endpoint. Every key that is array or object will be treated as separate root path. Choose root path where is your data.', 'wpdatatables'); ?>"></i>
+                            </h4>
+                            <!-- select JSON root -->
+                            <div class="form-group">
+                                <div class="fg-line">
+                                    <div class="select">
+                                        <select class="selectpicker" id="wdt-nested-json-root">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /select JSON root -->
+                        </div>
+                        <!-- /JSON root-->
+                    </div>
+                    <!-- Block for Nested JSON additional options -->
 
                     <div class="row" id="wdt-cache-block">
                         <div class="col-sm-3 m-b-16 hidden cache-settings-block">
@@ -633,18 +807,6 @@ $globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
 
                         </div>
 
-                    </div>
-                    <!-- /.row -->
-
-
-                </div>
-                <!-- /Table display settings -->
-
-                <!-- Table sorting and filtering settings -->
-                <div role="tabpanel" class="tab-pane fade" id="table-sorting-filtering-settings">
-                    <!-- .row -->
-                    <div class="row">
-
                         <div class="col-sm-4 m-b-16 pagination-layout-settings-block">
 
                             <h4 class="c-title-color m-b-2">
@@ -678,6 +840,17 @@ $globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
                             </div>
 
                         </div>
+
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /Table display settings -->
+
+                <!-- Table sorting and filtering settings -->
+                <div role="tabpanel" class="tab-pane fade" id="table-sorting-filtering-settings">
+                    <!-- .row -->
+                    <div class="row">
 
                         <div class="col-sm-4 m-b-20">
 
@@ -1196,6 +1369,35 @@ $globalAutoUpdateOption = get_option('wdtAutoUpdateOption');
                         </div>
                     </div>
                     <!-- /.row -->
+                    <div class="row">
+                        <div class="col-sm-4 m-b-16 table-tools-include-title-block hidden">
+
+                            <h4 class="c-title-color m-b-2">
+                                <?php esc_html_e('Include Table title', 'wpdatatables'); ?>
+                                <i class=" wpdt-icon-info-circle-thin" data-popover-content="#table-tools-title-hint"
+                                   data-toggle="html-popover" data-trigger="hover" data-placement="right"></i>
+                            </h4>
+
+                            <!-- Hidden popover with image hint -->
+                            <div class="hidden" id="table-tools-title-hint">
+                                <div class="popover-heading">
+                                    <?php esc_html_e('Include Table title', 'wpdatatables'); ?>
+                                </div>
+
+                                <div class="popover-body">
+                                    <?php esc_html_e(' If this is enabled, table title will be shown in first row  in the exported files of the Excel and Copy options.(CSV is not supported and on Print and PDF is included.)', 'wpdatatables'); ?>
+                                </div>
+                            </div>
+                            <!-- /Hidden popover with image hint -->
+
+                            <div class="toggle-switch" data-ts-color="blue">
+                                <input id="wdt-table-tools-include-title" type="checkbox">
+                                <label for="wdt-table-tools-include-title"
+                                       class="ts-label"><?php esc_html_e('Show table title in export files (Excel and Copy)', 'wpdatatables'); ?></label>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /Table tools settings -->

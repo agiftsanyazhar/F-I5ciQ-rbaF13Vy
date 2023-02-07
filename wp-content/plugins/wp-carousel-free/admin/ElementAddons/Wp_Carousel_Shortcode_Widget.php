@@ -128,7 +128,9 @@ class Wp_Carousel_Shortcode_Widget extends \Elementor\Widget_Base {
 			$upload_data        = get_post_meta( $post_id, 'sp_wpcp_upload_options', true );
 			$shortcode_data     = get_post_meta( $post_id, 'sp_wpcp_shortcode_options', true );
 			$main_section_title = get_the_title( $post_id );
-
+			// Load dynamic style for the existing shortcode.
+			$dynamic_style = WP_Carousel_Free_Public::load_dynamic_style( $post_id, $shortcode_data, $upload_data );
+			echo '<style id="wp_carousel_dynamic_css' . esc_attr( $post_id ) . '">' . $dynamic_style['dynamic_css'] . '</style>';
 			WP_Carousel_Free_Shortcode::wpcf_html_show( $upload_data, $shortcode_data, $post_id, $main_section_title );
 			?>
 			<script>

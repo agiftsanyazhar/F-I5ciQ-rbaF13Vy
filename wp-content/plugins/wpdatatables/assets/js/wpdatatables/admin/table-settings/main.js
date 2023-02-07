@@ -18,6 +18,13 @@
         });
 
         /**
+         * Change file location
+         */
+        $('#wdt-file-location').change(function (e) {
+            wpdatatable_config.setFileLocation($(this).val());
+        });
+
+        /**
          * Toggle server-side processing
          */
         $('#wdt-server-side').change(function(e){
@@ -57,6 +64,13 @@
          */
         $('#wdt-table-tools-include-html').change(function (e) {
             wpdatatable_config.setTableToolsIncludeHTML($(this).is(':checked') ? 1 : 0);
+        });
+
+        /**
+         * Toggle Table Tools Include table title option
+         */
+        $('#wdt-table-tools-include-title').change(function (e) {
+            wpdatatable_config.setTableToolsIncludeTitle($(this).is(':checked') ? 1 : 0);
         });
 
         /**
@@ -616,7 +630,7 @@
                 $('div.wdt-link-button-label-block').hide();
                 $('div.wdt-link-button-class-block').hide();
             } else if (['date', 'datetime'].indexOf($(this).val()) !== -1
-                && $.inArray(wpdatatable_config.table_type, ['xls', 'csv', 'google_spreadsheet', 'json', 'xml', 'serialized']) !== -1) {
+                && $.inArray(wpdatatable_config.table_type, ['xls', 'csv', 'google_spreadsheet', 'json','nested_json', 'xml', 'serialized']) !== -1) {
                 $('div.wdt-date-input-format-block').show();
                 $('div.wdt-possible-values-type-block').hide();
                 $('div.wdt-possible-values-options-block').hide();
@@ -903,6 +917,36 @@
                     }
                 }
             }
+            if (wpdatatable_config.table_type === 'nested_json'){
+
+                wpdatatable_config.jsonAuthParams = {
+                    url: $('#wdt-nested-json-url').val(),
+                    method: $('#wdt-nested-json-get-type').selectpicker('val'),
+                    authOption: $('#wdt-nested-json-auth-option').selectpicker('val'),
+                    username: $('#wdt-nested-json-username').val(),
+                    password: $('#wdt-nested-json-password').val(),
+                    customHeaders: wpdatatable_config.compileCustomHeadersRow(),
+                    root: $('#wdt-nested-json-root').val(),
+                };
+
+                if (wpdatatable_config.jsonAuthParams.root === ''){
+                    wdtNotify(wpdatatables_edit_strings.error, 'JSON roots can not be empty. Please set proper JSON roots or insert proper JSON params and click on Fetch JSON button again to get valid roots from JSON URL.', 'danger');
+                    return;
+                }
+                if (wpdatatable_config.jsonAuthParams.url === ''){
+                    $('.wdt-table-settings #wdt-nested-json-root').html('').selectpicker('refresh');
+                    $('.wdt-table-settings .nested-json-roots').addClass('hidden');
+                    wdtNotify(wpdatatables_edit_strings.error, 'JSON URL can not be empty', 'danger');
+                    return;
+                }
+                if ( wpdatatable_config.jsonAuthParams.authOption !== ''){
+                    if ( wpdatatable_config.jsonAuthParams.username === '' || wpdatatable_config.jsonAuthParams.password === ''){
+                        wdtNotify(wpdatatables_edit_strings.error, 'Credentials can not be empty', 'danger');
+                        return;
+                    }
+                }
+            }
+
             $('.wdt-preload-layer').animateFadeIn();
             $.ajax({
                 url: ajaxurl,
@@ -920,6 +964,7 @@
                         $('#wdt-error-modal .modal-body').html( data.error );
                         $('#wdt-error-modal').modal( 'show' );
                         $('.wdt-preload-layer').animateFadeOut();
+                        return;
                     }else{
                         // Reinitialize table with returned data
                         wpdatatable_config.initFromJSON( data.table );
@@ -1161,6 +1206,127 @@
             //Open the uploader dialog
             custom_uploader.open();
 
+        });
+
+        /**
+         * Change JSON Auth option
+         */
+        $('#wdt-nested-json-auth-option').change(function (e) {
+            let type = $(this).val();
+            switch( type ){
+                case 'basic_auth':
+                    jQuery('.wdt-table-settings .nested-json-basic-auth-inputs').removeClass('hidden');
+                    break;
+                default:
+                    jQuery('.wdt-table-settings .nested-json-basic-auth-inputs').addClass('hidden');
+                    jQuery('#wdt-nested-json-username').val('');
+                    jQuery('#wdt-nested-json-password').val('');
+                    break;
+            }
+            jQuery('#wdt-nested-json-auth-option').val( type ).selectpicker('refresh');
+        });
+
+        /**
+         * Get Nested JSON roots
+         */
+        $('#wdt-get-nested-json-roots').click(function (e) {
+            e.stopImmediatePropagation();
+            let url = $('#wdt-nested-json-url').val(),
+                authOption = $('#wdt-nested-json-auth-option').selectpicker('val'),
+                username = $('#wdt-nested-json-username').val(),
+                password = $('#wdt-nested-json-password').val(),
+                customHeaders = wpdatatable_config.compileCustomHeadersRow(),
+                params = {
+                    method: $('#wdt-nested-json-get-type').selectpicker('val')
+                };
+
+            if (url === ''){
+                $('.wdt-table-settings #wdt-nested-json-root').html('').selectpicker('refresh');
+                $('.wdt-table-settings .nested-json-roots').addClass('hidden');
+                wdtNotify(wpdatatables_edit_strings.error, 'JSON URL can not be empty', 'danger');
+                return;
+            }
+            params.url = url;
+            params.customHeaders = customHeaders;
+            if (authOption !== ''){
+                params.authOption = authOption;
+                if (username === '' || password === ''){
+                    wdtNotify(wpdatatables_edit_strings.error, 'Credentials can not be empty', 'danger');
+                    return;
+                }
+                params.username = username;
+                params.password = password;
+            }
+
+            // Add custom loader
+            let loader = document.createElement("div");
+            loader.classList.add("nested-json-loader");
+            $('#main-table-settings').css('opacity','0.5').append(loader)
+
+            $.ajax({
+                url: ajaxurl,
+                method: 'POST',
+                data: {
+                    action: 'wpdatatables_get_nested_json_roots',
+                    wdtNonce:  $('#wdtNonce').val(),
+                    params: JSON.stringify(params),
+                    tableConfig: JSON.stringify(wpdatatable_config.getJSON())
+                },
+                success: function (data) {
+                    if(data.success) {
+                        var options = '';
+                        $.each(data.data.roots, function (i, name) {
+                            options += '<option value="' + name + '">' + name + '</option>';
+                        });
+                        $('.wdt-table-settings #wdt-nested-json-root').html(options).selectpicker('refresh');
+                        $('.wdt-table-settings .nested-json-roots').removeClass('hidden');
+                        $('#main-table-settings .nested-json-loader').remove();
+                        $('#main-table-settings').css('opacity','1')
+                        jQuery('button.wdt-apply').prop( 'disabled', '' );
+                        wdtNotify(
+                            wpdatatables_edit_strings.success,
+                            wpdatatables_edit_strings.getJsonRoots,
+                            'success'
+                        );
+                    } else {
+                        $('.wdt-table-settings #wdt-nested-json-root').html('').selectpicker('refresh');
+                        $('.wdt-table-settings .nested-json-roots').addClass('hidden');
+                        $('#main-table-settings .nested-json-loader').remove();
+                        $('#main-table-settings').css('opacity','1')
+                        $('button.wdt-apply').prop( 'disabled', 'disabled' );
+                        wdtNotify('Error!', wpdatatables_edit_strings.errorText, 'danger');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    $('.wdt-table-settings #wdt-nested-json-root').html('').selectpicker('refresh');
+                    $('.wdt-table-settings .nested-json-roots').addClass('hidden');
+                    $('#main-table-settings .nested-json-loader').remove();
+                    $('#main-table-settings').css('opacity','1')
+                    $('button.wdt-apply').prop( 'disabled', 'disabled' );
+                    let message = xhr.responseText;
+                    wdtNotify('Error!', message, 'danger');
+                }
+            })
+
+        });
+
+        /**
+         * Add custom headers row
+         */
+        $('.wdt-add-nested-json-custom-headers-row').on('click', function (e) {
+            wpdatatable_config.renderCustomHeadersRow({
+                setKeyName: '',
+                setKeyValue: ''
+            });
+
+        });
+
+        /**
+         * Delete custom headers row
+         */
+        $(document).on('click', '.wdt-delete-custom-headers-row-rule', function (e) {
+            var $block = $(this).closest('div.wdt-custom-headers-row-rule');
+            $block.remove();
         });
 
         /**

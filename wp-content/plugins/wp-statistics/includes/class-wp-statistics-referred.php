@@ -41,6 +41,10 @@ class Referred
      */
     public static function getRefererURL()
     {
+        if (Helper::is_rest_request() && isset($_REQUEST['referred'])) {
+            return sanitize_url(wp_unslash($_REQUEST['referred']));
+        }
+
         return (isset($_SERVER['HTTP_REFERER']) ? sanitize_url(wp_unslash($_SERVER['HTTP_REFERER'])) : '');
     }
 
@@ -94,7 +98,7 @@ class Referred
      * @param string $referrer
      * @param string $title
      * @param bool $is_blank
-     * @return string
+     * @return string | void
      */
     public static function get_referrer_link($referrer, $title = '', $is_blank = false)
     {
@@ -115,8 +119,10 @@ class Referred
         // Get Page title
         $title = (trim($title) == "" ? $html_referrer : $title);
 
-        // Get Html Link
-        return "<a href='{$html_referrer}' title='{$title}'" . ($is_blank === true ? ' target="_blank"' : '') . ">{$base_url['host']}</a>";
+        if (isset($base_url['host'])) {
+            // Get Html Link
+            return "<a href='{$html_referrer}' title='{$title}'" . ($is_blank === true ? ' target="_blank"' : '') . ">{$base_url['host']}</a>";
+        }
     }
 
     /**

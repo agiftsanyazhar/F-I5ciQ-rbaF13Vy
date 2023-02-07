@@ -160,7 +160,7 @@
 }
 
 .wpcp-single-item .wpcp-all-captions .wpcp-post-meta {
-	margin: 0 0 20px;
+	margin: 0 0 6px;
 	padding: 0;
 }
 
@@ -508,4 +508,11 @@ html[dir="rtl"] .wpcp-single-item {
 }
 .wpcp-carousel-section i.fa {
 	font-style: normal;
+}
+.block-editor-page a.sp_wp_carousel_block_edit_button,
+a.sp_wp_carousel_block_edit_button {
+	display: inline-block;
+	text-decoration: underline;
+	font-size: 16px;
+	margin: 10px 0;
 }

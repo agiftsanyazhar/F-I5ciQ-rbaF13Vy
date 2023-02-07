@@ -2,3 +2,7 @@
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/Requests/Proxy/HTTP.php on line 19
+[08-Nov-2022 22:02:13 UTC] PHP Fatal error:  Uncaught Error: Interface 'Requests_Proxy' not found in /home/perpajakanvokasi/public_html/wp-includes/Requests/Proxy/HTTP.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/Requests/Proxy/HTTP.php on line 19

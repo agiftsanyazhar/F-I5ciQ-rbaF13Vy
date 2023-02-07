@@ -186,7 +186,7 @@
 }
 .spwpc-pagination-not-work,
 .spwpc-after-copy-text {
-    bottom: 0;
+    bottom: -100px;
     opacity: 0;
     z-index: 9999999;
     position: fixed;
@@ -201,7 +201,7 @@
     border: 1px solid #32373c;
 }
 .spwpc-pagination-not-work {
-    width: 280px;
+    width: 290px;
 }
 .spwpc-pagination-not-work .fa-check-circle,
 .spwpc-after-copy-text .fa-check-circle {

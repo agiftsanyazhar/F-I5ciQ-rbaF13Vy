@@ -163,3 +163,42 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php on line 11
+[31-Dec-2022 20:40:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Walker_Nav_Menu' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php on line 11
+[31-Dec-2022 20:40:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_custom_posts_maker.php:197
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_custom_posts_maker.php on line 197
+[31-Dec-2022 20:40:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_radunit.php:449
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_radunit.php on line 449
+[31-Dec-2022 20:40:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_slider.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_slider.php on line 9
+[31-Dec-2022 20:43:01 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting ';' or ',' in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_admin_template.php on line 14
+[31-Dec-2022 20:43:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_options.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_options.php on line 43
+[11-Jan-2023 22:20:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_custom_posts_maker.php:197
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_custom_posts_maker.php on line 197
+[12-Jan-2023 00:53:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Walker_Nav_Menu' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php on line 11
+[14-Jan-2023 12:59:03 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting ';' or ',' in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_admin_template.php on line 14
+[30-Jan-2023 15:24:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function __() in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_options.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_options.php on line 43
+[01-Feb-2023 01:04:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Walker_Nav_Menu' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/hypermenu.php on line 11
+[07-Feb-2023 04:40:19 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting ';' or ',' in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/classes/class_admin_template.php on line 14

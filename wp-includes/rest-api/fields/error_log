@@ -16,3 +16,15 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-user-meta-fields.php on line 17
+[01-Nov-2022 07:32:14 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Meta_Fields' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-post-meta-fields.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-post-meta-fields.php on line 17
+[18-Nov-2022 14:58:21 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Meta_Fields' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-user-meta-fields.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-user-meta-fields.php on line 17
+[03-Feb-2023 21:55:07 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_REST_Meta_Fields' not found in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-post-meta-fields.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/rest-api/fields/class-wp-rest-post-meta-fields.php on line 17

@@ -3,14 +3,14 @@
    Plugin Name: WP Font Awesome
    Plugin URI: https://wordpress.org/plugins/wp-font-awesome/
    Description: This plugin allows the easily embed Font Awesome to your site.
-   Version: 1.7.8
+   Version: 1.7.9
    Author: Zayed Baloch
    Author URI: https://www.zayedbaloch.com/
    License: GPL2
    */
 
 defined('ABSPATH') or die("No script kiddies please!");
-define( 'ZB_FAWE_VERSION',   '1.7.8' );
+define( 'ZB_FAWE_VERSION',   '1.7.9' );
 define( 'ZB_FAWE_URL', plugins_url( '', __FILE__ ) );
 define( 'ZB_FAWE_TEXTDOMAIN',  'zb_font_awesome' );
 
@@ -46,8 +46,8 @@ add_action( 'admin_enqueue_scripts', 'wp_font_awesome_admin_script' );*/
 
 function wp_fa_shortcode( $atts ) {
   extract( shortcode_atts( array( 'icon' => 'home', 'size' => '', 'color' => '', 'sup' => ''), $atts ) );
-  if ( $size ) { $size = ' fa-'.$size; } else{ $size = ''; }
-  if ( $color ) { $color = ' style="color: '.$color ; } else{ $color = ''; }
+  if ( $size ) { $size = esc_attr(' fa-'.$size); } else{ $size = ''; }
+  if ( $color ) { $color = ' style="color: '.esc_attr($color) ; } else{ $color = esc_attr(''); }
 
   if ( strtolower($sup) === 'yes' ) {
     return '<sup><i class="fa fa-'.str_replace('fa-','',$icon). $size. '"'.$color .'"></i></sup>';
@@ -58,10 +58,10 @@ function wp_fa_shortcode( $atts ) {
 
 function wp_fa5s_shortcode( $atts ) {
   extract( shortcode_atts( array( 'icon' => 'home', 'size' => '', 'color' => '', 'sup' => '' ), $atts ) );
-  if ( $size ) { $size = ' fa-'.$size; }
+  if ( $size ) { $size = esc_attr(' fa-'.$size); }
   else{ $size = ''; }
 
-  if ( $color ) { $color = ' style="color: '.$color ; }
+  if ( $color ) { $color = ' style="color: '.esc_attr($color) ; }
   else{ $color = ''; }
 
   if ( strtolower($sup) === 'yes' ) {
@@ -73,10 +73,10 @@ function wp_fa5s_shortcode( $atts ) {
 
 function wp_fa5r_shortcode( $atts ) {
   extract( shortcode_atts( array( 'icon' => 'home', 'size' => '', 'color' => '', 'sup' => '' ), $atts ) );
-  if ( $size ) { $size = ' fa-'.$size; }
+  if ( $size ) { $size = esc_attr(' fa-'.$size); }
   else{ $size = ''; }
 
-  if ( $color ) { $color = ' style="color: '.$color ; }
+  if ( $color ) { $color = ' style="color: '.esc_attr($color) ; }
   else{ $color = ''; }
 
   if ( strtolower($sup) === 'yes' ) {
@@ -89,10 +89,10 @@ function wp_fa5r_shortcode( $atts ) {
 
 function wp_fa5b_shortcode( $atts ) {
   extract( shortcode_atts( array( 'icon' => 'home', 'size' => '', 'color' => '', 'sup' => '' ), $atts ) );
-  if ( $size ) { $size = ' fa-'.$size; }
+  if ( $size ) { $size = esc_attr(' fa-'.$size); }
   else{ $size = ''; }
 
-  if ( $color ) { $color = ' style="color: '.$color ; }
+  if ( $color ) { $color = ' style="color: '.esc_attr($color) ; }
   else{ $color = ''; }
 
   if ( strtolower($sup) === 'yes' ) {

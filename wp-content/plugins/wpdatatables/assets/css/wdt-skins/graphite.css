@@ -116,6 +116,7 @@
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition:.5s;
+    height : 25px;
 }
 
 .wpDataTablesWrapper table.wpDataTable tr:last-child td {
@@ -293,7 +294,9 @@
 .wpDataTablesWrapper a.DTTT_button,
 .wpDataTablesWrapper button.DTTT_button:hover,
 .wpDataTablesWrapper div.DTTT_button:hover,
-.wpDataTablesWrapper a.DTTT_button:hover {
+.wpDataTablesWrapper a.DTTT_button:hover,
+.wpDataTablesWrapper button.DTTT_button,
+.wpDataTablesWrapper button.DTTT_button:hover {
     background-color: transparent;
     background-image: none;
     -webkit-border-radius: 0px;
@@ -412,7 +415,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
     bottom: -7px;
 }
 
-.wpDataTablesPopover.editTools a.DTTT_button {
+.wpDataTablesPopover.editTools a.DTTT_button,
+.wpDataTablesPopover.editTools button.DTTT_button {
     color: #ffffff !important;
 }
 

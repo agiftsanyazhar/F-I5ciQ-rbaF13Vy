@@ -11,3 +11,11 @@
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php on line 5
+[13-Jan-2023 03:59:53 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Import' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php on line 5
+[29-Jan-2023 07:45:49 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Import' not found in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-content/themes/unair-wp/backend/installer/importer/odin-import-class.php on line 5

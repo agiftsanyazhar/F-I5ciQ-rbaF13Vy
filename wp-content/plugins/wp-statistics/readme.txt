@@ -1,10 +1,10 @@
 === WP Statistics ===
-Contributors: mostafa.s1990, kashani, veronalabs, mehrshaddarzi, GregRoss
+Contributors: mostafa.s1990, kashani, veronalabs, GregRoss
 Donate link: https://wp-statistics.com/donate/
 Tags: analytics, wordpress analytics, stats, statistics, visit, visitors, hits, chart, browser, today, yesterday, week, month, year, total, post, page, sidebar, google, live visit, search word, agent, google analytics, webmasters, google webmasters, geoip, location
 Requires at least: 4.4
 Tested up to: 6.1
-Stable tag: 13.2.7
+Stable tag: 13.2.16
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -32,6 +32,7 @@ All these data are recorded in your server, and YES! WP Statistics is [GDPR comp
 * Widget Support for showing Statistics
 * Data Export in TSV, XML, and CSV formats
 * Statistical Reporting Emails
+* Statistical of pages with query strings and UTM parameters
 * [Premium] [Real-time stats](http://bit.ly/2Mj4Nss)
 * [Premium] [More Advanced reporting](http://bit.ly/2MjZE3l)
 * And much more information represented in graphs & charts along with data filtering
@@ -90,6 +91,9 @@ Services that use centralized databases for spam and robot detections , such as 
 = Not all referrals are showing up in the search words list, why? =
 Search Engine Referrals and Words are highly dependent on the search engines providing the information to us. Unfortunately, we can’t do anything about it; we report everything we receive.
 
+= Does WP Statistics support the UTM parameters? =
+Yes, It does! WP Statistics logs all query strings in the URL such as UTM parameters.
+
 = PHP 7 Support? =
 WP Statistics is PHP 7 compliant; however, some versions of PHP 7 have bugs that can cause issues. One known issue is that PHP 7.0.4 cause memory exhaustion errors. Newer versions of PHP 7 do not have this issue.
 At this time (September 2018) WP Statistics seems to run fine with PHP 7.2.6. But  you may experience issues that we haven’t found yet. If you do, feel free to report it after you make sure it is not a problem with PHP.
@@ -121,7 +125,6 @@ Referrer spam blacklist is provided by Matomo, available from https://github.com
 10. Theme widget
 
 == Upgrade Notice ==
-
 = 13.0 =
 **IMPORTANT NOTE**
 Welcome to WP Statistics v13.0, our biggest update!
@@ -131,6 +134,47 @@ Before updating, make sure you disabled all your add-ons, then after that, try t
 If you encounter any bug, please create an issue on [GitHub](https://github.com/wp-statistics/wp-statistics/issues/new) where we can act upon them more efficiently. Since [GitHub](https://github.com/wp-statistics/wp-statistics) is not a support forum, just bugs are welcomed, and any other request will be closed.
 
 == Changelog ==
+= v13.2.16 - 03.02.2023 =
+* Bugfix: The exclusion cache issue
+* Improvement: Populate post type title for archive pages
+
+= v13.2.15 - 13.01.2023 =
+* Bugfix: The exclusion issue when user is logged-in
+* Bugfix: The issue the API request to hit endpoint when permalink is default
+
+= v13.2.14 - 10.01.2023 =
+* Improvement: Compatibility with WordPress < 5.0
+
+= v13.2.13 - 09.01.2023 =
+* Bugfix: Fix recent, Top Visitor and Visitor page timeout & querying issue
+
+= v13.2.12 - 08.01.2023 =
+* Bugfix: Get top 10 visitor issue has been fixed
+* Bugfix: Changing the current language in admin has been fixed
+
+= v13.2.11 - 01.01.2023 =
+* Feature: A privacy setting has been added that allows customers to enable Do Not Track mode.
+* Improvement: Hardened plugin security and improvement
+
+= v13.2.10 - 24.12.2022 =
+* Bugfix: Logs the pages with query strings and UTM parameters
+
+= v13.2.9 - 17.12.2022 =
+* Bugfix: The include issue in CLI mode
+* Improvement: Error handler for referred that doesn't have any URL
+* Improvement: Hardened plugin security and improvement
+* Enhancement: Minor Improvements
+
+= v13.2.8 - 03.12.2022 =
+* Feature: Respect and compatibility with [Do Not Track](https://en.wikipedia.org/wiki/Do_Not_Track) browsers setting.
+* Feature: Add filter `wp_statistics_top_pages_arguments` to change the arguments of top pages.
+* Bugfix: Fix the Add-On notice constraint issue.
+* Bugfix: Sanitize the input of the URLs in the pages list
+* Improvement: Dynamic sending referred in the frontend by JavaScript while Cache is enabled.
+* Improvement: Remove `time` and `_nonce` parameters from the URL of the frontend while Cache is enabled.
+* Improvement: Compatibility with PHP v8.1
+* Improvement: Support method `Helper::get_pages_by_visitor_id()` to get pages by visitor id.
+
 = v13.2.7 - 23.10.2022 =
 * Bugfix: The error message while purging all databases
 * Update: The ChartJs library updated to v3.9.1

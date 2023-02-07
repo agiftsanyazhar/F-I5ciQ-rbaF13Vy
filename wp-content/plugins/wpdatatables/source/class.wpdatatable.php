@@ -22,6 +22,7 @@ class WPDataTable
     private $_defaultSortDirection = 'ASC';
     private $_tableContent = '';
     private $_tableType = '';
+    private $_fileLocation = 'wp_media_lib';
     private $_title = '';
     private $_interfaceLanguage;
     private $_responsive = false;
@@ -95,7 +96,7 @@ class WPDataTable
     private $_clearFilters = false;
     private $_pdfPaperSize = 'A4';
     private $_pdfPageOrientation = 'portrait';
-    public static $allowedTableTypes = array('xls', 'csv', 'manual', 'mysql', 'json', 'google_spreadsheet', 'xml', 'serialized', 'simple');
+    public static $allowedTableTypes = array('xls', 'csv', 'manual', 'mysql', 'json','nested_json', 'google_spreadsheet', 'xml', 'serialized', 'simple');
 
     /**
      * @return bool
@@ -203,6 +204,21 @@ class WPDataTable
     public function setTableContent($tableContent)
     {
         $this->_tableContent = $tableContent;
+    }
+
+    /**
+     * @return string
+     */
+
+    public function getFileLocation() {
+        return $this->_fileLocation;
+    }
+
+    /**
+     * @param string $fileLocation
+     */
+    public function setFileLocation($fileLocation) {
+        $this->_fileLocation = $fileLocation;
     }
 
     /**
@@ -542,6 +558,15 @@ class WPDataTable
         $this->_showTableToolsIncludeHTML = $showTableToolsIncludeHTML;
     }
 
+    public function getTableToolsIncludeTitle()
+    {
+        return $this->_showTableToolsIncludeTitle;
+    }
+
+    public function setTableToolsIncludeTitle($showTableToolsIncludeTitle)
+    {
+        $this->_showTableToolsIncludeTitle = $showTableToolsIncludeTitle;
+    }
 
     public function hideToolbar()
     {
@@ -1612,6 +1637,22 @@ class WPDataTable
 	}
 
 	/**
+	 * @throws Exception
+	 */
+	public function nestedJsonBasedConstruct($jsonParams, $wdtParameters = array()) {
+		$cache = WPDataTableCache::maybeCache($this->getCacheSourceData(), (int)$this->getWpId());
+		if (!$cache){
+			$jsonArray = self::sourceRenderData($this, 'nested_json', $jsonParams);
+		} else {
+			$jsonArray = $cache;
+		}
+
+		$jsonArray = apply_filters('wpdatatables_filter_nested_json_array', $jsonArray, $this->getWpId(), $jsonParams);
+
+		return $this->arrayBasedConstruct($jsonArray, $wdtParameters);
+	}
+
+	/**
 	 * @throws WDTException
 	 */
 	public function XMLBasedConstruct($xml, $wdtParameters = array()) {
@@ -1640,16 +1681,24 @@ class WPDataTable
 		$cache = WPDataTableCache::maybeCache($this->getCacheSourceData(), (int)$this->getWpId());
 		if (!$cache){
 			ini_set('memory_limit', '2048M');
+            $fileLocation = $this->getFileLocation();
 			if (!$xls_url) {
 				throw new WDTException(esc_html__('Excel file not found!','wpdatatables'));
 			}
-			if (!file_exists($xls_url)) {
+            if ($fileLocation == 'wp_media_lib' && !file_exists($xls_url)) {
 				throw new WDTException('Provided file ' . stripcslashes($xls_url) . ' does not exist!');
 			}
 
 			$format = substr(strrchr($xls_url, "."), 1);
 			$objReader = self::createObjectReader($xls_url);
 			$xls_url = apply_filters( 'wpdatatables_filter_excel_based_data_url', $xls_url, $this->getWpId() );
+            if ($fileLocation == 'wp_any_url'){
+                $file = @file_get_contents($xls_url);
+                if ($file === false) throw new WDTException('There is an error opening the file!');
+                $tempFileName = 'tempfile.' . $format;
+                file_put_contents($tempFileName, $file);
+                $xls_url = $tempFileName;
+            }
 			$objPHPExcel = $objReader->load($xls_url);
 			$objWorksheet = $objPHPExcel->getActiveSheet();
 			$highestRow = $objWorksheet->getHighestRow();
@@ -1725,6 +1774,10 @@ class WPDataTable
 			$sourceArray = self::jsonRenderData($source, $wpId);
 		}
 
+		if ($sourceType == 'nested_json') {
+			$sourceArray = self::nestedJsonRenderData($source, $wpId);
+		}
+
 		if ($sourceType == 'serialized') {
 			$sourceArray = self::serializedPhpRenderData($source, $wpId);
 		}
@@ -1756,6 +1809,20 @@ class WPDataTable
 		$json = WDTTools::curlGetData($json);
 		$json = apply_filters('wpdatatables_filter_json', $json, $id);
 		return json_decode($json, true);
+	}
+
+	/**
+	 * Helper method to get data from source URL
+	 * @param $jsonParams
+	 * @param $id
+	 * @return mixed|void
+	 * @throws Exception
+	 */
+	public static function nestedJsonRenderData($jsonParams, $id) {
+		if (!is_object($jsonParams))
+			$jsonParams = json_decode($jsonParams);
+		$nestedJSON = new WDTNestedJson($jsonParams);
+		return $nestedJSON->getData($id);
 	}
 
 	/**
@@ -2166,6 +2233,9 @@ class WPDataTable
         } else {
             $this->disablePagination();
         }
+        if (isset($tableData->file_location)) {
+            $this->setFileLocation($tableData->file_location);
+        }
 	    $this->setCacheSourceData(!empty($tableData->cache_source_data));
 	    $this->setAutoUpdateCache(!empty($tableData->auto_update_cache));
 
@@ -2190,6 +2260,12 @@ class WPDataTable
                     $params
                 );
                 break;
+	        case 'nested_json':
+		        $this->nestedJsonBasedConstruct(
+			        $tableData->content,
+			        $params
+		        );
+		        break;
             case 'serialized':
 	            $this->serializedPHPBasedConstruct(
 		            $tableData->content,
@@ -2274,6 +2350,7 @@ class WPDataTable
             isset($advancedSettings->paginationAlign) ? $this->setPaginationAlign($advancedSettings->paginationAlign) : $this->setPaginationAlign('right');
             isset($advancedSettings->paginationLayout) ? $this->setPaginationLayout($advancedSettings->paginationLayout) : $this->setPaginationLayout('full_numbers');
             isset($advancedSettings->showTableToolsIncludeHTML) ? $this->setTableToolsIncludeHTML($advancedSettings->showTableToolsIncludeHTML) : $this->setTableToolsIncludeHTML(false);
+            isset($advancedSettings->showTableToolsIncludeTitle) ? $this->setTableToolsIncludeTitle($advancedSettings->showTableToolsIncludeTitle) : $this->setTableToolsIncludeTitle(false);
             isset($advancedSettings->pdfPaperSize) ? $this->setPdfPaperSize($advancedSettings->pdfPaperSize) : $this->setPdfPaperSize('A4');
             isset($advancedSettings->pdfPageOrientation) ? $this->setPdfPageOrientation($advancedSettings->pdfPageOrientation) : $this->setPdfPageOrientation('portrait');
         } else {
@@ -2293,6 +2370,7 @@ class WPDataTable
             $this->setPaginationAlign('right');
             $this->setPaginationLayout('full_numbers');
             $this->setTableToolsIncludeHTML(false);
+            $this->setTableToolsIncludeTitle(false);
             $this->setPdfPaperSize('A4');
             $this->setPdfPageOrientation('portrait');
         }
@@ -2425,6 +2503,7 @@ class WPDataTable
         $obj->pagination = $this->isPagination();
         $obj->paginationAlign = $this->getPaginationAlign();
         $obj->paginationLayout = $this->getPaginationLayout();
+        $obj->file_location = $this->getFileLocation();
         $obj->globalSearch = $this->isGlobalSearch();
         $obj->showRowsPerPage = $this->isShowRowsPerPage();
 
@@ -2504,6 +2583,7 @@ class WPDataTable
         $currentSkin = get_option('wdtBaseSkin');
         $skinsWithNewTableToolsButtons = ['aqua', 'purple', 'dark'];
         $tableToolsIncludeHTML = !$this->getTableToolsIncludeHTML();
+        $tableToolsExportTitle = $this->getTableToolsIncludeTitle() ? $this->getName() : null;
         $pdfPaperSize = $this->getPdfPaperSize();
         $pdfPageOrientation = $this->getPdfPageOrientation();
 
@@ -2514,72 +2594,73 @@ class WPDataTable
                 if (!empty($this->_tableToolsConfig['columns'])) {
                     $obj->dataTableParams->buttons[] =
                         array(
-                            'extend' => 'colvis',
-                            'className' => 'DTTT_button DTTT_button_colvis',
-                            'text' => __('Columns', 'wpdatatables')
-
+                            'extend'           => 'colvis',
+                            'className'        => 'DTTT_button DTTT_button_colvis',
+                            'text'             => __('Columns', 'wpdatatables'),
+                            'collectionLayout' => 'wdt-skin-' . $currentSkin
                         );
                 }
                 if (!empty($this->_tableToolsConfig['print'])) {
                     $obj->dataTableParams->buttons[] =
                         array(
-                            'extend' => 'print',
+                            'extend'        => 'print',
                             'exportOptions' => array(
-                                'columns' => ':visible',
+                                'columns'   => ':visible',
                                 'stripHtml' => $tableToolsIncludeHTML
                             ),
-                            'className' => 'DTTT_button DTTT_button_print',
-                            'text' => __('Print', 'wpdatatables'),
-                            'title' => $wdtExportFileName
+                            'className'     => 'DTTT_button DTTT_button_print',
+                            'title'         => $wdtExportFileName,
+                            'text'          => __('Print', 'wpdatatables'),
                         );
                 }
 
                 if (!empty($this->_tableToolsConfig['excel'])) {
                     $exportButtons[] =
                         array(
-                            'extend' => 'excelHtml5',
+                            'extend'        => 'excelHtml5',
                             'exportOptions' => array(
-                                'columns' => ':visible',
+                                'columns'   => ':visible',
                                 'stripHtml' => $tableToolsIncludeHTML
                             ),
-                            'title' => $wdtExportFileName,
-                            'text' => __('Excel', 'wpdatatables')
+                            'filename'      => $wdtExportFileName,
+                            'title'         => $tableToolsExportTitle,
+                            'text'          => __('Excel', 'wpdatatables')
                         );
                 }
                 if (!empty($this->_tableToolsConfig['csv'])) {
                     $exportButtons[] =
                         array(
-                            'extend' => 'csvHtml5',
+                            'extend'        => 'csvHtml5',
                             'exportOptions' => array(
-                                'columns' => ':visible',
+                                'columns'   => ':visible',
                                 'stripHtml' => $tableToolsIncludeHTML
                             ),
-                            'title' => $wdtExportFileName,
-                            'text' => __('CSV', 'wpdatatables')
+                            'title'         => $wdtExportFileName,
+                            'text'          => __('CSV', 'wpdatatables')
                         );
                 }
                 if (!empty($this->_tableToolsConfig['copy'])) {
                     $exportButtons[] =
                         array(
-                            'extend' => 'copyHtml5',
+                            'extend'        => 'copyHtml5',
                             'exportOptions' => array(
-                                'columns' => ':visible',
+                                'columns'   => ':visible',
                                 'stripHtml' => $tableToolsIncludeHTML
                             ),
-                            'title' => $wdtExportFileName,
-                            'text' => __('Copy', 'wpdatatables')
+                            'filename'      => $wdtExportFileName,
+                            'title'         => $tableToolsExportTitle,
+                            'text'          => __('Copy', 'wpdatatables')
                         );
                 }
                 if (!empty($this->_tableToolsConfig['pdf'])) {
                     $exportButtons[] =
                         array(
-                            'extend' => 'pdfHtml5',
+                            'extend'        => 'pdfHtml5',
                             'exportOptions' => array('columns' => ':visible'),
-                            'className' => 'DTTT_button DTTT_button_pdf',
-                            'orientation' => $pdfPageOrientation,
-                            'pageSize' => $pdfPaperSize,
-                            'title' => $wdtExportFileName,
-                            'text' => __('PDF', 'wpdatatables')
+                            'orientation'   => $pdfPageOrientation,
+                            'pageSize'      => $pdfPaperSize,
+                            'title'         => $wdtExportFileName,
+                            'text'          => __('PDF', 'wpdatatables')
                         );
                 }
 

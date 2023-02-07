@@ -9,12 +9,12 @@ defined('ABSPATH') or die("Cannot access pages directly.");
 
 // Current version
 
-define('WDT_CURRENT_VERSION', '2.1.43');
+define('WDT_CURRENT_VERSION', '2.1.51');
 
 // Number of active plugin installs for wpDataTables
-define('WDT_NUMBER_OF_ACTIVE_INSTALLS', '66,000+');
+define('WDT_NUMBER_OF_ACTIVE_INSTALLS', '70,000+');
 // Number of active plugin installs for Amelia
-define('AMELIA_NUMBER_OF_ACTIVE_INSTALLS', '40,000+');
+define('AMELIA_NUMBER_OF_ACTIVE_INSTALLS', '50,000+');
 // Number of appointments for Amelia
 define('AMELIA_NUMBER_OF_APPOINTMENTS', '500,000+');
 /**
@@ -50,7 +50,7 @@ define('WDT_STORE_API_URL', 'https://store.tms-plugins.com/api/');
 
 
 /**
- * MySQL settings for query-based tables
+ * MySQL's settings for query-based tables
  */
 define('WDT_ENABLE_MYSQL', true); // Whether to use MySQL in wpDataTables. Disable if you are not going to access MySQL directly from wpDataTables.
 if (get_option('wdtUseSeparateCon')) {

@@ -89,6 +89,21 @@
             <img src="<?php $this->_asset('/projects/cdp/imgs/main-background-image.png'); ?>" class="ci-main-image">
           </div>
         </div>
+        <?php
+
+          $redi_plugin = $this->is_plugin_installed($this->redi_slug);
+          $redi_state = $redi_plugin ? 'already-installed' : 'install';
+
+        ?>
+        <div class="ci-project ci-project-redRed ci-<?php echo $redi_state; ?>-state-visible">
+          <?php
+            if ($redi_state == 'install') {
+              $this->_include('projects/red/install');
+            } else {
+              $this->_include('projects/red/installed');
+            }
+          ?>
+        </div>
         <div class="ci-project ci-project-TasteWP ci-install-state-visible">
           <?php $this->_include('projects/twp/install'); ?>
           <div class="ci-right-part">
@@ -126,7 +141,7 @@
       </div>
     </div>
     <div class="ci-all-projects">
-      <a class="ci-see-all-projects" href="https://inisev.com/?utm_source=plugin_footer&utm_campaign=BM&utm_medium=carrousel" target="_blank">See all projects</a>
+      <a class="ci-see-all-projects" href="https://inisev.com/?utm_source=plugin_footer&utm_campaign=CDP&utm_medium=carrousel" target="_blank">See all projects</a>
     </div>
   </section>
 </section>

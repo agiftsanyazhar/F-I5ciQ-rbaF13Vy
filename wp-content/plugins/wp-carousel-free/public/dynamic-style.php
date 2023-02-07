@@ -8,15 +8,12 @@
  */
 
 $section_title_dynamic_css = '';
-if ( ! is_admin() ) {
-	$upload_data    = get_post_meta( $post_id, 'sp_wpcp_upload_options', true );
-	$shortcode_data = get_post_meta( $post_id, 'sp_wpcp_shortcode_options', true );
-}
-
-$section_title = isset( $shortcode_data['section_title'] ) ? $shortcode_data['section_title'] : '';
-$carousel_type = isset( $upload_data['wpcp_carousel_type'] ) ? $upload_data['wpcp_carousel_type'] : '';
-$wpcp_arrows   = isset( $shortcode_data['wpcp_navigation'] ) ? $shortcode_data['wpcp_navigation'] : 'show';
-$wpcp_dots     = isset( $shortcode_data['wpcp_pagination'] ) ? $shortcode_data['wpcp_pagination'] : '';
+$section_title             = isset( $shortcode_data['section_title'] ) ? $shortcode_data['section_title'] : '';
+$carousel_type             = isset( $upload_data['wpcp_carousel_type'] ) ? $upload_data['wpcp_carousel_type'] : '';
+$wpcp_arrows               = isset( $shortcode_data['wpcp_navigation'] ) ? $shortcode_data['wpcp_navigation'] : 'show';
+$wpcp_dots                 = isset( $shortcode_data['wpcp_pagination'] ) ? $shortcode_data['wpcp_pagination'] : '';
+$wpcp_pagination           = isset( $shortcode_data['wpcp_source_pagination'] ) ? $shortcode_data['wpcp_source_pagination'] : false;
+$wpcp_layout               = isset( $shortcode_data['wpcp_layout'] ) ? $shortcode_data['wpcp_layout'] : 'carousel';
 
 if ( $section_title ) {
 	$old_section_title_margin   = isset( $shortcode_data['section_title_margin_bottom'] ) && is_numeric( $shortcode_data['section_title_margin_bottom'] ) ? $shortcode_data['section_title_margin_bottom'] : '30';
@@ -86,12 +83,43 @@ if ( 'hide' !== $wpcp_dots ) {
 	}
 	';
 }
+
 if ( 'hide_mobile' === $wpcp_dots ) {
 	$the_wpcf_dynamic_css .= '
 	@media screen and (max-width: 479px) {
 		#sp-wp-carousel-free-id-' . $post_id . '.nav-vertical-center .wpcp-next-button,#sp-wp-carousel-free-id-' . $post_id . ' .wpcp-swiper-dots {
 			display: none;
 		}
+	}';
+}
+
+// grid pagination styles.
+if ( $wpcp_pagination && 'grid' === $wpcp_layout && 'image-carousel' !== $carousel_type ) { // Load grid pagination's styles if layout is grid, Source type is not image carousel and pagination is enabled.
+	$pagination_alignment = isset( $shortcode_data['pagination_alignment'] ) ? $shortcode_data['pagination_alignment'] : 'center'; // button allignment.
+	$pagination_colors    = isset( $shortcode_data['pagination_color'] ) ? $shortcode_data['pagination_color'] : array(
+		'color'        => '#5e5e5e',
+		'hover_color'  => '#ffffff',
+		'bg'           => '#ffffff',
+		'hover_bg'     => '#178087',
+		'border'       => '#dddddd',
+		'hover_border' => '#178087',
+	); // pagination all colors.
+
+	$pagination_dynamic_style .= '
+	.wpcp-carousel-wrapper.wpcp-wrapper-' . $post_id . ' .wpcpro-post-pagination{
+		text-align: ' . $pagination_alignment . ';
+	}
+	.wpcp-wrapper-' . $post_id . ' .wpcpro-post-pagination .page-numbers{
+		color: ' . $pagination_colors['color'] . ';
+		border-color: ' . $pagination_colors['border'] . ';
+		background:  ' . $pagination_colors['bg'] . ';
+	}
+	.wpcp-wrapper-' . $post_id . ' .wpcpro-post-pagination .page-numbers:hover,
+	.wpcp-wrapper-' . $post_id . ' .wpcpro-post-pagination .page-numbers.current,
+	.wpcp-wrapper-' . $post_id . ' .wpcpro-post-pagination .page-numbers.current{
+		color: ' . $pagination_colors['hover_color'] . ';
+		border-color: ' . $pagination_colors['hover_border'] . ';
+		background:  ' . $pagination_colors['hover_bg'] . ';
 	}';
 }
 

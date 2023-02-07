@@ -23,6 +23,7 @@ function wdtActivationCreateTables() {
 						title varchar(255) NOT NULL,
                         show_title tinyint(1) NOT NULL default '1',
 						table_type varchar(55) NOT NULL,
+						file_location varchar(15) NOT NULL default '',
 						content text NOT NULL,
 						filtering tinyint(1) NOT NULL default '1',
 						filtering_form tinyint(1) NOT NULL default '0',
@@ -543,6 +544,8 @@ function wdtWpDataChartShortcodeHandler($atts, $content = null) {
         'id' => '0'
     ), $atts));
 
+	$id = absint($id);
+
     if (is_admin() && defined( 'AVADA_VERSION' ) && is_plugin_active('fusion-builder/fusion-builder.php') &&
         class_exists('Fusion_Element') && class_exists('WPDataTables_Fusion_Elements') &&
         isset($_POST['action']) && $_POST['action'] === 'get_shortcode_render')
@@ -587,10 +590,10 @@ function wdtWpDataTableCellShortcodeHandler($atts, $content = null) {
         'sort' => '1'
     ), $atts));
 
-    /**
-     * Protection
-     * @var int $table_id
-     */
+	$table_id = absint($table_id);
+	$row_id = absint($row_id);
+	$sort = absint($sort);
+
     if (!$table_id)
         return esc_html__('wpDataTable with provided ID not found!', 'wpdatatables');
 
@@ -769,6 +772,8 @@ function wdtWpDataTableShortcodeHandler($atts, $content = null) {
         'table_view' => 'regular'
     ), $atts));
 
+	$id = absint($id);
+
     if (is_admin() && defined( 'AVADA_VERSION' ) && is_plugin_active('fusion-builder/fusion-builder.php') &&
         class_exists('Fusion_Element') && class_exists('WPDataTables_Fusion_Elements') &&
         isset($_POST['action']) && $_POST['action'] === 'get_shortcode_render')
@@ -776,10 +781,6 @@ function wdtWpDataTableShortcodeHandler($atts, $content = null) {
         return WPDataTables_Fusion_Elements::get_content_for_avada_live_builder($atts, 'table');
     }
 
-    /**
-     * Protection
-     * @var int $id
-     */
     if (!$id) {
         return false;
     }
@@ -810,14 +811,7 @@ function wdtWpDataTableShortcodeHandler($atts, $content = null) {
         }
     } else {
 
-        /** @var mixed $table_view */
-        if ($table_view == 'excel') {
-            /** @var WPExcelDataTable $wpDataTable */
-            $wpDataTable = new WPExcelDataTable();
-        } else {
-            /** @var WPDataTable $wpDataTable */
-            $wpDataTable = new WPDataTable();
-        }
+	    $wpDataTable = new WPDataTable();
 
         $wpDataTable->setWpId($id);
 
@@ -829,7 +823,7 @@ function wdtWpDataTableShortcodeHandler($atts, $content = null) {
 
             $output = '';
             if ($tableData->show_title && $tableData->title) {
-                $output .= apply_filters('wpdatatables_filter_table_title', (empty($tableData->title) ? '' : '<h2>' . $tableData->title . '</h2>'), $id);
+                $output .= apply_filters('wpdatatables_filter_table_title', (empty($tableData->title) ? '' : '<h3 class="wpdt-c" id="wdt-table-title-'. $id .'">' . $tableData->title . '</h3>'), $id);
             }
             $output .= $wpDataTable->generateTable();
         } catch (Exception $e) {
@@ -839,79 +833,6 @@ function wdtWpDataTableShortcodeHandler($atts, $content = null) {
     $output = apply_filters('wpdatatables_filter_rendered_table', $output, $id);
 
     return $output;
-}
-
-/**
- * Handler for the SUM, AVG, MIN and MAX function shortcode
- * @param $atts
- * @param null $content
- * @param null $shortcode
- * @return string
- */
-function wdtFuncsShortcodeHandler($atts, $content = null, $shortcode = null) {
-
-    $attributes = shortcode_atts(array(
-        'table_id' => 0,
-        'col_id' => 0,
-        'label' => null
-    ), $atts);
-
-    if (!$attributes['table_id']) {
-        return __("Please provide table_id attribute for {$shortcode} shortcode!", 'wpdatatables');
-    }
-    if (!$attributes['col_id']) {
-        return __("Please provide col_id attribute for {$shortcode} shortcode!", 'wpdatatables');
-    }
-
-    $wpDataTable = WPDataTable::loadWpDataTable($attributes['table_id'], null, true);
-
-    $wpDataTableColumns = $wpDataTable->getColumns();
-    if (empty($wpDataTableColumns)) {
-        return __('wpDataTable with provided ID not found!', 'wpdatatables');
-    }
-
-    $column = WDTConfigController::loadSingleColumnFromDB($attributes['col_id']);
-
-    $columnExists = $column['table_id'] === $attributes['table_id'];
-    if ($columnExists === false) {
-        return __("Column with ID {$attributes['col_id']} is not found in table with ID {$attributes['table_id']}!", 'wpdatatables');
-    }
-    if ($column['column_type'] !== 'int' && $column['column_type'] !== 'float' && $column['column_type'] !== 'formula') {
-        return __('Provided column is not Integer or Float column type', 'wpdatatables');
-    }
-
-    if ($shortcode === 'wpdatatable_sum') {
-        $function = 'sum';
-        if (!isset($attributes['label'])) {
-            $attributes['label'] = get_option('wdtSumFunctionsLabel') ? get_option('wdtSumFunctionsLabel') : '&#8721; =';
-        }
-    } else if ($shortcode === 'wpdatatable_avg') {
-        $function = 'avg';
-        if (!isset($attributes['label'])) {
-            $attributes['label'] = get_option('wdtAvgFunctionsLabel') ? get_option('wdtAvgFunctionsLabel') : 'Avg =';
-        }
-    } else if ($shortcode === 'wpdatatable_min') {
-        $function = 'min';
-        if (!isset($attributes['label'])) {
-            $attributes['label'] = get_option('wdtMinFunctionsLabel') ? get_option('wdtMinFunctionsLabel') : 'Min =';
-        }
-    } else {
-        $function = 'max';
-        if (!isset($attributes['label'])) {
-            $attributes['label'] = get_option('wdtMaxFunctionsLabel') ? get_option('wdtMaxFunctionsLabel') : 'Max =';
-        }
-    }
-
-    /** @noinspection PhpUnusedLocalVariableInspection */
-    $funcResult = $wpDataTable->calcColumnFunction($column['orig_header'], $function);
-
-    ob_start();
-    include WDT_TEMPLATE_PATH . 'frontend/aggregate_functions.inc.php';
-    $aggregateFunctionsHtml = ob_get_contents();
-    ob_end_clean();
-
-    return $aggregateFunctionsHtml;
-
 }
 
 

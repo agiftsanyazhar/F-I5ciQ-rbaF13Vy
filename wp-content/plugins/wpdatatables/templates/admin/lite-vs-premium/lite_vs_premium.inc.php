@@ -46,8 +46,8 @@
                     <div class="card-header wdt-admin-card-header">
                         <h5><?php esc_html_e('Lite vs Premium comparison', 'wpdatatables'); ?></h5>
                         <p><?php esc_html_e('Get the most out of wpDataTables by upgrading to Premium and unlocking all of the powerful features.', 'wpdatatables'); ?></p>
-                        <a target="_blank"
-                           class="btn btn-primary f-500 tms-store-checkout-wpdatatables">
+                        <a target="_blank" href="https://wpdatatables.com/pricing/?utm_source=wpdt-lite&utm_medium=lite-upgrade&utm_content=wpdt&utm_campaign=wpdt"
+                           class="btn btn-primary f-500">
                             <i class="wpdt-icon-star-full m-r-5"></i>
                             <?php esc_html_e('Go Premium Now', 'wpdatatables'); ?></a>
                     </div>
@@ -92,6 +92,32 @@
                             </tr>
                             <tr>
                                 <td data-title="Features"><?php esc_html_e('Creating tables from JSON files', 'wpdatatables'); ?>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Features"><?php esc_html_e('Creating data tables from Nested JSON data', 'wpdatatables'); ?>
+                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW!', 'wpdatatables'); ?></span>
+                                    <hr>
+                                </td>
+                                <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                                <td data-title="Premium" class="text-center bg-blue"><i
+                                            class="wpdt-icon-check-full"></i>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-title="Features"><?php esc_html_e('JSON Authentication', 'wpdatatables'); ?>
+                                    <span style="color: #ef8137;font-weight: bold;float: right;"><?php esc_html_e('NEW!', 'wpdatatables'); ?></span>
                                     <hr>
                                 </td>
                                 <td data-title="Lite" class="text-center bg-grey"><i class="wpdt-icon-check-full"></i>
@@ -627,8 +653,8 @@
                         <p style="padding-left: 28px;padding-top: 10px;font-size: 10px"><?php esc_html_e('* Please note that wpDataTables add-ons are not included in premium version of plugin.', 'wpdatatables'); ?></p>
                     </div>
                     <div class="wdt-lite-vs-premium-footer text-center">
-                        <a target="_blank"
-                           class="btn btn-primary m-t-24 p-r-48 p-l-48 f-500 tms-store-checkout-wpdatatables">
+                        <a target="_blank" href="https://wpdatatables.com/pricing/?utm_source=wpdt-lite&utm_medium=lite-upgrade&utm_content=wpdt&utm_campaign=wpdt"
+                           class="btn btn-primary m-t-24 p-r-48 p-l-48 f-500">
                             <i class="wpdt-icon-star-full m-r-5"></i>
                             <?php esc_html_e('Go Premium Now', 'wpdatatables'); ?></a>
                     </div>

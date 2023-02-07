@@ -78,8 +78,9 @@ class Helper
         if (empty($_SERVER['REQUEST_URI'])) {
             return false;
         }
+
         $rest_prefix = trailingslashit(rest_get_url_prefix());
-        return (false !== strpos($_SERVER['REQUEST_URI'], $rest_prefix));
+        return (false !== strpos($_SERVER['REQUEST_URI'], $rest_prefix)) or isset($_REQUEST['rest_route']);
     }
 
     /**
@@ -1098,14 +1099,6 @@ class Helper
         // Create Empty Params Object
         $params = array();
 
-        //Set Referred
-        $params['referred'] = urlencode(Referred::get());
-
-        //exclude
-        $exclude                    = Exclusion::check();
-        $params['exclusion_match']  = ($exclude['exclusion_match'] === true ? 'yes' : 'no');
-        $params['exclusion_reason'] = (string)$exclude['exclusion_reason'];
-
         //track all page
         $params['track_all'] = (Pages::is_track_all_page() === true ? 1 : 0);
 
@@ -1116,7 +1109,7 @@ class Helper
         $params['search_query']      = (isset($get_page_type['search_query']) ? esc_html($get_page_type['search_query']) : '');
 
         //page url
-        $params['page_uri'] = Pages::get_page_uri();
+        $params['page_uri'] = base64_encode(Pages::get_page_uri());
 
         //return Json Data
         return $params;
@@ -1137,5 +1130,28 @@ class Helper
         $anonymousSubVersion = preg_replace('/[0-9]+/', '0', $subVersion);
 
         return "{$mainVersion}.{$anonymousSubVersion}";
+    }
+
+    /**
+     * Do not track browser detection
+     *
+     * @return bool
+     */
+    public static function dntEnabled()
+    {
+        if (Option::get('do_not_track')) {
+            return (isset($_SERVER['HTTP_DNT']) && $_SERVER['HTTP_DNT'] == 1) or (function_exists('getallheaders') && isset(getallheaders()['DNT']) && getallheaders()['DNT'] == 1);
+        }
+
+        return false;
+    }
+
+    public static function getRequestUri()
+    {
+        if (self::is_rest_request() and isset($_REQUEST['page_uri'])) {
+            return base64_decode($_REQUEST['page_uri']);
+        }
+
+        return sanitize_url(wp_unslash($_SERVER['REQUEST_URI']));
     }
 }

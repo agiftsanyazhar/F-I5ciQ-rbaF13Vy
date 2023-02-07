@@ -109,6 +109,7 @@ function wdtDuplicateTable() {
             'title' => $newTableName,
             'show_title' => $tableData->show_title,
             'table_type' => $tableData->table_type,
+            'file_location' => $tableData->file_location,
             'content' => $content,
             'filtering' => $tableData->filtering,
             'filtering_form' => $tableData->filtering_form,
@@ -535,3 +536,46 @@ function wdtDuplicateChart()
 }
 
 add_action('wp_ajax_wpdatatables_duplicate_chart', 'wdtDuplicateChart');
+
+/**
+ * Get Roots from Nested JSON url
+ */
+function wdtGetNestedJsonRoots()
+{
+	if ( !current_user_can('manage_options') || !wp_verify_nonce($_POST['wdtNonce'], 'wdtEditNonce') ) {
+		exit();
+	}
+	global $wdtVar1, $wdtVar2, $wdtVar3, $wdtVar4, $wdtVar5, $wdtVar6, $wdtVar7, $wdtVar8, $wdtVar9;
+	$tableConfig = json_decode(stripslashes_deep($_POST['tableConfig']));
+	// Set placeholders
+	$wdtVar1 = $wdtVar1 === '' ? $tableConfig->var1 : $wdtVar1;
+	$wdtVar2 = $wdtVar2 === '' ? $tableConfig->var2 : $wdtVar2;
+	$wdtVar3 = $wdtVar3 === '' ? $tableConfig->var3 : $wdtVar3;
+	$wdtVar4 = $wdtVar4 === '' ? $tableConfig->var4 : $wdtVar4;
+	$wdtVar5 = $wdtVar5 === '' ? $tableConfig->var5 : $wdtVar5;
+	$wdtVar6 = $wdtVar6 === '' ? $tableConfig->var6 : $wdtVar6;
+	$wdtVar7 = $wdtVar7 === '' ? $tableConfig->var7 : $wdtVar7;
+	$wdtVar8 = $wdtVar8 === '' ? $tableConfig->var8 : $wdtVar8;
+	$wdtVar9 = $wdtVar9 === '' ? $tableConfig->var9 : $wdtVar9;
+
+	$tableID = (int)$tableConfig->id;
+
+	$params = json_decode(stripslashes_deep($_POST['params']));
+	$params = WDTConfigController::sanitizeNestedJsonParams($params);
+	$nestedJSON = new WDTNestedJson($params);
+	$response = $nestedJSON->getResponse($tableID);
+
+	if (!is_array($response)) {
+		wp_send_json_error( array( 'msg' => $response ) );
+	}
+
+	$roots = $nestedJSON->prepareRoots( 'root', '', array(), $response);
+
+	if ( empty( $roots ) ) {
+		wp_send_json_error( array( 'msg' => esc_html__("Unable to retrieve data. Roots empty.", 'wpdatatables') ) );
+	}
+
+	wp_send_json_success( array( 'url' => $nestedJSON->getUrl(), 'roots' => $roots ) );
+}
+
+add_action('wp_ajax_wpdatatables_get_nested_json_roots', 'wdtGetNestedJsonRoots');

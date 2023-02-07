@@ -44,7 +44,7 @@ class WPDataTableCache
 			$wpdb->update(
 				$wpdb->prefix . "wpdatatables_cache",
 				array(
-					'data' => json_encode($sourceData),
+					'data'         => json_encode($sourceData, JSON_NUMERIC_CHECK),
 					'updated_time' => current_time('mysql'),
 				),
 				array('table_id' => $tableID)
@@ -90,11 +90,11 @@ class WPDataTableCache
 				$wpdb->insert(
 					$wpdb->prefix . "wpdatatables_cache",
 					array(
-						'table_id' => $tableID,
-						'table_type' => $tableType,
+						'table_id'      => $tableID,
+						'table_type'    => $tableType,
 						'table_content' => $tableContent,
-						'auto_update' => $autoUpdate,
-						'data' => json_encode($sourceData)
+						'auto_update'   => $autoUpdate,
+						'data'          => json_encode($sourceData, JSON_NUMERIC_CHECK)
 					)
 				);
 				if ($wpdb->last_error !== '')
@@ -187,11 +187,11 @@ class WPDataTableCache
 		if ($tableID) {
 			$logMessage = $logMessage . ' Table ID=' . $tableID;
 			if ($autoUpdate) {
-				$logError = current_time('mysql') . ' - ' . $title . ' ' . $log . '<br>';
+				$logError = current_time('mysql') . ' - ' . $title . ' ' . $log;
 				$wpdb->query(
 					$wpdb->prepare(
 						"UPDATE " . $wpdb->prefix . "wpdatatables_cache
-                           SET log_errors = CONCAT(log_errors, %s) WHERE table_id = %d",
+                           SET log_errors = %s WHERE table_id = %d",
 						$logError,
 						$tableID
 					)
@@ -275,7 +275,7 @@ class WPDataTableCache
 					continue;
 				}
 
-				if ($cacheTable['data'] === json_encode($result['data'])) continue;
+				if ($cacheTable['data'] === json_encode($result['data'], JSON_NUMERIC_CHECK)) continue;
 
 				self::updateData($cacheTable['table_id'], $result['data']);
 			}
@@ -292,7 +292,7 @@ class WPDataTableCache
 			];
 		}
 		try {
-			if (in_array($source_type, ['xls', 'csv'])) {
+			if (in_array($source_type, ['xlsx','ods', 'xls', 'csv'])) {
 				$tableData = WDTConfigController::loadTableFromDB($table_id);
 				$params = array(
 					'dateInputFormat' => array(),
@@ -316,7 +316,7 @@ class WPDataTableCache
 				case 'xls':
 				case 'csv':
 					ini_set('memory_limit', '2048M');
-					if (!file_exists($source)) {
+                    if (isset($tableData) && $tableData->file_location == 'wp_media_lib' && !file_exists($source)) {
 						self::_logErrors(
 							'Error message:',
 							'Provided file ' . stripcslashes($source) . ' does not exist!',
@@ -326,6 +326,15 @@ class WPDataTableCache
 					}
 					$format = substr(strrchr($source, "."), 1);
 					$objReader = WPDataTable::createObjectReader($source);
+                if (isset($tableData) && $tableData->file_location == 'wp_any_url'){
+                    $file = @file_get_contents($source);
+                    if ($file === false){
+                        throw new Exception('There is an error opening the file!');
+                    }
+                    $tempFileName = 'tempfile.' . $format;
+                    file_put_contents($tempFileName, $file);
+                    $source = $tempFileName;
+                }
 					$objPHPExcel = $objReader->load($source);
 					$objWorksheet = $objPHPExcel->getActiveSheet();
 					$highestRow = $objWorksheet->getHighestRow();
@@ -365,6 +374,9 @@ class WPDataTableCache
 					break;
 				case 'json':
 					$dataArray = WPDataTable::jsonRenderData($source, $table_id);
+					break;
+				case 'nested_json':
+					$dataArray = WPDataTable::nestedJsonRenderData($source, $table_id);
 					break;
 				case 'serialized':
 					$dataArray = WPDataTable::serializedPhpRenderData($source, $table_id);

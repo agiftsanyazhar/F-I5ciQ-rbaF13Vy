@@ -1,12 +1,14 @@
 
 
-# BEGIN Really Simple SSL Redirect 5.3.5
+
+#Begin Really Simple Security
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{HTTPS} !=on [NC]
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 </IfModule>
-# END Really Simple SSL Redirect
+
+#End Really Simple Security
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.

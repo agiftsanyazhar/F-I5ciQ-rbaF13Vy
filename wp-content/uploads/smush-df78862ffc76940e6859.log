@@ -2146,3 +2146,59 @@
 [2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=90, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak3.png 
 [2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=89, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak2.png 
 [2022-09-11 03:21:23 : INFO] - Could not find file for image: ID=88, file=/home/perpajakanvokasi/public_html/wp-content/uploads/2016/09/pajak1.png 
+[2022-10-31 03:47:50 : INFO] - Re_Smush_It_Task with attachment ID : 7863, autocreated on : October 31, 2022 03:47:50 
+[2022-10-31 04:08:19 : INFO] - 
+ 
+[2022-10-31 04:08:19 : INFO] - Header for logs at time:  Mon, 31 Oct 2022 04:08:19 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-10-31 04:08:19 : INFO] - WP: 6.0.3 
+[2022-10-31 04:08:19 : INFO] - PHP: 7.4.32 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.73.el7.x86_64 #1 SMP Wed Aug 24 21:31:23 UTC 2022 x86_64) 
+[2022-10-31 04:08:19 : INFO] - MySQL: 5.7.40 
+[2022-10-31 04:08:19 : INFO] - WPLANG: en_US 
+[2022-10-31 04:08:19 : INFO] - Server: LiteSpeed 
+[2022-10-31 04:08:19 : INFO] - Outbound connections: N 
+[2022-10-31 04:08:19 : INFO] - safe_mode: 0 
+[2022-10-31 04:08:19 : INFO] - max_execution_time: 30 
+[2022-10-31 04:08:19 : INFO] - memory_limit: 512M (used: 60.5M | 64.5M) 
+[2022-10-31 04:08:19 : INFO] - multisite: N 
+[2022-10-31 04:08:19 : INFO] - openssl: OpenSSL 1.1.1p  21 Jun 2022 
+[2022-10-31 04:08:19 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2022-10-31 04:08:19 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2022-10-31 04:08:19 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2022-10-31 04:08:19 : INFO] - Processing task with ID : 1, and type 'smush' 
+[2022-10-31 04:08:20 : INFO] - Re_Smush_It_Task with attachment ID : 7863, autocreated on : October 31, 2022 03:47:50 
+[2022-10-31 04:08:20 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-10-31 04:08:20 : INFO] - 85 
+[2022-10-31 04:08:22 : INFO] - Backing up the original image - 2022/10/WhatsApp-Image-2022-10-31-at-10.40.36-updraft-pre-smush-original.jpeg 
+[2022-10-31 04:08:22 : INFO] - Re_Smush_It_Task with attachment ID : 7863, autocreated on : October 31, 2022 03:47:50 
+[2022-10-31 04:08:22 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-10-31 04:08:22 : INFO] - 85 
+[2022-10-31 04:08:23 : INFO] - Re_Smush_It_Task with attachment ID : 7863, autocreated on : October 31, 2022 03:47:50 
+[2022-10-31 04:08:23 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-10-31 04:08:23 : INFO] - 85 
+[2022-10-31 04:08:25 : INFO] - Re_Smush_It_Task with attachment ID : 7863, autocreated on : October 31, 2022 03:47:50 
+[2022-10-31 04:08:25 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-10-31 04:08:25 : INFO] - 85 
+[2022-10-31 04:08:26 : INFO] - Re_Smush_It_Task with attachment ID : 7863, autocreated on : October 31, 2022 03:47:50 
+[2022-10-31 04:08:26 : INFO] - There were no WebP conversion tools found on your server. 
+[2022-10-31 04:08:26 : INFO] - 85 
+[2022-10-31 04:08:28 : INFO] - Successfully optimized the image - /home/perpajakanvokasi/public_html/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-31-at-10.40.36.jpeg.The file was compressed from 129.06 KB to 127.44 KB saving 1.25 percent using WP-Optimize 
+[2022-10-31 04:08:28 : INFO] - Completed processing task with ID : 1, and type 'smush' 
+[2022-10-31 04:08:28 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2022-10-31 04:08:28 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2022-10-31 04:08:28 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2022-10-31 04:08:28 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2022-10-31 04:19:44 : INFO] - 
+ 
+[2022-10-31 04:19:44 : INFO] - Header for logs at time:  Mon, 31 Oct 2022 04:19:44 +0000 on https://perpajakan.vokasi.unair.ac.id 
+[2022-10-31 04:19:44 : INFO] - WP: 6.0.3 
+[2022-10-31 04:19:44 : INFO] - PHP: 7.4.32 (litespeed, Linux cpanela.unair.ac.id 3.10.0-962.3.2.lve1.5.73.el7.x86_64 #1 SMP Wed Aug 24 21:31:23 UTC 2022 x86_64) 
+[2022-10-31 04:19:44 : INFO] - MySQL: 5.7.40 
+[2022-10-31 04:19:44 : INFO] - WPLANG: en_US 
+[2022-10-31 04:19:44 : INFO] - Server: LiteSpeed 
+[2022-10-31 04:19:44 : INFO] - Outbound connections: N 
+[2022-10-31 04:19:44 : INFO] - safe_mode: 0 
+[2022-10-31 04:19:44 : INFO] - max_execution_time: 30 
+[2022-10-31 04:19:44 : INFO] - memory_limit: 512M (used: 60.4M | 64.5M) 
+[2022-10-31 04:19:44 : INFO] - multisite: N 
+[2022-10-31 04:19:44 : INFO] - openssl: OpenSSL 1.1.1p  21 Jun 2022 
+[2022-10-31 04:19:44 : INFO] - The queue for tasks of type "smush" is empty. Aborting! 

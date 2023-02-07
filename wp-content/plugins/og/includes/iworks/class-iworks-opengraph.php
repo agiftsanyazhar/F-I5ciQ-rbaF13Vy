@@ -1,7 +1,7 @@
 <?php
 class iWorks_OpenGraph {
 	private $youtube_meta_name = 'iworks_yt_thumbnails';
-	private $version           = '3.1.7';
+	private $version           = '3.1.9';
 	private $debug             = false;
 	private $locale            = null;
 
@@ -830,7 +830,7 @@ class iWorks_OpenGraph {
 				is_array( $og['og']['image'] )
 				&& ! empty( $og['og']['image'] )
 			) {
-				$img = $og['og']['image'][0];
+				$img = reset( $og['og']['image'] );
 				if ( isset( $img['url'] ) ) {
 					$tmp_src = $img['url'];
 				}
@@ -888,16 +888,34 @@ class iWorks_OpenGraph {
 				$tmp_src = array_shift( $tmp_src );
 			}
 			if ( ! empty( $tmp_src ) ) {
-				printf(
-					'<link rel="image_src" href="%s" />%s',
-					esc_url( $tmp_src ),
-					$this->debug ? PHP_EOL : ''
-				);
-				printf(
-					'<meta name="msapplication-TileImage" content="%s" />%s',
-					esc_url( $tmp_src ),
-					$this->debug ? PHP_EOL : ''
-				);
+				/**
+				 * Allow to disable head link rel="image_src".
+				 *
+				 * @since 3.1.9
+				 *
+				 * @param boolean enable/disable
+				 */
+				if ( apply_filters( 'og_head_link_rel_image_src_enabled', true ) ) {
+					printf(
+						'<link rel="image_src" href="%s" />%s',
+						esc_url( $tmp_src ),
+						$this->debug ? PHP_EOL : ''
+					);
+				}
+				/**
+				 * Allow to disable head meta name="msapplication-TileImage".
+				 *
+				 * @since 3.1.9
+				 *
+				 * @param boolean enable/disable
+				 */
+				if ( apply_filters( 'og_head_meta_title_image_enabled', true ) ) {
+					printf(
+						'<meta name="msapplication-TileImage" content="%s" />%s',
+						esc_url( $tmp_src ),
+						$this->debug ? PHP_EOL : ''
+					);
+				}
 				/**
 				 * Schema.org
 				 *
@@ -1451,8 +1469,9 @@ class iWorks_OpenGraph {
 		if (
 			isset( $og['og']['image'] )
 			&& is_array( $og['og']['image'] )
+			&& ! empty( $og['og']['image'] )
 		) {
-			$img = $og['og']['image'][0];
+			$img = reset( $og['og']['image'] );
 		} else {
 			return $og;
 		}

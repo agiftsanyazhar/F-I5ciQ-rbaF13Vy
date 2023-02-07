@@ -12,7 +12,7 @@
                     <img class="wpdt-promo-text" src="<?php echo WDT_ROOT_URL ?>assets/img/promo/all-licenses.png" alt="">
                 </div>
                 <div id="wpdt-fourth-section">
-                    <button id="wpdt-grab-it" class="tms-store-checkout-wpdatatables">Grab yours!</button>
+                    <button id="wpdt-grab-it" onclick="window.open('https://wpdatatables.com/pricing/?utm_source=wpdt-lite&utm_medium=lite-upgrade&utm_content=wpdt&utm_campaign=wpdt', '_blank')">Grab yours!</button>
                 </div>
                 <div class="wpdt-promo-close">
                     <span class="wpdt-promo-dismiss-text">Don't show again</span>

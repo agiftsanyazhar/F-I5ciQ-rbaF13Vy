@@ -3862,3 +3862,7 @@ Live Preview.
 .watermark-pro-notice strong {
 	color: #999;
 }
+
+.wpcf-section[data-section-id="watermark-settings"] .sp_wpcp--preview {
+    display: none;
+}

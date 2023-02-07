@@ -50,3 +50,43 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/duotone.php on line 580
+[31-Oct-2022 17:27:08 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/generated-classname.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/generated-classname.php on line 67
+[02-Nov-2022 05:25:51 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/layout.php:226
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/layout.php on line 226
+[05-Nov-2022 16:11:22 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/spacing.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/spacing.php on line 83
+[07-Nov-2022 22:23:49 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/dimensions.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/dimensions.php on line 67
+[08-Nov-2022 09:37:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home/perpajakanvokasi/public_html/wp-includes/block-supports/elements.php:138
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/elements.php on line 138
+[13-Nov-2022 16:26:48 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/colors.php:152
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/colors.php on line 152
+[18-Nov-2022 11:26:04 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/custom-classname.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/custom-classname.php on line 59
+[23-Nov-2022 21:03:14 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/align.php:59
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/align.php on line 59
+[07-Jan-2023 04:52:42 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/duotone.php:580
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/duotone.php on line 580
+[04-Feb-2023 15:16:49 UTC] PHP Fatal error:  Uncaught Error: Class 'WP_Block_Supports' not found in /home/perpajakanvokasi/public_html/wp-includes/block-supports/layout.php:439
+Stack trace:
+#0 {main}
+  thrown in /home/perpajakanvokasi/public_html/wp-includes/block-supports/layout.php on line 439

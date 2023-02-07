@@ -550,7 +550,7 @@ function wdtStoreEnqueue() {
     wp_enqueue_script('tms-store-checkout-config', WDT_STORE_URL . '/static/js/checkout/config.js', array('jquery'), 1.12, true);
     //wp_enqueue_script('tms-store-checkout', WDT_STORE_URL . '/static/js/checkout/checkout.js', array('jquery'), 1.12, true);
 	wp_enqueue_script('tms-store-checkout', WDT_STORE_URL . '/static/js/checkout/checkout-promo.js', array('jquery'), 1.12, true);
-	wp_enqueue_script('tms-store-checkout-wpdatatables', WDT_STORE_URL . '/static/js/checkout/wpdatatables.js', array('jquery'), 1.12, true);
+    //wp_enqueue_script('tms-store-checkout-wpdatatables', WDT_STORE_URL . '/static/js/checkout/wpdatatables.js', array('jquery'), 1.12, true);
 }
 
 /**

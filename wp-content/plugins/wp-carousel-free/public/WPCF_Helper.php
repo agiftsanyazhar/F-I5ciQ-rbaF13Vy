@@ -158,7 +158,8 @@ if ( ! class_exists( 'WPCF_Helper' ) ) {
 			if ( ! empty( $preloader_image ) && $preloader ) {
 				ob_start();
 				include self::wpcf_locate_template( 'preloader.php' );
-				echo apply_filters( 'sp_wpcp_preloader', ob_get_clean() );
+				$prloader = apply_filters( 'sp_wpcp_preloader', ob_get_clean() );
+				echo wp_kses_post( $prloader );
 			}
 		}
 
@@ -258,6 +259,7 @@ if ( ! class_exists( 'WPCF_Helper' ) ) {
 		 */
 		public static function get_pagination( $upload_data, $shortcode_data, $post_id ) {
 			$wpcp_pagination = isset( $shortcode_data['wpcp_source_pagination'] ) ? $shortcode_data['wpcp_source_pagination'] : false;
+
 			$wpcp_layout     = isset( $shortcode_data['wpcp_layout'] ) ? $shortcode_data['wpcp_layout'] : 'carousel';
 			if ( $wpcp_pagination && 'carousel' !== $wpcp_layout ) {
 				$carousel_type = isset( $upload_data['wpcp_carousel_type'] ) ? $upload_data['wpcp_carousel_type'] : '';

@@ -591,7 +591,8 @@ div.wdt-column-block.gu-mirror span {
     font-size: 15px;
 }
 
-.wpdt-c .wdt-table-settings .input-path-block .fg-line {
+.wpdt-c .wdt-table-settings .input-path-block .fg-line,
+.wpdt-c .wdt-table-settings .input-nested-json-url-block .fg-line {
     width: 75%;
 }
 

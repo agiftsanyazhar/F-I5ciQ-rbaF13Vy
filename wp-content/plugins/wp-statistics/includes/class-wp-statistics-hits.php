@@ -33,8 +33,6 @@ class Hits
             $this->rest_hits = (object)self::rest_params();
 
             # Filter Data
-            add_filter('wp_statistics_user_referer', array($this, 'set_user_referer'));
-            add_filter('wp_statistics_exclusion', array($this, 'set_exclusion'));
             add_filter('wp_statistics_current_page', array($this, 'set_current_page'));
             add_filter('wp_statistics_page_uri', array($this, 'set_page_uri'));
             add_filter('wp_statistics_track_all_pages', array($this, 'set_track_all'));
@@ -47,36 +45,6 @@ class Hits
 
         # Record WordPress Front Page Hits
         add_action('wp', array($this, 'record_wp_hits'));
-    }
-
-    /**
-     * Set User Referer
-     *
-     * @param $referred
-     * @return array
-     */
-    public function set_user_referer($referred)
-    {
-        return isset($this->rest_hits->referred) ? $this->rest_hits->referred : $referred;
-    }
-
-    /**
-     * Set Exclusion
-     *
-     * @param $exclude
-     * @return array
-     */
-    public function set_exclusion($exclude)
-    {
-
-        if (isset($this->rest_hits->exclusion_match) and isset($this->rest_hits->exclusion_reason) and in_array($this->rest_hits->exclusion_reason, Exclusion::exclusion_list()) == true) {
-            return array(
-                'exclusion_match'  => $this->rest_hits->exclusion_match == 'yes',
-                'exclusion_reason' => $this->rest_hits->exclusion_reason,
-            );
-        }
-
-        return $exclude;
     }
 
     /**
@@ -122,7 +90,7 @@ class Hits
      */
     public function set_page_uri($page_uri)
     {
-        return isset($this->rest_hits->page_uri) ? $this->rest_hits->page_uri : $page_uri;
+        return isset($this->rest_hits->page_uri) ? base64_decode($this->rest_hits->page_uri) : $page_uri;
     }
 
     /**
@@ -146,9 +114,7 @@ class Hits
         $data = array();
         if (Helper::is_rest_request() and isset($_REQUEST[Hits::$rest_hits_key])) {
             foreach ($_REQUEST as $key => $value) {
-                if (!in_array($key, array('_', '_wpnonce'))) {
-                    $data[$key] = $value;
-                }
+                $data[$key] = $value;
             }
 
             return ($params === false ? $data : (isset($data[$params]) ? $data[$params] : false));
@@ -224,7 +190,7 @@ class Hits
      */
     public static function record_wp_hits()
     {
-        if (!Option::get('use_cache_plugin')) {
+        if (!Option::get('use_cache_plugin') and !Helper::dntEnabled()) {
             Hits::record();
         }
     }

@@ -3,7 +3,7 @@
 Plugin Name: wpDataTables - Tables & Table Charts
 Plugin URI: https://wpdatatables.com
 Description: Create responsive, sortable tables & charts from Excel, CSV or PHP. Add tables & charts to any post in minutes with DataTables.
-Version: 2.1.43
+Version: 2.1.51
 Author: TMS-Plugins
 Author URI: https://tms-outsource.com
 Text Domain: wpdatatables
@@ -52,6 +52,7 @@ function wpdatatables_load()
     require_once(WDT_ROOT_PATH . 'source/class.wpdatacolumn.php');
     require_once(WDT_ROOT_PATH . 'source/class.wpdatatablerows.php');
     require_once(WDT_ROOT_PATH . 'source/class.wpdatatablecache.php');
+    require_once(WDT_ROOT_PATH . 'source/class.wdtnestedjson.php');
     require_once(WDT_ROOT_PATH . 'source/class.wpdatachart.php');
     require_once(WDT_ROOT_PATH . 'source/class.wdtbrowsetable.php');
     require_once(WDT_ROOT_PATH . 'source/class.wdtbrowsechartstable.php');
@@ -90,10 +91,6 @@ register_uninstall_hook(__FILE__, 'wdtUninstall');
 add_shortcode('wpdatatable', 'wdtWpDataTableShortcodeHandler');
 add_shortcode('wpdatachart', 'wdtWpDataChartShortcodeHandler');
 add_shortcode('wpdatatable_cell', 'wdtWpDataTableCellShortcodeHandler');
-add_shortcode('wpdatatable_sum', 'wdtFuncsShortcodeHandler');
-add_shortcode('wpdatatable_avg', 'wdtFuncsShortcodeHandler');
-add_shortcode('wpdatatable_min', 'wdtFuncsShortcodeHandler');
-add_shortcode('wpdatatable_max', 'wdtFuncsShortcodeHandler');
 
 
 wpdatatables_load();

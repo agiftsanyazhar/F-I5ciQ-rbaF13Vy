@@ -4,8 +4,8 @@ Donate link: https://paypal.me/zayedbaloch
 Tags: fontawesome, font awesome, font icon, posts, page, widget, sidebar, shortcode,
 Requires at least: 3.2
 Requires PHP: 5.5.6
-Tested up to: 5.9
-Stable tag: 1.7.8
+Tested up to: 6.1
+Stable tag: 1.7.9
 License: GPLv2 or later
 
 This plugin allows you to easily embed Font Awesome icon to your site with simple shortcodes.
@@ -100,6 +100,9 @@ Note: Don't use double quotes `(" ")` on shortcode in Widget title.
 
 == Changelog ==
 
+= 1.7.9 = 
+* Security fixes
+
 = 1.7.8 = 
 * Updated FontAwesom to v6
 
@@ -154,6 +157,9 @@ Note: Don't use double quotes `(" ")` on shortcode in Widget title.
 * First Release
 
 == Upgrade Notice ==
+
+= 1.7.9 = 
+* Security fixes
 
 = 1.7.8 = 
 * Updated FontAwesom to v6
